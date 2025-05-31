@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0000aa;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000aa0;
+    /* Replace with your background color */
+
+    padding: 40px 30px;
+}
+
+.nav-left {
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 4em;
+    width: auto;
+    max-height: 100%;
+  }
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: red;
+    color: white;
+}
+
+h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 7rem; 
+    text-align: center;
+    font-weight: bold;
+  background: linear-gradient(270deg, #A10025, #fffdfe, #0011ff);
+  background-size: 600% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 5rem;
+    font-style: italic;
+    color: orange;
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px auto;
+
+    width: 98%;          /* Increase from 80% to 95% */
+    max-width: 1280px;   /* Increase the max-width limit */
+}
+
+.quote span {
+    color: #fff;
+}
+
+.content {
+    max-width: 1280px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 2rem; /* ← Change this value to adjust font size */
+    white-space: pre-wrap;
+}
+
+.content p {
+    font-size: 1.5rem; /* or your chosen size */
+    margin: 0.5rem 0;   /* ↓ Reduced top and bottom margin */
+  }
+
+  .content ul {
+    font-size: 1.5rem; /* Adjust the size as needed */
+    margin-left: 1.5rem; /* Optional: to indent bullets nicely */
+  }
+
+.signature {
+    margin-top: 5px;
+    text-align: left;
+    font-family: "JetBrains Mono", monospace;
+    color: rgb(253, 250, 251);
+    font-size: rem;
+}
+
+.signature img {
+    width: 50rem;       /* Set the desired width */
+    height: auto;       /* Maintain aspect ratio */
+    display: block;     /* Ensures proper spacing */
+    margin-top: 1px;   /* Optional: adds space above the image */
+    margin-left: -50px;
+  }
+
+.back-button {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 20px 40px;
+    font-size: 50px;
+    font-family: 'Press Start 2P', monospace;
+    background-color: #7ece06;
+    color: #ffffff;
+    text-decoration: none;
+    border: 4px solid #ff0000;
+    box-shadow: 4px 4px 0 #000;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+        /* Center inline-block using parent */
+    display: table;
+  }
+  
+  
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      height: 40px;
+    }
+  }
