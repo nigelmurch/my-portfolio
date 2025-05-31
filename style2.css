@@ -122,22 +122,23 @@ h2 {
 }
 
 .content {
-    max-width: 1280px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 2rem; /* ← Change this value to adjust font size */
-    white-space: pre-wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 2rem;
+  white-space: pre-wrap;
+  text-align: left; /* ← This is the key */
 }
 
 .content p {
-    font-size: 1.5rem; /* or your chosen size */
-    margin: 0.5rem 0;   /* ↓ Reduced top and bottom margin */
-  }
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
 
-  .content ul {
-    font-size: 1.5rem; /* Adjust the size as needed */
-    margin-left: 1.5rem; /* Optional: to indent bullets nicely */
-  }
+.content ul {
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
 
 .signature {
     margin-top: 5px;
