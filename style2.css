@@ -132,19 +132,19 @@ h2 {
 
 .content p {
   font-size: 1.5rem;
-  margin: 0.3rem 0; /* Reduced from 0.5rem */
+  margin: 0.2rem 0; /* Super tight vertical spacing */
 }
 
 .content ul {
   font-size: 1.5rem;
-  margin-top: 0.3rem;  /* Closer to previous <p> */
-  margin-bottom: 0.3rem;
-  margin-left: 1.5rem; /* Indent remains */
-  padding-left: 1rem;  /* Optional tighter bullet space */
+  margin-top: 0.1rem;    /* Almost flush with paragraph above */
+  margin-bottom: 0.2rem;
+  margin-left: 1.5rem;   /* Keeps indentation */
+  padding-left: 0.8rem;  /* Optional: tighter bullet spacing */
 }
 
 .content ul li {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem; /* Optional: tighter list items */
 }
 
 .signature {
