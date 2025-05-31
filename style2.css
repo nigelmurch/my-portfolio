@@ -4,6 +4,7 @@ body {
     background-color: #0000aa;
     color: #ffffff;
     font-family: "JetBrains Mono", monospace;
+    text-align: center;   
     box-sizing: border-box;
 }
 
@@ -54,8 +55,12 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px auto;
+  justify-content: center;
   text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 h1 {
