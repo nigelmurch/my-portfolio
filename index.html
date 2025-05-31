@@ -3,113 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UX Investigator</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Press Start 2P', monospace;
-      background-color: #0000aa;
-      color: #ffffff;
-    }
-
-    #boot-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #0000aa;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: left;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .c64-text {
-      white-space: pre;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-
-    #press-key-msg {
-      margin-top: 20px;
-      display: none;
-      color: #ffffff;
-    }
-
-    .blink-text {
-      animation: blink 1s steps(1, start) infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    #site-content {
-      display: none;
-      padding: 20px;
-    }
-
-    .nav-menu {
-      margin-top: 20px;
-    }
-
-    .nav-links {
-      list-style: none;
-      padding: 0;
-    }
-
-    .nav-links li {
-      display: inline;
-      margin: 0 10px;
-    }
-
-    a {
-      color: #00ff00;
-      text-decoration: none;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      background-color: black;
-      color: #00ff00;
-      border: 2px solid #00ff00;
-      cursor: pointer;
-    }
-  </style>
+  <title>Commodore 64 Boot</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Boot screen -->
-  <div id="boot-screen">
-    <div class="c64-text">
-*** COMMODORE 64 BASIC V2 ***<br>
-64K RAM SYSTEM  38911 BASIC BYTES FREE<br>
-READY.<br>
-    </div>
-    <div id="press-key-msg" class="blink-text">PRESS ANY KEY TO CONTINUE...</div>
+  <div class="screen">
+    <pre id="bootText" class="boot-text"></pre>
+    <div id="anyKey" class="any-key">*** PRESS ANY KEY TO CONTINUE ***</div>
   </div>
-
-    <div id="main-content">
-      <section id="home">
-        <h1>UX Investigator Inc.</h1>
-        <p>“I don’t guess. I investigate.”<br>
-        Uncovering the truth behind the user experience—one insight at a time.</p>
-        <a href="home.html" id="home-enter-btn">ENTER</a>
-      </section>
-    </div>
-  </div> 
-
   <script src="script.js"></script>
 </body>
 </html>
