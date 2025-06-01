@@ -102,9 +102,19 @@ p {
 }
 
 .contact-form input[type="email"],
-.contact-form input[type="file"],
+.contact-form input[type="file"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  border: 2px solid #00ffe1;
+  background-color: #000044;
+  color: white;
+  border-radius: 4px;
+}
+
 .contact-form textarea {
-  min-height: 600px; /* 💥 3x bigger */
+  min-height: 600px; /* ✅ Truly 3x bigger */
   width: 100%;
   padding: 15px;
   font-size: 14px;
@@ -114,9 +124,6 @@ p {
   color: white;
   border-radius: 4px;
   resize: vertical;
-}
-.contact-form textarea {
-  min-height: 200px; /* ✨ Larger message box */
 }
 
 .contact-form input:focus,
