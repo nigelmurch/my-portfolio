@@ -25,46 +25,35 @@
   </header>
 
   <main class="contact-content">
-    <form
-      action="https://formspree.io/f/mpwrange"
-      method="POST"
-      enctype="multipart/form-data"
-      id="contactForm"
-      class="contact-form"
-      onsubmit="window.location.hash = '#success'"
-    >
-      <label for="email">Your email:</label>
-      <input type="email" name="email" id="email" required />
+  <form
+    action="https://formspree.io/f/mpwrange"
+    method="POST"
+    enctype="multipart/form-data"
+    id="contactForm"
+    class="contact-form"
+    onsubmit="window.location.hash = '#success'"
+  >
+    <label for="email">Your email:</label>
+    <input type="email" name="email" id="email" required />
 
-      <label for="upload">Your file:</label>
-      <input type="file" name="upload" id="upload" />
+    <label for="upload">Your file:</label>
+    <input type="file" name="upload" id="upload" />
 
-      <button type="submit" class="cta">Send Message</button>
-    </form>
-    <form
-  action="https://formspree.io/f/mpwrange"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-    <!-- Confirmation Modal -->
-    <div id="confirmationModal" class="modal-overlay">
-      <div class="modal-box">
-        <h2>Message Sent!</h2>
-        <p>Thank you for reaching out. I'll get back to you soon.</p>
-        <button class="close-btn" id="closeModal">Close</button>
-      </div>
+    <label for="message">Your message:</label>
+    <textarea name="message" id="message" required></textarea>
+
+    <button type="submit" class="cta">Send Message</button>
+  </form>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal-overlay">
+    <div class="modal-box">
+      <h2>Message Sent!</h2>
+      <p>Thank you for reaching out. I'll get back to you soon.</p>
+      <button class="close-btn" id="closeModal">Close</button>
     </div>
-  </main>
+  </div>
+</main>
 
   <!-- 🎵 Retro Sound Effect -->
   <audio id="successSound" src="https://freesound.org/data/previews/341/341695_5260877-lq.mp3"></audio>
