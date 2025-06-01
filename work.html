@@ -1,15 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UX Investigator</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Press Start 2P', monospace;
-      background-color: #0000aa;
-      color: #ffffff;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work</title>
+  <style>
+    body {
+      background-color: #0000FF; /* Blue background */
+      color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    .navbar a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+hr.red {
+      border-top: 2px solid #FF0000;
+    }
+
+    hr.yellow {
+      border-top: 2px solid #FFFF00;
+    }
+
+    h2.green {
+      color: #00FF00;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <a href="#">HOME</a>
+      <a href="#">PROCLAMATION</a>
+      <a href="#">ABOUT</a>
+      <a href="#">WORK</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <div class="section" id="work-section">
+      <h1>WORK</h1>
+      <h2 class="green">Solo Work9</h2>
+      <p>Flavours by Papatūānuku Kai Verified!</p>
+      <img src="#" alt="Food Dish" />
+    </div>
+
+    <hr class="red" />
+    <hr class="yellow" />
+    <hr class="yellow" />
+    <hr class="yellow" />
+  </div>
+</body>
+</html>
