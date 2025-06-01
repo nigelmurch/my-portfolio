@@ -61,16 +61,14 @@ body {
 }
 
 .about-content {
-    font-size: 1.0rem; 
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
-  align-items: start;
+  gap: 40px;
+  align-items: center; /* Changed from start → center */
 }
-
 .image-container img {
   max-width: 100%;
   border: 4px solid lightgray;
@@ -141,19 +139,21 @@ body {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+.quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
+}
+
 .quote {
   font-family: "JetBrains Mono", monospace;
   font-style: italic;
   font-size: 1.5rem;
-  display: flex;
-  align-items: center; /* vertical center */
-  justify-content: flex-end; /* push text to right */
-  text-align: right;
-}
-}
-
-.quote p {
   line-height: 1.8;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .bio {
@@ -225,8 +225,22 @@ body {
     box-shadow: 2px 2px 0 #000;
   }
 
-  @media (max-width: 768px) {
-    .logo {
-      height: 40px;
-    }
+ @media (max-width: 768px) {
+  .logo {
+    height: 40px;
   }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .quote-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
+}
