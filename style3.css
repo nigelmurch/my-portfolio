@@ -156,6 +156,14 @@ body {
   color: white;
 }
 
+.quote-sub {
+  display: block;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #cccccc;
+  text-align: center;
+  margin-top: 8px;
+}
 .bio {
   font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
   font-size:1.5rem;
