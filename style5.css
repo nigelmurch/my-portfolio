@@ -1,39 +1,52 @@
 body {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
-  background-color: #0000CC;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #0000aa;
   color: white;
 }
 
-header {
-  background-color: #000066;
-  border-top: 4px solid red;
-  border-bottom: 4px solid red;
+.nav-bar {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000aa0;
+    padding: 40px 30px;
+    border-bottom: 4px solid red; /* 🔴 Red line separator */
 }
 
-nav {
-  display: flex;
-  justify-content: flex-end; /* Right alignment */
-  align-items: center;
-  height: 60px;
-  padding-right: 40px; /* Space from the right edge */
-  gap: 30px; /* Space between links */
-  background-color: #000066;
-   border-bottom: 4px solid red; /* 🔴 Red line separator */
-}
+.nav-left {
+    flex-shrink: 0;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 60px;
+.logo {
+    height: 4em;
+    width: auto;
+    max-height: 100%;
 }
 
-nav a.active {
-  color: cyan;
-  text-decoration: underline;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.nav-links li a:hover {
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 h1, h2 {
