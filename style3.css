@@ -13,9 +13,8 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #000aa0;
-    /* Replace with your background color */
-
     padding: 40px 30px;
+    border-bottom: 4px solid red; /* 🔴 Red line separator */
 }
 
 .nav-left {
@@ -26,9 +25,7 @@ body {
     height: 4em;
     width: auto;
     max-height: 100%;
-  }
-
-
+}
 
 .nav-links {
     list-style: none;
@@ -42,11 +39,14 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.2s ease;
 }
 
-nav a:hover {
+.nav-links li a:hover {
     background-color: red;
     color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 .section-title {
   text-align: center;
