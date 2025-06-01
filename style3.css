@@ -97,6 +97,31 @@ body {
   font-size: 12px;
 }
 /* Existing button styles */
+/* CTA: MY VALUES BUTTON — RETRO COLORS */
+.cta {
+  background: #00ffe1; /* Electric cyan base */
+  color: #000044;       /* Deep retro navy text */
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 transparent;
+  position: relative;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  background: #00ccbb;
+  color: #000000;
+}
+
+.cta:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
 
 .back-button {
   display: inline-block;
