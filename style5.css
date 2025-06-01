@@ -1,3 +1,4 @@
+/* BASE STYLES */
 body {
   box-sizing: border-box;
   margin: 0;
@@ -6,48 +7,55 @@ body {
   color: white;
 }
 
+/* NAVIGATION BAR */
 .nav-bar {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000aa0;
-    padding: 40px 30px;
-    border-bottom: 4px solid red; /* 🔴 Red line separator */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000aa0;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
 }
 
 .nav-left {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .logo {
-    height: 4em;
-    width: auto;
-    max-height: 100%;
+  height: 4em;
+  width: auto;
+  max-height: 100%;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.2s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.nav-links li a.active {
+  color: cyan;
+  text-decoration: underline;
 }
 
 .nav-links li a:hover {
-    background-color: red;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
+
+/* SECTION TITLE */
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -60,6 +68,7 @@ body {
   text-shadow: 2px 2px 0 #000;
 }
 
+/* MAIN CONTENT LAYOUT */
 .about-content {
   max-width: 1000px;
   margin: 40px auto;
@@ -67,15 +76,64 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: center; /* Changed from start → center */
+  align-items: center;
 }
+
 .image-container img {
+  width: 100%;
   max-width: 100%;
+  height: auto;
   border: 4px solid lightgray;
   box-shadow: 0 0 10px #000;
 }
 
-/* Modal Styles */
+/* QUOTE BLOCK */
+.quote {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.quote-sub {
+  font-size: 1rem;
+  color: #00ffe1;
+  margin-top: 10px;
+}
+
+/* CTA BUTTON */
+.cta {
+  background: #00ffe1;
+  color: #000044;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 transparent;
+  position: relative;
+  margin-top: 20px;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  background: #00ccbb;
+  color: #000000;
+}
+
+.cta:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* MODAL STYLES */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -108,17 +166,18 @@ body {
 
 .modal-box ul {
   list-style: disc;
-  padding: 40;
+  padding-left: 20px;
   font-size: 10px;
   text-align: left;
   line-height: 2;
   margin-bottom: 20px;
-  color:white;
+  color: white;
 }
 
 .modal-box ul li::marker {
-  color: #00ffe1; /* electric cyan bullets */
+  color: #00ffe1;
 }
+
 .close-btn {
   background: #ff0088;
   color: white;
@@ -140,73 +199,26 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
-.quote-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;  /* changed from flex-end → center */
-  text-align: center;
-}
-
-.quote {
-  font-family: "JetBrains Mono", monospace;
-  font-style: italic;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.quote-sub {
-  display: block;
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #cccccc;
-  text-align: center;
-  margin-top: 8px;
-}
+/* BIO SECTION */
 .bio {
-  font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
-  font-size:1.5rem;
-  line-height: 1.8;}
+  font-family: "JetBrains Mono", monospace;
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
 
 .bio p {
-  font-size:1.5rem;  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.8;
   margin-bottom: 20px;
- 
-}
-/* Existing button styles */
-/* CTA: MY VALUES BUTTON — RETRO COLORS */
-.cta {
-  background: #00ffe1; /* Electric cyan base */
-  color: #000044;       /* Deep retro navy text */
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-size: 10px;
-  font-family: 'Press Start 2P', monospace;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 0 transparent;
-  position: relative;
 }
 
-.cta:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
-  background: #00ccbb;
-  color: #000000;
-}
-
-.cta:active {
-  transform: scale(0.97);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
+/* BACK BUTTON */
 .back-button {
   display: inline-block;
   margin: 30px auto;
   padding: 10px 20px;
-  font-size: 24px; /* ↓ reduced from 50px */
+  font-size: 24px;
   font-family: 'Press Start 2P', monospace;
   background-color: #7ece06;
   color: #ffffff;
@@ -216,25 +228,17 @@ body {
   text-align: center;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-
-  display: table; /* keeps it centered if needed */
+  display: table;
 }
-  
-  
-  .back-button:hover {
-    background-color: #ff0000;
-    color: #000000;
-    box-shadow: 2px 2px 0 #000;
-  }
 
+.back-button:hover {
+  background-color: #ff0000;
+  color: #000000;
+  box-shadow: 2px 2px 0 #000;
+}
 
-  .back-button:hover {
-    background-color: #ff0000;
-    color: #000000;
-    box-shadow: 2px 2px 0 #000;
-  }
-
- @media (max-width: 768px) {
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .logo {
     height: 40px;
   }
@@ -244,18 +248,17 @@ body {
     text-align: center;
   }
 
-  .quote-wrapper {
-    align-items: center;
-    text-align: center;
-  }
-
   .quote {
     font-size: 1.2rem;
   }
-}
 
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
 }
