@@ -52,11 +52,14 @@
     const contactForm = document.getElementById('contactForm');
     const confirmationModal = document.getElementById('confirmationModal');
     const closeModal = document.getElementById('closeModal');
+    const sound = document.getElementById('successSound');
 
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevent real form submission
-      confirmationModal.style.display = 'flex'; // Show the modal
-      contactForm.reset(); // Optionally clear the form
+      e.preventDefault();
+      confirmationModal.style.display = 'flex';
+      sound.currentTime = 0; // rewind if it was played
+      sound.play();
+      contactForm.reset();
     });
 
     closeModal.addEventListener('click', () => {
