@@ -139,12 +139,13 @@ body {
   from { transform: scale(0.8); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
 .quote-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  text-align: right;
+  align-items: center;  /* changed from flex-end → center */
+  text-align: center;
 }
 
 .quote {
