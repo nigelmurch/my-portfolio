@@ -61,7 +61,8 @@ body {
 }
 
 .about-content {
-  max-width: 900px;
+  font-family: "JetBrains Mono", monospace;
+    font-size: 1.5rem;  max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
   display: grid;
