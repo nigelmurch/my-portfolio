@@ -47,9 +47,28 @@
   </div>
 </div>
   </main>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contactForm');
+    const confirmationModal = document.getElementById('confirmationModal');
+    const closeModal = document.getElementById('closeModal');
 
- 
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent real form submission
+      confirmationModal.style.display = 'flex'; // Show the modal
+      contactForm.reset(); // Optionally clear the form
+    });
 
-  <script src="script.js"></script>
+    closeModal.addEventListener('click', () => {
+      confirmationModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === confirmationModal) {
+        confirmationModal.style.display = 'none';
+      }
+    });
+  });
+</script>
 </body>
 </html>
