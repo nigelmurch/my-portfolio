@@ -154,10 +154,10 @@ body {
 .bio {
   font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
   font-size:1.5rem;
-}
+  line-height: 1.8;}
 
 .bio p {
-  line-height: 1.8;
+  font-size:1.5rem;  line-height: 1.8;
   margin-bottom: 20px;
   font-size: 12px;
 }
