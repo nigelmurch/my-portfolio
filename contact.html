@@ -41,7 +41,21 @@
 
       <button type="submit" class="cta">Send Message</button>
     </form>
-
+    <form
+  action="https://formspree.io/f/mpwrange"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
     <!-- Confirmation Modal -->
     <div id="confirmationModal" class="modal-overlay">
       <div class="modal-box">
