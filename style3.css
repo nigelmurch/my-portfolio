@@ -76,6 +76,66 @@ body {
   box-shadow: 0 0 10px #000;
 }
 
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #000aa0;
+  border: 4px solid #ff00ff;
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 0 15px #ff00ff;
+  animation: popIn 0.3s ease-out;
+}
+
+.modal-box h2 {
+  color: #00ffe1;
+  margin-bottom: 20px;
+}
+
+.modal-box ul {
+  list-style: none;
+  padding: 0;
+  font-size: 10px;
+  text-align: left;
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background: #ff0088;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 .quote {
   text-align: center;
   font-size: 1rem;
