@@ -19,7 +19,8 @@ nav {
   padding-right: 40px; /* Space from the right edge */
   gap: 30px; /* Space between links */
   background-color: #000066;
-  border-bottom: 2px solid red;
+   border-bottom: 4px solid red; /* 🔴 Red line separator */
+}
 }
 
 nav a {
