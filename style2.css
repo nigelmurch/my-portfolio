@@ -15,9 +15,8 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #000aa0;
-    /* Replace with your background color */
-
     padding: 40px 30px;
+    border-bottom: 4px solid red; /* 🔴 Red line separator */
 }
 
 .nav-left {
