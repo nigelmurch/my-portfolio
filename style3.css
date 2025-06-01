@@ -142,7 +142,9 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 .quote {
+  font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
   text-align: center;
+  font-style: italic;
   font-size: 1.5rem;
 }
 
