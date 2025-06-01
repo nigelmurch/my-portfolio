@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: 'Press Start 2P', monospace;
   background-color: #0000aa;
@@ -72,14 +73,32 @@ body {
   line-height: 1.8;
 }
 
-.cta {
-  margin-top: 15px;
-  padding: 10px 20px;
+/* Existing button styles */
+.cta,
+.back-btn {
   background: #ff0088;
   color: white;
-  border: none;
+  border: 2px solid transparent;
+  padding: 10px 20px;
   cursor: pointer;
   font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 transparent;
+  position: relative;
+}
+
+.cta:hover,
+.back-btn:hover {
+  transform: scale(1.05);
+  border-color: white;
+  box-shadow: 0 0 8px #ff66c4, 0 0 16px #ff66c4;
+}
+
+.cta:active,
+.back-btn:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .bio {
