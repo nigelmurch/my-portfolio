@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Web 5 - Work Page</title>
-  <link rel="stylesheet" href="style5.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Work - Nigel Murch</title>
+  <link rel="stylesheet" href="style3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- NAVIGATION -->
   <div class="nav-bar">
     <div class="nav-left">
       <img class="logo" src="images/logoUXI.png" alt="Logo" />
@@ -15,53 +17,76 @@
     <ul class="nav-links">
       <li><a href="home.html">Proclamation</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="work.html" class="active">Work</a> </li> 
+      <li><a href="work.html" class="active">Work</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div> 
-  <header>
-      <h1>WORK</h1> 
+  </div>
+
+  <!-- SECTION TITLE -->
+  <header class="section-title">
+    <h1>WORK</h1>
   </header>
-  <h2>Solo Work9</h2>
 
-  <div class="solo section">
-    <div class="solo-item">
-      <div>
-        <p>🦌 Flavours by Papatūānuku<br/>Kai Verified!</p>
-      </div>
-      <img src="https://i.imgur.com/1s6QduA.jpg" alt="Food">
+  <!-- MAIN CONTENT -->
+  <main class="about-content">
+    
+    <!-- SOLO WORK -->
+    <div class="image-container">
+      <img src="images/food-project.jpg" alt="Delicious dish" />
     </div>
-  </div>
 
-  <div class="team section">
-    <div class="team-text">TEAM PROJECTS</div>
-    <div class="team-grid">
-      <div class="team-item">
-        <img src="https://i.imgur.com/DdOjaFj.png" alt="Whetū Mārama icon" />
-        <h3>WHETŪ<br/>MĀRAMA</h3>
-        <img src="https://i.imgur.com/H8ZP0ll.png" alt="Spotlight icon" />
-      </div>
-      <div class="team-item">
-        <a href="#" class="project-link">
-          <img src="https://i.imgur.com/Ctr5pU3.png" alt="Open Door">
-          The Open Door Project<br/>
-          <small>"Because every question deserves an answer"</small>
-        </a>
-        <a href="#" class="project-link">
-          <img src="https://i.imgur.com/7NSRLYM.png" alt="Flower shield">
-        </a>
+    <div class="quote-wrapper">
+      <p class="quote">
+        “Flavours by Papatūānuku<br>
+        <span class="quote-sub">Kai Verified!</span>”
+      </p>
+      <div class="cta-container">
+        <button class="cta">Explore Project</button>
       </div>
     </div>
-  </div>
 
-  <button class="button">Back</button>
+    <!-- TEAM PROJECTS SECTION -->
+    <div class="bio" style="grid-column: 1 / -1;">
+      <h2 style="color: yellow; font-size: 1.5rem; margin-top: 50px;">TEAM PROJECTS</h2>
 
-  <footer>
-    <div class="footer-columns">
+      <div style="display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1; text-align: center;">
+          <img src="images/whetu-icon.png" alt="Whetū Mārama" style="width: 80px;" />
+          <h3 style="font-size: 1rem;">WHETŪ<br>MĀRAMA</h3>
+        </div>
+
+        <div style="flex: 1; text-align: center;">
+          <img src="images/spotlight-icon.png" alt="Spotlight icon" style="width: 80px;" />
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <div style="background: pink; padding: 20px; border-radius: 10px; max-width: 300px; text-align: center;">
+          <img src="images/opendoor-icon.png" alt="Open Door Project" style="width: 40px;" />
+          <p style="margin-top: 10px;">The Open Door Project</p>
+          <p class="quote-sub" style="margin-top: 10px;">"Because every question deserves an answer"</p>
+        </div>
+
+        <div style="background: pink; padding: 20px; border-radius: 10px; max-width: 300px; text-align: center;">
+          <img src="images/flower-icon.png" alt="Flower icon" style="width: 40px;" />
+        </div>
+      </div>
+
+      <!-- RETURN BUTTON -->
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="home.html" class="back-button">Back</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER (Optional if used on other pages) -->
+  <footer style="text-align: center; padding: 20px 0; font-size: 10px; border-top: 4px solid red;">
+    <div style="display: flex; justify-content: space-between; max-width: 900px; margin: auto; padding: 0 20px; flex-wrap: wrap;">
       <span>UXinvestigator.com</span>
       <span>UX investigator for hire, no problem to big or to small.</span>
       <span>© Copyright 2025 Ux Investigator Inc</span>
     </div>
   </footer>
+
 </body>
 </html>
