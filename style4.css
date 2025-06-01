@@ -1,81 +1,132 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #0000aa;
-    font-family: 'JetBrains Mono', monospace;
-    color: #ffffff;
-    transform: scale(1.1); /* Scales the page to 110% */
-  transform-origin: top left; /* Ensures scaling starts from the top-left corner */
-  }
-  
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 20px;
-      font-size: 1.5rem;
-    }
-  }
+  margin: 0;
+  padding: 0;
+  background-color: #0000aa;
+  font-family: 'JetBrains Mono', monospace;
+  color: #ffffff;
+  transform: scale(1.1);
+  transform-origin: top left;
+}
 
-  .about-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-  }
-  
+@media (max-width: 768px) {
   .about-container {
-    max-width: 1728px;
-    text-align: center;
-    background-color: #0000aa;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .profile-img {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #ffffff;
-    margin-bottom: 20px;
-  }
-  
-  h1 {
-    font-family: 'Press Start 2P', monospace;
-    font-size:7rem;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-    color: #ffcc00;
-    margin-bottom: 20px;
-  }
-  
-  p {
+    padding: 20px;
     font-size: 1.5rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
   }
-  
-  .skills h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .skills ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .skills li {
-    background-color: #3333cc;
-    margin: 10px 0;
-    padding: 40px;
-    border-radius: 6px;
-    font-weight: bold;
-  }
+}
 
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.about-container {
+  max-width: 1728px;
+  text-align: center;
+  background-color: #0000aa;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  background-color: #3333cc;
+  margin: 10px 0;
+  padding: 40px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* 🌟 Contact Form Styling */
+.contact-content {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #0000aa;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-size: 14px;
+  color: #00ffe1;
+  text-align: left;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="file"],
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  border: 2px solid #00ffe1;
+  background-color: #000044;
+  color: white;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 200px; /* ✨ Larger message box */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff00ff;
+  box-shadow: 0 0 5px #ff00ff;
+}
+
+/* Modal styles */
 .modal-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -100,8 +151,6 @@ body {
 
 .modal-box {
   animation: popIn 0.4s ease-out;
-}
-.modal-box {
   background: #000aa0;
   border: 4px solid #ff00ff;
   padding: 30px;
@@ -110,7 +159,6 @@ body {
   color: white;
   font-family: 'Press Start 2P', monospace;
   box-shadow: 0 0 15px #ff00ff;
-  animation: popIn 0.3s ease-out;
 }
 
 .close-btn {
