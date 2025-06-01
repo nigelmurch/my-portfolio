@@ -108,14 +108,18 @@ body {
 }
 
 .modal-box ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding: 40;
   font-size: 10px;
   text-align: left;
   line-height: 2;
   margin-bottom: 20px;
+  color:white;
 }
 
+.modal-box ul li::marker {
+  color: #00ffe1; /* electric cyan bullets */
+}
 .close-btn {
   background: #ff0088;
   color: white;
