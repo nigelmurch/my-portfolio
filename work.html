@@ -1,81 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Work</title>
-  <style>
-    body {
-      background-color: #0000FF; /* Blue background */
-      color: #FFFFFF;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web 5 - Work Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      background-color: #0000CC;
+      color: white;
+    }
 
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+    header {
+      background-color: #000066;
+      border-top: 4px solid red;
+      border-bottom: 4px solid red;
+      padding: 10px 0;
+      text-align: center;
+    }
 
-    .navbar {
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-    .navbar a {
-      color: #FFFFFF;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    nav a.active {
+      color: cyan;
+      text-decoration: underline;
+    }
 
-    .section {
-      text-align: center;
-      padding: 20px 0;
-    }
+    h1, h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-    .section img {
-      max-width: 100%;
-      height: auto;
-    }
+    h1 {
+      color: orange;
+      font-size: 32px;
+      text-shadow: 2px 2px #000;
+    }
 
-hr.red {
-      border-top: 2px solid #FF0000;
-    }
+    h2 {
+      color: lime;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
 
-    hr.yellow {
-      border-top: 2px solid #FFFF00;
-    }
+    .section {
+      padding: 20px;
+      border-top: 2px solid red;
+      border-bottom: 2px solid red;
+      margin: 40px 0;
+    }
 
-    h2.green {
-      color: #00FF00;
-    }
-  </style>
+    .solo, .team {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .solo-item, .team-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .solo-item img, .team-item img {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    .team-item {
+      justify-content: space-evenly;
+    }
+
+    .team-text {
+      font-size: 16px;
+      color: yellow;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    footer {
+      background: #000066;
+      padding: 10px;
+      color: white;
+      font-size: 10px;
+      text-align: center;
+      border-top: 2px solid red;
+    }
+
+    .footer-columns {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      background: magenta;
+      border: none;
+      padding: 10px 20px;
+      font-family: 'Press Start 2P';
+      color: black;
+      margin: 30px auto;
+      display: block;
+      cursor: pointer;
+    }
+
+    a.project-link {
+      display: inline-block;
+      background: pink;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 10px;
+      text-align: center;
+      color: black;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .project-link img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 40px;
+    }
+
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <div class="navbar">
-      <a href="#">HOME</a>
-      <a href="#">PROCLAMATION</a>
-      <a href="#">ABOUT</a>
-      <a href="#">WORK</a>
-      <a href="#">CONTACT</a>
-    </div>
+  <header>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#">PROCLAMATION</a>
+      <a href="#">ABOUT</a>
+      <a href="#" class="active">WORK</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
 
-    <div class="section" id="work-section">
-      <h1>WORK</h1>
-      <h2 class="green">Solo Work9</h2>
-      <p>Flavours by Papatūānuku Kai Verified!</p>
-      <img src="#" alt="Food Dish" />
-    </div>
+  <h1>WORK</h1>
+  <h2>Solo Work9</h2>
 
-    <hr class="red" />
-    <hr class="yellow" />
-    <hr class="yellow" />
-    <hr class="yellow" />
-  </div>
+  <div class="solo section">
+    <div class="solo-item">
+      <div>
+        <p>🦌 Flavours by Papatūānuku<br/>Kai Verified!</p>
+      </div>
+      <img src="https://i.imgur.com/1s6QduA.jpg" alt="Food">
+    </div>
+  </div>
+
+  <div class="team section">
+    <div class="team-text">TEAM PROJECTS</div>
+    <div class="team-grid">
+      <div class="team-item">
+        <img src="https://i.imgur.com/DdOjaFj.png" alt="Whetū Mārama icon" />
+        <h3>WHETŪ<br/>MĀRAMA</h3>
+        <img src="https://i.imgur.com/H8ZP0ll.png" alt="Spotlight icon" />
+      </div>
+      <div class="team-item">
+        <a href="#" class="project-link">
+          <img src="https://i.imgur.com/Ctr5pU3.png" alt="Open Door">
+          The Open Door Project<br/>
+          <small>"Because every question deserves an answer"</small>
+        </a>
+        <a href="#" class="project-link">
+          <img src="https://i.imgur.com/7NSRLYM.png" alt="Flower shield">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="button">Back</button>
+
+  <footer>
+    <div class="footer-columns">
+      <span>UXinvestigator.com</span>
+      <span>UX investigator for hire, no problem to big or to small.</span>
+      <span>© Copyright 2025 Ux Investigator Inc</span>
+    </div>
+  </footer>
 </body>
 </html>
