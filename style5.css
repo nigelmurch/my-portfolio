@@ -21,11 +21,6 @@ body {
     flex-shrink: 0;
 }
 
-nav a.active {
-  color: cyan;
-  text-decoration: underline;
-}
-
 .logo {
     height: 4em;
     width: auto;
@@ -53,102 +48,210 @@ nav a.active {
     padding: 4px 8px;
     border-radius: 4px;
 }
-
-h1, h2 {
+.section-title {
   text-align: center;
-  margin-top: 40px;
+  font-size: 2rem;
+  margin-top: 30px;
 }
 
-h1 {
-  color: #FF69B4; /* Matched to 'About' page */
-  font-size: 28px; /* Adjusted to match other pages */
-  text-shadow: 2px 2px #000;
+.section-title h1 {
+  font-size: 40px;
+  color: orange;
+  text-shadow: 2px 2px 0 #000;
 }
 
-h2 {
-  color: lime;
-  font-size: 20px;
+.about-content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center; /* Changed from start → center */
+}
+.image-container img {
+  max-width: 100%;
+  border: 4px solid lightgray;
+  box-shadow: 0 0 10px #000;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: #000aa0;
+  border: 4px solid #ff00ff;
+  padding: 30px;
+  max-width: 500px;
+  text-align: center;
+  color: white;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 0 15px #ff00ff;
+  animation: popIn 0.3s ease-out;
+}
+
+.modal-box h2 {
+  color: #00ffe1;
   margin-bottom: 20px;
 }
 
-.section {
-  padding: 20px;
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-  margin: 40px 0;
-}
-
-.solo, .team {
-  max-width: 700px;
-  margin: auto;
-}
-
-.solo-item, .team-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
-.solo-item img, .team-item img {
-  width: 100px;
-  border-radius: 10px;
-}
-
-.team-item {
-  justify-content: space-evenly;
-}
-
-.team-text {
-  font-size: 16px;
-  color: yellow;
-  text-align: center;
-  margin-top: 50px;
-}
-
-footer {
-  background: #000066;
-  padding: 10px;
-  color: white;
+.modal-box ul {
+  list-style: disc;
+  padding: 40;
   font-size: 10px;
-  text-align: center;
-  border-top: 2px solid red;
+  text-align: left;
+  line-height: 2;
+  margin-bottom: 20px;
+  color:white;
 }
 
-.footer-columns {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  flex-wrap: wrap;
+.modal-box ul li::marker {
+  color: #00ffe1; /* electric cyan bullets */
 }
-
-.button {
-  background: magenta;
+.close-btn {
+  background: #ff0088;
+  color: white;
   border: none;
-  padding: 10px 20px;
-  font-family: 'Press Start 2P';
-  color: black;
-  margin: 30px auto;
-  display: block;
+  padding: 8px 16px;
   cursor: pointer;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
 }
 
-a.project-link {
-  display: inline-block;
-  background: pink;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 10px;
+.close-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.quote-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  /* changed from flex-end → center */
   text-align: center;
-  color: black;
-  font-size: 12px;
-  text-decoration: none;
 }
 
-.project-link img {
+.quote {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.quote-sub {
   display: block;
-  margin: 0 auto 10px;
-  width: 40px;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #cccccc;
+  text-align: center;
+  margin-top: 8px;
+}
+.bio {
+  font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
+  font-size:1.5rem;
+  line-height: 1.8;}
+
+.bio p {
+  font-size:1.5rem;  line-height: 1.8;
+  margin-bottom: 20px;
+ 
+}
+/* Existing button styles */
+/* CTA: MY VALUES BUTTON — RETRO COLORS */
+.cta {
+  background: #00ffe1; /* Electric cyan base */
+  color: #000044;       /* Deep retro navy text */
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 transparent;
+  position: relative;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffe1, 0 0 20px #00ffe1;
+  background: #00ccbb;
+  color: #000000;
+}
+
+.cta:active {
+  transform: scale(0.97);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.back-button {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  font-size: 24px; /* ↓ reduced from 50px */
+  font-family: 'Press Start 2P', monospace;
+  background-color: #7ece06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 3px solid #ff0000;
+  box-shadow: 3px 3px 0 #000;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  display: table; /* keeps it centered if needed */
+}
+  
+  
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+ @media (max-width: 768px) {
+  .logo {
+    height: 40px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .quote-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+
+  .quote {
+    font-size: 1.2rem;
+  }
 }
 
 .team-grid {
