@@ -13,19 +13,22 @@ header {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Left alignment */
   align-items: center;
   height: 60px;
+  padding-left: 40px; /* Optional spacing from the left edge */
+  gap: 30px; /* Space between nav links */
+  background-color: #000066;
+  border-top: 4px solid red;
+  border-bottom: 4px solid red;
 }
 
 nav a {
-  flex: 1;
-  text-align: center;
-  line-height: 60px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
+  line-height: 60px;
 }
 
 nav a.active {
