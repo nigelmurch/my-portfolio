@@ -142,10 +142,14 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 .quote {
-  font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
-  text-align: center;
+  font-family: "JetBrains Mono", monospace;
   font-style: italic;
   font-size: 1.5rem;
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: flex-end; /* push text to right */
+  text-align: right;
+}
 }
 
 .quote p {
