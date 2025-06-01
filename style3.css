@@ -97,40 +97,41 @@ body {
   font-size: 12px;
 }
 /* Existing button styles */
-.cta,
-.back-btn {
-  background: #ff0088;
-  color: white;
-  border: 2px solid transparent;
+
+.back-button {
+  display: inline-block;
+  margin: 30px auto;
   padding: 10px 20px;
-  cursor: pointer;
-  font-size: 10px;
+  font-size: 24px; /* ↓ reduced from 50px */
   font-family: 'Press Start 2P', monospace;
-  transition: all 0.2s ease;
-  box-shadow: 0 0 0 transparent;
-  position: relative;
-}
-
-.cta:hover,
-.back-btn:hover {
-  transform: scale(1.05);
-  border-color: white;
-  box-shadow: 0 0 8px #ff66c4, 0 0 16px #ff66c4;
-}
-
-.cta:active,
-.back-btn:active {
-  transform: scale(0.97);
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-
-
-.back-btn {
-  background: #ff0088;
-  color: white;
-  border: none;
-  padding: 8px 16px;
+  background-color: #7ece06;
+  color: #ffffff;
+  text-decoration: none;
+  border: 3px solid #ff0000;
+  box-shadow: 3px 3px 0 #000;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
-  font-size: 10px;
+
+  display: table; /* keeps it centered if needed */
 }
+  
+  
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+
+  .back-button:hover {
+    background-color: #ff0000;
+    color: #000000;
+    box-shadow: 2px 2px 0 #000;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      height: 40px;
+    }
+  }
