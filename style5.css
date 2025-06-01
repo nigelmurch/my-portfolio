@@ -13,13 +13,13 @@ header {
 
 nav {
   display: flex;
-  justify-content: flex-start; /* Left alignment */
+  justify-content: flex-end; /* Right alignment */
   align-items: center;
   height: 60px;
-  padding-left: 40px; /* Optional spacing from the left edge */
-  gap: 30px; /* Space between nav links */
+  padding-right: 40px; /* Space from the right edge */
+  gap: 30px; /* Space between links */
   background-color: #000066;
-  border-top: 4px solid red;
+  border-top: 4px;
   border-bottom: 4px solid red;
 }
 
