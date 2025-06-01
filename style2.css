@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Fira Mono', monospace;
+   font-family: "Pixelify Sans", sans-serif;
   color: #FC9536; /* ← Correct spelling and syntax */
   font-style: italic;
   font-size: 2.3rem;
