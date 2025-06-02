@@ -218,35 +218,31 @@ body {
   margin-bottom: 20px;
 }
 
-/* BACK BUTTON */
-.back-button {
+/* Project button */
+.project-button {
   display: inline-block;
   margin: 30px auto;
-  padding: 10px 20px;
-  font-size: 24px;
+  padding: 12px 24px;
+  font-size: 18px;
   font-family: 'Press Start 2P', monospace;
-  background-color: #7ece06;
-  color: #ffffff;
+  background-color: #00ffe1;
+  color: #000044;
   text-decoration: none;
-  border: 3px solid #ff0000;
+  border: 3px solid #ff00ff;
   box-shadow: 3px 3px 0 #000;
-  text-align: center;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  display: table;
+  text-align: center;
 }
 
-.back-button:hover {
-  background-color: #ff0000;
-  color: #000000;
-  box-shadow: 2px 2px 0 #0000
+.project-button:hover {
+  background-color: #ff00ff;
+  color: #000;
+  box-shadow: 2px 2px 0 #000;
 }
 
 
 
-  .footer-content span {
-    margin: 5px 0;
-  }
+ 
 }/* RESPONSIVE */
 @media (max-width: 768px) {
   .logo {
