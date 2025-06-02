@@ -132,7 +132,7 @@ h2 {
 }
 
 .content p {
-       font-family: 'Press Start 2P', monospace;
+      font-family: "JetBrains Mono", monospace;
     font-size: 1.5rem;
   margin: 0.1rem 0;            /* Almost zero margin */
 }
