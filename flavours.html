@@ -26,49 +26,55 @@
   </header>
 
   <main class="project-content">
-   <div class="intro-box">
-  <img src="images/sign.png" alt="Cover" class="project-img" />
-  <p>A co-design UX research project exploring food sovereignty, cultural expression, and Papatuanuku’s wisdom in the digital space.</p>
-  
-  <!-- 👇 Add this button -->
-  <div class="btn-container">
-    <button class="cta" id="openModalBtn">LET'S INVESTIGATE</button>
-  </div>
-</div>
-    <h2>Explore the Project</h2>
-    <img src="images/Website-development.png" alt="sceenshot of homepage" class="modal-img" />
-    <img src="images/club.png" alt="screenshot of club page" class="modal-img" />
-    <button class="close-btn">Close</button>
-  </div>
-</div>
+    <div class="intro-box">
+      <img src="images/sign.png" alt="Cover" class="project-img" />
+      <p>A co-design UX research project exploring food sovereignty, cultural expression, and Papatuanuku’s wisdom in the digital space.</p>
+
+      <!-- Let's Investigate Button -->
+      <div class="btn-container">
+        <button class="cta" id="openModalBtn">LET'S INVESTIGATE</button>
+      </div>
+    </div>
+
     <section class="content-grid">
       <div class="grid-item">
-        <img src="images/food-neophobia.png" alt="screenshot of slde for my problem to solve" class="project-img" />
-        <h3>The Problem! </h3>
-        <p>The problem I wanted to solve is why people are hesitant to trying alternative food sources like invassive flora and fauna, overcoming this leads to exploring the intersection of indigenous identity, seasonal kai, and storytelling.</p>
+        <img src="images/food-neophobia.png" alt="Slide showing food hesitation problem" class="project-img" />
+        <h3>The Problem!</h3>
+        <p>The problem I wanted to solve is why people are hesitant to try alternative food sources like invasive flora and fauna, overcoming this leads to exploring the intersection of indigenous identity, seasonal kai, and storytelling.</p>
       </div>
 
       <div class="grid-item">
         <img src="images/website-development.png" alt="Secondary Research" class="project-img" />
         <h3>Secondary Research</h3>
-        <p>My Aim is to design an interactive platform which will allow me to begin anchoring modern design within Māori values and food sovereignty movements while still focusing on delivering the alternative food source to eco-concious consumers and those who are in financial strife.</p>
+        <p>My aim is to design an interactive platform anchored in Māori values and food sovereignty movements while addressing alternative food options for eco-conscious and financially challenged users.</p>
       </div>
 
       <div class="grid-item">
         <img src="images/survey-slide.png" alt="Initial Research" class="project-img" />
         <h3>Initial Research</h3>
-        <p>Taking note of body language and using other observation methods while conducting surveys and interviews to gauge and center authentic voices and lived experiences into viable data I could then use to develop my research further.</p>
+        <p>Through surveys and interviews, I captured body language and lived experiences to ground the research in real human stories.</p>
       </div>
 
       <div class="grid-item">
         <img src="images/case-studies.png" alt="Case Studies" class="project-img" />
         <h3>Case Studies</h3>
-        <p>My challenge was to start comparing ethical design practices in cultural spaces and food storytelling platforms. Which would then influence my design process. </p>
+        <p>I explored ethical design practices in cultural platforms and storytelling environments to inspire my own process.</p>
       </div>
     </section>
 
+    <!-- Back Button -->
     <div class="btn-container">
       <a href="work.html" class="back-button">⬅ Back to Work</a>
+    </div>
+
+    <!-- 🔍 Investigate Modal -->
+    <div id="investigateModal" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Explore the Project</h2>
+        <img src="images/Website-development.png" alt="Screenshot of homepage" class="modal-img" />
+        <img src="images/club.png" alt="Screenshot of club page" class="modal-img" />
+        <button class="close-btn">Close</button>
+      </div>
     </div>
   </main>
 
@@ -79,23 +85,26 @@
       <span>© 2025 UX Investigator Inc</span>
     </div>
   </footer>
-<script>
-  const modal = document.getElementById('investigateModal');
-  const openBtn = document.getElementById('openModalBtn');
-  const closeBtn = document.querySelector('.close-btn');
 
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
+  <!-- 💡 Modal JavaScript -->
+  <script>
+    const modal = document.getElementById('investigateModal');
+    const openBtn = document.getElementById('openModalBtn');
+    const closeBtn = document.querySelector('.close-btn');
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    closeBtn.addEventListener('click', () => {
       modal.style.display = 'none';
-    }
-  });
-</script></body>
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
 </html>
