@@ -174,8 +174,13 @@ body {
   color: white;
 }
 
+.modal-box ul li {
+  margin-bottom: 8px;
+}
+
 .modal-box ul li::marker {
-  color: #00ffe1;
+  color: #00ffe1; /* 💠 Electric cyan bullets */
+}
 }
 
 .close-btn {
