@@ -2,9 +2,15 @@ const bootTextElement = document.getElementById('bootText');
 const anyKeyElement = document.getElementById('anyKey');
 
 const bootLines = [
-  " **** COMMODORE 64 BASIC V2 ****",
-  " 64K RAM SYSTEM 38911 BASIC BYTES FREE",
-  "READY.",
+  "**** COMMODORE 64 BASIC V2 ****",
+  "64K RAM SYSTEM  38911 BASIC BYTES FREE",
+  "",
+  "UX INVESTIGATOR READY.",
+  "",
+  "LOAD \"PORTFOLIO\",8,1",
+  "SEARCHING FOR PORTFOLIO",
+  "LOADING",
+  "READY."
 ];
 
 let lineIndex = 0;
