@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flavours by Papatūānuku</title>
+  <link rel="stylesheet" href="fbp-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+  <div class="nav-bar">
+    <div class="nav-left">
+      <img class="logo" src="images/logoUXI.png" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">Proclamation</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <header class="section-title">
+    <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
+  </header>
+
+  <main class="project-content">
+    <div class="intro-box">
+      <img src="images/fbp-cover.png" alt="Cover" class="project-img" />
+      <p>A co-design UX research project exploring food sovereignty, cultural expression, and Papatuanuku’s wisdom in the digital space.</p>
+    </div>
+
+    <section class="content-grid">
+      <div class="grid-item">
+        <img src="images/fbp-concepts.png" alt="Concept Board" class="project-img" />
+        <h3>Concept Boards</h3>
+        <p>Exploring the intersection of indigenous identity, seasonal kai, and storytelling.</p>
+      </div>
+
+      <div class="grid-item">
+        <img src="images/fbp-secondary.png" alt="Secondary Research" class="project-img" />
+        <h3>Secondary Research</h3>
+        <p>Anchoring modern design within Māori values and food sovereignty movements.</p>
+      </div>
+
+      <div class="grid-item">
+        <img src="images/fbp-initial.png" alt="Initial Research" class="project-img" />
+        <h3>Initial Research</h3>
+        <p>Using interviews and observation methods to center authentic voices and lived experiences.</p>
+      </div>
+
+      <div class="grid-item">
+        <img src="images/fbp-case.png" alt="Case Studies" class="project-img" />
+        <h3>Case Studies</h3>
+        <p>Comparing ethical design practices in cultural spaces and food storytelling platforms.</p>
+      </div>
+    </section>
+
+    <div class="btn-container">
+      <a href="work.html" class="back-button">⬅ Back to Work</a>
+    </div>
+  </main>
+</body>
+</html>
