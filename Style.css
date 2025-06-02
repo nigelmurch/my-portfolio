@@ -28,8 +28,8 @@ body {
   color: #00ff00;
   margin-bottom: 40px;
   min-height: 200px;
-} /* ✅ This was missing! */
-
+  font-family: 'Press Start 2P', monospace; 
+}
 .any-key {
   font-family: 'Press Start 2P', monospace;
   font-weight: bold;
