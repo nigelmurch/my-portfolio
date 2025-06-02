@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- NAV BAR -->
   <div class="nav-bar">
     <div class="nav-left">
       <img class="logo" src="images/logoUXI.png" alt="Logo" />
@@ -21,20 +22,25 @@
     </ul>
   </div>
 
+  <!-- PAGE HEADER -->
   <header class="section-title">
     <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="project-content">
     <div class="intro-box">
       <img src="images/sign.png" alt="Cover" class="project-img" />
       <p>A co-design UX research project exploring food sovereignty, cultural expression, and Papatuanuku’s wisdom in the digital space.</p>
 
-      <!-- Let's Investigate Button -->
+      <!-- CTA BUTTONS -->
       <div class="btn-container">
         <button class="cta" id="openModalBtn">LET'S INVESTIGATE</button>
-        <button class="cta" id="openMoreModalBtn">MORE WORK</button>     
+        <button class="cta" id="openMoreModalBtn">MORE WORK</button>
+      </div>
     </div>
+
+    <!-- CONTENT GRID -->
     <section class="content-grid">
       <div class="grid-item">
         <img src="images/food-neophobia.png" alt="Slide showing food hesitation problem" class="project-img" />
@@ -61,31 +67,34 @@
       </div>
     </section>
 
-    <!-- Back Button -->
+    <!-- BACK TO WORK -->
     <div class="btn-container">
       <a href="work.html" class="back-button">⬅ Back to Work</a>
     </div>
 
-    <!-- 🔍 Investigate Modal -->
+    <!-- MODAL 1: LET'S INVESTIGATE -->
     <div id="investigateModal" class="modal-overlay">
       <div class="modal-box">
         <h2>Explore the Project</h2>
         <img src="images/home-page.png" alt="Screenshot of homepage" class="modal-img" />
         <img src="images/club.png" alt="Screenshot of club page" class="modal-img" />
-         <img src="images/home-page.png" alt="Screenshot of homepage" class="modal-img" />   
+        <img src="images/home-page.png" alt="Screenshot of homepage" class="modal-img" />
         <button class="close-btn">Close</button>
       </div>
     </div>
-      <!-- Modal 2: MORE WORK -->
-<div id="moreWorkModal" class="modal-overlay">
-  <div class="modal-box">
-    <h2>Additional Work</h2>
-    <img src="images/busadvertising.png" alt="Additional Work Image 1" class="modal-img" />
-    <img src="images/cell&phone.png" alt="Additional Work Image 2" class="modal-img" />
-    <button class="close-btn more-close">Close</button>
-  </div>
-</div>  </main>
 
+    <!-- MODAL 2: MORE WORK -->
+    <div id="moreWorkModal" class="modal-overlay">
+      <div class="modal-box">
+        <h2>Additional Work</h2>
+        <img src="images/busadvertising.png" alt="Additional Work Image 1" class="modal-img" />
+        <img src="images/cell&phone.png" alt="Additional Work Image 2" class="modal-img" />
+        <button class="close-btn close-more">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="footer-content">
       <span>UXinvestigator.com</span>
@@ -94,34 +103,37 @@
     </div>
   </footer>
 
-  <!-- 💡 Modal JavaScript -->
- <script>
-  const modal = document.getElementById('investigateModal');
-  const openBtn = document.getElementById('openModalBtn');
-  const closeBtn = modal.querySelector('.close-btn');
+  <!-- MODAL SCRIPT -->
+  <script>
+    const modal = document.getElementById('investigateModal');
+    const moreModal = document.getElementById('moreWorkModal');
 
-  const moreModal = document.getElementById('moreWorkModal');
-  const openMoreBtn = document.getElementById('openMoreModalBtn');
-  const moreCloseBtn = moreModal.querySelector('.more-close');
+    const openBtn = document.getElementById('openModalBtn');
+    const openMoreBtn = document.getElementById('openMoreModalBtn');
 
-  openBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
+    const closeBtn = modal.querySelector('.close-btn');
+    const closeMoreBtn = moreModal.querySelector('.close-more');
 
-  closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+    openBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
 
-  openMoreBtn.addEventListener('click', () => {
-    moreModal.style.display = 'flex';
-  });
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
 
-  moreCloseBtn.addEventListener('click', () => {
-    moreModal.style.display = 'none';
-  });
+    openMoreBtn.addEventListener('click', () => {
+      moreModal.style.display = 'flex';
+    });
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) modal.style.display = 'none';
-    if (e.target === moreModal) moreModal.style.display = 'none';
-  });
-</script>
+    closeMoreBtn.addEventListener('click', () => {
+      moreModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) modal.style.display = 'none';
+      if (e.target === moreModal) moreModal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
