@@ -24,60 +24,20 @@
     <h1>CONTACT ME</h1>
   </header>
 
-  <main class="contact-wrapper">
-  <div class="contact-content">
-    <form
-      action="https://formspree.io/f/mpwrange"
-      method="POST"
-      enctype="multipart/form-data"
-      id="contactForm"
-      class="contact-form"
-      onsubmit="window.location.hash = '#success'"
-    >
-      <label for="email">Your email:</label>
-      <input type="email" name="email" id="email" required />
+  <section class="retro-contact">
+  <h2>📬 GET IN TOUCH</h2>
+  <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+    <label for="name">NAME</label>
+    <input type="text" id="name" name="name" required />
 
-      <label for="upload">Your file:</label>
-      <input type="file" name="upload" id="upload" />
+    <label for="email">EMAIL</label>
+    <input type="email" id="email" name="email" required />
 
-      <label for="message">Your message:</label>
-      <textarea name="message" id="message" required></textarea>
+    <label for="message">MESSAGE</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit" class="cta">Send Message</button>
-    </form>
-  </div>
-</main>
-
-  <!-- 🎵 Retro Sound Effect -->
-  <audio id="successSound" src="https://freesound.org/data/previews/341/341695_5260877-lq.mp3"></audio>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const confirmationModal = document.getElementById('confirmationModal');
-      const closeModal = document.getElementById('closeModal');
-      const sound = document.getElementById('successSound');
-
-      // Show modal only if redirected back with a success hash
-      if (window.location.hash === '#success') {
-        confirmationModal.style.display = 'flex';
-        if (sound) {
-          sound.currentTime = 0;
-          sound.play();
-        }
-      }
-
-      closeModal.addEventListener('click', () => {
-        confirmationModal.style.display = 'none';
-        window.location.hash = ''; // clear hash
-      });
-
-      window.addEventListener('click', (e) => {
-        if (e.target === confirmationModal) {
-          confirmationModal.style.display = 'none';
-          window.location.hash = '';
-        }
-      });
-    });
-  </script>
+    <button type="submit" class="cta">SEND MESSAGE</button>
+  </form>
+</section>
 </body>
 </html>
