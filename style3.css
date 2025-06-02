@@ -77,7 +77,12 @@ body {
   box-shadow: 0 0 10px #000;
 }
 
+
 /* Modal Styles */
+.modal-box {
+  animation: popIn 0.3s ease-out;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
