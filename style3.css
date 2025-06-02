@@ -7,47 +7,48 @@ body {
 }
 
 .nav-bar {
-    font-family: 'Press Start 2P', monospace;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000aa0;
-    padding: 40px 30px;
-    border-bottom: 4px solid red; /* 🔴 Red line separator */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000aa0;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
 }
 
 .nav-left {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .logo {
-    height: 4em;
-    width: auto;
-    max-height: 100%;
+  height: 4em;
+  width: auto;
+  max-height: 100%;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.2s ease;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
 .nav-links li a:hover {
-    background-color: red;
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
+
 .section-title {
   text-align: center;
   font-size: 2rem;
@@ -67,8 +68,9 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: center; /* Changed from start → center */
+  align-items: center;
 }
+
 .image-container img {
   max-width: 100%;
   border: 4px solid lightgray;
@@ -117,8 +119,9 @@ body {
 }
 
 .modal-box ul li::marker {
-  color: #00ffe1; /* electric cyan bullets */
+  color: #00ffe1;
 }
+
 .close-btn {
   background: #ff0088;
   color: white;
@@ -144,7 +147,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  /* changed from flex-end → center */
+  align-items: center;
   text-align: center;
 }
 
@@ -165,21 +168,24 @@ body {
   text-align: center;
   margin-top: 8px;
 }
+
 .bio {
-  font-family: "JetBrains Mono", monospace;  grid-column: 1 / -1;
-  font-size:1.5rem;
-  line-height: 1.8;}
+  font-family: "JetBrains Mono", monospace;
+  grid-column: 1 / -1;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
 
 .bio p {
-  font-size:1.5rem;  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.8;
   margin-bottom: 20px;
- 
 }
-/* Existing button styles */
-/* CTA: MY VALUES BUTTON — RETRO COLORS */
+
+/* CTA Button */
 .cta {
-  background: #00ffe1; /* Electric cyan base */
-  color: #000044;       /* Deep retro navy text */
+  background: #00ffe1;
+  color: #000044;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
@@ -206,7 +212,7 @@ body {
   display: inline-block;
   margin: 30px auto;
   padding: 10px 20px;
-  font-size: 24px; /* ↓ reduced from 50px */
+  font-size: 24px;
   font-family: 'Press Start 2P', monospace;
   background-color: #7ece06;
   color: #ffffff;
@@ -216,25 +222,85 @@ body {
   text-align: center;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-
-  display: table; /* keeps it centered if needed */
+  display: table;
 }
-  
-  
-  .back-button:hover {
-    background-color: #ff0000;
-    color: #000000;
-    box-shadow: 2px 2px 0 #000;
-  }
 
+.back-button:hover {
+  background-color: #ff0000;
+  color: #000000;
+  box-shadow: 2px 2px 0 #000;
+}
 
-  .back-button:hover {
-    background-color: #ff0000;
-    color: #000000;
-    box-shadow: 2px 2px 0 #000;
-  }
+/* RETRO CONTACT FORM */
+.retro-contact {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #000aa0;
+  border: 4px solid red;
+  box-shadow: 4px 4px 0 #ff00ff;
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  text-align: center;
+}
 
- @media (max-width: 768px) {
+.retro-contact h2 {
+  color: orange;
+  font-size: 16px;
+  text-shadow: 2px 2px 0 #000;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-size: 10px;
+  color: #00ffe1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #000044;
+  color: white;
+  border: 2px solid #ff00ff;
+  padding: 10px;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #00ffe1;
+  box-shadow: 0 0 5px #00ffe1;
+}
+
+.contact-form .cta {
+  background: #00ffe1;
+  color: #000;
+  border: 2px solid #ff00ff;
+  font-size: 10px;
+  font-family: 'Press Start 2P', monospace;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.contact-form .cta:hover {
+  background: #ff00ff;
+  color: white;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
   .logo {
     height: 40px;
   }
