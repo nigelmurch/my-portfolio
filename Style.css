@@ -1,35 +1,48 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
   background-color: #0000aa;
   color: #00ff00;
   font-family: 'Press Start 2P', monospace;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .screen {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 90%;
-  max-width: 700px;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
   padding: 40px;
   background-color: #000088;
   border: 4px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
+  overflow-y: auto;
 }
 
 .boot-text {
   white-space: pre-wrap;
   font-size: 12px;
   line-height: 1.6;
+  letter-spacing: 1px;
   color: #00ff00;
-  margin-bottom: 40px;
-  min-height: 200px;
-  font-family: 'Press Start 2P', monospace; 
+  font-family: 'Press Start 2P', monospace;
+  flex-grow: 1;
+  width: 100%;
 }
+
 .any-key {
   font-family: 'Press Start 2P', monospace;
   font-weight: bold;
@@ -38,6 +51,8 @@ body {
   animation: blink 1s infinite;
   text-align: center;
   color: #00ff00;
+  width: 100%;
+  padding-top: 20px;
 }
 
 @keyframes blink {
