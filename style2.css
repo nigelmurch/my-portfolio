@@ -106,7 +106,7 @@ h2 {
 }
 
 .quote {
-    font-family: "Pompiere", sans-serif;
+    font-family: "Pompiere", sans-serif, italic;
     color: #fff;
     text-align: center;
     font-size: 1.5rem;
