@@ -144,7 +144,7 @@ h3 {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
   margin: 1rem 0; /* You can adjust this value for more or less space */
-  line-height: o.9; /* Optional: improves readability */
+  line-height: 1.2; /* Optional: improves readability */
 }
 
 .content ul {
