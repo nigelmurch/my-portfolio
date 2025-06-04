@@ -143,8 +143,8 @@ h3 {
 .content p {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
-  margin: 1rem 0; /* You can adjust this value for more or less space */
-  line-height: 1.2; /* Optional: improves readability */
+  margin: 0.9rem 0; /* Top and bottom spacing between paragraphs */
+  line-height: 1.7; /* Optional: improves text readability */
 }
 
 .content ul {
