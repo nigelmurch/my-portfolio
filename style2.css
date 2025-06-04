@@ -95,7 +95,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.3rem;
+  font-size: 2.3rem;
   color:#FF13FO;
 }
 
@@ -148,6 +148,7 @@ h3 {
 
 .content ul {
   font-family: "JetBrains Mono", monospace;
+  font-size:1.5rem;
   font-size: 1.5rem;
   margin: 0.1rem 0;
   margin-left: 1.2rem;
@@ -166,24 +167,7 @@ h3 {
   margin-bottom: 0;
 }
 
-/* Signature */
-.signature {
-  margin-top: 5px;
-  text-align: left;
-  font-family: "JetBrains Mono", monospace;
-  color: rgb(253, 250, 251);
-  font-size: 1rem;
-}
-
-.signature img {
-  width: 50rem;
-  height: auto;
-  display: block;
-  margin-top: 1px;
-  margin-left: -50px;
-}
-
-/* Back Button */
+/* Return Button */
 .back-button {
   display: inline-block;
   margin: 30px auto;
