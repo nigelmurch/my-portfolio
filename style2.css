@@ -143,7 +143,7 @@ h3 {
 .content p {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
-  margin: 10.1rem 0; /* Top and bottom spacing between paragraphs */
+  margin: -1.1rem 0; /* Top and bottom spacing between paragraphs */
   line-height: 1.7; /* Optional: improves text readability */
 }
 
