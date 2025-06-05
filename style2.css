@@ -9,8 +9,6 @@ body {
   box-sizing: border-box;
 }
 
-
-
 /* Navigation */
 .nav-bar {
   font-family: 'Press Start 2P', monospace;
@@ -87,6 +85,18 @@ h1 {
   }
 }
 
+ <main class="about-content">
+  <div class="image-container">
+    <img src= />
+  </div>
+
+ <div class="quote-wrapper">
+  <p class="quote">
+    “Your users have secrets, I find them.”<br>
+    <span class="quote-sub">(<em>ethically, of course</em>)</span>
+  </p>
+  <button class="cta">My Values</button>
+</div>
 h2 {
   font-family: "JetBrains Mono", monospace;
   color: #FFFFFF;
