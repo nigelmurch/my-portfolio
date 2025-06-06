@@ -219,24 +219,23 @@ h3 {
 
 /* ------------------ RETURN BUTTON ------------------ */
 .back-button {
-  display: block;
-  margin: 3rem auto 1rem;
-  padding: 12px 24px;
+  display: inline-block;
+  margin: 3rem 0 1rem;
+  padding: 10px 20px;
   font-size: 1rem;
   font-family: 'Press Start 2P', monospace;
-  background-color: #66e0ff; /* Light blue base */
+  background-color: #66e0ff;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   text-decoration: none;
   border: 3px solid #000;
   box-shadow: 4px 4px 0 #000;
   transition: all 0.2s ease-in-out;
-  text-align: center;
   cursor: pointer;
 }
 
 .back-button:hover {
-  background-color: #1E90FF; /* Hover deep blue */
+  background-color: #0033cc;
   color: white;
   box-shadow: 2px 2px 0 #000;
 }
