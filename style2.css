@@ -1,4 +1,3 @@
-/* General body styles */
 body {
   font-family: "JetBrains Mono", monospace, sans-serif;
   line-height: 1.6;
@@ -85,18 +84,65 @@ h1 {
   }
 }
 
- <main class="about-content">
-  <div class="image-container">
-    <img src= />
-  </div>
+/* About section image + quote side-by-side */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 0;
+}
 
- <div class="quote-wrapper">
-  <p class="quote">
-    “Your users have secrets, I find them.”<br>
-    <span class="quote-sub">(<em>ethically, of course</em>)</span>
-  </p>
-  <button class="cta">My Values</button>
-</div>
+.image-container img {
+  width: 50%; /* Resizes image to 50% */
+  height: auto;
+  max-width: 300px;
+  border: 3px solid #fff;
+  border-radius: 12px;
+}
+
+.quote-wrapper {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+}
+
+.quote-wrapper .quote {
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+/* Quote block */
+.quote {
+  font-family: "Pompiere", sans-serif;
+  color: #fff;
+  margin: 10px auto;
+  width: 98%;
+  max-width: 1280px;
+}
+
+.quote span {
+  color: #fff;
+}
+
+.cta {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  background-color: #ff007f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #ff0055;
+}
+
+/* Headings */
 h2 {
   font-family: "JetBrains Mono", monospace;
   color: #FFFFFF;
@@ -106,11 +152,10 @@ h2 {
 
 h3 {
   font-size: 2.3rem;
-  color:#FF13FO;
+  color: #FF13FO; /* Note: FO is invalid. Consider changing to F0 */
 }
 
-
-
+/* Animated background */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -121,21 +166,6 @@ h3 {
   100% {
     background-position: 0% 50%;
   }
-}
-
-/* Quote block */
-.quote {
-  font-family: "Pompiere", sans-serif;
-  color: #fff;
-  text-align: center;
-  font-size: 1.5rem;
-  margin: 10px auto;
-  width: 98%;
-  max-width: 1280px;
-}
-
-.quote span {
-  color: #fff;
 }
 
 /* Content styling */
@@ -153,13 +183,12 @@ h3 {
 .content p {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
-  margin: -1.1rem 0; /* Top and bottom spacing between paragraphs */
-  line-height: 1.7; /* Optional: improves text readability */
+  margin: -1.1rem 0;
+  line-height: 1.7;
 }
 
 .content ul {
   font-family: "JetBrains Mono", monospace;
-  font-size:1.5rem;
   font-size: 1.5rem;
   margin: 0.1rem 0;
   margin-left: 1.2rem;
@@ -185,8 +214,9 @@ h3 {
   padding: 10px 20px;
   font-size: 24px;
   font-family: 'Press Start 2P', monospace;
-  background-color: #7ece06;
-  color: #ffffff;
+  text-shadow: #000000 2px;  background-color: #7ece06;
+  color: #66ffff;
+  
   text-decoration: none;
   border: 3px solid #ff0000;
   box-shadow: 3px 3px 0 #000;
@@ -202,8 +232,21 @@ h3 {
   box-shadow: 2px 2px 0 #000;
 }
 
-  @media (max-width: 768px) {
-    .logo {
-      height: 40px;
-    }
+@media (max-width: 768px) {
+  .logo {
+    height: 40px;
   }
+
+  .about-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .quote-wrapper {
+    text-align: center;
+  }
+
+  .quote-wrapper .quote {
+    text-align: center;
+  }
+}
