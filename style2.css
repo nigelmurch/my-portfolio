@@ -264,3 +264,10 @@ h3 {
     width: 180px;
   }
 }
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
