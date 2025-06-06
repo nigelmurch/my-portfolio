@@ -1,33 +1,27 @@
+/* ------------------ BASE ------------------ */
 body {
   font-family: "JetBrains Mono", monospace, sans-serif;
-  line-height: 1.6;
   background-color: #0000aa;
   color: #f0f0f0;
+  margin: 0;
   padding: 2rem;
-  text-align: center;
   box-sizing: border-box;
 }
 
-/* Navigation */
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   background-color: #000aa0;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-}
-
-.nav-left {
-  flex-shrink: 0;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .logo {
   height: 4em;
   width: auto;
-  max-height: 100%;
 }
 
 .nav-links {
@@ -42,30 +36,29 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  text-transform: lowercase;
 }
 
-nav a:hover {
+.nav-links li a.active {
+  text-decoration: underline;
+}
+
+.nav-links li a:hover {
   background-color: red;
   color: white;
+  padding: 0 5px;
 }
 
-/* Heading */
+/* ------------------ HEADINGS ------------------ */
 .heading-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  width: 100%;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  margin: 0 auto 2rem;
 }
 
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 3.5rem;
-  margin-bottom: 10px;
   background: linear-gradient(90deg, #ff007f, #7f00ff, #00e5ff);
   background-size: 200%;
   background-clip: text;
@@ -73,31 +66,44 @@ h1 {
   color: transparent;
   -webkit-text-fill-color: transparent;
   animation: retro-glow 4s ease-in-out infinite alternate;
+  margin-bottom: 0.5rem;
 }
 
 @keyframes retro-glow {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
-/* About section image + quote side-by-side */
-.about-content {
+h2 {
+  font-family: "Marcellus", serif;
+  font-size: 2.5rem;
+  font-style: italic;
+  color: #ffccff;
+  margin-bottom: 0.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* ------------------ ABOUT SECTION ------------------ */
+.about-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
   flex-wrap: wrap;
-  padding: 40px 0;
 }
 
 .image-container img {
-  width: 95%; /* Resizes image to 50% */
+  width: 220px;
   height: auto;
-  max-width: 300px;
   border: 3px solid #fff;
   border-radius: 12px;
 }
@@ -105,36 +111,29 @@ h1 {
 .quote-wrapper {
   flex: 1;
   max-width: 600px;
-  text-align: left;
 }
 
 .quote-wrapper .quote {
-  text-align: left;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-/* Quote block */
-.quote {
-  font-family: "Pompiere", sans-serif;
-  color: #fff;
-  margin: 10px auto;
-  width: 98%;
-  max-width: 1280px;
+.quote-sub {
+  font-size: 1rem;
+  opacity: 0.7;
 }
 
-.quote span {
-  color: #fff;
-}
-
+/* ------------------ BUTTON ------------------ */
 .cta {
-  margin-top: 20px;
   padding: 10px 20px;
   font-family: 'Press Start 2P', monospace;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: #ff007f;
-  border: none;
   color: white;
+  border: none;
   cursor: pointer;
+  text-transform: uppercase;
   transition: background-color 0.3s ease;
 }
 
@@ -142,111 +141,96 @@ h1 {
   background-color: #ff0055;
 }
 
-/* Headings */
-h2 {
-  font-family: "JetBrains Mono", monospace;
-  color: #FFFFFF;
-  font-style: italic;
-  font-size: 3.3rem;
-}
-
-h3 {
-  font-size: 2.3rem;
-  color: #FF13FO; /* Note: FO is invalid. Consider changing to F0 */
-}
-
-/* Animated background */
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Content styling */
+/* ------------------ CONTENT ------------------ */
 .content {
-  font-weight: 400;
-  font-style: normal;
-  max-width: 1280px;
-  margin: 0 auto;
-  line-height: 0.9;
-  font-size: 1.5rem;
-  white-space: pre-wrap;
+  max-width: 1000px;
+  margin: 2rem auto;
+  font-size: 1.3rem;
+  line-height: 1.6;
   text-align: left;
 }
 
 .content p {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
-  margin: -1.1rem 0;
-  line-height: 1.7;
+  margin: 0.5rem 0;
 }
 
 .content ul {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
-  margin: 0.1rem 0;
-  margin-left: 1.2rem;
-  padding-left: 0.6rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
 }
 
 .content ul li {
-  margin-bottom: 0.05rem;
+  margin-bottom: 0.2rem;
 }
 
-.content > *:first-child {
-  margin-top: 0;
+/* ------------------ QUOTE ------------------ */
+.quote {
+  font-family: "Pompiere", cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 2rem 0;
+  text-align: center;
 }
 
-.content > *:last-child {
-  margin-bottom: 0;
+/* ------------------ SIGNATURE ------------------ */
+.signature {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
 }
 
-/* Return Button */
+/* ------------------ HIGHLIGHT ------------------ */
+.highlight {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* ------------------ RETURN BUTTON ------------------ */
 .back-button {
-  display: inline-block;
-  margin: 30px auto;
+  display: block;
+  margin: 3rem auto 1rem;
   padding: 10px 20px;
-  font-size: 24px;
+  font-size: 1rem;
   font-family: 'Press Start 2P', monospace;
-  text-shadow: #000000 2px;  background-color: #7ece06;
+  background-color: #7ece06;
   color: #66ffff;
-  
   text-decoration: none;
   border: 3px solid #ff0000;
   box-shadow: 3px 3px 0 #000;
-  text-align: center;
   transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  display: table;
+  text-align: center;
 }
 
 .back-button:hover {
   background-color: #ff0000;
-  color: #000000;
+  color: #000;
   box-shadow: 2px 2px 0 #000;
 }
 
+/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
-  .logo {
-    height: 40px;
-  }
-
-  .about-content {
+  .nav-bar {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .quote-wrapper {
     text-align: center;
   }
 
-  .quote-wrapper .quote {
-    text-align: center;
+  .content {
+    padding: 0 1rem;
+  }
+
+  .image-container img {
+    width: 180px;
   }
 }
