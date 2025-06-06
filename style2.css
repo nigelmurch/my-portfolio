@@ -221,21 +221,23 @@ h3 {
 .back-button {
   display: block;
   margin: 3rem auto 1rem;
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 1rem;
   font-family: 'Press Start 2P', monospace;
-  background-color: #7ece06;
-  color: #66ffff;
+  background-color: #66e0ff; /* Light blue base */
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow */
   text-decoration: none;
-  border: 3px solid #ff0000;
-  box-shadow: 3px 3px 0 #000;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
   transition: all 0.2s ease-in-out;
   text-align: center;
+  cursor: pointer;
 }
 
 .back-button:hover {
-  background-color: #ff0000;
-  color: #000;
+  background-color: #0033cc; /* Hover deep blue */
+  color: white;
   box-shadow: 2px 2px 0 #000;
 }
 
