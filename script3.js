@@ -1,5 +1,5 @@
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
+document.getElementById('contactForm').addEventListener('submit', function (event) {
   event.preventDefault();
 
   const name = document.getElementById('name').value.trim();
@@ -37,11 +37,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   document.getElementById('contactForm').reset();
 });
 
-function validateEmail(email) {
-  const re = /\S+@\S+\.\S+/;
-  return re.test(email);
-}
-
+// Modal close logic
 document.getElementById('closeConfirmBtn').addEventListener('click', () => {
   document.getElementById('confirmationModal').style.display = 'none';
 });
@@ -52,3 +48,8 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+function validateEmail(email) {
+  const re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
