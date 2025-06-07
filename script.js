@@ -42,7 +42,7 @@ document.addEventListener('keydown', () => {
 });
 
 document.addEventListener('click', () => {
-  window.location.href = '/home'; // Allow click anywhere
+  window.location.href = '/about'; // Allow click anywhere
 });
 
 typeLine();
