@@ -25,19 +25,27 @@
   </header>
 
   <section class="retro-contact">
-    <h2>📬 GET IN TOUCH</h2>
-    <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-      <label for="name">NAME</label>
-      <input type="text" id="name" name="name" required />
+    <div class="contact-container">
+      <h2>📬 GET IN TOUCH</h2>
+      <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+        <div class="input-group">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required />
+        </div>
 
-      <label for="email">EMAIL</label>
-      <input type="email" id="email" name="email" required />
+        <div class="input-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required />
+        </div>
 
-      <label for="message">MESSAGE</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <div class="input-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
 
-      <button type="submit" class="cta">SEND MESSAGE</button>
-    </form>
+        <button type="submit" class="btn">SEND MESSAGE</button>
+      </form>
+    </div>
 
     <!-- 🔔 Confirmation Modal -->
     <div id="confirmationModal" class="modal-overlay">
