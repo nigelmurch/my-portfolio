@@ -3,81 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me - Nigel Murch</title>
-  <link rel="stylesheet" href="style3.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <title>Contact Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="nav-bar">
-    <div class="nav-left">
-      <img class="logo" src="images/logoUXI.png" alt="Logo" />
+
+  <h1 class="section-title">Contact Us</h1>
+  <section class="retro-contact">
+    <div class="contact-container">
+      <h2>Say Hello</h2>
+      <form id="contactForm" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+        <div class="input-group">
+          <label for="name">NAME</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="input-group">
+          <label for="email">EMAIL</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="input-group">
+          <label for="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="input-group">
+          <label for="message">MESSAGE</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formMessage"></p>
+      </form>
     </div>
-    <ul class="nav-links">
-      <li><a href="home.html">home</a></li>
-      <li><a href="about.html">individual work</a></li>
-      <li><a href="work.html">group work</a></li>
-      <li><a href="contact.html" class="active">contact</a></li>
-    </ul>
-  </div>
+  </section>
 
-  <header class="section-title">
-    <h1>CONTACT ME</h1>
-  </header>
-
- <section class="retro-contact">
-  <div class="contact-container">
-    <h2>📬 GET IN TOUCH</h2>
-    <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-      <div class="input-group">
-        <label for="name">NAME</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-
-      <div class="input-group">
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-
-      <div class="input-group">
-        <label for="message">MESSAGE</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-
-      <button type="submit" class="btn">SEND MESSAGE</button>
-    </form>
-  </div>
-
-  <!-- 🔔 Confirmation Modal -->
-  <div id="confirmationModal" class="modal-overlay">
-    <div class="modal-box">
-      <h2>MESSAGE SENT</h2>
-      <p>Thanks for reaching out! I’ll be in touch soon. 📨</p>
-      <button type="submit" class="btn">SEND MESSAGE</button>
-    </div>
-  </div>
-</section>
-
-  <!-- ✅ Confirmation Modal Script -->
-  <script>
-    const form = document.querySelector('.contact-form');
-    const confirmModal = document.getElementById('confirmationModal');
-    const closeConfirmBtn = document.getElementById('closeConfirmBtn');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Prevent default form submission
-      confirmModal.style.display = 'flex';
-      form.reset(); // Optional: reset form
-    });
-
-    closeConfirmBtn.addEventListener('click', () => {
-      confirmModal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === confirmModal) {
-        confirmModal.style.display = 'none';
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
