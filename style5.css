@@ -13,11 +13,11 @@ body {
 
 h1{
    font-family: "Press Start 2P", system-ui;
-  font-size:4rem;
+   font-size: 3.5rem;
 }
 
 
-h1, h2, p {
+h2, p {
   color: inherit;
   font-size: 12px;
 }
