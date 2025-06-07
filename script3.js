@@ -1,14 +1,20 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting
+  const form = document.getElementById('contactForm');
+  const formMessage = document.getElementById('formMessage');
 
-    // Get form values
+  if (!form || !formMessage) {
+    console.error('Form or message element not found.');
+    return;
+  }
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const subject = document.getElementById('subject').value.trim();
     const message = document.getElementById('message').value.trim();
-    const formMessage = document.getElementById('formMessage');
 
     // Simple validation
     if (name.length < 2) {
@@ -35,15 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    // If validation passes
     formMessage.textContent = 'Thank you! Your message has been sent.';
     formMessage.style.color = 'green';
-
-    // Reset form
-    document.getElementById('contactForm').reset();
+    form.reset();
   });
 
-  // Email validation function
   function validateEmail(email) {
     const re = /\S+@\S+\.\S+/;
     return re.test(email);
