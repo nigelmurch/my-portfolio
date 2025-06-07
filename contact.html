@@ -24,38 +24,38 @@
     <h1>CONTACT ME</h1>
   </header>
 
-  <section class="retro-contact">
-    <div class="contact-container">
-      <h2>📬 GET IN TOUCH</h2>
-      <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <div class="input-group">
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <div class="input-group">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="input-group">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-
-        <button type="submit" class="btn">SEND MESSAGE</button>
-      </form>
-    </div>
-
-    <!-- 🔔 Confirmation Modal -->
-    <div id="confirmationModal" class="modal-overlay">
-      <div class="modal-box">
-        <h2>MESSAGE SENT</h2>
-        <p>Thanks for reaching out! I’ll be in touch soon. 📨</p>
-        <button class="close-btn" id="closeConfirmBtn">Close</button>
+ <section class="retro-contact">
+  <div class="contact-container">
+    <h2>📬 GET IN TOUCH</h2>
+    <form class="contact-form" action="mailto:youremail@example.com" method="POST" enctype="text/plain">
+      <div class="input-group">
+        <label for="name">NAME</label>
+        <input type="text" id="name" name="name" required />
       </div>
+
+      <div class="input-group">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="input-group">
+        <label for="message">MESSAGE</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">SEND MESSAGE</button>
+    </form>
+  </div>
+
+  <!-- 🔔 Confirmation Modal -->
+  <div id="confirmationModal" class="modal-overlay">
+    <div class="modal-box">
+      <h2>MESSAGE SENT</h2>
+      <p>Thanks for reaching out! I’ll be in touch soon. 📨</p>
+      <button class="close-btn" id="closeConfirmBtn">Close</button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ✅ Confirmation Modal Script -->
   <script>
