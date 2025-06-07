@@ -28,7 +28,7 @@
 
   <section class="retro-contact">
    <div class="contact-page">
-  <form id="contactForm" action="https://formsubmit.co/ 8a30b6315dc2bd0dd911e6526c469ae4" method="POST">
+<form id="contactForm" action="https://formsubmit.co/8a30b6315dc2bd0dd911e6526c469ae4" method="POST">
     <h2>📡 GET IN TOUCH</h2>
     
     <label for="name">Name</label>
@@ -61,40 +61,16 @@
   </div>
 
   <script>
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // You can still use FormSubmit to actually send the form
-      fetch('https://formsubmit.co/el/vezodi', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams(new FormData(this)).toString()
-      })
-      .then(response => {
-        document.getElementById('thankYouModal').style.display = 'flex';
-
-        setTimeout(() => {
-          window.location.href = 'about.html';
-        }, 2500);
-      })
-      .catch(error => {
-        console.error('Error submitting form:', error);
-        alert('Oops! Something went wrong.');
-      });
-    });
-  </script>
-  <script>
-  const form = document.querySelector("form");
+  const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop the form from submitting instantly
+    e.preventDefault(); // prevent immediate submission
+
     alert("Thanks! Your message has been sent.");
 
     setTimeout(() => {
-      form.submit(); // now submit the form
-    }, 1000); // delay to show message
+      form.submit(); // submit the actual form
+    }, 1000); // optional delay to show message
   });
 </script></body>
 </html>
