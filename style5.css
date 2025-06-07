@@ -1,5 +1,11 @@
 /* BASE STYLES */
 /* Base Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 12px;
   line-height: 1.6;
