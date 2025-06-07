@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Nigel Murch</title>
+  <title>Individual Work</title>
   <link rel="stylesheet" href="style3.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
@@ -20,71 +20,35 @@
     </ul>
   </div>
 
-  <header class="section-title">
-    <h1>Flavours By Papatūānuku</h1>
-  </header>
+  
+  <main class="content">
+    <h1>Flavours by Papatūānuku Kai Verified!</h1>
 
-  <main class="about-content">
-  <div class="image-container">
-    <img src= />
-  </div>
+    <section class="initial-research">
+      <h2>Initial research</h2>
+      <p>Below are four artefacts—Medium, Context, Goal, and Subject—which were the four main points for me to start my research, followed by the 5 Gyory boxes below them.</p>
+    </section>
 
- <div class="quote-wrapper">
-  <p class="quote">
-    “Your users have secrets, I find them.”<br>
-    <span class="quote-sub">(<em>ethically, of course</em>)</span>
-  </p>
-  <button class="cta">My Values</button>
-</div>
+    <section class="image-section">
+      <img src="#" alt="Rocky coastline" />
+      <p>The first artefact that I chose was a photograph of a rocky coastline...</p>
+    </section>
 
-  <div class="bio">
-    <p><strong>Nigel Murch</strong> is a UX researcher and service designer focused on creating digital experiences that are authentic, ethical, sustainable, and intuitive.</p>
+    <section class="kaitiakitanga-section">
+      <h3>Kaitiakitanga: What is it?</h3>
+      <p>Kaitiakitanga is a Māori term that refers to guardianship...</p>
+    </section>
 
-    <p>Having a deep interest in human psychology and behaviour, Nigel explores how digital design can support – not manipulate – real people. He believes true representation goes beyond diversity checkboxes, using co-design to ensure that communities actively shape the services built for them.</p>
+    <section class="initial-research-description">
+      <h3>Initial Research Description</h3>
+      <p>The initial research description provides an overview...</p>
+    </section>
+  </main>
 
-    <p>Nigel creates digital experiences that are intuitive, inclusive, and sustainable – guided by real user needs and cultural insight, while challenging manipulative design by championing transparency and co-design, ensuring communities shape the services meant for them.</p>
+  <footer>
+    <button type="button" id="nextBtn">Next</button>
+  </footer>
 
-    <p>With a focus on ethical practices and environmental responsibility, his research-led approach turns complexity into clarity, making digital interactions feel effortless and meaningful.</p>
-
-    <a href="home.html" class="back-button">Return</a>
-  </div>
-</main>
-
-  <!--  MODAL CODE HERE -->
-  <div id="valuesModal" class="modal-overlay">
-    <div class="modal-box">
-      <h2>My Values</h2>
-      <ul>
-        <li> Human-centered design</li>
-        <li> Ethical research practices</li>
-        <li> Inclusive & accessible solutions</li>
-        <li> Co-design with communities</li>
-        <li> Transparency over manipulation</li>
-        <li>Sustainable and mindful innovation</li>
-      </ul>
-      <button class="close-btn">Close</button>
-    </div>
-  </div>
-
-  <!-- 🔌 JS for modal -->
-  <script>
-    const modal = document.getElementById('valuesModal');
-    const openBtn = document.querySelector('.cta');
-    const closeBtn = document.querySelector('.close-btn');
-
-    openBtn.addEventListener('click', () => {
-      modal.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
