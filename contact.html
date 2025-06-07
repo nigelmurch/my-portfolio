@@ -29,10 +29,7 @@
   <section class="retro-contact">
     <div class="contact-container">
       <h2>📬 GET IN TOUCH</h2>
-      <form action="https://formsubmit.co/el/vezodi" method="POST" class="contact-form">
-        <input type="hidden" name="_subject" value="New message from portfolio contact form!">
-        <input type="hidden" name="_next" value="thankyou.html">
-
+      <form id="contactForm" class="contact-form">
         <div class="input-group">
           <label for="name">NAME</label>
           <input type="text" id="name" name="name" required />
@@ -54,8 +51,43 @@
         </div>
 
         <button type="submit" class="btn">SEND MESSAGE</button>
+        <div id="formMessage"></div>
       </form>
     </div>
   </section>
+
+  <!-- Thank You Modal -->
+  <div class="modal-overlay" id="thankYouModal">
+    <div class="modal-box">
+      <h2>Thank you for your message!</h2>
+      <p>Redirecting you to the about page...</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // You can still use FormSubmit to actually send the form
+      fetch('https://formsubmit.co/el/vezodi', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(new FormData(this)).toString()
+      })
+      .then(response => {
+        document.getElementById('thankYouModal').style.display = 'flex';
+
+        setTimeout(() => {
+          window.location.href = 'about.html';
+        }, 2500);
+      })
+      .catch(error => {
+        console.error('Error submitting form:', error);
+        alert('Oops! Something went wrong.');
+      });
+    });
+  </script>
 </body>
 </html>
