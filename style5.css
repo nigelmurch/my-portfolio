@@ -11,14 +11,6 @@ body {
   line-height: 1.6;
   background-color: #0000aa;}
 
-
-
-
-h2, p {
-  color: inherit;
-  font-size: 12px;
-}
-
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
@@ -72,6 +64,10 @@ h2, p {
   font-size: 3.5rem;
   color: #00ffff;
 }
+
+.section-title h2 {
+  font-family: "JetBrains Mono", monospace;}
+color:#929696;
 
 .section-title p {
   font-size: 12px;
