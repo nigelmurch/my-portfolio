@@ -11,17 +11,14 @@ body {
   line-height: 1.6;
   background-color: #0000aa;}
 
-h1{
-   font-family: "Press Start 2P", system-ui;
-   font-size: 3.5rem;
-}
 
 
-h2, p {
+
+h1, h2, p {
   color: inherit;
   font-size: 12px;
 }
-/* Navbar */
+
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
@@ -71,7 +68,10 @@ h2, p {
 }
 
 .section-title h1 {
-  color: #00ffff;
+  h1{
+   font-family: "Press Start 2P", system-ui;
+   font-size: 3.5rem;
+}  color: #00ffff;
   font-size: 20px;
 }
 
