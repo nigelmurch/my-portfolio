@@ -3,16 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Form</title>
+  <title>Contact Me - Nigel Murch</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div class="nav-bar">
+    <div class="nav-left">
+      <img class="logo" src="images/logoUXI.png" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="home.html">home</a></li>
+      <li><a href="about.html">individual work</a></li>
+      <li><a href="work.html">group work</a></li>
+      <li><a href="contact.html" class="active">contact</a></li>
+    </ul>
+  </div>
 
-  <h1 class="section-title">Contact Us</h1>
+  <header class="section-title">
+    <h1>📟 CONTACT ME</h1>
+  </header>
+
   <section class="retro-contact">
     <div class="contact-container">
-      <h2>Say Hello</h2>
-      <form id="contactForm" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <h2>📬 GET IN TOUCH</h2>
+      <form id="contactForm">
         <div class="input-group">
           <label for="name">NAME</label>
           <input type="text" id="name" name="name" required />
@@ -30,12 +45,21 @@
 
         <div class="input-group">
           <label for="message">MESSAGE</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="btn">Send Message</button>
-        <p id="formMessage"></p>
+        <button type="submit" class="btn">SEND MESSAGE</button>
+        <p class="form-message" id="formMessage"></p>
       </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="confirmationModal" class="modal-overlay">
+      <div class="modal-box">
+        <h2>✅ MESSAGE SENT</h2>
+        <p>Thanks for reaching out! I’ll be in touch soon. 📨</p>
+        <button class="close-btn" id="closeConfirmBtn">Close</button>
+      </div>
     </div>
   </section>
 
