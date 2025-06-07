@@ -29,30 +29,26 @@
   <section class="retro-contact">
     <div class="contact-container">
       <h2>📬 GET IN TOUCH</h2>
-      <form id="contactForm" class="contact-form">
-        <div class="input-group">
-          <label for="name">NAME</label>
-          <input type="text" id="name" name="name" required />
-        </div>
+    <form id="contactForm" method="POST" action="https://formsubmit.co/nigelmurch@xtra.co.nz">
+  <!-- Replace with your actual email address above -->
 
-        <div class="input-group">
-          <label for="email">EMAIL</label>
-          <input type="email" id="email" name="email" required />
-        </div>
+  <input type="hidden" name="_next" value="https://uxinvestigator.site/about">
+  <input type="hidden" name="_captcha" value="false">
 
-        <div class="input-group">
-          <label for="subject">SUBJECT</label>
-          <input type="text" id="subject" name="subject" required />
-        </div>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
 
-        <div class="input-group">
-          <label for="message">MESSAGE</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
 
-        <button type="submit" class="btn">SEND MESSAGE</button>
-        <div id="formMessage"></div>
-      </form>
+  <label for="subject">Subject</label>
+  <input type="text" id="subject" name="subject" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
     </div>
   </section>
 
