@@ -38,7 +38,7 @@ function typeLine() {
 }
 
 document.addEventListener('keydown', () => {
-  window.location.href = '/home'; // Change this to your actual homepage URL
+  window.location.href = '/about'; // Change this to your actual homepage URL
 });
 
 document.addEventListener('click', () => {
