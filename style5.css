@@ -22,32 +22,45 @@ h1, h2, p {
   font-size: 12px;
 }
 /* Navbar */
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
-  background-color: #111;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  border-bottom: 2px solid #00ff99;
+  background-color: #000aa0;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
 }
 
-.nav-left img.logo {
-  height: 40px;
+.logo {
+  height: 4em;
+  width: auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links a {
-  color: #00ff99;
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+  text-transform: lowercase;
 }
 
-.nav-links a.active {
-  color: #ff00ff;
+.nav-links li a.active {
+  text-decoration: underline;
+}
+
+.nav-links li a:hover {
+  background-color: red;
+  color: white;
+  padding: 0 5px;
 }
 
 /* Page Title */
