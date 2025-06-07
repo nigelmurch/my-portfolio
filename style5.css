@@ -1,12 +1,14 @@
 /* BASE STYLES */
 /* Base Reset & Font */
 body {
-  margin: 0;
-  font-family: 'Press Start 2P', cursive;
-  background-color: #000;
-  color: #00ff99;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
+h1, h2, p {
+  color: inherit;
+  font-size: 12px;
+}
 /* Navbar */
 .nav-bar {
   background-color: #111;
