@@ -1,182 +1,140 @@
 body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  background-color: #0000aa;
-  font-family: 'JetBrains Mono', monospace;
-  color: #ffffff;
-  transform: scale(1.1);
-  transform-origin: top left;
 }
 
-@media (max-width: 768px) {
-  .about-container {
-    padding: 20px;
-    font-size: 1.5rem;
-  }
-}
-
-.about-section {
+.nav-bar {
+  background-color: black;
+  padding: 1rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  justify-content: space-between;
 }
 
-.about-container {
-  max-width: 1728px;
-  text-align: center;
-  background-color: #0000aa;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+.nav-left .logo {
+  width: 40px;
 }
 
-.profile-img {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #ffffff;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 7rem;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  color: #ffcc00;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.skills h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.skills ul {
+.nav-links {
   list-style: none;
-  padding: 0;
-}
-
-.skills li {
-  background-color: #3333cc;
-  margin: 10px 0;
-  padding: 40px;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* 🌟 Contact Form Styling */
-.contact-content {
-  max-width: 600px;
-  height: calc(100vh - 140px); /* Adjust height minus nav/header */
-  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* 🔽 Vertically center */
-  align-items: center;     /* 🔛 Horizontally center */
-  padding: 40px 30px;
-  background-color: #0000aa;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #000;
+  gap: 1rem;
+  margin: 0;
 }
 
-.contact-form {
+.nav-links li a {
+  color: lime;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: cyan;
+}
+
+.section-title {
+  text-align: center;
+  margin: 3rem 0 1rem;
+}
+
+.retro-contact {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.contact-form label {
-  font-size: 14px;
-  color: #00ffe1;
-  text-align: left;
-}
-
-.contact-form input[type="email"],
-.contact-form input[type="file"] {
-  width: 100%;
-  padding: 15px;
-  font-size: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  border: 2px solid #00ffe1;
-  background-color: #000044;
-  color: white;
-  border-radius: 4px;
-}
-
-.contact-form textarea {
-  min-height: 600px; /* ✅ Truly 3x bigger */
-  width: 100%;
-  padding: 15px;
-  font-size: 14px;
-  font-family: 'JetBrains Mono', monospace;
-  border: 2px solid #00ffe1;
-  background-color: #000044;
-  color: white;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: #ff00ff;
-  box-shadow: 0 0 5px #ff00ff;
-}
-
-/* Modal styles */
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
   justify-content: center;
-  z-index: 999;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
 }
 
-@keyframes popIn {
-  0% {
-    transform: scale(0.8) rotate(-2deg);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    opacity: 1;
-  }
+.contact-container {
+  background-color: #000;
+  color: #00ff00;
+  border: 3px solid lime;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 20px lime;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid lime;
+  background-color: black;
+  color: lime;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: lime;
+  color: black;
+  border: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: cyan;
+}
+
+.form-message {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-box {
-  animation: popIn 0.4s ease-out;
-  background: #000aa0;
-  border: 4px solid #ff00ff;
-  padding: 30px;
-  max-width: 500px;
+  background-color: black;
+  color: lime;
+  border: 3px solid lime;
+  padding: 2rem;
   text-align: center;
-  color: white;
-  font-family: 'Press Start 2P', monospace;
-  box-shadow: 0 0 15px #ff00ff;
+  width: 90%;
+  max-width: 400px;
 }
 
 .close-btn {
-  background: #ff0088;
-  color: white;
+  margin-top: 1rem;
+  background-color: lime;
+  color: black;
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', cursive;
   cursor: pointer;
-  font-size: 10px;
-  font-family: 'Press Start 2P', monospace;
-  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background-color: cyan;
 }
