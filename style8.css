@@ -52,6 +52,51 @@ body {
   padding: 0 5px;
 }
 
+/* VIDEO MODAL STYLING */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 170, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #111;
+  border: 2px dashed #00ffff;
+  padding: 30px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 0 20px #ff00ff;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content video {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.modal-footer {
+  margin-top: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 2rem;
+  color: #ff00ff;
+  cursor: pointer;
+}
 /* BACK BUTTON CONTAINER */
 .back-button-container {
   display: flex;
