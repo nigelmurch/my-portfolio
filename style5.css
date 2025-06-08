@@ -89,14 +89,14 @@ body {
   border: 2px dashed #00ffff;
   padding: 30px;
   width: 300px;
+  min-height: 500px; /* ✅ Adjust this value */
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
-
 .work-card:hover {
   transform: scale(1.05);
 }
