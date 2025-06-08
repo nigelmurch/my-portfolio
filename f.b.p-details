@@ -22,6 +22,10 @@
     </ul>
   </div>
 
+<div class="back-button-container">
+  <a href="individual.html" class="retro-button">← Back to Individual Work</a>
+</div>
+
   <!-- Page Title -->
   <header class="section-title">
     <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
