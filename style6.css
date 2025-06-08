@@ -209,43 +209,33 @@ body {
 }
 
 /* Case Studies Section */
+/* Case Studies Section */
 .case-study {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 40px; /* wider side margins */
-  
-  .case-study p {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: #cccccc;
-}
   font-size: 10px;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #cccccc;
-}
-  color: white;
   background: #0000aa;
 }
 
 .case-study h2 {
   color: #00ffe1;
-  font-family: "JetBrains Mono", monospace; 
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
   margin-top: 40px;
   text-shadow: 2px 2px 0 #000;
 }
 
 .case-study p {
-  font-family: 'VT323', monospace; /* or any font you prefer */
-  font-size: 10px;
+  font-family: "JetBrains Mono", monospace; /* You can replace this with another if preferred */
+  font-size: 14px;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #cccccc;
 }
-
 /* Footer */
 .site-footer {
   text-align: center;
