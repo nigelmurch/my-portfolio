@@ -71,20 +71,16 @@ body {
   margin-top: 15px;
 }
 
-/* MAIN CONTENT */
-.content-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
+/* DETAIL BOXES */
 .detail-box {
   background-color: #111;
   border: 2px dashed #00ffff;
   padding: 30px;
-  margin-bottom: 40px;
+  margin: 40px auto;
   box-shadow: 0 0 15px #ff00ff;
   text-align: left;
+  max-width: 900px;
+  width: 90%;
 }
 
 .detail-box h3 {
@@ -93,11 +89,21 @@ body {
   margin-bottom: 20px;
 }
 
-.detail-box p {
+.detail-box p,
+.detail-box ul li {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
   color: #eeeeee;
   line-height: 1.8;
+}
+
+.detail-box ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.detail-box ul li {
+  margin-bottom: 10px;
 }
 
 /* RETRO BUTTON */
@@ -133,6 +139,6 @@ body {
   text-align: center;
   padding: 20px;
   border-top: 2px solid #00ff99;
-  color: #666;
+  color: #999;
   font-size: 10px;
 }
