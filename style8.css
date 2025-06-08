@@ -1,1 +1,53 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'Press Start 2P', monospace;
+  background-color: #0000aa;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000aa0;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+}
+
+.logo {
+  height: 4em;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+.nav-links li a.active {
+  text-decoration: underline;
+}
+
+.nav-links li a:hover {
+  background-color: red;
+  color: white;
+  padding: 0 5px;
+}
