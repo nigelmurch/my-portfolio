@@ -90,7 +90,7 @@ body {
 }
 
 .grid-item h3 {
-  color: yellow;
+  font-family: "JetBrains Mono", monospace;  color: yellow;
   font-size: 1rem;
   margin-top: 15px;
 }
