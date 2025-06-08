@@ -89,30 +89,28 @@ body {
   border: 2px dashed #00ffff;
   padding: 30px;
   width: 300px;
-  min-height: 500px; /* ✅ Adjust this value */
+  text-align: center;
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
-
-  display: flex;
-  flex-direction: column;
+  /* Remove these if added earlier */
+  display: block;
+  min-height: unset;
 }
+
 .work-card:hover {
   transform: scale(1.05);
 }
 
 .retro-button {
   display: inline-block;
-  width: 100%; /* Make all buttons fill the container width */
-  max-width: 200px; /* Ensures a consistent size */
-  text-align: center;
+  margin-top: 20px;
   padding: 10px 15px;
   background-color: #ff00ff;
   color: #000;
   text-decoration: none;
   border: 2px solid #00ffff;
-  font-family: 'Press Start 2P', monospace;
-  box-sizing: border-box;
+}
 
 .retro-button:hover {
   background-color: #00ffff;
