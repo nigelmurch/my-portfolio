@@ -49,8 +49,9 @@ body {
 }
 
 .section-title h1 {
-  color: orange;
-  font-size: 28px;
+  font-family: 'Press Start 2P', monospace;
+  color: #0c2ec7;
+  font-size:3.5rem;
   text-shadow: 2px 2px 0 black;
 }
 
