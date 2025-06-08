@@ -51,7 +51,7 @@ body {
 .section-title h1 {
   font-family: 'Press Start 2P', monospace;
   color: #00dbfc;
-  font-size:3.5rem;
+  font-size: 3.5rem;
   text-shadow: 2px 2px 0 black;
 }
 
@@ -202,9 +202,34 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px #ff66c4;
 }
+
 @keyframes popIn {
   from { transform: scale(0.9); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
+}
+
+/* Case Studies Section */
+.case-study {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 40px; /* wider side margins */
+  font-family: 'Press Start 2P', monospace;
+  color: white;
+  background: #0000aa;
+}
+
+.case-study h2 {
+  color: #00ffe1;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.case-study p {
+  font-size: 10px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #cccccc;
 }
 
 /* Footer */
@@ -247,5 +272,9 @@ body {
   .footer-content {
     flex-direction: column;
     gap: 5px;
+  }
+
+  .case-study {
+    padding: 0 20px; /* smaller padding on mobile */
   }
 }
