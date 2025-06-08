@@ -51,3 +51,10 @@ body {
   color: white;
   padding: 0 5px;
 }
+
+/* BACK BUTTON CONTAINER */
+.back-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0 40px;
+}
