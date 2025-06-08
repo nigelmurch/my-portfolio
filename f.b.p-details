@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Flavours By Papatūānuku - Details</title>
-  <link rel="stylesheet" href="style5.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style7.css" />
+  link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -28,10 +28,25 @@
 
   <!-- Page Title -->
   <header class="section-title">
-    <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
-    <h2>Eat wild. Heal the land. Help each other.</h2>
-  </header>
+  <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
+  <h2>Eat wild. Protect nature. Share kai.</h2>
+</header>
 
+<div class="content-wrapper">
+  <div class="detail-box">
+    <h3>Service Design Purpose</h3>
+    <p>Flavours by Papatūānuku connects eco-conscious consumers with wild and invasive foods to nourish communities and protect native ecosystems.</p>
+  </div>
+
+  <div class="detail-box">
+    <h3>Design Insight</h3>
+    <p>This project is grounded in decolonisation, sustainability, and whanaungatanga. It aims to normalize consumption of wild kai as an act of kaitiakitanga and manaakitanga.</p>
+  </div>
+
+  <div class="back-button-container">
+    <a href="individual.html" class="retro-button">← Back to Individual Work</a>
+  </div>
+</div>
   <!-- Main Content Section -->
   <section class="individual-work-grid">
     <div class="work-card">
