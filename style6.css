@@ -213,7 +213,19 @@ body {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 40px; /* wider side margins */
-  font-family: 'Press Start 2P', monospace;
+  
+  .case-study p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
+  font-size: 10px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #cccccc;
+}
   color: white;
   background: #0000aa;
 }
@@ -226,8 +238,8 @@ body {
 }
 
 .case-study p {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 12px;
+  font-family: 'VT323', monospace; /* or any font you prefer */
+  font-size: 10px;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #cccccc;
