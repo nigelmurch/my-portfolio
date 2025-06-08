@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flavours By Papatūānuku - Details</title>
+  <link rel="stylesheet" href="style5.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+</head>
+<body>
 
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <div class="nav-left">
+      <img class="logo" src="images/logoUXI.png" alt="Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">About |</a></li>
+      <li><a href="individual.html">Individual Work |</a></li>
+      <li><a href="work.html">Group Work |</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Page Title -->
+  <header class="section-title">
+    <h1>FLAVOURS BY PAPATŪĀNUKU</h1>
+    <h2>Eat wild. Heal the land. Help each other.</h2>
+  </header>
+
+  <!-- Main Content Section -->
+  <section class="individual-work-grid">
+    <div class="work-card">
+      <h3>What is F.B.P?</h3>
+      <p>
+        A research-led food design concept encouraging New Zealanders to eat wild, invasive species 
+        like deer, goat, and rabbit — not just to reduce their food costs, but to help heal the ecosystem.
+      </p>
+    </div>
+
+    <div class="work-card">
+      <h3>Who is it for?</h3>
+      <p>
+        Eco-conscious families, hunters, foragers, foodies, and anyone passionate about sustainability 
+        and challenging food neophobia. Especially those struggling with rising costs of living.
+      </p>
+    </div>
+
+    <div class="work-card">
+      <h3>Why Retro Design?</h3>
+      <p>
+        To engage users emotionally and visually, using a familiar visual language from old-school 
+        games and early web nostalgia — perfect for challenging the way we see "future food."
+      </p>
+    </div>
+
+    <div class="work-card">
+      <h3>Where to Next?</h3>
+      <p>
+        Future development includes an interactive recipe book, a forager’s AR guide, and partnerships 
+        with iwi and conservation groups to source and cook invasive species ethically and legally.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>2024 Flavours By Papatūānuku | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>s
