@@ -5,6 +5,9 @@ body {
   font-family: 'Press Start 2P', monospace;
 }
 
+p {
+  font-family: "JetBrains Mono", monospace;
+}
 .nav-bar {
   background: #000aa0;
   padding: 30px 20px;
@@ -208,7 +211,6 @@ body {
   to   { transform: scale(1); opacity: 1; }
 }
 
-/* Case Studies Section */
 /* Case Studies Section */
 .case-study {
   max-width: 900px;
