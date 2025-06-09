@@ -8,6 +8,14 @@ body {
   color: white;
 }
 
+.centered-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
