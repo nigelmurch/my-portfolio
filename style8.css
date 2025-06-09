@@ -46,6 +46,25 @@ body {
   color: white;
   padding: 0 5px;
 }
+
+/* ------------------ END OF NAVIGATION ------------------ */
+
+.section-title {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title h1,
+.section-title h4 {
+  margin: 0 auto;
+}
+}
+
+.section-title h4 {
+  font-size: 0.8rem;
+  margin-top: 20px;
+  line-height: 1.5;
+}
 .project-section {
   padding: 40px 20px;
   max-width: 960px;
