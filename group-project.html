@@ -127,7 +127,6 @@
     </div>
   </div>
 
-<!-- Open Door Project Modals -->
 <div id="openModal1" class="modal-container" onclick="closeModal('openModal1')">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-btn" onclick="closeModal('openModal1')">X</button>
@@ -152,46 +151,61 @@
 <div id="openModal4" class="modal-container" onclick="closeModal('openModal4')">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-btn" onclick="closeModal('openModal4')">X</button>
-   <img src="images/grpsocialmedia-single.png" alt="Open Display 3" class="zoom-img" onclick="toggleZoom(this)">  </div>
+    <img src="images/grpsocialmedia-single.png" alt="Open Display 4" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
 </div>
 
-<!-- Open Modal 5 -->
 <div id="openModal5" class="modal-container" onclick="closeModal('openModal5')">
   <div class="modal-content" onclick="event.stopPropagation()">
     <button class="close-btn" onclick="closeModal('openModal5')">X</button>
-    <img src="images/grpsocilamedia-single2.png" alt="Open Display 4" class="zoom-img" onclick="toggleZoom(this)">
+    <img src="images/grpsocilamedia-single2.png" alt="Open Display 5" class="zoom-img" onclick="toggleZoom(this)">
   </div>
-</div>  
-  <!-- JavaScript -->
-  <script>
-    function toggleImage(id) {
-      var img = document.getElementById(id);
-      img.style.display = img.style.display === "none" ? "block" : "none";
-    }
+</div>
 
-    function openModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
+<div id="openModal6" class="modal-container" onclick="closeModal('openModal6')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal6')">X</button>
+    <img src="images/grp-process.png" alt="Open Display 6" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
+<div id="openModal7" class="modal-container" onclick="closeModal('openModal7')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal7')">X</button>
+    <img src="images/grp-team.png" alt="Open Display 7" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
 
-    function openVideoModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
+<!-- JavaScript -->
+<script>
+  function toggleImage(id) {
+    var img = document.getElementById(id);
+    img.style.display = img.style.display === "none" ? "block" : "none";
+  }
 
-    function closeVideoModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
+  function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
 
-    function toggleZoom(img) {
-      img.classList.toggle("zoomed");
-    }
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
 
-    function toggleVideoZoom(video) {
-      video.classList.toggle("zoomed");
-    }
-  </script>
+  function openVideoModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function closeVideoModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  function toggleZoom(img) {
+    img.classList.toggle("zoomed");
+  }
+
+  function toggleVideoZoom(video) {
+    video.classList.toggle("zoomed");
+  }
+</script>
 </body>
 </html>
