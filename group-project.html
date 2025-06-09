@@ -1,257 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Individual Work - Nigel Murch</title>
-  <link rel="stylesheet" href="style8.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Door & Whetū Mārama Modals</title>
+  <link rel="stylesheet" href="style8.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <div class="nav-bar">
-    <div class="nav-left">
-      <img class="logo" src="images/logoUXI.png" alt="Logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">About |</a></li>
-      <li><a href="individual-work.html">Individual Work |</a></li>
-      <li><a href="group-project.html"class="active">Group Project |</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <h1>Open Door Project</h1>
+  <div class="modal-buttons">
+    <button onclick="openModal('od-img1')">Open Image 1</button>
+    <button onclick="openModal('od-img2')">Open Image 2</button>
+    <button onclick="openModal('od-img3')">Open Image 3</button>
+    <button onclick="openModal('od-img4')">Open Image 4</button>
+    <button onclick="openModal('od-img5')">Open Image 5</button>
+    <button onclick="openVideoModal('od-video')">Open Video</button>
   </div>
 
-  <!-- Page Title -->
-  <header class="section-title">
-    <h1>Group Projects</h1>
-    <h4>"In the symphony of design, even the tiniest cog plays a vital note—precision role, harmony, and progress depend on every part turning in unison."</h4>
-  </header>
-<!-- Whetu Marama Section -->
-<div class="project-section">
   <h1>Whetū Mārama</h1>
-  <div class="center-content">
-    <div class="button-container">
-      <button onclick="openVideoModal('whetuVideo')" class="btn">Watch Video</button>
-      <button class="btn" onclick="openModal('whetuModal1')">Open Display 1</button>
-      <button class="btn" onclick="openModal('whetuModal2')">Open Display 2</button>
-      <button class="btn" onclick="openModal('whetuModal3')">Open Display 3</button>
-      <button class="btn" onclick="openModal('whetuModal4')">Open Display 4</button>
-      <button class="btn" onclick="openModal('whetuModal5')">Open Display 5</button>
-      <button class="btn" onclick="openModal('whetuModal6')">Open Display 6</button>
-      <button class="btn" onclick="openModal('whetuModal7')">Blurb</button>
-    </div>
-    <div class="individual-work-grid">
-      <div class="work-card">
-        <h2>Whetū Mārama</h2>
-        <button class="toggle-image-btn" onclick="toggleImage('hiddenImageWhetu')">Show Image</button>
-        <img id="hiddenImageWhetu" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Whetū Mārama Video Modal -->
-<div id="whetuVideo" class="modal-container" onclick="closeModal('whetuVideo')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">✕</button>
-    <video muted playsinline controls onclick="toggleVideoZoom(this)">
-      <source src="images/whetu-marama-website.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-<!-- Whetu Marama Modals 1–6 -->
-<div id="whetuModal1" class="modal-container" onclick="closeModal('whetuModal1')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal1')">X</button>
-    <img src="images/whetu-display1.jpg" alt="Whetu Display 1" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="whetuModal2" class="modal-container" onclick="closeModal('whetuModal2')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal2')">X</button>
-    <img src="images/whetu-display2.jpg" alt="Whetu Display 2" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="whetuModal3" class="modal-container" onclick="closeModal('whetuModal3')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal3')">X</button>
-    <img src="images/whetu-display3.jpg" alt="Whetu Display 3" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="whetuModal4" class="modal-container" onclick="closeModal('whetuModal4')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal4')">X</button>
-    <img src="images/whetu-display4.jpg" alt="Whetu Display 4" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="whetuModal5" class="modal-container" onclick="closeModal('whetuModal5')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal5')">X</button>
-    <img src="images/whetu-display5.jpg" alt="Whetu Display 5" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="whetuModal6" class="modal-container" onclick="closeModal('whetuModal6')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal6')">X</button>
-    <img src="images/whetu-display6.jpg" alt="Whetu Display 6" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<!-- Whetu Marama Blurb Modal -->
-<div id="whetuModal7" class="modal-container" onclick="closeModal('whetuModal7')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('whetuModal7')">X</button>
-    <p>Whetū Mārama is a guiding star of inspiration. Our design celebrates its influence through storytelling, vibrant visuals, and interactive experiences to empower users and guide them toward wellbeing and cultural connection.</p>
-  </div>
-</div>
-
-  <!-- Open Door Section -->
-  <div class="project-section">
-    <h1>Open Door Project</h1>
-    <div class="center-content">
-      <div class="button-container">
-        <button onclick="openVideoModal('openVideo')" class="btn">Watch Video</button>
-        <button class="btn" onclick="openModal('openModal1')">Open Display 1</button>
-        <button class="btn" onclick="openModal('openModal2')">Open Display 2</button>
-        <button class="btn" onclick="openModal('openModal3')">Open Display 3</button>
-        <button class="btn" onclick="openModal('openModal4')">Open Display 4</button>
-        <button class="btn" onclick="openModal('openModal5')">Open Display 5</button>
-        <button class="btn" onclick="openModal('openModal6')">Open Display 6</button> 
-        <button class="btn" onclick="openModal('whetuModal7')">Blurb</button>
-      </div>
-      <div class="individual-work-grid">
-        <div class="work-card">
-          <h2>Open Door Project</h2>
-          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage3')">Show Image</button>
-          <img id="hiddenImage3" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
-        </div>
-      </div>
-    </div>
+  <div class="modal-buttons">
+    <button onclick="openModal('wm-img1')">Open Image 1</button>
+    <button onclick="openModal('wm-img2')">Open Image 2</button>
+    <button onclick="openModal('wm-img3')">Open Image 3</button>
+    <button onclick="openModal('wm-img4')">Open Image 4</button>
+    <button onclick="openModal('wm-img5')">Open Image 5</button>
+    <button onclick="openVideoModal('wm-video')">Open Video</button>
   </div>
 
-  <!-- Open Video Modal -->
-  <div id="openVideo" class="modal-container">
+  <!-- Image Modals for Open Door -->
+  <div id="od-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img1')">✕</span><img src="img/open-door-1.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img2')">✕</span><img src="img/open-door-2.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img3')">✕</span><img src="img/open-door-3.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img4')">✕</span><img src="img/open-door-4.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img5')">✕</span><img src="img/open-door-5.jpg" onclick="toggleZoom(this)"></div></div>
+
+  <!-- Video Modal for Open Door -->
+  <div id="od-video" class="modal-container">
     <div class="modal-content">
-      <button class="close-btn" onclick="closeVideoModal('openVideo')">X</button>
-      <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
-        <source src="images/open-door-project.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+      <span class="close-button" onclick="closeVideoModal('od-video')">✕</span>
+      <video controls onclick="toggleVideoZoom(this)">
+        <source src="videos/open-door.mp4" type="video/mp4">
+        Your browser does not support video.
       </video>
     </div>
   </div>
 
-<div id="openModal1" class="modal-container" onclick="closeModal('openModal1')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal1')">X</button>
-    <img src="images/grp-research1.png" alt="Open Display 1" class="zoom-img" onclick="toggleZoom(this)">
+  <!-- Image Modals for Whetū Mārama -->
+  <div id="wm-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img1')">✕</span><img src="img/whetu-marama-1.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img2')">✕</span><img src="img/whetu-marama-2.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img3')">✕</span><img src="img/whetu-marama-3.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img4')">✕</span><img src="img/whetu-marama-4.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="img/whetu-marama-5.jpg" onclick="toggleZoom(this)"></div></div>
+
+  <!-- Video Modal for Whetū Mārama -->
+  <div id="wm-video" class="modal-container">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeVideoModal('wm-video')">✕</span>
+      <video controls onclick="toggleVideoZoom(this)">
+        <source src="videos/whetu-marama.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
   </div>
-</div>
 
-<div id="openModal2" class="modal-container" onclick="closeModal('openModal2')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal2')">X</button>
-    <img src="images/grp-social-mediatemplates.png" alt="Open Display 2" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="openModal3" class="modal-container" onclick="closeModal('openModal3')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal3')">X</button>
-    <img src="images/grp-usercase-studies.png" alt="Open Display 3" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="openModal4" class="modal-container" onclick="closeModal('openModal4')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal4')">X</button>
-    <img src="images/grpsocialmedia-single.png" alt="Open Display 4" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="openModal5" class="modal-container" onclick="closeModal('openModal5')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal5')">X</button>
-    <img src="images/grpsocilamedia-single2.png" alt="Open Display 5" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="openModal6" class="modal-container" onclick="closeModal('openModal6')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal6')">X</button>
-    <img src="images/grp-process.png" alt="Open Display 6" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<div id="openModal7" class="modal-container" onclick="closeModal('openModal7')">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeModal('openModal7')">X</button>
-    <img src="images/grp-team.png" alt="Open Display 7" class="zoom-img" onclick="toggleZoom(this)">
-  </div>
-</div>
-
-<!-- JavaScript -->
-<script>
-  // Toggle an image
-  function toggleImage(id) {
-    const img = document.getElementById(id);
-    if (!img) return;
-    const current = window.getComputedStyle(img).display;
-    img.style.display = (current === "none") ? "block" : "none";
-  }
-
-  // Open a non-video modal
-  function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "flex";
-  }
-
-  // Close a non-video modal
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = "none";
-  }
-
-  // Open video modal and start playback from 0s
-  function openVideoModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.style.display = "flex";
-    const video = modal.querySelector("video");
-    if (video) {
-      video.currentTime = 0;
-      video.play();
+  <!-- JavaScript -->
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
     }
-  }
 
-  // Close video modal and reset
-  function closeVideoModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.style.display = "none";
-    const video = modal.querySelector("video");
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'none';
     }
-  }
 
-  // Toggle zoom on image
-  function toggleZoom(img) {
-    if (img) img.classList.toggle('zoomed');
-  }
+    function toggleZoom(img) {
+      if (img) img.classList.toggle('zoomed');
+    }
 
-  // Toggle zoom on video
-  function toggleVideoZoom(video) {
-    if (video) video.classList.toggle('zoomed');
-  }
-</script>
+    function openVideoModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
+    }
+
+    function closeVideoModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+
+    function toggleVideoZoom(video) {
+      if (video) video.classList.toggle('zoomed');
+    }
+  </script>
+
 </body>
 </html>
