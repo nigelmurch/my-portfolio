@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,102 +9,105 @@
 </head>
 <body>
 
-  <!-- NAV BAR -->
-  <div class="nav-bar">
-    <div class="nav-left">
-      <img class="logo" src="images/logoUXI.png" alt="Logo" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">About |</a></li>
-      <li><a href="individual-work.html">Individual Work |</a></li>
-       <li><a href="group-project.html" class="active">group Work |</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<!-- NAV BAR -->
+<div class="nav-bar">
+  <div class="nav-left">
+    <img class="logo" src="images/logoUXI.png" alt="Logo" />
   </div>
-  <!-- PAGE HEADER -->
-  <header class="section-title">
-   <div class="centered-page">
-  <h1>Open Door Project</h1>
+  <ul class="nav-links">
+    <li><a href="about.html">About |</a></li>
+    <li><a href="individual-work.html">Individual Work |</a></li>
+    <li><a href="group-project.html" class="active">Group Work |</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </div>
-  </header>
 
-  <main class="retro-main">
-    <div class="button-grid">
-      <button class="retro-button" onclick="openModal('modal1')">Sexual Health Trends</button>
-      <button class="retro-button" onclick="openModal('modal2')">Research</button>
-      <button class="retro-button" onclick="openModal('modal3')">SocialMedia</button>
-      <button class="retro-button" onclick="openModal('modal4')">User Case Study</button>
-      <button class="retro-button" onclick="openModal('modal5')">Social Media </button>
-      <button class="retro-button" onclick="openModal('modal6')">Social Media</button>
-      <button class="retro-button" onclick="openModal('modal7')">Open Door Project Video</button>
-    </div>
+<!-- PAGE HEADER -->
+<header class="section-title">
+  <div class="centered-page">
+    <h1>Open Door Project</h1>
+  </div>
+</header>
 
-    <div class="back-link">
-      <a href="individual-work.html">⬅ Return to Individual Work</a>
-    </div>
-  </main>
+<main class="retro-main centered-page">
+  <div class="button-grid">
+    <button class="retro-button" onclick="openModal('modal1')">Sexual Health Trends</button>
+    <button class="retro-button" onclick="openModal('modal2')">Research</button>
+    <button class="retro-button" onclick="openModal('modal3')">Social Media</button>
+    <button class="retro-button" onclick="openModal('modal4')">User Case Study</button>
+    <button class="retro-button" onclick="openModal('modal5')">Social Media 1</button>
+    <button class="retro-button" onclick="openModal('modal6')">Social Media 2</button>
+    <button class="retro-button" onclick="openModal('modal7')">Open Door Project Video</button>
+  </div>
 
-<!-- Modal 1 -->
-<div class="retro-modal" id="retroModal1">
+  <div class="back-link">
+    <a href="individual-work.html">⬅ Return to Individual Work</a>
+  </div>
+</main>
+
+<!-- MODALS -->
+<div class="retro-modal" id="modal1">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-<img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
+    <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
     <h2>Trends</h2>
     <p>Research into Sexual Health trends</p>
   </div>
 </div>
-<!-- Modal 2 -->
-<div class="retro-modal" id="retroModal1">
+
+<div class="retro-modal" id="modal2">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-    <img src="images/grp-research1.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)"/>
- <h2>Research</h2>    
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+    <img src="images/grp-research1.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
+    <h2>Research</h2>
     <p>Research into sexual health</p>
   </div>
 </div>
 
-<!-- Modal 3 -->
-<div class="retro-modal" id="retroModal1">
+<div class="retro-modal" id="modal3">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-    <img src="images/grp-social-mediatemplates.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)"/>
- <h2>Figma Social Media</h2>    
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+    <img src="images/grp-social-mediatemplates.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
+    <h2>Figma Social Media</h2>
     <p>Social Media templates I created for the Open Door Project</p>
   </div>
 </div>
 
-<!-- Modal 4 -->
-<div class="retro-modal" id="retroModal1">
+<div class="retro-modal" id="modal4">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-   <img src="images/grp-usercase-studies.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)"/>
- <h2>User Case Study</h2>    
+    <span class="close" onclick="closeModal('modal4')">&times;</span>
+    <img src="images/grp-usercase-studies.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
+    <h2>User Case Study</h2>
     <p>User case study I found for Open Door Project</p>
   </div>
 </div>
 
-<!-- Modal 5 -->
-<div class="retro-modal" id="retroModal1">
+<div class="retro-modal" id="modal5">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-    <img src="images/grpsocialmedia-single.png" alt="Modal 5" class="zoom-img" onclick="toggleZoom(this)"/>
+    <span class="close" onclick="closeModal('modal5')">&times;</span>
+    <img src="images/grpsocialmedia-single.png" alt="Modal 5" class="zoom-img" onclick="toggleZoom(this)" />
     <h2>Single Social Media 1</h2>
-    <p>This is the first one of my draft social media posts</p>
+    <p>This is the first draft of my social media posts</p>
   </div>
 </div>
 
-<!-- Modal 6 -->
-<div class="retro-modal" id="retroModal1">
+<div class="retro-modal" id="modal6">
   <div class="retro-modal-content">
-    <span class="close">&times;</span>
-    <img src="images/grpsocilamedia-single2.png" alt="Modal 6" class="zoom-img" onclick="toggleZoom(this)"/>
-     <h2>Single Social Media </h2>
+    <span class="close" onclick="closeModal('modal6')">&times;</span>
+    <img src="images/grpsocilamedia-single2.png" alt="Modal 6" class="zoom-img" onclick="toggleZoom(this)" />
+    <h2>Single Social Media 2</h2>
     <p>This is the second draft social media post for Open Door Project</p>
   </div>
 </div>
 
+<div class="retro-modal" id="modal7">
+  <div class="retro-modal-content">
+    <span class="close" onclick="closeModal('modal7')">&times;</span>
+    <p>Embed or link to the video here</p>
+  </div>
+</div>
 
-  <script>
+<script>
   function openModal(id) {
     document.getElementById(id).style.display = "flex";
   }
