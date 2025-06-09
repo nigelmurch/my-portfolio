@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,195 +8,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Navbar -->
-<div class="nav-bar">
-  <div class="nav-left">
-    <img class="logo" src="images/logoUXI.png" alt="Logo" />
-  </div>
-  <ul class="nav-links">
-    <li><a href="about.html">About |</a></li>
-    <li><a href="individual-work.html">Individual Work |</a></li>
-    <li><a href="group-project.html" class="active">Group Work |</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-
-<!-- Whetu Marama Project Section -->
-<div class="project-section">
-  <h1>Whetu Marama</h1>
-  <div class="center-content">
-    <div class="button-container">
-      <button onclick="openVideoModal('whetuVideo')" class="btn">Watch Video</button>
-      <button class="btn" onclick="openModal('whetuModal1')">Open Display 1</button>
-      <button class="btn" onclick="openModal('whetuModal2')">Open Display 2</button>
-      <button class="btn" onclick="openModal('whetuModal3')">Open Display 3</button>
-      <button class="btn" onclick="openModal('whetuModal4')">Open Display 4</button>
-      <button class="btn" onclick="openModal('whetuModal5')">Blurb</button>
+  <!-- Navbar -->
+  <div class="nav-bar">
+    <div class="nav-left">
+      <img class="logo" src="images/logoUXI.png" alt="Logo" />
     </div>
-    <div class="individual-work-grid">
-      <div class="work-card">
-        <h2>Whetu Marama</h2>
-        <button class="toggle-image-btn" onclick="toggleImage('hiddenImage2')">Show Image</button>
-        <img id="hiddenImage2" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+    <ul class="nav-links">
+      <li><a href="about.html">About |</a></li>
+      <li><a href="individual-work.html">Individual Work |</a></li>
+      <li><a href="group-project.html" class="active">Group Work |</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Whetu Marama Section -->
+  <div class="project-section">
+    <h1>Whetu Marama</h1>
+    <div class="center-content">
+      <div class="button-container">
+        <button onclick="openVideoModal('whetuVideo')" class="btn">Watch Video</button>
+        <button class="btn" onclick="openModal('whetuModal1')">Open Display 1</button>
+        <button class="btn" onclick="openModal('whetuModal2')">Open Display 2</button>
+        <button class="btn" onclick="openModal('whetuModal3')">Open Display 3</button>
+        <button class="btn" onclick="openModal('whetuModal4')">Open Display 4</button>
+        <button class="btn" onclick="openModal('whetuModal5')">Blurb</button>
+      </div>
+      <div class="individual-work-grid">
+        <div class="work-card">
+          <h2>Whetu Marama</h2>
+          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage2')">Show Image</button>
+          <img id="hiddenImage2" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Whetu Video Modal -->
-<div id="whetuVideo" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">X</button>
-    <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
-      <source src="images/whetu-marama-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-<!-- Whetu Modals -->
-<div id="whetuModal1" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('whetuModal1')">✕ Close</button>
-    <img src="images/whetu1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="whetuModal2" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('whetuModal2')">✕ Close</button>
-    <img src="images/whetu2.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="whetuModal3" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('whetuModal3')">✕ Close</button>
-    <img src="images/whetu3.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="whetuModal4" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('whetuModal4')">✕ Close</button>
-    <img src="images/whetu4a.png" alt="Modal 4A" class="zoom-img" onclick="toggleZoom(this)" />
-    <img src="images/whetu4b.png" alt="Modal 4B" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<!-- Whetu Blurb -->
-<div id="whetuModal5" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('whetuModal5')">✕ Close</button>
-    <h3>Reflection of the Project</h3>
-    <p>Whetu Marama was a chance to explore the stars through a user-centred lens—connecting mātauranga Māori with design in a way that inspired and informed. As a design team, we wanted our mahi to shine a light on stories not often told, and to ensure those stories were crafted with respect, playfulness, and authenticity.</p>
-    <p>Retro aesthetics were used to echo the timeless nature of these narratives, while interactivity and colour ensured our approach felt accessible and bold. This project reinforced my belief that cultural storytelling deserves digital platforms that honour both history and user needs equally.</p>
-  </div>
-</div>
-
-<!-- Open Door Project Section -->
-<div class="project-section">
-  <h1>Open Door Project</h1>
-  <div class="center-content">
-    <div class="button-container">
-      <button onclick="openVideoModal('openVideo')" class="btn">Watch Video</button>
-      <button class="btn" onclick="openModal('openModal1')">Open Display 1</button>
-      <button class="btn" onclick="openModal('openModal2')">Open Display 2</button>
-      <button class="btn" onclick="openModal('openModal3')">Open Display 3</button>
-      <button class="btn" onclick="openModal('openModal4')">Open Display 4</button>
-      <button class="btn" onclick="openModal('openModal5')">Blurb</button>
+  <!-- Video Modal -->
+  <div id="whetuVideo" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeVideoModal('whetuVideo')">X</button>
+      <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
+        <source src="images/whetu-marama-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="individual-work-grid">
-      <div class="work-card">
-        <h2>Open Door Project</h2>
-        <button class="toggle-image-btn" onclick="toggleImage('hiddenImage3')">Show Image</button>
-        <img id="hiddenImage3" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+  </div>
+
+  <!-- Whetu Modals -->
+  <!-- (Same as you had – just make sure file names match!) -->
+
+  <!-- Open Door Section -->
+  <div class="project-section">
+    <h1>Open Door Project</h1>
+    <div class="center-content">
+      <div class="button-container">
+        <button onclick="openVideoModal('openVideo')" class="btn">Watch Video</button>
+        <button class="btn" onclick="openModal('openModal1')">Open Display 1</button>
+        <button class="btn" onclick="openModal('openModal2')">Open Display 2</button>
+        <button class="btn" onclick="openModal('openModal3')">Open Display 3</button>
+        <button class="btn" onclick="openModal('openModal4')">Open Display 4</button>
+        <button class="btn" onclick="openModal('openModal5')">Blurb</button>
+      </div>
+      <div class="individual-work-grid">
+        <div class="work-card">
+          <h2>Open Door Project</h2>
+          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage3')">Show Image</button>
+          <img id="hiddenImage3" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Open Door Modals -->
-<div id="openVideo" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeVideoModal('openVideo')">X</button>
-    <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
-      <source src="images/open-door-project.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+  <!-- Open Video Modal -->
+  <div id="openVideo" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeVideoModal('openVideo')">X</button>
+      <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
+        <source src="images/open-door-project.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
-</div>
 
-<div id="openModal1" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('openModal1')">✕ Close</button>
-    <img src="images/opendoor1.png" alt="Open Door Display 1" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
+  <!-- JavaScript -->
+  <script>
+    function toggleImage(id) {
+      var img = document.getElementById(id);
+      img.style.display = img.style.display === "none" ? "block" : "none";
+    }
 
-<div id="openModal2" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('openModal2')">✕ Close</button>
-    <img src="images/opendoor2.png" alt="Open Door Display 2" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
 
-<div id="openModal3" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('openModal3')">✕ Close</button>
-    <img src="images/opendoor3.png" alt="Open Door Display 3" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
 
-<div id="openModal4" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('openModal4')">✕ Close</button>
-    <img src="images/opendoor4a.png" alt="Open Door Display 4A" class="zoom-img" onclick="toggleZoom(this)" />
-    <img src="images/opendoor4b.png" alt="Open Door Display 4B" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
+    function openVideoModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
 
-<div id="openModal5" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('openModal5')">✕ Close</button>
-    <h3>Reflection of the Project</h3>
-    <p>Open Door Project explored access and empathy. We brought design to the streets—literally—with a mobile solution shaped by young people's voices. The goal was to offer not just information, but real, barrier-free access to care and support.</p>
-    <p>Interactive elements and strong color helped grab attention, while familiar language and safe design made the approach feel approachable. The project taught us a lot about equity in design—and how accessibility starts with listening.</p>
-  </div>
-</div>
+    function closeVideoModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
 
-<!-- JavaScript -->
-<script>
-  function toggleImage(id) {
-    var img = document.getElementById(id);
-    img.style.display = img.style.display === "none" ? "block" : "none";
-  }
+    function toggleZoom(img) {
+      img.classList.toggle("zoomed");
+    }
 
-  function openModal(id) {
-    document.getElementById(id).style.display = "flex";
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  function openVideoModal(id) {
-    document.getElementById(id).style.display = "flex";
-  }
-
-  function closeVideoModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  function toggleZoom(img) {
-    img.classList.toggle("zoomed");
-  }
-
-  function toggleVideoZoom(video) {
-    video.classList.toggle("zoomed");
-  }
-</script>
-
+    function toggleVideoZoom(video) {
+      video.classList.toggle("zoomed");
+    }
+  </script>
 </body>
 </html>
