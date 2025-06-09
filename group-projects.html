@@ -26,61 +26,81 @@
     <h1>Open Door Project</h1>
   </header>
 
-<div class="button-container">
-    <button onclick="openModal('modal1')">Modal 1</button>
-    <button onclick="openModal('modal2')">Modal 2</button>
-    <button onclick="openModal('modal3')">Modal 3</button>
-    <button onclick="openModal('modal4')">Modal 4</button>
-    <button onclick="openModal('modal5')">Modal 5</button>
-    <button onclick="openModal('modal6')">Modal 6</button>
-    <button onclick="openModal('modal7')">Modal 7</button>
+  <main class="retro-main">
+    <div class="button-grid">
+      <button class="retro-button" onclick="openModal('modal1')">Open Modal 1</button>
+      <button class="retro-button" onclick="openModal('modal2')">Open Modal 2</button>
+      <button class="retro-button" onclick="openModal('modal3')">Open Modal 3</button>
+      <button class="retro-button" onclick="openModal('modal4')">Open Modal 4</button>
+      <button class="retro-button" onclick="openModal('modal5')">Open Modal 5</button>
+      <button class="retro-button" onclick="openModal('modal6')">Open Modal 6</button>
+      <button class="retro-button" onclick="openModal('modal7')">Open Modal 7</button>
+    </div>
+
+    <div class="back-link">
+      <a href="individual-work.html">⬅ Return to Individual Work</a>
+    </div>
+  </main>
+
+  <!-- 7 Retro Modals -->
+  <div id="modal1" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal1')">✖ Close</button>
+      <p>This is modal 1. Add your content here!</p>
+    </div>
   </div>
 
-  <!-- Modals -->
-  <div id="modal1" class="modal"><div class="modal-content"><span onclick="closeModal('modal1')" class="close">✖</span><p>Modal 1 content goes here.</p></div></div>
-  <div id="modal2" class="modal"><div class="modal-content"><span onclick="closeModal('modal2')" class="close">✖</span><p>Modal 2 content goes here.</p></div></div>
-  <div id="modal3" class="modal"><div class="modal-content"><span onclick="closeModal('modal3')" class="close">✖</span><p>Modal 3 content goes here.</p></div></div>
-  <div id="modal4" class="modal"><div class="modal-content"><span onclick="closeModal('modal4')" class="close">✖</span><p>Modal 4 content goes here.</p></div></div>
-  <div id="modal5" class="modal"><div class="modal-content"><span onclick="closeModal('modal5')" class="close">✖</span><p>Modal 5 content goes here.</p></div></div>
-  <div id="modal6" class="modal"><div class="modal-content"><span onclick="closeModal('modal6')" class="close">✖</span><p>Modal 6 content goes here.</p></div></div>
-  <div id="modal7" class="modal"><div class="modal-content"><span onclick="closeModal('modal7')" class="close">✖</span><p>Modal 7 content goes here.</p></div></div>
+  <div id="modal2" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal2')">✖ Close</button>
+      <p>This is modal 2. Add your content here!</p>
+    </div>
+  </div>
 
-  <div class="back-button">
-    <a href="individual-work.html">← Return to Individual Work</a>
+  <div id="modal3" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal3')">✖ Close</button>
+      <p>This is modal 3. Add your content here!</p>
+    </div>
+  </div>
+
+  <div id="modal4" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal4')">✖ Close</button>
+      <p>This is modal 4. Add your content here!</p>
+    </div>
+  </div>
+
+  <div id="modal5" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal5')">✖ Close</button>
+      <p>This is modal 5. Add your content here!</p>
+    </div>
+  </div>
+
+  <div id="modal6" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal6')">✖ Close</button>
+      <p>This is modal 6. Add your content here!</p>
+    </div>
+  </div>
+
+  <div id="modal7" class="retro-modal">
+    <div class="retro-modal-content">
+      <button class="close-btn" onclick="closeModal('modal7')">✖ Close</button>
+      <p>This is modal 7. Add your content here!</p>
+    </div>
   </div>
 
   <script>
     function openModal(id) {
-      document.getElementById(id).style.display = "block";
+      document.getElementById(id).style.display = 'flex';
     }
 
     function closeModal(id) {
-      document.getElementById(id).style.display = "none";
+      document.getElementById(id).style.display = 'none';
     }
-
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    };
   </script>
-</body>
-</html>
 
-
-   
-
-  
-
-   
-
-    
-
-
- 
-  </script>
 </body>
 </html>
