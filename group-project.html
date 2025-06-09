@@ -107,6 +107,98 @@ This experience strengthened my commitment to designing with care, courage, and 
   <button class="toggle-image-btn" onclick="toggleImage()">Show Image</button>
   <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
 </div>
+
+
+
+   
+<h1>Whetu Marama</h1>
+
+<!-- Trigger Buttons -->
+<div class="button-container">
+    <button onclick="openVideoModal()" class="btn">Watch Video</button>
+    <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
+    <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
+    <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
+    <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
+    <button class="btn" onclick="openModal('modal5')">Blurb</button>
+  </div>
+
+ <!-- Video Modal -->
+<div id="videoModal" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeVideoModal()">X</button>
+    <video
+      id="videoPlayer"
+      muted
+      playsinline
+      controls
+      onclick="toggleVideoZoom()"
+      style="max-width: 100%; height: auto;"
+    >
+      <source src="images/open-door-project.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- Image Modals -->
+<div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+    <img src="images/grp-research1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
+  </div>
+</div>
+
+<div id="modal2" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal2')">✕ Close</button>
+    <img src="images/grp-social-mediatemplates.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
+  </div>
+</div>
+
+<div id="modal3" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal3')">✕ Close</button>
+    <img src="images/grp-usercase-studies.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
+  </div>
+</div>
+
+<div id="modal4" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal4')">✕ Close</button>
+    <img src="images/grpsocialmedia-single.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
+    <img src="images/grpsocilamedia-single2.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" /> 
+  </div>
+</div>
+
+<div id="modal5" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal5')">✕ Close</button>
+    <h3>Reflection of the Project</h3>
+    <p>The Open Door Project was more than just a design challenge—it was an opportunity to create something that could truly impact lives. From the outset, I knew this project needed to reflect more than just functionality; it had to represent accessibility, inclusion, and dignity for every young person navigating the sensitive space of sexual health.
+
+As a service designer and researcher, I dove deeply into understanding the barriers rangatahi face when accessing support. This meant looking beyond assumptions and focusing on what real users told us, with empathy guiding each step of our journey. Through collaboration with my team, we translated research into design—crafting ideas that were both strategic and human.
+
+Personally, the project was transformative. It reminded me that good design isn’t about flashy interfaces or clever slogans. It’s about opening doors—literal and metaphorical—for people who’ve been excluded or underserved. It’s about listening, advocating, and ensuring voices are not only heard but embedded into the outcome.
+
+This experience strengthened my commitment to designing with care, courage, and community. It reminded me why I chose this path in the first place—to be part of something that helps build a better, fairer world. I also taught me that team work is like the inners of a clock, all internal parts have to be well oiled and function in unison, or else it all falls apart, thus I feel I played my part well/p>
+  
+    </div>
+</div>   
+
+ <div class="individual-work-grid">
+  <div class="work-card">
+    
+  <h2>Open Door Project </h2>
+  <button class="toggle-image-btn" onclick="toggleImage()">Show Image</button>
+  <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+</div>
+
+
+
+
+
+   
   
 <script>
   function openVideoModal() {
