@@ -61,6 +61,7 @@ body {
 }
 
 .section-title h4 {
+  font-family: "JetBrains Mono", monospace, sans-serif;
   font-size: 0.8rem;
   margin-top: 20px;
   line-height: 1.5;
