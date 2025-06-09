@@ -170,33 +170,66 @@
 
 <!-- JavaScript -->
 <script>
+  // Toggle the display of an image between visible and hidden
   function toggleImage(id) {
-    var img = document.getElementById(id);
-    img.style.display = img.style.display === "none" ? "block" : "none";
+    const img = document.getElementById(id);
+    if (!img) return;
+    const currentDisplay = window.getComputedStyle(img).display;
+    img.style.display = (currentDisplay === "none") ? "block" : "none";
   }
 
+  // Open a standard modal by setting its display to flex
   function openModal(id) {
-    document.getElementById(id).style.display = "flex";
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = "flex";
+    }
   }
 
+  // Close a standard modal by setting its display to none
   function closeModal(id) {
-    document.getElementById(id).style.display = "none";
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = "none";
+    }
   }
 
+  // Open a modal and play the video from the start
   function openVideoModal(id) {
-    document.getElementById(id).style.display = "flex";
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.style.display = "flex";
+    const video = modal.querySelector("video");
+    if (video) {
+      video.currentTime = 0;
+      video.play();
+    }
   }
 
+  // Close a video modal and reset the video
   function closeVideoModal(id) {
-    document.getElementById(id).style.display = "none";
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.style.display = "none";
+    const video = modal.querySelector("video");
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
   }
 
+  // Toggle zoom effect on an image
   function toggleZoom(img) {
-    img.classList.toggle("zoomed");
+    if (img) {
+      img.classList.toggle('zoomed');
+    }
   }
 
+  // Toggle zoom effect on a video
   function toggleVideoZoom(video) {
-    video.classList.toggle("zoomed");
+    if (video) {
+      video.classList.toggle('zoomed');
+    }
   }
 </script>
 </body>
