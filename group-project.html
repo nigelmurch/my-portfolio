@@ -51,11 +51,11 @@
   </div>
 </div>
 
-<!-- Whetū Mārama Video Modal -->
+<!-- Whetū Mārama Video Modal -->
 <div id="whetuVideo" class="modal-container" onclick="closeModal('whetuVideo')">
   <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">✕ Close</button>
-    <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
+    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">✕</button>
+    <video muted playsinline controls onclick="toggleVideoZoom(this)">
       <source src="images/whetu-marama-website.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -199,31 +199,27 @@
 
 <!-- JavaScript -->
 <script>
-  // Toggle the display of an image between visible and hidden
+  // Toggle an image
   function toggleImage(id) {
     const img = document.getElementById(id);
     if (!img) return;
-    const currentDisplay = window.getComputedStyle(img).display;
-    img.style.display = (currentDisplay === "none") ? "block" : "none";
+    const current = window.getComputedStyle(img).display;
+    img.style.display = (current === "none") ? "block" : "none";
   }
 
-  // Open a standard modal by setting its display to flex
+  // Open a non-video modal
   function openModal(id) {
     const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = "flex";
-    }
+    if (modal) modal.style.display = "flex";
   }
 
-  // Close a standard modal by setting its display to none
+  // Close a non-video modal
   function closeModal(id) {
     const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = "none";
-    }
+    if (modal) modal.style.display = "none";
   }
 
-  // Open a modal and play the video from the start
+  // Open video modal and start playback from 0s
   function openVideoModal(id) {
     const modal = document.getElementById(id);
     if (!modal) return;
@@ -235,7 +231,7 @@
     }
   }
 
-  // Close a video modal and reset the video
+  // Close video modal and reset
   function closeVideoModal(id) {
     const modal = document.getElementById(id);
     if (!modal) return;
@@ -247,18 +243,14 @@
     }
   }
 
-  // Toggle zoom effect on an image
+  // Toggle zoom on image
   function toggleZoom(img) {
-    if (img) {
-      img.classList.toggle('zoomed');
-    }
+    if (img) img.classList.toggle('zoomed');
   }
 
-  // Toggle zoom effect on a video
+  // Toggle zoom on video
   function toggleVideoZoom(video) {
-    if (video) {
-      video.classList.toggle('zoomed');
-    }
+    if (video) video.classList.toggle('zoomed');
   }
 </script>
 </body>
