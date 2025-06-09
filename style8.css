@@ -93,9 +93,10 @@ h1, h2, h3 {
 .work-card {
   background-color: #222;
   border: 2px solid #00ffaa;
-  padding: 30px;
-  max-width: 600px;
+  padding: 20px; /* Reduced from 30px */
+  max-width: 400px; /* Reduced from 600px */
   width: 90%;
+  font-size: 0.7rem; /* Optional: reduce font size for tighter text */
 }
 
 .toggle-image-btn {
