@@ -22,32 +22,100 @@
     <li><a href="contact.html">contact</a></li>
   </ul>
 </nav>
- <div class="back-button-container">
-    <a href="individual-work.html" class="retro-button">← Back A Step</a>
-  </div>
-<!-- Video Modal -->
-<div id="videoModal" class="modal">
-  <div class="modal-content">
-        <video width="100%" height="auto" controls>
-      <source src="images/f-b-p-website.mp4" type="video/mp4">
-      <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
-    <div class="modal-footer">
-     <!-- Close Button (top-right corner or wherever you want it) -->
-<button class="close-modal-btn" onclick="closeModal()">Close Video Player</button>
+<h1>Website Development Modals</h1>
+
+  <!-- Trigger Buttons -->
+  <button class="btn" onclick="openVideoModal()">Watch Website Demo</button>
+  <button class="btn" onclick="openModal('modal1')">Open Modal 1</button>
+  <button class="btn" onclick="openModal('modal2')">Open Modal 2</button>
+  <button class="btn" onclick="openModal('modal3')">Open Modal 3</button>
+  <button class="btn" onclick="openModal('modal4')">Open Modal 4</button>
+  <button class="btn" onclick="openModal('modal5')">Open Modal 5</button>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeVideoModal()">✕ Close</button>
+      <video id="videoPlayer" controls>
+        <source src="f-b-p-website.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
-</div>
+
+  <!-- Image Modals -->
+  <div id="modal1" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="image1.jpg" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)">
+    </div>
+  </div>
+
+  <div id="modal2" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal2')">✕ Close</button>
+      <img src="image2.jpg" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)">
+    </div>
+  </div>
+
+  <div id="modal3" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal3')">✕ Close</button>
+      <img src="image3.jpg" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)">
+    </div>
+  </div>
+
+  <div id="modal4" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal4')">✕ Close</button>
+      <img src="image4.jpg" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)">
+    </div>
+  </div>
+
+  <div id="modal5" class="modal-container">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal('modal5')">✕ Close</button>
+      <img src="image5.jpg" alt="Modal 5" class="zoom-img" onclick="toggleZoom(this)">
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script>
-  function closeModal() {
-    document.getElementById("videoModal").style.display = "none";
-    const vid = document.getElementById("websiteVideo");
-    if (vid) {
-      vid.pause();
-      vid.currentTime = 0;
+    // Video Modal Controls
+    function openVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('videoPlayer');
+      modal.style.display = 'flex';
+      video.currentTime = 0;
+      video.play();
     }
-  }
-</script>
-</script></body>
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      const video = document.getElementById('videoPlayer');
+      modal.style.display = 'none';
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    // General Modal Controls
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.style.display = 'none';
+      const img = modal.querySelector('img');
+      if (img) img.classList.remove('zoomed');
+    }
+
+    // Zoom Toggle
+    function toggleZoom(img) {
+      img.classList.toggle('zoomed');
+    }
+  </script>
+
+</body>
 </html>
