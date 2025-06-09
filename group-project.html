@@ -25,16 +25,28 @@
 
 
   
-<h1>Open Door Project</h1>
+  <!-- Open Door Project Section -->
+  <div class="project-section">
+    <h1>Open Door Project</h1>
 
-<!-- Trigger Buttons -->
-<div class="button-container">
-    <button onclick="openVideoModal()" class="btn">Watch Video</button>
-    <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
-    <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
-    <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
-    <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
-    <button class="btn" onclick="openModal('modal5')">Blurb</button>
+    <div class="center-content">
+      <div class="button-container">
+        <button onclick="openVideoModal()" class="btn">Watch Video</button>
+        <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
+        <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
+        <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
+        <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
+        <button class="btn" onclick="openModal('modal5')">Blurb</button>
+      </div>
+
+      <div class="individual-work-grid">
+        <div class="work-card">
+          <h2>Open Door Project</h2>
+          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage')">Show Image</button>
+          <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+        </div>
+      </div>
+    </div>
   </div>
 
  <!-- Video Modal -->
@@ -47,8 +59,7 @@
       playsinline
       controls
       onclick="toggleVideoZoom()"
-      style="max-width: 100%; height: auto;"
-    >
+      style="max-width: 100%; height: auto;">
       <source src="images/open-door-project.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -111,17 +122,36 @@ This experience strengthened my commitment to designing with care, courage, and 
 
 
    
-<h1>Whetu Marama</h1>
+<!-- Whetu Marama Section -->
+  <div class="project-section">
+    <h1>Whetu Marama</h1>
 
-<!-- Trigger Buttons -->
-<div class="button-container">
-    <button onclick="openVideoModal()" class="btn">Watch Video</button>
-    <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
-    <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
-    <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
-    <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
-    <button class="btn" onclick="openModal('modal5')">Blurb</button>
+    <div class="center-content">
+      <div class="button-container">
+        <button onclick="openVideoModal()" class="btn">Watch Video</button>
+        <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
+        <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
+        <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
+        <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
+        <button class="btn" onclick="openModal('modal5')">Blurb</button>
+      </div>
+
+      <div class="individual-work-grid">
+        <div class="work-card">
+          <h2>Whetu Marama</h2>
+          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage2')">Show Image</button>
+          <img id="hiddenImage2" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Example Modal Structure -->
+  <div id="modal1" class="modal">Content for Modal 1</div>
+  <div id="modal2" class="modal">Content for Modal 2</div>
+  <div id="modal3" class="modal">Content for Modal 3</div>
+  <div id="modal4" class="modal">Content for Modal 4</div>
+  <div id="modal5" class="modal">Blurb Content</div>
 
  <!-- Video Modal -->
 <div id="videoModal" class="modal-container">
@@ -255,3 +285,25 @@ This experience strengthened my commitment to designing with care, courage, and 
     }
   }
 </script>
+
+    <!-- Simple modal and toggle script -->
+  <script>
+    function openModal(id) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(m => m.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function toggleImage(imageId) {
+      const img = document.getElementById(imageId);
+      if (img.style.display === 'none') {
+        img.style.display = 'block';
+      } else {
+        img.style.display = 'none';
+      }
+    }
+
+    function openVideoModal() {
+      alert("Video modal would open here.");
+    }
+  </script>
