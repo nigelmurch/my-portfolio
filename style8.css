@@ -59,6 +59,21 @@ body {
   margin: 10px;
 }
 
+.toggle-image-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #00ffaa;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.toggle-image-btn:hover {
+  background-color: #00ddaa;
+}
 /* Already styled: .btn */
 #hiddenImage {
   display: none;
