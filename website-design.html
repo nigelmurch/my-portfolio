@@ -27,7 +27,7 @@
 
 <!-- Trigger Buttons -->
 <div class="button-container">
-  <button class="btn" onclick="openVideoModal()">Watch Website Demo</button>
+ <button onclick="openVideoModal()" class="btn">Watch Video</button>
   <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
   <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
   <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
@@ -39,13 +39,19 @@
 <div id="videoModal" class="modal-container">
   <div class="modal-content">
     <button class="close-btn" onclick="closeVideoModal()">X</button>
-    <video id="videoPlayer" autoplay muted playsinline controls>
-  <source src="your-video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+    <video
+      id="videoPlayer"
+      muted
+      playsinline
+      controls
+      onclick="toggleVideoZoom()"
+      style="max-width: 100%; height: auto;"
+    >
+      <source src="f-b-p-website.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
-
 <!-- Image Modals -->
 <div id="videoModal" class="modal-container">
   <div class="modal-content">
@@ -109,16 +115,22 @@
   function openVideoModal() {
   const modal = document.getElementById('videoModal');
   const video = document.getElementById('videoPlayer');
+
   modal.style.display = 'flex';
 
-  // Ensure video plays even if browser restricts autoplay
+  video.muted = true; // Required for autoplay
   video.currentTime = 0;
-  video.muted = true;
-  video.play().catch((err) => {
-    console.error('Autoplay failed:', err);
+
+  video.play().catch((error) => {
+    console.warn('Autoplay failed:', error);
   });
 }
 
+function toggleVideoZoom() {
+  const video = document.getElementById('videoPlayer');
+  video.classList.toggle('zoomed');
+}  
+  
   function closeVideoModal() {
     const modal = document.getElementById('videoModal');
     const video = document.getElementById('videoPlayer');
