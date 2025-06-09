@@ -43,6 +43,12 @@
   <script>
   function closeModal() {
     document.getElementById("videoModal").style.display = "none";
+    const vid = document.getElementById("websiteVideo");
+    if (vid) {
+      vid.pause();
+      vid.currentTime = 0;
+    }
   }
+</script>
 </script></body>
 </html>
