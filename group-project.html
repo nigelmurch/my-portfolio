@@ -43,71 +43,75 @@
   </main>
 
   <!-- 7 Retro Modals -->
-  <div id="modal1" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal1')">✖ Close</button>
-       <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+       <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
          <p>Research into Sexual Health trends!</p>
     </div>
   </div>
 
-  <div id="modal2" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal2')">✖ Close</button>
-      <img src="images/grp-research1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/grp-research1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
         <p>Research into sexual health</p>
     </div>
   </div>
 
-  <div id="modal3" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal3')">✖ Close</button>
-      <img src="images/grp-social-mediatemplates.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"     
+  <div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/grp-social-mediatemplates.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
         <p>Social Media templates I created for the Open Door Project</p>
     </div>
   </div>
 
-  <div id="modal4" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal4')">✖ Close</button>
-      <img src="images/grp-usercase-studies.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <<div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/grp-usercase-studies.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
         <p>User case study I found for Open Door Project</p>
     </div>
   </div>
 
-  <div id="modal5" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal5')">✖ Close</button>
-      <img src="images/grpsocialmedia-single.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <<div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/grpsocialmedia-single.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
         <p>This is the first one of my draft social media posts</p>
     </div>
   </div>
 
-  <div id="modal6" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal6')">✖ Close</button>
-      <img src="images/grpsocilamedia-single2.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/grpsocilamedia-single2.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"/>
         <p>This is modal 6. the second draft social media post for Open Door Project</p>
     </div>
   </div>
 
-  <div id="modal7" class="retro-modal">
-    <div class="retro-modal-content">
-      <button class="close-btn" onclick="closeModal('modal7')">✖ Close</button>
-      <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)"   
+  <div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+      <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />  
         <p>This is modal 7. Add your content here!</p>
     </div>
   </div>
 
   <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
+  function openModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
 
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-    }
-  </script>
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  function toggleZoom(img) {
+    img.classList.toggle("zoomed");
+  }
+</script>
 
 </body>
 </html>
