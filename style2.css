@@ -16,6 +16,7 @@ body {
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
 }
 
 .logo {
