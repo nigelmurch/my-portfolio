@@ -3,11 +3,9 @@
 }
 
 body {
-  font-family: "JetBrains Mono", monospace;
-  background-color: #0000aa;
-  
-  text-align: center;
-  padding: 2rem;
+  background-color: #000044;
+  font-family: 'VT323', monospace;
+  color: white;
 }
 
 /* ------------------ NAVIGATION ------------------ */
@@ -15,7 +13,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
@@ -51,23 +48,20 @@ body {
   padding: 0 5px;
 }
 
-
-
-.btn {
-  padding: 10px 20px;
-  background: #00ffaa;
-  border: none;
-  border-radius: 5px;
+.retro-button {
+  background-color: #fefefe;
+  border: 2px solid #000;
+  padding: 8px 16px;
+  margin: 5px;
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
   cursor: pointer;
-  margin: 10px;
+  box-shadow: 2px 2px 0 #000;
 }
 
-.button-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 2rem;
+.retro-button:hover {
+  background-color: #ff00ff;
+  color: #000;
 }
 
 .modal-container {
@@ -145,4 +139,17 @@ body {
   background-color: #0033cc;
   color: white;
   box-shadow: 2px 2px 0 #000;
+}
+
+.return-link {
+  font-family: 'VT323', monospace;
+  color: #ccc;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.return-link:hover {
+  color: #ff0;
 }
