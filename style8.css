@@ -89,17 +89,11 @@ body {
   margin-top: 20px;
 }
 
-.close-button {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 2rem;
-  color: #fc03c6;
-  cursor: pointer;
-}
+
 /* BACK BUTTON CONTAINER */
 .back-button-container {
   display: flex;
   justify-content: center;
+  color: #fc03c6;  
   margin: 60px 0 40px;
 }
