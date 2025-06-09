@@ -60,6 +60,14 @@ body {
   margin: 10px;
 }
 
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
 .modal-container {
   display: none;
   position: fixed;
@@ -99,10 +107,11 @@ body {
   padding: 5px 10px;
   cursor: pointer;
   font-size: 16px;
-  z-index:10;
+  z-index: 10;
 }
 
-.zoom-img {
+.zoom-img,
+#videoPlayer {
   width: 100%;
   max-width: 600px;
   transition: transform 0.3s ease;
@@ -111,11 +120,5 @@ body {
 
 .zoomed {
   transform: scale(1.5);
-  transition: transform 0.3s ease;
   cursor: zoom-out;
-}
-
-#videoPlayer {
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
 }
