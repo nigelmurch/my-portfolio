@@ -39,10 +39,10 @@
 <div id="videoModal" class="modal-container">
   <div class="modal-content">
     <button class="close-btn" onclick="closeVideoModal()">X</button>
-    <video id="videoPlayer" controls muted>
-      <source src="your-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <video id="videoPlayer" autoplay muted playsinline controls>
+  <source src="your-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   </div>
 </div>
 
@@ -107,12 +107,17 @@
 <!-- Modal Scripts -->
 <script>
   function openVideoModal() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
-    modal.style.display = 'flex';
-    video.currentTime = 0;
-    video.play();
-  }
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('videoPlayer');
+  modal.style.display = 'flex';
+
+  // Ensure video plays even if browser restricts autoplay
+  video.currentTime = 0;
+  video.muted = true;
+  video.play().catch((err) => {
+    console.error('Autoplay failed:', err);
+  });
+}
 
   function closeVideoModal() {
     const modal = document.getElementById('videoModal');
