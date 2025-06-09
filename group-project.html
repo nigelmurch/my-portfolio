@@ -51,10 +51,10 @@
   </div>
 </div>
 
-<!-- Whetu Marama Video Modal -->
-<div id="whetuVideo" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">X</button>
+<!-- Whetū Mārama Video Modal -->
+<div id="whetuVideo" class="modal-container" onclick="closeVideoModal('whetuVideo')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">✕ Close</button>
     <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
       <source src="images/whetu-marama-website.mp4" type="video/mp4" />
       Your browser does not support the video tag.
