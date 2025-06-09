@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #0000aa;
+  background-color: #0000aa;
   font-family: 'VT323', monospace;
   color: white;
 }
@@ -48,6 +48,7 @@ body {
   padding: 0 5px;
 }
 
+/* ------------------ RETRO BUTTON ------------------ */
 .retro-button {
   background-color: #fefefe;
   border: 2px solid #000;
@@ -64,6 +65,7 @@ body {
   color: #000;
 }
 
+/* ------------------ EXISTING MODAL ------------------ */
 .modal-container {
   display: none;
   position: fixed;
@@ -106,6 +108,61 @@ body {
   z-index: 10;
 }
 
+/* ------------------ RETRO MODAL (NEW) ------------------ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.3s ease;
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 2px solid #000;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  font-family: 'Courier New', Courier, monospace;
+  background-image: linear-gradient(to bottom right, #fffdf5, #e7e4d5);
+  color: #222;
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+.modal .close {
+  color: #444;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+  color: #000;
+}
+
+@keyframes fadeInModal {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ------------------ ZOOM + MEDIA ------------------ */
 .zoom-img,
 #videoPlayer {
   width: 100%;
@@ -119,6 +176,7 @@ body {
   cursor: zoom-out;
 }
 
+/* ------------------ BACK BUTTON ------------------ */
 .back-button {
   display: inline-block;
   margin: 3rem 0 1rem;
@@ -141,6 +199,7 @@ body {
   box-shadow: 2px 2px 0 #000;
 }
 
+/* ------------------ RETURN LINK ------------------ */
 .return-link {
   font-family: 'VT323', monospace;
   color: #ccc;
