@@ -3,123 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Group Work</title>
-  <link rel="stylesheet" href="style9.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <title>Flavours By Papatunuku</title>
+  <link rel="stylesheet" href="style8.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Chicle&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Marcellus&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Sixtyfour+Convergence&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<!-- NAV BAR -->
-<div class="nav-bar">
+<nav class="nav-bar">
   <div class="nav-left">
-    <img class="logo" src="images/logoUXI.png" alt="Logo" />
+    <a href="index.html">
+      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+    </a>
   </div>
   <ul class="nav-links">
-    <li><a href="about.html">About |</a></li>
-    <li><a href="individual-work.html">Individual Work |</a></li>
-    <li><a href="group-project.html" class="active">Group Work |</a></li>
+    <li><a href="about.html" class="active">About |</a></li>
+    <li><a href="individual-work.html">Individual work |</a></li>
+    <li><a href="group-project.html">Group Project 1 |</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-</div>
+</nav>
 
-<!-- PAGE HEADER -->
-<header class="section-title">
-  <div class="centered-page">
-    <h1>Open Door Project</h1>
-  </div>
-</header>
+<h1>Flavours By Papatūānuku</h1>
 
-<main class="retro-main centered-page">
-  <div class="button-grid">
-    <button class="retro-button" onclick="openModal('modal1')">Sexual Health Trends</button>
-    <button class="retro-button" onclick="openModal('modal2')">Research</button>
-    <button class="retro-button" onclick="openModal('modal3')">Social Media</button>
-    <button class="retro-button" onclick="openModal('modal4')">User Case Study</button>
-    <button class="retro-button" onclick="openModal('modal5')">Social Media 1</button>
-    <button class="retro-button" onclick="openModal('modal6')">Social Media 2</button>
-    <button class="retro-button" onclick="openModal('modal7')">Open Door Project Video</button>
+<!-- Trigger Buttons -->
+<div class="button-container">
+    <button onclick="openVideoModal()" class="btn">Watch Video</button>
+    <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
+    <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
+    <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
+    <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
+    <button class="btn" onclick="openModal('modal5')">Open Display 5</button>
   </div>
 
-  <div class="back-link">
-    <a href="individual-work.html">⬅ Return to Individual Work</a>
-  </div>
-</main>
-
-<!-- MODALS -->
-<div class="retro-modal" id="modal1">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <img src="images/sexualHealthTrends_.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>Trends</h2>
-    <p>Research into Sexual Health trends</p>
+ <!-- Video Modal -->
+<div id="videoModal" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeVideoModal()">X</button>
+    <video
+      id="videoPlayer"
+      muted
+      playsinline
+      controls
+      onclick="toggleVideoZoom()"
+      style="max-width: 100%; height: auto;"
+    >
+      <source src="images/f-b-p-website.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </div>
 </div>
 
-<div class="retro-modal" id="modal2">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <img src="images/grp-research1.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>Research</h2>
-    <p>Research into sexual health</p>
+<!-- Image Modals -->
+<div id="modal1" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
+    <img src="images/desk-top-lap-top.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div class="retro-modal" id="modal3">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal3')">&times;</span>
-    <img src="images/grp-social-mediatemplates.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>Figma Social Media</h2>
-    <p>Social Media templates I created for the Open Door Project</p>
+<div id="modal2" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal2')">✕ Close</button>
+    <img src="images/home-page.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div class="retro-modal" id="modal4">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal4')">&times;</span>
-    <img src="images/grp-usercase-studies.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>User Case Study</h2>
-    <p>User case study I found for Open Door Project</p>
+<div id="modal3" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal3')">✕ Close</button>
+    <img src="images/safety.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div class="retro-modal" id="modal5">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal5')">&times;</span>
-    <img src="images/grpsocialmedia-single.png" alt="Modal 5" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>Single Social Media 1</h2>
-    <p>This is the first draft of my social media posts</p>
+<div id="modal4" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal4')">✕ Close</button>
+    <img src="images/Poster-on-wall.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div class="retro-modal" id="modal6">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal6')">&times;</span>
-    <img src="images/grpsocilamedia-single2.png" alt="Modal 6" class="zoom-img" onclick="toggleZoom(this)" />
-    <h2>Single Social Media 2</h2>
-    <p>This is the second draft social media post for Open Door Project</p>
+<div id="modal5" class="modal-container">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal('modal5')">✕ Close</button>
+    <h3>Why I Am Passionate About Flavours by Papatūānuku</h3>
+  <p><strong>Flavours by Papatūānuku</strong> is more than just a project.</p>
+
+  <p>It is a reflection of who I am, what I value, and the kind of future I want to help create. As someone with a deep connection to both the natural world and the people of Aotearoa, I feel a personal and cultural responsibility to protect and celebrate our environment. This project combines my passions for sustainability, design, storytelling, and social change in a way that feels not only urgent but deeply meaningful. If we want to change the world, then change starts at home.</p>
+
+  <p>At its heart, Flavours by Papatūānuku is about restoring balance and reimagining our relationship with food—not as passive consumers, but as active kaitiaki (guardians) of the whenua (land). Invasive species threaten our ecosystems and biodiversity—yet, ironically, they can also provide nutritious and delicious solutions if approached creatively. Yes, you heard that right!</p>
+
+  <p>By encouraging people to incorporate wild and invasive species into their diets, this project transforms an environmental problem into a cultural opportunity for reconnection, resilience, and innovation.</p>
+
+  <p>My passion stems from a drive to challenge the status quo, flip the narrative around food fear and waste, and inspire others to embrace unfamiliar flavours with curiosity. I believe food is one of the most powerful tools to bring people together, spark conversation, and drive change. Every recipe, story, and interaction through Flavours by Papatūānuku is designed to educate, empower, and excite people about the possibility of living more lightly and consciously on the land—while also fostering financial stability and reducing waste. In some cases, this bounty can be given to those suffering from poverty.</p>
+
+  <p>What fuels me is seeing eco-conscious individuals—from whānau to foragers to chefs—start to shift their thinking and embrace new ways of eating that honor both tradition and transformation. My design background enables me to translate this vision into compelling experiences—but it’s the kaupapa that gives it life.</p>
+
+  <p>This project is a wero (challenge) to all of us: to think critically about the impact of our choices, to celebrate the gifts of Papatūānuku, and to imagine a future where sustainability isn’t a compromise—it’s a joy.</p>
+
+  <h4>Just A Thought</h4>
+  <p>We often hear about rabbits, possums, wallabies, and other invasive species causing harm to Aotearoa’s delicate ecosystems. Yet the solution of aerial 1080 drops can be cruel, imprecise, and toxic. It saturates the land, contaminates waterways, and leads to agonizing deaths of animals—many of which become hazardous to other species, including humans. What if, instead, we reclaimed this problem as a resource? What if we cooked, cured, and celebrated these animals in a way that helped heal the land?</p>
   </div>
 </div>
 
-<div class="retro-modal" id="modal7">
-  <div class="retro-modal-content">
-    <span class="close" onclick="closeModal('modal7')">&times;</span>
-    <p>Embed or link to the video here</p>
-  </div>
-</div>
-
+  <a href="individual-work.html" class="back-button">← Return</a>
+  
 <script>
+  function openVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    modal.style.display = 'flex';
+    video.muted = true;
+    video.currentTime = 0;
+    video.play().catch((error) => {
+      console.warn('Autoplay failed:', error);
+    });
+  }
+
+  function toggleVideoZoom() {
+    const video = document.getElementById('videoPlayer');
+    video.classList.toggle('zoomed');
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const video = document.getElementById('videoPlayer');
+    modal.style.display = 'none';
+    video.pause();
+    video.currentTime = 0;
+  }
+
   function openModal(id) {
-    document.getElementById(id).style.display = "flex";
+    document.getElementById(id).style.display = 'flex';
   }
 
   function closeModal(id) {
-    document.getElementById(id).style.display = "none";
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+    const img = modal.querySelector('img');
+    if (img) img.classList.remove('zoomed');
   }
 
   function toggleZoom(img) {
-    img.classList.toggle("zoomed");
+    img.classList.toggle('zoomed');
   }
 </script>
-
-</body>
-</html>
