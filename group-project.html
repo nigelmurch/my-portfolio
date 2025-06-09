@@ -48,12 +48,49 @@
     <div class="modal-content">
       <button class="close-btn" onclick="closeVideoModal('whetuVideo')">X</button>
       <video muted playsinline controls onclick="toggleVideoZoom(this)" style="max-width: 100%; height: auto;">
-        <source src="images/whetu-marama-video.mp4" type="video/mp4" />
+        <source src="images/" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 
+  <!-- Whetu Marama Modals -->
+<div id="whetuModal1" class="modal-container" onclick="closeModal('whetuModal1')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('whetuModal1')">X</button>
+    <img src="images/whetu-display1.jpg" alt="Whetu Display 1" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<div id="whetuModal2" class="modal-container" onclick="closeModal('whetuModal2')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('whetuModal2')">X</button>
+    <img src="images/whetu-display2.jpg" alt="Whetu Display 2" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<div id="whetuModal3" class="modal-container" onclick="closeModal('whetuModal3')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('whetuModal3')">X</button>
+    <img src="images/whetu-display3.jpg" alt="Whetu Display 3" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<!-- Optional blurb/modal 4 -->
+<div id="whetuModal4" class="modal-container" onclick="closeModal('whetuModal4')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('whetuModal4')">X</button>
+    <p>Whetū Mārama is a guiding star of inspiration. Our design celebrates its influence through storytelling, vibrant visuals, and interactive experiences to empower users and guide them toward wellbeing and cultural connection.</p>
+  </div>
+</div>
+
+<!-- Whetu Modal 5 -->
+<div id="whetuModal5" class="modal-container" onclick="closeModal('whetuModal5')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('whetuModal5')">X</button>
+    <img src="images/whetu-display4.jpg" alt="Whetu Display 4" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
   <!-- Whetu Modals -->
   <!-- (Same as you had – just make sure file names match!) -->
 
@@ -90,6 +127,41 @@
     </div>
   </div>
 
+<!-- Open Door Project Modals -->
+<div id="openModal1" class="modal-container" onclick="closeModal('openModal1')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal1')">X</button>
+    <img src="images/grp-research1.png" alt="Open Display 1" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<div id="openModal2" class="modal-container" onclick="closeModal('openModal2')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal2')">X</button>
+    <img src="images/grp-social-mediatemplates.png" alt="Open Display 2" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<div id="openModal3" class="modal-container" onclick="closeModal('openModal3')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal3')">X</button>
+    <img src="images/grp-usercase-studies.png" alt="Open Display 3" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>
+
+<div id="openModal4" class="modal-container" onclick="closeModal('openModal4')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal4')">X</button>
+   <img src="images/grpsocialmedia-single.png" alt="Open Display 3" class="zoom-img" onclick="toggleZoom(this)">  </div>
+</div>
+
+<!-- Open Modal 5 -->
+<div id="openModal5" class="modal-container" onclick="closeModal('openModal5')">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeModal('openModal5')">X</button>
+    <img src="images/grpsocilamedia-single2.png" alt="Open Display 4" class="zoom-img" onclick="toggleZoom(this)">
+  </div>
+</div>  
   <!-- JavaScript -->
   <script>
     function toggleImage(id) {
