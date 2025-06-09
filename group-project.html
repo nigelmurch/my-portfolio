@@ -103,9 +103,8 @@ This experience strengthened my commitment to designing with care, courage, and 
  <div class="individual-work-grid">
   <div class="work-card">
   <h2>My Project</h2>
-  <p>Description goes here.</p>
-
-  <button class="btn" onclick="document.getElementById('hiddenImage').style.display='block'">
+  <button class="toggle-image-btn" onclick="toggleImage()">Show Image</button>
+<img id="hiddenImage" src="images/Education-website.jpg alt="Revealed" class="hidden-image" style="display: none; margin-top: 20px; width: 100%;">
     Reveal Image
   </button>
 
@@ -150,5 +149,20 @@ This experience strengthened my commitment to designing with care, courage, and 
 
   function toggleZoom(img) {
     img.classList.toggle('zoomed');
+  }
+</script>
+
+   <script>
+  function toggleImage() {
+    const image = document.getElementById('hiddenImage');
+    const button = document.querySelector('.toggle-image-btn');
+
+    if (image.style.display === 'none') {
+      image.style.display = 'block';
+      button.textContent = 'Hide Image';
+    } else {
+      image.style.display = 'none';
+      button.textContent = 'Show Image';
+    }
   }
 </script>
