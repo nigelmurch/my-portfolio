@@ -1,93 +1,83 @@
 body {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #0000aa;
-  color: #00ffaa;
-  margin: 0;
-  padding: 0;
-}
-
-/* Navigation (unchanged, omitted) */
-
-.section-title {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #101010;
+  color: #f0f0f0;
+  padding: 2rem;
   text-align: center;
-  padding: 40px 20px;
 }
 
-.section-title h1,
-.section-title h4 {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
+h1 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: #ffdd57;
+  text-transform: uppercase;
 }
 
-.section-title h4 {
-  font-family: "JetBrains Mono", monospace;
+.modal-buttons {
+  margin: 1rem 0 2rem;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 6px;
+  background-color: #444;
+  border: none;
   color: #fff;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.center-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+button:hover {
+  background-color: #ffdd57;
+  color: #000;
 }
 
-.project-section {
-  /* unchanged */
-}
-
-/* Buttons, cards, etc. (unchanged, omitted) */
-
-/* Modal styles */
 .modal-container {
   display: none;
   position: fixed;
-  z-index: 1000;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.95);
   align-items: center;
+  justify-content: center;
 }
 
 .modal-content {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  color: #fff;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 
+.modal-content img,
 .modal-content video {
-  display: block;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px; 
-  right: 10px;
-  background: red;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-size: 0.75rem;
-  font-family: 'Press Start 2P', cursive;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.zoom-img.zoomed,
-video.zoomed {
+.zoomed {
   transform: scale(1.5);
   cursor: zoom-out;
 }
 
-/* For modal greeting, optional */
-.zoom-img { cursor: zoom-in; }
+.close-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #ff4c4c;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10000;
+}
