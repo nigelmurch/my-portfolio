@@ -9,11 +9,13 @@ p {
   font-family: "JetBrains Mono", monospace;
 }
 .nav-bar {
-    padding: 30px 20px;
-  border-bottom: 4px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px; /* ✅ Set your desired font size here */
 }
 
 .logo {
