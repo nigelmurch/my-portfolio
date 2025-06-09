@@ -5,305 +5,122 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Group Project</title>
   <link rel="stylesheet" href="style8.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Chicle&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Marcellus&family=Merienda:wght@300..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Sixtyfour+Convergence&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yesteryear&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav class="nav-bar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="about.html">About |</a></li>
-    <li><a href="individual-work.html">Individual work |</a></li>
-    <li><a href="group-project.html"class="active">Group Project |</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+<!-- Whetu Marama Project Section -->
+<div class="project-section">
+  <h1>Whetu Marama</h1>
 
+  <div class="center-content">
+    <div class="button-container">
+      <button onclick="openVideoModal('whetuVideo')" class="btn">Watch Video</button>
+      <button class="btn" onclick="openModal('whetuModal1')">Open Display 1</button>
+      <button class="btn" onclick="openModal('whetuModal2')">Open Display 2</button>
+      <button class="btn" onclick="openModal('whetuModal3')">Open Display 3</button>
+      <button class="btn" onclick="openModal('whetuModal4')">Open Display 4</button>
+      <button class="btn" onclick="openModal('whetuModal5')">Blurb</button>
+    </div>
 
-  
-  <!-- Open Door Project Section -->
-  <div class="project-section">
-    <h1>Open Door Project</h1>
-
-    <div class="center-content">
-      <div class="button-container">
-        <button onclick="openVideoModal()" class="btn">Watch Video</button>
-        <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
-        <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
-        <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
-        <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
-        <button class="btn" onclick="openModal('modal5')">Blurb</button>
-      </div>
-
-      <div class="individual-work-grid">
-        <div class="work-card">
-          <h2>Open Door Project</h2>
-          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage')">Show Image</button>
-          <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
-        </div>
+    <div class="individual-work-grid">
+      <div class="work-card">
+        <h2>Whetu Marama</h2>
+        <button class="toggle-image-btn" onclick="toggleImage('hiddenImage2')">Show Image</button>
+        <img id="hiddenImage2" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
       </div>
     </div>
   </div>
+</div>
 
- <!-- Video Modal -->
-<div id="videoModal" class="modal-container">
+<!-- Video Modal -->
+<div id="whetuVideo" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeVideoModal()">X</button>
+    <button class="close-btn" onclick="closeVideoModal('whetuVideo')">X</button>
     <video
-      id="videoPlayer"
       muted
       playsinline
       controls
-      onclick="toggleVideoZoom()"
-      style="max-width: 100%; height: auto;">
-      <source src="images/open-door-project.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</div>
-
-<!-- Image Modals -->
-<div id="modal1" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
-    <img src="images/grp-research1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="modal2" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal2')">✕ Close</button>
-    <img src="images/grp-social-mediatemplates.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="modal3" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal3')">✕ Close</button>
-    <img src="images/grp-usercase-studies.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
-  </div>
-</div>
-
-<div id="modal4" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal4')">✕ Close</button>
-    <img src="images/grpsocialmedia-single.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
-    <img src="images/grpsocilamedia-single2.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" /> 
-  </div>
-</div>
-
-<div id="modal5" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal5')">✕ Close</button>
-    <h3>Reflection of the Project</h3>
-    <p>The Open Door Project was more than just a design challenge—it was an opportunity to create something that could truly impact lives. From the outset, I knew this project needed to reflect more than just functionality; it had to represent accessibility, inclusion, and dignity for every young person navigating the sensitive space of sexual health.
-
-As a service designer and researcher, I dove deeply into understanding the barriers rangatahi face when accessing support. This meant looking beyond assumptions and focusing on what real users told us, with empathy guiding each step of our journey. Through collaboration with my team, we translated research into design—crafting ideas that were both strategic and human.
-
-Personally, the project was transformative. It reminded me that good design isn’t about flashy interfaces or clever slogans. It’s about opening doors—literal and metaphorical—for people who’ve been excluded or underserved. It’s about listening, advocating, and ensuring voices are not only heard but embedded into the outcome.
-
-This experience strengthened my commitment to designing with care, courage, and community. It reminded me why I chose this path in the first place—to be part of something that helps build a better, fairer world. I also taught me that team work is like the inners of a clock, all internal parts have to be well oiled and function in unison, or else it all falls apart, thus I feel I played my part well/p>
-  
-    </div>
-</div>   
-
- <div class="individual-work-grid">
-  <div class="work-card">
-    
-  <h2>Open Door Project </h2>
-  <button class="toggle-image-btn" onclick="toggleImage()">Show Image</button>
-  <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
-</div>
-
-
-
-   
-<!-- Whetu Marama Section -->
-  <div class="project-section">
-    <h1>Whetu Marama</h1>
-
-    <div class="center-content">
-      <div class="button-container">
-        <button onclick="openVideoModal()" class="btn">Watch Video</button>
-        <button class="btn" onclick="openModal('modal1')">Open Display 1</button>
-        <button class="btn" onclick="openModal('modal2')">Open Display 2</button>
-        <button class="btn" onclick="openModal('modal3')">Open Display 3</button>
-        <button class="btn" onclick="openModal('modal4')">Open Display 4</button>
-        <button class="btn" onclick="openModal('modal5')">Blurb</button>
-      </div>
-
-      <div class="individual-work-grid">
-        <div class="work-card">
-          <h2>Whetu Marama</h2>
-          <button class="toggle-image-btn" onclick="toggleImage('hiddenImage2')">Show Image</button>
-          <img id="hiddenImage2" src="images/Education-website2.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Example Modal Structure -->
-  <div id="modal1" class="modal">Content for Modal 1</div>
-  <div id="modal2" class="modal">Content for Modal 2</div>
-  <div id="modal3" class="modal">Content for Modal 3</div>
-  <div id="modal4" class="modal">Content for Modal 4</div>
-  <div id="modal5" class="modal">Blurb Content</div>
-
- <!-- Video Modal -->
-<div id="videoModal" class="modal-container">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeVideoModal()">X</button>
-    <video
-      id="videoPlayer"
-      muted
-      playsinline
-      controls
-      onclick="toggleVideoZoom()"
+      onclick="toggleVideoZoom(this)"
       style="max-width: 100%; height: auto;"
     >
-      <source src="images/open-door-project.mp4" type="video/mp4" />
+      <source src="images/whetu-marama-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
 </div>
 
 <!-- Image Modals -->
-<div id="modal1" class="modal-container">
+<div id="whetuModal1" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal1')">✕ Close</button>
-    <img src="images/grp-research1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
+    <button class="close-btn" onclick="closeModal('whetuModal1')">✕ Close</button>
+    <img src="images/whetu1.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div id="modal2" class="modal-container">
+<div id="whetuModal2" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal2')">✕ Close</button>
-    <img src="images/grp-social-mediatemplates.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
+    <button class="close-btn" onclick="closeModal('whetuModal2')">✕ Close</button>
+    <img src="images/whetu2.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div id="modal3" class="modal-container">
+<div id="whetuModal3" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal3')">✕ Close</button>
-    <img src="images/grp-usercase-studies.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
+    <button class="close-btn" onclick="closeModal('whetuModal3')">✕ Close</button>
+    <img src="images/whetu3.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div id="modal4" class="modal-container">
+<div id="whetuModal4" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal4')">✕ Close</button>
-    <img src="images/grpsocialmedia-single.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
-    <img src="images/grpsocilamedia-single2.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" /> 
+    <button class="close-btn" onclick="closeModal('whetuModal4')">✕ Close</button>
+    <img src="images/whetu4a.png" alt="Modal 4A" class="zoom-img" onclick="toggleZoom(this)" />
+    <img src="images/whetu4b.png" alt="Modal 4B" class="zoom-img" onclick="toggleZoom(this)" />
   </div>
 </div>
 
-<div id="modal5" class="modal-container">
+<!-- Blurb Modal -->
+<div id="whetuModal5" class="modal-container">
   <div class="modal-content">
-    <button class="close-btn" onclick="closeModal('modal5')">✕ Close</button>
+    <button class="close-btn" onclick="closeModal('whetuModal5')">✕ Close</button>
     <h3>Reflection of the Project</h3>
-    <p>The Open Door Project was more than just a design challenge—it was an opportunity to create something that could truly impact lives. From the outset, I knew this project needed to reflect more than just functionality; it had to represent accessibility, inclusion, and dignity for every young person navigating the sensitive space of sexual health.
-
-As a service designer and researcher, I dove deeply into understanding the barriers rangatahi face when accessing support. This meant looking beyond assumptions and focusing on what real users told us, with empathy guiding each step of our journey. Through collaboration with my team, we translated research into design—crafting ideas that were both strategic and human.
-
-Personally, the project was transformative. It reminded me that good design isn’t about flashy interfaces or clever slogans. It’s about opening doors—literal and metaphorical—for people who’ve been excluded or underserved. It’s about listening, advocating, and ensuring voices are not only heard but embedded into the outcome.
-
-This experience strengthened my commitment to designing with care, courage, and community. It reminded me why I chose this path in the first place—to be part of something that helps build a better, fairer world. I also taught me that team work is like the inners of a clock, all internal parts have to be well oiled and function in unison, or else it all falls apart, thus I feel I played my part well/p>
-  
-    </div>
-</div>   
-
- <div class="individual-work-grid">
-  <div class="work-card">
-    
-  <h2>Whetu Marama</h2>
-  <button class="toggle-image-btn" onclick="toggleImage()">Show Image</button>
-  <img id="hiddenImage" src="images/Education-website.jpg" alt="Surprise!" style="display: none; margin-top: 20px; max-width: 100%; border: 2px solid #00ffaa;">
+    <p>Whetu Marama was a chance to explore the stars through a user-centred lens—connecting mātauranga Māori with design in a way that inspired and informed. As a design team, we wanted our mahi to shine a light on stories not often told, and to ensure those stories were crafted with respect, playfulness, and authenticity.</p>
+    <p>Retro aesthetics were used to echo the timeless nature of these narratives, while interactivity and colour ensured our approach felt accessible and bold. This project reinforced my belief that cultural storytelling deserves digital platforms that honour both history and user needs equally.</p>
+  </div>
 </div>
 
-
-
-
-
-   
-  
+<!-- JavaScript Inline -->
 <script>
-  function openVideoModal() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
-    modal.style.display = 'flex';
-    video.muted = true;
-    video.currentTime = 0;
-    video.play().catch((error) => {
-      console.warn('Autoplay failed:', error);
-    });
-  }
-
-  function toggleVideoZoom() {
-    const video = document.getElementById('videoPlayer');
-    video.classList.toggle('zoomed');
-  }
-
-  function closeVideoModal() {
-    const modal = document.getElementById('videoModal');
-    const video = document.getElementById('videoPlayer');
-    modal.style.display = 'none';
-    video.pause();
-    video.currentTime = 0;
+  function toggleImage(id) {
+    var img = document.getElementById(id);
+    img.style.display = img.style.display === "none" ? "block" : "none";
   }
 
   function openModal(id) {
-    document.getElementById(id).style.display = 'flex';
+    document.getElementById(id).style.display = "flex";
   }
 
   function closeModal(id) {
-    const modal = document.getElementById(id);
-    modal.style.display = 'none';
-    const img = modal.querySelector('img');
-    if (img) img.classList.remove('zoomed');
+    document.getElementById(id).style.display = "none";
+  }
+
+  function openVideoModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function closeVideoModal(id) {
+    document.getElementById(id).style.display = "none";
   }
 
   function toggleZoom(img) {
-    img.classList.toggle('zoomed');
+    img.classList.toggle("zoomed");
+  }
+
+  function toggleVideoZoom(video) {
+    video.classList.toggle("zoomed");
   }
 </script>
 
-   <script>
-  function toggleImage() {
-    const image = document.getElementById('hiddenImage');
-    const button = document.querySelector('.toggle-image-btn');
-
-    if (image.style.display === 'none') {
-      image.style.display = 'block';
-      button.textContent = 'Hide Image';
-    } else {
-      image.style.display = 'none';
-      button.textContent = 'Show Image';
-    }
-  }
-</script>
-
-    <!-- Simple modal and toggle script -->
-  <script>
-    function openModal(id) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(m => m.style.display = 'none');
-      document.getElementById(id).style.display = 'block';
-    }
-
-    function toggleImage(imageId) {
-      const img = document.getElementById(imageId);
-      if (img.style.display === 'none') {
-        img.style.display = 'block';
-      } else {
-        img.style.display = 'none';
-      }
-    }
-
-    function openVideoModal() {
-      alert("Video modal would open here.");
-    }
-  </script>
+</body>
+</html>
