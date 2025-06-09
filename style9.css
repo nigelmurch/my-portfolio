@@ -51,12 +51,7 @@ body {
   padding: 0 5px;
 }
 
-body {
-  font-family: sans-serif;
-  padding: 2rem;
-  background-color: #f4f4f4;
-  text-align: center;
-}
+
 
 .button-container button {
   margin: 10px;
