@@ -147,9 +147,9 @@ body {
 /* Content Grid */
 .individual-work-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
+  justify-content: center;      /* Center horizontally */
+  align-items: center;          /* Center vertically */
+  min-height: 100vh;            /* Full screen height for vertical centering */
   padding: 40px 20px;
 }
 
@@ -159,10 +159,10 @@ body {
   justify-content: space-between;
   background-color: #111;
   border: 2px dashed #00ffff;
-  padding: 30px;
-  width: 300px;
+  padding: 50px;
+  width: 450px;
   text-align: center;
   color: #fff;
-  box-shadow: 0 0 10px #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
   transition: transform 0.2s;
 }
