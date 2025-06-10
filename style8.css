@@ -31,7 +31,7 @@ body {
 }
 
 .nav-links li a {
-  color: #fff;
+  font-family: 'Press Start 2P', monospace;  color: #fff;
   text-decoration: none;
   font-weight: bold;
   text-transform: lowercase;
