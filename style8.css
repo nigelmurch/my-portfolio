@@ -1,6 +1,7 @@
+/* ------------------ GENERAL ------------------ */
 body {
   font-family: 'Press Start 2P', monospace;
-    background-color: #0000aa;
+  background-color: #0000aa;
   color: #f0f0f0;
   padding: 2rem;
   text-align: center;
@@ -13,8 +14,7 @@ body {
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 18px;
+  font-size: 18px; /* Consistent font size for nav */
 }
 
 .logo {
@@ -31,10 +31,13 @@ body {
 }
 
 .nav-links li a {
-  font-family: 'Press Start 2P', monospace;  color: #fff;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   text-transform: lowercase;
+  font-size: 18px; /* Match overall nav font size */
+  padding: 0 5px;  /* Prevent shift on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links li a.active {
@@ -44,7 +47,6 @@ body {
 .nav-links li a:hover {
   background-color: red;
   color: white;
-  padding: 0 5px;
 }
 
 
