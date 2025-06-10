@@ -125,3 +125,7 @@ button:hover {
   cursor: pointer;
   z-index: 10000;
 }
+
+#open-door-project {
+  margin-bottom: 60px; /* Adjust space as needed */
+}
