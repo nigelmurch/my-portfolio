@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Open Door & Whetū Mārama Modals</title>
-  <link rel="stylesheet" href="style8.css">
+  <link rel="stylesheet" href="style8.css" />
 </head>
 <body>
   <nav class="nav-bar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="about.html" class="active">About |</a></li>
-    <li><a href="individual-work.html">Individual work |</a></li>
-    <li><a href="group-project.html">Group Project|</a></li>
-    <li><a href="contact.html">contact</a></li>
-  </ul>
-</nav>
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About |</a></li>
+      <li><a href="individual-work.html">Individual work |</a></li>
+      <li><a href="group-project.html">Group Project |</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <h1>Open Door Project</h1>
   <div class="modal-buttons">
     <button onclick="openModal('od-img1')">Research</button>
@@ -41,36 +42,36 @@
   </div>
 
   <!-- Image Modals for Open Door -->
-  <div id="od-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img1')">✕</span><img src="img/grp-research1.png" onclick="toggleZoom(this)"></div></div>
-  <div id="od-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img2')">✕</span><img src="img/grp-social-mediatemplates.png" onclick="toggleZoom(this)"></div></div>
-  <div id="od-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img3')">✕</span><img src="img/grp-usercase-studies.png" onclick="toggleZoom(this)"></div></div>
-  <div id="od-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img4')">✕</span><img src="grpsocialmedia-single.png" onclick="toggleZoom(this)"></div></div>
-  <div id="od-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img5')">✕</span><img src="img/grpsocilamedia-single2.png" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img1')">✕</span><img src="images/grp-research1.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="od-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img2')">✕</span><img src="images/grp-social-mediatemplates.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="od-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img3')">✕</span><img src="images/grp-usercase-studies.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="od-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img4')">✕</span><img src="images/grpsocialmedia-single.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="od-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img5')">✕</span><img src="images/grpsocilamedia-single2.png" onclick="toggleZoom(this)" /></div></div>
 
   <!-- Video Modal for Open Door -->
   <div id="od-video" class="modal-container">
     <div class="modal-content">
       <span class="close-button" onclick="closeVideoModal('od-video')">✕</span>
       <video controls onclick="toggleVideoZoom(this)">
-        <source src="open-door-project.mp4" type="video/mp4">
+        <source src="videos/open-door-project.mp4" type="video/mp4" />
         Your browser does not support video.
       </video>
     </div>
   </div>
 
   <!-- Image Modals for Whetū Mārama -->
-  <div id="wm-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img1')">✕</span><img src="img/my-role-in-wm.png" onclick="toggleZoom(this)"></div></div>
-  <div id="wm-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img2')">✕</span><img src="img/360-experiencewm.png" onclick="toggleZoom(this)"></div></div>
-  <div id="wm-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img3')">✕</span><img src="img/stargazing-page-wm.png" onclick="toggleZoom(this)"></div></div>
-  <div id="wm-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img4')">✕</span><img src="img/home-pagewm.png" onclick="toggleZoom(this)"></div></div>
-  <div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="figma-hifi-prototype.png" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img1')">✕</span><img src="images/my-role-in-wm.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="wm-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img2')">✕</span><img src="images/360-experiencewm.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="wm-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img3')">✕</span><img src="images/stargazing-page-wm.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="wm-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img4')">✕</span><img src="images/home-pagewm.png" onclick="toggleZoom(this)" /></div></div>
+  <div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="images/figma-hifi-prototype.png" onclick="toggleZoom(this)" /></div></div>
 
   <!-- Video Modal for Whetū Mārama -->
   <div id="wm-video" class="modal-container">
     <div class="modal-content">
       <span class="close-button" onclick="closeVideoModal('wm-video')">✕</span>
       <video controls onclick="toggleVideoZoom(this)">
-        <source src="whetu-marama-website.mp4" type="video/mp4">
+        <source src="videos/whetu-marama-website.mp4" type="video/mp4" />
         Your browser does not support video.
       </video>
     </div>
@@ -116,6 +117,5 @@
       if (video) video.classList.toggle('zoomed');
     }
   </script>
-
 </body>
 </html>
