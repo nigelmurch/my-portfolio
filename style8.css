@@ -9,8 +9,9 @@ body {
 
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
-   font-family: 'Press Start 2P', monospace;  display: flex;
-  justify-content: space-between;
+  
+  display: flex;
+  font-family: "JetBrains Mono", monospace;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
