@@ -129,3 +129,46 @@ button:hover {
 #open-door-project {
   margin-bottom: 60px; /* Adjust space as needed */
 }
+
+/* ------------------ REFLECTION SECTION ------------------ */
+.reflection-section {
+  background-color: #111199;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  border: 3px solid #ffdd57;
+  border-radius: 20px;
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.reflection-section h2 {
+  font-family: 'Press Start 2P', monospace;
+  color: #ffdd57;
+  font-size: 1rem;
+  margin: 1.5rem 0 1rem;
+  text-transform: uppercase;
+}
+
+.reflection-section ol {
+  list-style-position: outside;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.reflection-section ol li {
+  margin-bottom: 1.2rem;
+}
+
+.reflection-section p {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.reflection-section hr {
+  border: none;
+  border-top: 2px dashed #ffdd57;
+  margin: 2rem 0;
+}
