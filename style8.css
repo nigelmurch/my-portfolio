@@ -9,13 +9,15 @@ body {
 
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
-  
   display: flex;
-  font-family: "JetBrains Mono", monospace;
+  justify-content: center;
   align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
-  font-size: 24px; /* Consistent font size for nav */
+  gap: 1rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
 }
 
 .logo {
