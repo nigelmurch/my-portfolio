@@ -19,8 +19,13 @@ body {
 
 .nav-bar {
   display: flex;
+  justify-content: space-between;  /* This spreads logo left, links right */
   align-items: center;
-  justify-content: flex-end;
+  padding: 0 2rem;  /* Add horizontal breathing space */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .nav-links {
