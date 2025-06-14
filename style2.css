@@ -78,7 +78,7 @@ body {
 /* Work-card tweaks for About page */
 .work-card h3 {
   font-family: 'Press Start 2P', monospace;
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 1rem;
   color: #00ffff;
 }
