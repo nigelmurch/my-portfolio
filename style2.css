@@ -129,6 +129,17 @@ body {
   transform: scale(1.05);
 }
 
+.profile-photo {
+  width: 180px;          /* or use % if you prefer responsiveness */
+  height: auto;
+  border-radius: 12px;   /* Optional: soften edges */
+  margin-bottom: 20px;   /* Space below the photo */
+  box-shadow: 0 0 10px #ff00ff; /* Optional: matching retro effect */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .retro-button {
   display: inline-block;
   margin-top: 20px;
