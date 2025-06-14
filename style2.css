@@ -85,10 +85,16 @@ body {
 
 /* Badge image next to the H1 */
 .title-image {
-  width: 180px;
+  width: 80px; /* Smaller size */
   height: auto;
-  box-shadow: 0 0 10px #ff00ff;
- float-item:right;
+  float: right;
+  margin-left: 20px;
+  box-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff; /* stacked glows for a neon effect */
+  border-radius: 6px; /* optional: soften the image edges */
 }
 
 .section-title h2 {
