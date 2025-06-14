@@ -63,7 +63,8 @@ section {
 }
 
 h1 {
-  font-family: 'Press Start 2P', monospace;  margin-top: 3rem;
+  font-family: 'Press Start 2P', monospace;
+  margin-top: 3rem;
   font-size: 2rem;
   color: #ffdd57;
   text-transform: uppercase;
@@ -76,9 +77,10 @@ h1 {
 button {
   padding: 10px 20px;
   margin: 6px;
-    background-color: #ff007f;
+  background-color: #ff007f;
   border: none;
-  font-family: 'Press Start 2P', monospace;  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
   font-size: 0.9rem;
   border-radius: 5px;
   cursor: pointer;
@@ -130,7 +132,6 @@ button:hover {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  
   font-size: 20px;
   color: white;
   line-height: 30px;
@@ -183,5 +184,49 @@ button:hover {
 .reflection-section hr {
   border: none;
   border-top: 2px dashed #ffdd57;
+  margin: 2rem 0;
+}
+
+/* ------------------ WHETU MARAMA REFLECTION SECTION ------------------ */
+.reflection-whetu {
+  background-color: #00008b;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  border: 3px solid #ffff66;
+  border-radius: 20px;
+  text-align: left;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  box-shadow: 0 0 10px #ffff66;
+}
+
+.reflection-whetu h2 {
+  font-family: 'Press Start 2P', monospace;
+  color: #ffff66;
+  font-size: 1rem;
+  margin: 1.5rem 0 1rem;
+  text-transform: uppercase;
+}
+
+.reflection-whetu ol {
+  list-style-position: outside;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.reflection-whetu ol li {
+  margin-bottom: 1.2rem;
+}
+
+.reflection-whetu p {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.reflection-whetu hr {
+  border: none;
+  border-top: 2px dashed #ffff66;
   margin: 2rem 0;
 }
