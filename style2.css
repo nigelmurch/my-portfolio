@@ -75,6 +75,10 @@ body {
   margin-top: 1rem;
 }
 
+.about-me-grid {
+  padding-top: 40px; /* or use margin-top: 40px; */
+}
+
 /* Work-card tweaks for About page */
 .work-card h3 {
   font-family: 'Press Start 2P', monospace;
@@ -91,6 +95,10 @@ body {
   list-style-type: square; /* or 'disc' for regular bullets */
 }
 
+.work-card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
 /* Content Grid */
 .individual-work-grid {
