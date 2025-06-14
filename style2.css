@@ -60,20 +60,32 @@ body {
   border-bottom: 2px dotted #ff00ff;
 }
 
-.section-title h1 {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 3.5rem;
+.section-title h2 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.section-title .quote {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  color: #cccccc;
+  margin-top: 1rem;
+}
+
+/* Work-card tweaks for About page */
+.work-card h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  margin-bottom: 1rem;
   color: #00ffff;
 }
 
-.section-title h2 {
+.work-card p,
+.work-card ul {
   font-family: "JetBrains Mono", monospace;
-  color: #c2c4c4;
-  font-size: 1.5rem; /* ← You can make this 2rem, 3rem, etc. */
-}
-.section-title p {
-  font-size: 12px;
-  color: #cccccc;
+  font-size: 0.9rem;
+  color: #f0f0f0;
 }
 
 /* Content Grid */
