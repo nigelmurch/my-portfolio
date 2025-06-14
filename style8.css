@@ -60,6 +60,10 @@ body {
   color: white;
 }
 
+.logo {
+  height: 60px;
+  margin-right: auto;
+}
 
 h1 {
   font-family: 'Press Start 2P', monospace;  margin-top: 3rem;
