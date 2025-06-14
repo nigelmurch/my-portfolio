@@ -116,8 +116,8 @@ body {
   background-color: #111;
   border: 2px dashed #00ffff;
   padding: 30px;
-  width: 1vw;
-  max-width: 800px;
+  width: 60%;
+  max-width: none;
   margin: 0 auto;              /*  Center the card itself */
   text-align: left;            /* Align text inside to the left */
   color: #fff;
