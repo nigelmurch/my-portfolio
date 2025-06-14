@@ -29,6 +29,7 @@ body {
 }
 
 .nav-links {
+  font-size:24px;
   list-style: none;
   display: flex;
   gap: 30px;
