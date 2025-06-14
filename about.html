@@ -9,99 +9,104 @@
 </head>
 <body>
 
-<nav class="nav-bar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-    </a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="about.html" class="active">About |</a></li>
-    <li><a href="individual-work.html">Individual Work |</a></li>
-    <li><a href="group-project.html">Group Project|</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+
+nav class="nav-bar">
+  <div class="nav-left">
+    <a href="index.html">
+      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+    </a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="about.html" class="active">About |</a></li>
+    <li><a href="individual-work.html">Individual Work |</a></li>
+    <li><a href="group-project.html">Group Project |</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
 </nav>
 
 <div class="heading-wrapper">
-  <h1>UX INVESTIGATOR</h1>
-  <h2>Proclamation of Purpose and Practice</h2>
-  <h3>Nigel Murch – UX Researcher & Service Designer</h3>
+  <h1>UX INVESTIGATOR</h1>
+  <h2>Proclamation of Purpose and Practice</h2>
+  <h3>Nigel Murch – UX Researcher & Service Designer</h3>
+</div>
 
-    <!-- Inside the about-section .left-stack -->
 <div class="about-section">
-    <div class="left-stack">
-      <img src="images/me.png" alt="Retro Profile Image" />
-      <h3>Nigel Murch — UX Researcher & Service Designer</h3>
-      <button class="cta" id="openModal">My Values</button>
-    </div>
+  <div class="left-stack">
+    <img src="images/me.png" alt="Retro Profile Image" />
+    <h3>Nigel Murch — UX Researcher & Service Designer</h3>
+    <button class="cta" id="openModal">My Values</button>
+  </div>
 
-    <div class="quote-wrapper">
-      <p class="quote">
-        “Your users have secrets, I find them.”<br />
-        <span class="quote-sub">(<em>ethically, of course</em>)</span>
-      </p>
-    </div>
-  </div>
+  <div class="quote-wrapper">
+    <p class="quote">
+      “Your users have secrets, I find them.”<br />
+      <span class="quote-sub">(<em>ethically, of course</em>)</span>
+    </p>
+  </div>
+</div>
 
-  <!-- ✅ NEW FRAMING STATEMENT -->
-  
-
+<!-- ✅ Projects Section -->
 <section class="projects">
-      <div class="project-card">
-        <h2>Kia ora</h2>
-        <p> Greetings all
-Ko te Ahu Patiki te maunga
-Herbert is the mountain
-Ko Aparima te awa
-Aparima is the river
-Nō Ngāruawāhia ahau
-I am from Ngāruawāhia
-Ko Murch tōku whānau
-Murch is my family
-Ko Nigel tōku ingoa
-My name is Nigel</p>
-<button>View Project</button>
-      </div>
+  <div class="project-card">
+    <h2>Kia ora</h2>
+    <p>
+      Greetings all<br>
+      Ko te Ahu Patiki te maunga<br>
+      Herbert is the mountain<br>
+      Ko Aparima te awa<br>
+      Aparima is the river<br>
+      Nō Ngāruawāhia ahau<br>
+      I am from Ngāruawāhia<br>
+      Ko Murch tōku whānau<br>
+      Murch is my family<br>
+      Ko Nigel tōku ingoa<br>
+      My name is Nigel
+    </p>
+    <button>View Project</button>
+  </div>
+</section>
 
-  <div class="content">
-  <a href="about.html" class="back-button">Return</a>
+<!-- ✅ Return Button -->
+<div class="content">
+  <a href="about.html" class="back-button">Return</a>
 </div>
 
-<!-- ✅ MODAL HTML -->
+<!-- ✅ Modal HTML -->
 <div id="modal-overlay" class="modal-overlay">
-  <div class="modal-content">
-    <span class="close-modal" id="closeModal">&times;</span>
-    <h2>My Core Values</h2>
-    <ul>
-      <li><strong>Understand deeply</strong></li>
-      <li><strong>Design with purpose</strong></li>
-      <li><strong>Always advocate for the user</strong></li>
-      <li><strong>Champion equity and inclusion</strong></li>
-      <li><strong>Be authentic, ethical, and intentional</strong></li>
-    </ul>
-  </div>
+  <div class="modal-content">
+    <span class="close-modal" id="closeModal">&times;</span>
+    <h2>My Core Values</h2>
+    <ul>
+      <li><strong>Understand deeply</strong></li>
+      <li><strong>Design with purpose</strong></li>
+      <li><strong>Always advocate for the user</strong></li>
+      <li><strong>Champion equity and inclusion</strong></li>
+      <li><strong>Be authentic, ethical, and intentional</strong></li>
+    </ul>
+  </div>
 </div>
 
-<!-- ✅ MODAL SCRIPT -->
+<!-- ✅ Modal Script -->
 <script>
-  const modal = document.getElementById('modal-overlay');
-  const openModalBtn = document.getElementById('openModal');
-  const closeModalBtn = document.getElementById('closeModal');
+  const modal = document.getElementById('modal-overlay');
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
 
-  openModalBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-  });
+  openModalBtn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+  });
 
-  closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-  });
+  closeModalBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
 
-  window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.style.display = 'none';
-    }
-  });
+  window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
 </script>
-<script src="script2.js" /></body>
+<script src="script2.js"></script>
+</body>
 </html>
+
