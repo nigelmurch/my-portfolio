@@ -300,6 +300,68 @@ h3 {
   box-shadow: 2px 2px 0 #000;
 }
 
+/* ------------------ FRAMED SECTION ------------------ */
+.framed-section {
+  background-color: #111199;
+  color: #f0f0f0;
+  padding: 3rem;
+  margin: 3rem auto;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  max-width: 1000px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.framed-section h4.framed-intro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-align: center;
+  color: #66e0ff;
+}
+
+.framed-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.3rem;
+}
+
+.framed-body ul {
+  margin-left: 2rem;
+  padding-left: 1rem;
+}
+
+.framed-body ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: square;
+}
+
+.framed-body .quote {
+  font-family: "Pompiere", cursive;
+  font-size: 1.6rem;
+  color: #ffccff;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.framed-body .quote span {
+  display: block;
+  margin-top: 1rem;
+  color: #66e0ff;
+}
+
+.framed-body .signature {
+  margin-top: 3rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
+  border-top: 1px dashed #66e0ff;
+  padding-top: 1rem;
+}
+
 /* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
   .about-section {
