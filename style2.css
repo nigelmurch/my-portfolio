@@ -110,7 +110,8 @@ body {
   padding: 30px;
   width: 100%;
   max-width: 800px;
-  text-align: left; /* ← Add this */
+  margin: 0 auto;              /*  Center the card itself */
+  text-align: left;            /* Align text inside to the left */
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
