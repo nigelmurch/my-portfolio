@@ -65,6 +65,10 @@ body {
   margin-right: auto;
 }
 
+section {
+  margin-top: 4rem;
+}
+
 h1 {
   font-family: 'Press Start 2P', monospace;  margin-top: 3rem;
   font-size: 2rem;
