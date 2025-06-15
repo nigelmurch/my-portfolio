@@ -1,27 +1,25 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Commodore 64 Boot Screen</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commodore 64 Boot</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="screen">
-      **** COMMODORE 64 BASIC V2 ****<<br> </div>
-      <div class="boot-text2">   
-      </div>      
-  64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
-      READY.
-    </div>
-    <div class="any-key">***press any key to continue***</div>
-  </div>
+  <div class="screen">
+    <div class="boot-text">
+      **** COMMODORE 64 BASIC V2 ****
+    </div>
+    <div class="boot-text2">
+      64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
+      READY.
+    </div>
+    <div class="any-key">***press any key to continue***</div>
+  </div>
 
-  <script>
-    document.addEventListener('keydown', () => {
-      alert("Booting up! 🔧");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
