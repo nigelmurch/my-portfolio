@@ -18,28 +18,36 @@
 
 <script>
   const bootText = document.getElementById("bootText");
-  const textToType = `BOOTING UX INVESTIGATOR SYSTEM...\n\nLoading protocols...\nSystem check complete.\nWelcome, User.`;
+  const textToType = `BOOTING UX INVESTIGATOR SYSTEM...\n\nLoading protocols...\nSystem check complete.\n\n> Press any key to continue...`;
+  
   const typingSound = new Audio("older-keyboard-typing.wav");
+  typingSound.loop = true;
+  typingSound.volume = 0.2;
 
   let i = 0;
 
   function type() {
+    if (i === 0) {
+      // Start playing sound when typing begins
+      typingSound.play().catch((e) => {
+        console.warn("Autoplay failed:", e);
+      });
+    }
+
     if (i < textToType.length) {
       bootText.textContent += textToType.charAt(i);
-
-      // Play a short sound on every character (clone so it overlaps properly)
-      const keySound = typingSound.cloneNode();
-      keySound.volume = 0.3; // Adjust volume if needed
-      keySound.play();
-
       i++;
-      setTimeout(type, 60); // typing speed
+      setTimeout(type, 50); // typing speed
+    } else {
+      // Stop typing sound when done
+      typingSound.pause();
+      typingSound.currentTime = 0;
     }
   }
 
-  // Start the typing effect when the screen is ready
-  window.onload = type;
+  window.onload = () => {
+    type(); // Auto-start typing with sound
+  };
 </script>
-
   
 </html>
