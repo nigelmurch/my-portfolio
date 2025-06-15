@@ -19,6 +19,34 @@
   </ul>
 </nav>
 
+   <h1>Open Door Project</h1>
+  <div class="modal-buttons">
+    <button onclick="openModal('od-img1')">Open Image 1</button>
+    <button onclick="openModal('od-img2')">Open Image 2</button>
+    <button onclick="openModal('od-img3')">Open Image 3</button>
+    <button onclick="openModal('od-img4')">Open Image 4</button>
+    <button onclick="openModal('od-img5')">Open Image 5</button>
+    <button onclick="openVideoModal('od-video')">Open Video</button>
+  </div>
+
+  <!-- Image Modals for Open Door -->
+  <div id="od-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img1')">✕</span><img src="img/open-door-1.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img2')">✕</span><img src="img/open-door-2.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img3')">✕</span><img src="img/open-door-3.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img4')">✕</span><img src="img/open-door-4.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="od-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img5')">✕</span><img src="img/open-door-5.jpg" onclick="toggleZoom(this)"></div></div>
+
+  <!-- Video Modal for Open Door -->
+  <div id="od-video" class="modal-container">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeVideoModal('od-video')">✕</span>
+      <video controls onclick="toggleVideoZoom(this)">
+        <source src="videos/open-door.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+
 <section class="project-work">
     <h1>OPEN DOOR PROJECT</h1>
 
@@ -51,11 +79,86 @@
       While not everything went as planned, the heart was there. The Open Door Project could grow into a truly transformative piece of design activism. 
       Our team laid a strong foundation for future work rooted in community engagement, collaboration and inclusive design.
     </p>
+  </section> <br> <br>
+  <h1>Whetū Mārama</h1>
+  <div class="modal-buttons">
+    <button onclick="openModal('wm-img1')">Open Image 1</button>
+    <button onclick="openModal('wm-img2')">Open Image 2</button>
+    <button onclick="openModal('wm-img3')">Open Image 3</button>
+    <button onclick="openModal('wm-img4')">Open Image 4</button>
+    <button onclick="openModal('wm-img5')">Open Image 5</button>
+    <button onclick="openVideoModal('wm-video')">Open Video</button>
+  </div>
+  
+<!-- Video Modal for Open Door -->
+  <div id="od-video" class="modal-container">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeVideoModal('od-video')">✕</span>
+      <video controls onclick="toggleVideoZoom(this)">
+        <source src="videos/open-door.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
 
-    <p class="signature">
-      — Ngā mihi, Nigel Murch
-    </p>
-  </section>
+  <!-- Image Modals for Whetū Mārama -->
+  <div id="wm-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img1')">✕</span><img src="img/whetu-marama-1.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img2')">✕</span><img src="img/whetu-marama-2.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img3')">✕</span><img src="img/whetu-marama-3.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img4')">✕</span><img src="img/whetu-marama-4.jpg" onclick="toggleZoom(this)"></div></div>
+  <div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="img/whetu-marama-5.jpg" onclick="toggleZoom(this)"></div></div>
+
+  <!-- Video Modal for Whetū Mārama -->
+  <div id="wm-video" class="modal-container">
+    <div class="modal-content">
+      <span class="close-button" onclick="closeVideoModal('wm-video')">✕</span>
+      <video controls onclick="toggleVideoZoom(this)">
+        <source src="videos/whetu-marama.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'none';
+    }
+
+    function toggleZoom(img) {
+      if (img) img.classList.toggle('zoomed');
+    }
+
+    function openVideoModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
+    }
+
+    function closeVideoModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+
+    function toggleVideoZoom(video) {
+      if (video) video.classList.toggle('zoomed');
+    }
+  </script>
 
 </body>
 </html>
