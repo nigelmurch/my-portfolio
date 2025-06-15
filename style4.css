@@ -34,7 +34,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase; /* ✅ Make all nav text uppercase */
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .nav-links li a.active {
