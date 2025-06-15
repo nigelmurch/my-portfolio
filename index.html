@@ -15,4 +15,31 @@
 </div>
   <script src="script.js"></script>
 </body>
+
+<script>
+  const bootText = document.getElementById("bootText");
+  const textToType = `BOOTING UX INVESTIGATOR SYSTEM...\n\nLoading protocols...\nSystem check complete.\nWelcome, User.`;
+  const typingSound = new Audio("sounds/typing.mp3");
+
+  let i = 0;
+
+  function type() {
+    if (i < textToType.length) {
+      bootText.textContent += textToType.charAt(i);
+
+      // Play a short sound on every character (clone so it overlaps properly)
+      const keySound = typingSound.cloneNode();
+      keySound.volume = 0.3; // Adjust volume if needed
+      keySound.play();
+
+      i++;
+      setTimeout(type, 60); // typing speed
+    }
+  }
+
+  // Start the typing effect when the screen is ready
+  window.onload = type;
+</script>
+
+  
 </html>
