@@ -3,15 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UXI Boot</title>
+  <title>Commodore 64 Boot</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="screen">
-    <pre id="bootText" class="boot-text"></pre>
-    <div id="anyKey" class="any-key">*** PRESS ANY KEY TO CONTINUE ***</div>
+  <div class="c64-screen">
+    <div class="boot-text">
+      *** COMMODORE 64 BASIC V2 ***<br />
+      64K RAM SYSTEM 38911 BASIC BYTES FREE<br /><br />
+      READY.<br /><br />
+      <span class="blink">PRESS ANY KEY TO CONTINUE</span>
+    </div>
   </div>
-  <script src="boot.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
