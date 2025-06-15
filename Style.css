@@ -26,9 +26,8 @@ html, body {
   max-width: 1200px; /* Optional: limit width on large screens */
   height: 90%;
   max-height: 800px; /* Optional: limit height */
-
   padding: 40px;
-  background-color: #000088;
+  background-color: #0000aa
   border: 4px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
   overflow-y: auto;
