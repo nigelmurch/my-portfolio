@@ -21,7 +21,7 @@ body {
 .screen {
   display: flex;
   flex-direction: column;
-   position: relative; /* important */
+  position: relative; /* important */
   align-items: flex-start;
   width: 100%;
   height: 100%;
@@ -30,13 +30,12 @@ body {
   border: 4px solid #00ff00;
   box-shadow: 0 0 10px #00ff00;
   overflow-y: auto;
-  position: relative; /* ✅ Enables absolute children */
+  position: relative; /* âœ… Enables absolute children */
 }
 
-
-
 .boot-text {
-  white-space: pre-wrap; /* ✅ allows \n newlines to display */
+  white-space: pre-wrap; /* âœ… allows 
+ newlines to display */
   text-shadow: 0 0 5px #0f0;
   line-height: 1.6;
   letter-spacing: 1px;
@@ -61,7 +60,6 @@ body {
   z-index: 1000;
 }
 
-}
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
