@@ -21,8 +21,8 @@ body {
       left: 50%;
       transform: translateX(-50%);
       white-space: pre-wrap;
-      font-size: 0.5rem;
-      line-height: 1.5em;
+      font-size: 0.75rem;
+      line-height: 1.75em;
       text-align: center;
     }
 
