@@ -1,5 +1,4 @@
 
-
 window.onload = function () {
   const bootText2 = document.querySelector('.boot-text2');
   const anyKey = document.querySelector('.any-key');
