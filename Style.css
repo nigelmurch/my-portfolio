@@ -1,48 +1,35 @@
 body {
-      margin: 0;
-      background-color: #0404b4; /* Commodore blue */
-      font-family: 'Press Start 2P', monospace;
-      color: #7fffd4;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .screen {
-      flex: 1;
-      position: relative;
-    }
-
-    .boot-text {
-      font-family: 'Press Start 2P', monospace;
-      color: #7fffd4;  
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: pre-wrap;
-      font-size: 1.75rem;
-      line-height: 1.75em;
-      text-align: center;
-    }
-
-   
-.any-key {
-  font-family: 'Press Start 2P', monospace;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: bold;
-  font-size: 1.0rem;
-  display: block;
-  animation: blink 1s infinite;
-  text-align: center;
-  color: #7fffd4; /* Match boot screen text color */
+  margin: 0;
+  padding: 0;
+  background-color: #0000aa;
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
+.c64-screen {
+  width: 100%;
+  padding: 2rem;
+  text-align: left;
+  max-width: 900px;
+}
+
+.boot-text {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
