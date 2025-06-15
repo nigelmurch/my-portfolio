@@ -34,8 +34,7 @@ body {
 }
 
 .boot-text {
-  white-space: pre-wrap; /* Allows 
- newlines to display */
+  white-space: pre-wrap; /* Allows \n newlines to display */
   text-shadow: 0 0 5px #0f0;
   line-height: 1.6;
   letter-spacing: 1px;
