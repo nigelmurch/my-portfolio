@@ -1,48 +1,71 @@
-const bootTextElement = document.getElementById('bootText');
-const anyKeyElement = document.getElementById('anyKey');
+<script>
+  const bootTextElement = document.getElementById('bootText');
+  const anyKeyElement = document.getElementById('anyKey');
 
-const bootLines = [
-  "**** COMMODORE 64 BASIC V2 ****",
-  "64K RAM SYSTEM  38911 BASIC BYTES FREE",
-  "",
-  "UX INVESTIGATOR READY.",
-  "",
-  "LOAD \"PORTFOLIO\",8,1",
-  "SEARCHING FOR PORTFOLIO",
-  "LOADING",
-  "READY."
-];
+  const bootLines = [
+    "**** COMMODORE 64 BASIC V2 ****",
+    "64K RAM SYSTEM  38911 BASIC BYTES FREE",
+    "",
+    "UX INVESTIGATOR READY.",
+    "",
+    "LOAD \"PORTFOLIO\",8,1",
+    "SEARCHING FOR PORTFOLIO",
+    "LOADING",
+    "READY."
+  ];
 
-let lineIndex = 0;
-let charIndex = 0;
+  const typingSound = new Audio("older-keyboard-typing.wav");
+  typingSound.loop = true;
+  typingSound.volume = 0.2;
 
-function typeLine() {
-  if (lineIndex < bootLines.length) {
-    const line = bootLines[lineIndex];
-    if (charIndex <= line.length) {
-      bootTextElement.textContent += line.charAt(charIndex);
-      charIndex++;
-      setTimeout(typeLine, 50); // Typing speed
-    } else {
-      bootTextElement.textContent += '\n';
-      lineIndex++;
-      charIndex = 0;
-      setTimeout(typeLine, 300); // Delay between lines
+  let lineIndex = 0;
+  let charIndex = 0;
+
+  function typeLine() {
+    if (lineIndex === 0 && charIndex === 0) {
+      // Try to start sound when typing begins
+      typingSound.play().catch(() => {});
     }
-  } else {
-    // Finished typing
-    setTimeout(() => {
-      anyKeyElement.style.display = 'block';
-    }, 500);
+
+    if (lineIndex < bootLines.length) {
+      const line = bootLines[lineIndex];
+      if (charIndex <= line.length) {
+        bootTextElement.textContent += line.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeLine, 50); // typing speed
+      } else {
+        bootTextElement.textContent += '\n';
+        lineIndex++;
+        charIndex = 0;
+        setTimeout(typeLine, 300); // delay between lines
+      }
+    } else {
+      // Typing finished
+      typingSound.pause();
+      typingSound.currentTime = 0;
+
+      setTimeout(() => {
+        anyKeyElement.style.display = 'block';
+      }, 500);
+    }
   }
-}
 
-document.addEventListener('keydown', () => {
-  window.location.href = '/about'; // Change this to your actual homepage URL
-});
+  // Fallback: user interaction starts sound if blocked
+  document.body.addEventListener("click", () => {
+    if (typingSound.paused) {
+      typingSound.play().catch(() => {});
+    }
+  });
 
-document.addEventListener('click', () => {
-  window.location.href = '/about'; // Allow click anywhere
-});
+  // Allow navigation on key or click
+  document.addEventListener('keydown', () => {
+    window.location.href = '/about'; // Update to your actual path
+  });
 
-typeLine();
+  document.addEventListener('click', () => {
+    window.location.href = '/about';
+  });
+
+  // Start typing on load
+  window.onload = typeLine;
+</script>
