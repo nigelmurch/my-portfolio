@@ -72,72 +72,43 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.contact-page {
-  display: flex;
-  background-color: #0000aa;  
-  justify-content: center;
-  align-items: center;
-  height: 80vh; /* Adjust height as needed */
-}
-
-/* CONTACT FORM STYLES */
-#contactForm {
-  background: #111;
-  color: #00ffc3;
-  font-family: 'Press Start 2P', cursive;
-  border: 2px solid #00ffc3;
+/* Contact Modal Container */
+.contact-modal {
+  width: 500px; /* previously might have been ~300px */
   padding: 2rem;
-  border-radius: 15px;
-  width: 500px;
-  max-width: 90%;
-  margin: 2rem auto;
-  box-shadow: 0 0 20px #00ffc3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  background-color: #000;
+  border: 2px solid #00ffff;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px #0ff;
+  font-family: 'Press Start 2P', monospace;
 }
 
-#contactForm h2 {
-  grid-column: 1 / -1;
-  text-align: center;
-  font-size: 1rem;
-}
-
-#contactForm label {
-  font-size: 0.75rem;
-  text-align: right;
-  padding-top: 0.4rem;
-}
-
-#contactForm input,
-#contactForm textarea {
-  font-family: inherit;
-  background: black;
-  border: 1px solid #00ffc3;
-  color: #00ffc3;
-  padding: 0.5rem;
-  font-size: 0.75rem;
+/* Input Fields */
+.contact-modal input,
+.contact-modal textarea {
   width: 100%;
-}
-
-#contactForm textarea {
-  grid-column: 1 / -1;
-  resize: vertical;
-}
-
-#contactForm button {
-  grid-column: 1 / -1;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #111;
+  border: 1px solid #00ffff;
+  color: #00ffff;
   font-family: inherit;
-  background: #00ffc3;
-  border: none;
-  padding: 0.6rem;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-  font-size: 0.75rem;
-  transition: background-color 0.2s ease;
+  font-size: 14px;
 }
 
-#contactForm button:hover {
-  background-color: #00d8a0;
+/* Button */
+.contact-modal button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.contact-modal button:hover {
+  background-color: #00dddd;
 }
