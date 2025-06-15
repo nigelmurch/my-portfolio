@@ -1,53 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <title>Commodore 64 Boot</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <title>Commodore 64 Boot</title>
 </head>
 <body>
- <div class="screen">
-  <pre id="bootText" class="boot-text"></pre>
-  <div id="anyKey" class="any-key">*** PRESS ANY KEY TO CONTINUE ***</div>
-</div>
-  <script src="script.js"></script>
+  <div class="screen">
+    <pre id="bootText" class="boot-text"></pre>
+    <div id="anyKey" class="any-key">*** PRESS ANY KEY TO CONTINUE ***</div>
+  </div>
+  <script src="script.js"></script>
 </body>
-
-<script>
-  const bootText = document.getElementById("bootText");
-  const textToType = `BOOTING UX INVESTIGATOR SYSTEM...\n\nLoading protocols...\nSystem check complete.\n\n> Press any key to continue...`;
-  
-  const typingSound = new Audio("older-keyboard-typing.wav");
-  typingSound.loop = true;
-  typingSound.volume = 0.2;
-
-  let i = 0;
-
-  function type() {
-    if (i === 0) {
-      // Start playing sound when typing begins
-      typingSound.play().catch((e) => {
-        console.warn("Autoplay failed:", e);
-      });
-    }
-
-    if (i < textToType.length) {
-      bootText.textContent += textToType.charAt(i);
-      i++;
-      setTimeout(type, 50); // typing speed
-    } else {
-      // Stop typing sound when done
-      typingSound.pause();
-      typingSound.currentTime = 0;
-    }
-  }
-
-  window.onload = () => {
-    type(); // Auto-start typing with sound
-  };
-</script>
-  
 </html>
