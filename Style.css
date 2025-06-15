@@ -38,20 +38,22 @@ body {
   width: 100%;
 }
 
-.any-key {
-  position: fixed; /* Ensure it's pinned to viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Press Start 2P', monospace;
-  font-size: 2rem;
-  color: #00ff00;
-  text-align: center;
-  display: none;
-  animation: blink 1s infinite;
-  white-space: nowrap;
-  z-index: 1000;
+
+.press-key {
+  margin-top: 20px;
+  animation: blink 1s step-start infinite;
+  visibility: hidden;
 }
+
+@keyframes blink {
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
