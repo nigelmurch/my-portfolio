@@ -80,3 +80,30 @@ body {
   color: #666;
   font-size: 10px;
 }
+
+.framed-section {
+  background-color: #111199;
+  color: #f0f0f0;
+  padding: 3rem;
+  margin: 3rem auto;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  max-width: 900px;
+  text-align: left;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.framed-section h4.framed-intro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.framed-section .framed-body p,
+.framed-section .framed-body ul {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+
