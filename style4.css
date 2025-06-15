@@ -6,6 +6,7 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -13,9 +14,10 @@ body {
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
+  font-size: 24px; 
 }
-  
+
+
 .logo {
   height: 4em;
   width: auto;
