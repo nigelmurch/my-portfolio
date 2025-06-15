@@ -4,57 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Commodore 64 Boot Screen</title>
+  <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background-color: #0404b4; /* Commodore blue */
-      font-family: 'Press Start 2P', monospace;
-      color: #7fffd4;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .screen {
-      flex: 1;
-      position: relative;
-    }
-
-    .boot-text {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: pre-wrap;
-      font-size: 1.75rem;
-      line-height: 1.5em;
-      text-align: center;
-    }
-
-    .any-key {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: bold;
-      font-size: 2.0rem;
-      animation: blink 1s infinite;
-      text-align: center;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-  </style>
 </head>
 <body>
   <div class="screen">
-    <div class="boot-text">
-      **** COMMODORE 64 BASIC V2 ****<br><br>
-      64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
+      **** COMMODORE 64 BASIC V2 ****<<br> </div>
+      <div class="boot-text2">   
+      </div>      
+  64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
       READY.
     </div>
     <div class="any-key">***press any key to continue***</div>
