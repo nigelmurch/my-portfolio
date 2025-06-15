@@ -118,7 +118,26 @@ h3 {
 }
 
 .section-title {
-  margin-top: 2rem; /* or adjust to 3rem or 40px as needed */
+  text-align: center;
+}
+
+/* Siren effect on H1 */
+.siren-text {
+  animation: sirenFlash 1s infinite alternate;
+}
+
+@keyframes sirenFlash {
+  0%   { color: #ff0000; } /* red */
+  50%  { color: #ffffff; } /* white flash */
+  100% { color: #0000ff; } /* blue */
+}
+
+/* Style quote for extra polish */
+.quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-top: 1rem;
 }
 /* ABOUT SECTION */
 .about-section {
