@@ -1,234 +1,72 @@
-/* ------------------ GENERAL ------------------ */
 body {
-  font-family: 'Press Start 2P', monospace;
   background-color: #0000aa;
-  color: #f0f0f0;
+  color: #ffffff;
+  font-family: "JetBrains Mono", monospace;
   padding: 2rem;
-  text-align: center;
+  margin: 0;
 }
 
-/* ----------- NAVIGATION BAR STYLING ----------- */
+/* Nav bar retro */
 .nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #0000aa;
-  border-bottom: 2px solid #f0f0f0;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  height: 50px;
-  width: auto;
+  background-color: #000aa0;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #ff007f;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase; /* ✅ Make all nav text uppercase */
-  font-size: 18px;
-  transition: color 0.2s ease-in-out;
-}
-
-.nav-links li a.active {
-  text-decoration: underline;
-}
-
-.nav-links li a:hover {
-  background-color: red;
-  color: white;
-  padding: 0 5px;
-}
-
-.logo {
-  height: 60px;
-  margin-right: auto;
-}
-
-section {
-  margin-top: 4rem;
-}
-
-h1 {
-  font-family: 'Press Start 2P', monospace;
-  margin-top: 3rem;
-  font-size: 2rem;
-  color: #ffdd57;
-  text-transform: uppercase;
-}
-
-.modal-buttons {
-  margin: 1rem 0 2rem;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 6px;
-  background-color: #ff007f;
-  border: none;
-  font-family: 'Press Start 2P', monospace;
-  color: #fff;
-  font-size: 0.9rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #ffdd57;
-  color: #000;
-}
-
-.modal-container {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.95);
-  align-items: center;
   justify-content: center;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
 }
 
-.modal-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
+.nav-links li a {
+  font-family: 'Press Start 2P', monospace;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.modal-content img,
-.modal-content video {
-  max-width: 100%;
-  max-height: 100%;
-  transition: transform 0.3s ease;
-  cursor: zoom-in;
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #ff007f;
+  border-bottom: 2px solid #ff007f;
 }
 
-.zoomed {
-  transform: scale(1.5);
-  cursor: zoom-out;
+/* Project content */
+.project-work {
+  max-width: 900px;
+  margin: 3rem auto;
+  line-height: 1.7;
+  font-size: 1rem;
+  white-space: pre-wrap;
 }
 
-.close-button {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: #ff4c4c;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 20px;
-  color: white;
-  line-height: 30px;
+.project-work h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2rem;
   text-align: center;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-#open-door-project {
-  margin-bottom: 60px; /* Adjust space as needed */
-}
-
-/* ------------------ REFLECTION SECTION ------------------ */
-.reflection-section {
-  background-color: #111199;
-  padding: 2rem;
-  margin: 3rem auto;
-  max-width: 1000px;
-  border: 3px solid #ffdd57;
-  border-radius: 20px;
-  text-align: left;
-  font-size: 0.75rem;
-  line-height: 1.8;
-}
-
-.reflection-section h2 {
-  font-family: 'Press Start 2P', monospace;
-  color: #ffdd57;
-  font-size: 1rem;
-  margin: 1.5rem 0 1rem;
-  text-transform: uppercase;
-}
-
-.reflection-section ol {
-  list-style-position: outside;
-  padding-left: 1.2rem;
+  color: #66ffff;
   margin-bottom: 2rem;
 }
 
-.reflection-section ol li {
-  margin-bottom: 1.2rem;
-}
-
-.reflection-section p {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  line-height: 1.7;
-}
-
-.reflection-section hr {
-  border: none;
-  border-top: 2px dashed #ffdd57;
-  margin: 2rem 0;
-}
-
-/* ------------------ WHETU MARAMA REFLECTION SECTION ------------------ */
-.reflection-whetu {
-  background-color: #00008b;
-  padding: 2rem;
-  margin: 3rem auto;
-  max-width: 1000px;
-  border: 3px solid #ffff66;
-  border-radius: 20px;
-  text-align: left;
-  font-size: 0.75rem;
-  line-height: 1.8;
-  box-shadow: 0 0 10px #ffff66;
-}
-
-.reflection-whetu h2 {
+.project-work h2 {
   font-family: 'Press Start 2P', monospace;
-  color: #ffff66;
-  font-size: 1rem;
-  margin: 1.5rem 0 1rem;
-  text-transform: uppercase;
+  color: #ff00ff;
+  font-size: 1.2rem;
+  border-bottom: 1px dashed #fff;
+  margin-top: 2rem;
 }
 
-.reflection-whetu ol {
-  list-style-position: outside;
-  padding-left: 1.2rem;
-  margin-bottom: 2rem;
+.project-work ol {
+  margin-left: 1.5rem;
 }
 
-.reflection-whetu ol li {
-  margin-bottom: 1.2rem;
-}
-
-.reflection-whetu p {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  line-height: 1.7;
-}
-
-.reflection-whetu hr {
-  border: none;
-  border-top: 2px dashed #ffff66;
-  margin: 2rem 0;
+.project-work p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
