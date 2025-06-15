@@ -73,12 +73,8 @@ h1 {
   100% { background-position: 100% 50%; }
 }
 
-.title-with-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+.section-title {
+  margin-top: 4rem; /* or try 5rem for more space */
 }
 
 .title-with-badge h1 {
@@ -96,7 +92,7 @@ h1 {
 }
 
 .badge-icon {
-  width: 200px;
+  width: 100px;  /* Increased from 60px */
   height: auto;
   display: inline-block;
 }
