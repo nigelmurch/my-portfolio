@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000aa0;
+ background-color: #0000aa;
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
