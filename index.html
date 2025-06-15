@@ -1,24 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commodore 64 Boot</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Boot Screen Simulation</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .boot-line {
+      position: relative;
+      white-space: pre;
+      padding: 10px;
+    }
+
+    .left-text {
+      position: absolute;
+      left: 10px;
+      top: 0;
+    }
+
+    .center-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="screen">
-    <div class="boot-text">
-      **** COMMODORE 64 BASIC V2 ****
-    </div>
-    <div class="boot-text2">
-      64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
-      READY.
-    </div>
-    <div class="any-key">***press any key to continue***</div>
-  </div>
+  <div class="boot-line">
+    <span class="left-text">BIOS v2.41 - Intel Boot Agent GE v1.3.81</span>
+    <span class="center-text">***press any key to continue***</span>
+  </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.addEventListener('keydown', () => {
+      alert("System resuming... 🔧");
+    });
+  </script>
 </body>
 </html>
