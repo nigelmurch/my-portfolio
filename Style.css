@@ -1,61 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Commodore 64 Boot Screen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="screen">
+    <div class="boot-text">
+      **** COMMODORE 64 BASIC V2 ****<br><br>
+      64K RAM SYSTEM  38911 BASIC BYTES FREE<br><br>
+      READY.
+    </div>
+    <div class="any-key">***press any key to continue***</div>
+  </div>
 
-
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #4030A0; /* Commodore 64 blue */
-  color: #00FF00; /* Green text */
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
-  line-height: 1.5;
-  white-space: pre;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.screen {
-  width: 80%;
-  max-width: 800px;
-}
-
-
-.boot-text {
-  white-space: pre-wrap; /* Allows \n newlines to display */
-  text-shadow: 0 0 5px #0f0;
-  line-height: 1.6;
-  letter-spacing: 1px;
-  color: #00ff00;
-  font-family: 'Press Start 2P', monospace;
-  flex-grow: 1;
-  width: 100%;
-}
-
-
-.press-key {
-  margin-top: 20px;
-  animation: blink 1s step-start infinite;
-  visibility: hidden;
-}
-
-@keyframes blink {
-  50% {
-    visibility: hidden;
-  }
-  100% {
-    visibility: visible;
-  }
-}
-
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
+  <script>
+    document.addEventListener('keydown', () => {
+      alert("Booting up! 🔧");
+    });
+  </script>
+</body>
+</html>
