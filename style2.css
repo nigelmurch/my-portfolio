@@ -96,7 +96,7 @@ h1 {
 }
 
 .badge-icon {
-  width: 60px;  /* Smaller badge */
+  width: 60px;
   height: auto;
   display: inline-block;
 }
@@ -241,4 +241,59 @@ h3 {
 
 .close-modal:hover {
   color: #ff007f;
+}
+
+/* ------------------ ABOUT PAGE AS WORK CARD ------------------ */
+.work-container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.work-card {
+  background-color: #000aa0;
+  border: 3px solid #ff007f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00e5ff;
+}
+
+.work-image {
+  width: 100%;
+  max-width: 350px;
+  border: 3px solid white;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.work-content h3 {
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #66e0ff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.work-content p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.work-content ul {
+  margin: 0 0 1.5rem 1.5rem;
+  padding-left: 1rem;
+}
+
+.work-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.signature {
+  margin-top: 2rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: left;
 }
