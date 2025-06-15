@@ -34,9 +34,8 @@ body {
 }
 
 .boot-text {
-  white-space: pre-wrap;
-  font-size: 18px;
-  line-height: 1.6;
+  white-space: pre-wrap; /* This makes \n render as line breaks */
+  text-shadow: 0 0 5px #0f0;  line-height: 1.6;
   letter-spacing: 1px;
   color: #00ff00;
   font-family: 'Press Start 2P', monospace;
