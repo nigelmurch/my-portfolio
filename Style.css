@@ -27,18 +27,20 @@ body {
       text-align: center;
     }
 
-    .any-key {
-      font-family: 'Press Start 2P', monospace;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-weight: bold;
-      font-size: 1.0rem;
-      display: block;
-      animation: blink 1s infinite;
-      text-align: center;
-    }
+   
+.any-key {
+  font-family: 'Press Start 2P', monospace;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.0rem;
+  display: block;
+  animation: blink 1s infinite;
+  text-align: center;
+  color: #7fffd4; /* Match boot screen text color */
+}
 
     @keyframes blink {
       0%, 100% { opacity: 1; }
