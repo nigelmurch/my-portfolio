@@ -36,10 +36,12 @@ body {
 }
 
 .nav-links li a {
+.nav-links li a {
+  color: #fff;
   text-decoration: none;
-  color: #f0f0f0;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase; /* ✅ Make all nav text uppercase */
+  font-size: 18px;
   transition: color 0.2s ease-in-out;
 }
 
