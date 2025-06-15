@@ -16,6 +16,7 @@ body {
 
     .boot-text {
       font-family: 'Press Start 2P', monospace;
+      color: #7fffd4;  
       position: absolute;
       top: 20px;
       left: 50%;
