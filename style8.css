@@ -148,21 +148,41 @@ button:hover {
 }
 
 /* ------------------ PROJECT SECTIONS ------------------ */
+/* Style for both project sections */
 .project-work {
-  padding: 2rem 1rem;
-  max-width: 960px;
-  margin: auto;
+  font-family: 'JetBrains Mono', monospace; /* You can change to any other font */
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 1rem;
+  color: #f0f0f0; /* Optional: for dark backgrounds */
 }
 
-ol {
-  text-align: left;
-  padding-left: 2rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
+/* Headings */
+.project-work h1 {
+  font-size: 2.5rem;
+  font-family: 'Press Start 2P', cursive; /* Retro look */
+  margin-bottom: 1.5rem;
 }
 
-ol li {
-  margin-bottom: 1rem;
+.project-work h2 {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #00ff00; /* Optional: glowing green terminal style */
+}
+
+/* Lists */
+.project-work ol {
+  margin-left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* Paragraphs */
+.project-work p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
 }
 
 /* ------------------ RESPONSIVE ------------------ */
