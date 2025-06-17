@@ -1,9 +1,9 @@
 function goToAboutPage() {
-  window.location.href = "about.html"; // Redirect to About page
+  window.location.href = "about.html"; // Navigate to About page
 }
 
-// Trigger on key press
+// Key press event
 document.addEventListener('keydown', goToAboutPage);
 
-// Also trigger on mouse click of the text
+// Mouse click on blinking text
 document.querySelector('.blink').addEventListener('click', goToAboutPage);
