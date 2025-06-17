@@ -26,7 +26,8 @@ body {
 }
 
 .blink {
-  animation: blink 1s infinite;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @keyframes blink {
