@@ -20,7 +20,7 @@ body {
 }
 
 .boot-text {
-  white-space: pre-wrap;
+  font-size: 1.75rem;  white-space: pre-wrap;
   line-height: 1.5;
   letter-spacing: 1px;
 }
