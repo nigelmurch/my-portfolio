@@ -1,10 +1,9 @@
-function continueToNext() {
-  // Replace this with your desired action
-  alert("Continuing...");
+function goToAboutPage() {
+  window.location.href = "about.html"; // Redirect to About page
 }
 
 // Trigger on key press
-document.addEventListener('keydown', continueToNext);
+document.addEventListener('keydown', goToAboutPage);
 
 // Also trigger on mouse click of the text
-document.querySelector('.blink').addEventListener('click', continueToNext);
+document.querySelector('.blink').addEventListener('click', goToAboutPage);
