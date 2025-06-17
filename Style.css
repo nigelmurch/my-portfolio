@@ -26,10 +26,12 @@ body {
 }
 
 .blink {
-  cursor: pointer;
+  animation: blink-animation 1s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1s steps(2, start) infinite;
 }
 
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
