@@ -27,7 +27,6 @@ body {
 
 .blink {
   cursor: pointer;
-  text-decoration: underline;
 }
 
 @keyframes blink {
