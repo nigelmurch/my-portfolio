@@ -28,10 +28,14 @@ body {
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
   -webkit-animation: blink-animation 1s steps(2, start) infinite;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #00ff00; /* Optional: C64-style green */
 }
 
 @keyframes blink-animation {
   to {
     visibility: hidden;
   }
+}
 }
