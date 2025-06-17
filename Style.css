@@ -13,10 +13,14 @@ body {
 }
 
 .c64-screen {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  padding: 2rem;
-  text-align: left;
-  max-width: 900px;
+  max-width: 800px; /* optional: controls width */
+  text-align: center;
+  padding: 2rem;     /* optional: spacing inside */
 }
 
 .boot-text {
