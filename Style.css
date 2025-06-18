@@ -35,7 +35,7 @@ body {
   position: absolute;
   top: 110px; /* space it below .left-line (adjust as needed) */
   left: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #ffffff;
   white-space: pre-line;
 }
