@@ -60,11 +60,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-@keyframes retro-glow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
 .section-title {
   margin-top: 4rem; /* or try 5rem for more space */
 }
