@@ -33,9 +33,10 @@ body {
 
 .left-line2 {
   position: absolute;
-  top: 60px;
+  top: 110px; /* space it below .left-line (adjust as needed) */
   left: 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: #ffffff;
   white-space: pre-line;
 }
 
