@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
+    background-color: #0000aa;
 }
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
