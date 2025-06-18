@@ -13,20 +13,35 @@ body {
 }
 
 .c64-screen {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   width: 100%;
-  max-width: 800px; /* optional: controls width */
-  text-align: center;
-  padding: 2rem;     /* optional: spacing inside */
+  height: 100%;
 }
 
-.boot-text {
-  font-size: 1.3rem;  white-space: pre-wrap;
-  line-height: 1.5;
-  letter-spacing: 1px;
+.top-line {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.left-line {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
+.center-prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00ff00;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .blink {
