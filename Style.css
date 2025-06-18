@@ -23,14 +23,14 @@ body {
   top: 20px;
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .left-line {
   position: absolute;
   top: 60px;
   left: 20px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   white-space: pre-line;
 }
 
@@ -41,8 +41,10 @@ body {
   transform: translate(-50%, -50%);
   color: #00ff00;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1rem;
+  animation: blink 1s step-start infinite;
 }
+
 
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
@@ -52,9 +54,8 @@ body {
   color: #00ff00; /* Optional: C64-style green */
 }
 
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
+@keyframes blink {
+  50% {
+    opacity: 0;
   }
-}
 }
