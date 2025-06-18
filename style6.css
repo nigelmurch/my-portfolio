@@ -7,6 +7,7 @@ body {
 
 p {
   font-family: "JetBrains Mono", monospace;
+  font-size:24px;
 }
 .nav-bar {
   display: flex;
@@ -15,7 +16,7 @@ p {
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .logo {
@@ -219,7 +220,7 @@ p {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 40px; /* wider side margins */
-  font-size: 10px;
+  font-size: 24px;
   line-height: 1.8;
   margin-bottom: 30px;
   color: #cccccc;
@@ -229,7 +230,7 @@ p {
 .case-study h2 {
   color: #00ffe1;
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin-top: 40px;
   text-shadow: 2px 2px 0 #000;
 }
@@ -237,7 +238,7 @@ p {
 h3 {
   font-family: 'JetBrains Mono', monospace;
   color: yellow;
-  font-size: 1rem;
+  font-size: 1.8rem;
   margin-top: 15px;
 }
 .case-study p {
@@ -245,6 +246,7 @@ h3 {
   font-size: 14px;
   line-height: 1.8;
   margin-bottom: 30px;
+  font-size:24px;
   color: #cccccc;
 }
 /* Footer */
