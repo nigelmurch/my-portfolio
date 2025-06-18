@@ -31,6 +31,14 @@ body {
   white-space: pre-line;
 }
 
+.left-line2 {
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  font-size: 1.5rem;
+  white-space: pre-line;
+}
+
 .center-prompt {
   position: absolute;
   top: 50%;
