@@ -11,17 +11,17 @@
   <div class="c64-screen">
     <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
     <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
-    <div class="center-prompt" id="startPrompt">PRESS ANY KEY TO CONTINUE</div>
+    <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
   </div>
 
   <script>
-    function continueAction() {
-      alert("You continued! (Replace this with your actual action)");
-      // You can replace the above with a redirect or hide the prompt
-    }
+    const goToAbout = () => {
+      window.location.href = "about.html";
+    };
 
-    document.addEventListener("keydown", continueAction);
-    document.addEventListener("click", continueAction);
+    document.addEventListener('keydown', goToAbout);
+    document.addEventListener('click', goToAbout);
   </script>
+
 </body>
 </html>
