@@ -103,7 +103,12 @@ body {
   transition: transform 0.2s;
 }
 
+p {
+  font-size: 18px;
+}
+
 .work-card:hover {
+    min-height: 400px; /* or any desired height */
   transform: scale(1.05);
 }
 
