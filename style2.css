@@ -65,18 +65,14 @@ h1 {
 }
 
 .title-with-badge h1 {
-  margin: 0;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3.5rem;
-  background: linear-gradient(90deg, #ff007f, #7f00ff, #00e5ff);
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: retro-glow 4s ease-in-out infinite alternate;
-  text-align: center;
+  animation: sirenFlash 0.6s infinite alternate;
+  color: red;
+  text-shadow: 0 0 15px red;
+  background: none;
+  -webkit-background-clip: none;
+  -webkit-text-fill-color: initial;
 }
+
 
 .badge-icon {
   width: 100px;  /* Increased from 60px */
@@ -108,7 +104,7 @@ h3 {
 .siren-text {
   animation: sirenFlash 0.6s infinite alternate;
   font-weight: bold;
-  color: red; /* fallback */
+  color: red; /* fallback color */
 }
 
 @keyframes sirenFlash {
@@ -312,4 +308,19 @@ h3 {
   font-size: 1.2rem;
   color: #fff;
   text-align: left;
+}
+
+@keyframes sirenFlash {
+  0% {
+    color: red;
+    text-shadow: 0 0 15px red;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 5px white;
+  }
+  100% {
+    color: blue;
+    text-shadow: 0 0 15px blue;
+  }
 }
