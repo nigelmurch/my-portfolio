@@ -42,9 +42,6 @@ body {
   color: #00ff00;
   font-weight: bold;
   font-size: 1rem;
-  animation: blink 1s step-start infinite;
-}
-
 
 .blink {
   animation: blink-animation 1s steps(2, start) infinite;
