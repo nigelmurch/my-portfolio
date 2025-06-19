@@ -130,5 +130,17 @@ Te Ara – The Encyclopedia of New Zealand. (2021). Invasive animals – Impacts
   </footer>
 
 </body>
+<script>
+  function openModal(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+  }
+</script>	
 </html>
 
