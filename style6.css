@@ -231,6 +231,14 @@ body {
   text-shadow: 2px 2px 0 #000;
 }
 
+ul {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 24px;
+  color: #cccccc;
+  line-height: 1.8;
+  margin-left: 1.5rem;
+}
+
 h3 {
   font-family: 'JetBrains Mono', monospace;
   color: yellow;
