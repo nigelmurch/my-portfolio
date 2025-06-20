@@ -30,10 +30,10 @@ body {
 .nav-links li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Press Start 2P', monospace; /* ✅ Add this line */  font-weight: bold;
   text-transform: uppercase; /* ✅ Make all nav text uppercase */
   font-size: 18px;
-}
+  }
 
 .nav-links li a.active {
   color: cyan;
