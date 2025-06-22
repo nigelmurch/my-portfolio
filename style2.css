@@ -259,7 +259,7 @@ h3 {
 
 /* ------------------ ABOUT PAGE AS WORK CARD ------------------ */
 .work-container {
-  max-width: 14800px; /* was 1200px */
+  max-width: 1800px; /* was 1200px */
   margin: 3rem auto;
   padding: 2rem; /* more breathing room */
 }
@@ -270,7 +270,7 @@ h3 {
   padding: 3rem; /* was 2rem */
   border-radius: 16px; /* slightly rounder */
   box-shadow: 0 0 20px #00e5ff;
-  max-width: 1000px; /* added width constraint */
+  max-width: 16000px; /* added width constraint */
   margin: 0 auto; /* center the card */
 }
 
