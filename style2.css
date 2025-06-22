@@ -317,7 +317,8 @@ ul li.highlight {
   font-weight: bold;
   box-shadow: 0 0 6px #ff00ff;
 }
-}.signature {
+
+.signature {
   margin-top: 2.5rem;
   color: #fff;
   text-align: left;
