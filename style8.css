@@ -87,12 +87,19 @@ p, li {
 }
 
 /* ------------------ MODAL BUTTONS ------------------ */
-.modal-buttons {
+.button-container {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-row {
+  display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 2rem;
 }
 
 button {
@@ -133,15 +140,15 @@ button:hover {
   padding: 1rem;
   border: 3px solid #ffdd57;
   border-radius: 10px;
-  max-width: 90vw;
+  max-width: 95vw;
   max-height: 90vh;
   overflow: auto;
 }
 
 .modal-content img,
 .modal-content video {
-  max-width: 100%;
-  max-height: 80vh;
+  max-width: 95vw;
+  max-height: 85vh;
   border-radius: 5px;
   transition: transform 0.4s ease;
   cursor: zoom-in;
@@ -240,5 +247,16 @@ button:hover {
   button {
     font-size: 8px;
     padding: 8px 12px;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    max-width: 90vw;
+    max-height: 70vh;
+  }
+
+  .modal-row {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
