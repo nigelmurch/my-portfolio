@@ -50,7 +50,7 @@ p, li {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: centre;
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
