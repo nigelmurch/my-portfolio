@@ -259,7 +259,7 @@ h3 {
 
 /* ------------------ ABOUT PAGE AS WORK CARD ------------------ */
 .work-container {
-  max-width: 1400px; /* was 1200px */
+  max-width: 14800px; /* was 1200px */
   margin: 3rem auto;
   padding: 2rem; /* more breathing room */
 }
