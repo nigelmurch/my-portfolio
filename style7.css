@@ -97,7 +97,7 @@ body {
 .detail-box p,
 .detail-box ul li {
   font-family: 'JetBrains Mono', monospace;
-  font-size:1.5rem;
+  font-size:0.9rem;
   color: #eeeeee;
   line-height: 1.8;
 }
