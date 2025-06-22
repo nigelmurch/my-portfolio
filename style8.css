@@ -8,7 +8,7 @@ body {
   text-align: center;
 }
 
-.content-container {
+.content-container, .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
@@ -28,6 +28,13 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-family: 'Press Start 2P', monospace;
+}
+
+h3 {
+  color: magenta;
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  margin-bottom: 1rem;
 }
 
 p, li {
@@ -67,7 +74,6 @@ p, li {
   text-decoration: none;
   font-size: 24px;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: 'Press Start 2P', monospace;
 }
 
 .nav-links li a.active {
@@ -158,47 +164,42 @@ button:hover {
   z-index: 1001;
 }
 
-/* ------------------ PROJECT SECTIONS ------------------ */
-.container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+/* ------------------ SECTION STYLING ------------------ */
+.section {
+  background-color: #111;
+  border: 2px dashed magenta;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
 
-    .section {
-      background-color: #111;
-      border: 2px dashed magenta;
-      padding: 1rem;
-      margin-bottom: 2rem;
-    }
+.section-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
-    h1, h2, h3 {
-      color: magenta;
-      font-size: 1.2rem;
-    }
+.section-columns > div {
+  flex: 1;
+  min-width: 250px;
+}
 
-    p, li {
-      font-size: 0.7rem;
-      line-height: 1.8;
-      text-align: left;
-    }
+/* ------------------ BACK BUTTON ------------------ */
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  color: cyan;
+  font-family: 'Press Start 2P', monospace;
+  border: 2px solid cyan;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
 
-    .section-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .section-columns > div {
-      flex: 1;
-      min-width: 250px;
-    }
-
-    @media (max-width: 768px) {
-      .section-columns {
-        flex-direction: column;
-      }
-    }
+.back-button:hover {
+  background-color: cyan;
+  color: #000;
+}
 
 /* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
@@ -224,4 +225,20 @@ button:hover {
     padding: 0.5rem;
   }
 
+  h1 {
+    font-size: 1.6rem;
+  }
 
+  h2, h3 {
+    font-size: 1rem;
+  }
+
+  p, li {
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 8px;
+    padding: 8px 12px;
+  }
+}
