@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
   justify-content: space-between;
