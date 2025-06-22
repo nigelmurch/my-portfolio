@@ -309,10 +309,11 @@ h3 {
 
 .signature {
   margin-top: 2.5rem;
-  font-style: italic;
-  font-size: 1.4rem; /* slightly larger */
   color: #fff;
   text-align: left;
+  font-size: 2rem; /* Match the <p> or <li> size from the rest of your content */
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.6;
 }
 
 @keyframes sirenFlash {
