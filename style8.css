@@ -59,6 +59,7 @@ p, li {
 
 .logo {
   height: 4em;
+  width: auto;
 }
 
 .nav-links {
