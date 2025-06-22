@@ -8,6 +8,13 @@ body {
   text-align: center;
 }
 
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #0000aa;
+}
+
 h1 {
   font-size: 2.5rem;
   color: #ffdd57;
@@ -16,18 +23,20 @@ h1 {
 }
 
 h2 {
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   color: #00ffff;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  font-family: 'Press Start 2P', monospace;
 }
 
 p, li {
-  font-size: 0.7rem;
+  font-size: 1rem;
   line-height: 1.8;
   text-align: left;
   max-width: 900px;
   margin: 0 auto 1rem;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* ------------------ NAVIGATION ------------------ */
@@ -50,6 +59,7 @@ p, li {
   gap: 20px;
   margin: 0;
   padding: 0;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .nav-links li a {
@@ -57,6 +67,7 @@ p, li {
   text-decoration: none;
   font-size: 24px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .nav-links li a.active {
@@ -148,21 +159,19 @@ button:hover {
 }
 
 /* ------------------ PROJECT SECTIONS ------------------ */
-/* Style for both project sections */
 .project-work {
-  font-family: 'JetBrains Mono', monospace; /* You can change to any other font */
+  font-family: 'JetBrains Mono', monospace;
   font-size: 1.2rem;
   line-height: 1.8;
   margin: 2rem auto;
   max-width: 900px;
   padding: 1rem;
-  color: #f0f0f0; /* Optional: for dark backgrounds */
+  color: #f0f0f0;
 }
 
-/* Headings */
 .project-work h1 {
   font-size: 2.5rem;
-  font-family: 'Press Start 2P', cursive; /* Retro look */
+  font-family: 'Press Start 2P', cursive;
   margin-bottom: 1.5rem;
 }
 
@@ -170,16 +179,14 @@ button:hover {
   font-size: 1.6rem;
   margin-top: 2rem;
   font-family: 'Press Start 2P', cursive;
-  color: #00ff00; /* Optional: glowing green terminal style */
+  color: #00ff00;
 }
 
-/* Lists */
 .project-work ol {
   margin-left: 1.5rem;
   font-size: 1.2rem;
 }
 
-/* Paragraphs */
 .project-work p {
   font-size: 24px;
   margin-top: 1.5rem;
