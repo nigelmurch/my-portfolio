@@ -53,6 +53,7 @@ body {
   border-radius: 4px;
 }
 
+/* ------------------ SECTION TITLE ------------------ */
 .section-title {
   text-align: center;
   padding: 50px 20px 20px;
@@ -64,7 +65,7 @@ body {
   color: #00ffff;
 }
 
-/* ------------------ DETAIL BOX ROW ------------------ */
+/* ------------------ DETAIL BOXES ------------------ */
 .detail-row {
   display: flex;
   justify-content: space-between;
@@ -74,7 +75,6 @@ body {
   margin: 40px auto;
 }
 
-/* ------------------ DETAIL BOX ------------------ */
 .detail-box {
   background-color: #111;
   border: 2px dashed #00ffff;
@@ -130,8 +130,8 @@ body {
   box-shadow: 0 0 10px #ff00ff;
 }
 
-/* ------------------ MODAL STYLES ------------------ */
-.modal, .modal-container {
+/* ------------------ MODAL ------------------ */
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -159,31 +159,26 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* --------- NEW: Adjusted Sizes Inside Modals --------- */
-.modal-content h3 {
-  font-size: 24px;
-  color: #ff00ff;
-  margin-bottom: 20px;
-  font-family: 'Press Start 2P', monospace;
-}
-
-.modal-content h6 {
-  font-size: 16px;
-  color: #00ffff;
-  margin: 1.5rem 0 0.5rem;
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.modal-content p {
+/* ✅ NEW: Make modal text and lists 18px */
+.modal-content p,
+.modal-content ul,
+.modal-content li {
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 1rem;
   color: #eeeeee;
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* CLOSE BUTTON */
-.close-modal, .close-btn {
+.modal-content ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.8rem;
+}
+
+.close-modal {
   position: absolute;
   top: 10px;
   right: 20px;
@@ -217,7 +212,7 @@ body {
   box-shadow: 0 0 10px #ff00ff;
 }
 
-/* ------------------ BACK BUTTON CONTAINER ------------------ */
+/* ------------------ BACK BUTTON ------------------ */
 .back-button-container {
   display: flex;
   justify-content: center;
