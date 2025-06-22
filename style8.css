@@ -90,6 +90,7 @@ p, li {
   background-color: red;
   padding: 4px 8px;
   border-radius: 4px;
+  font-color: #97e7f7;
 }
 /* ------------------ MODAL BUTTONS ------------------ */
 .button-container {
