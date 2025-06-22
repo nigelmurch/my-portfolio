@@ -39,7 +39,7 @@ body {
 
 .nav-links li a.active {
   text-decoration: underline;
-  color: #e042f5;
+  color: orange;
 }
 
 .nav-links li a:hover {
