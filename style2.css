@@ -259,22 +259,24 @@ h3 {
 
 /* ------------------ ABOUT PAGE AS WORK CARD ------------------ */
 .work-container {
-  max-width: 1200px;
+  max-width: 1400px; /* was 1200px */
   margin: 3rem auto;
-  padding: 1rem;
+  padding: 2rem; /* more breathing room */
 }
 
 .work-card {
   background-color: #000aa0;
   border: 3px solid #ff007f;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 15px #00e5ff;
+  padding: 3rem; /* was 2rem */
+  border-radius: 16px; /* slightly rounder */
+  box-shadow: 0 0 20px #00e5ff;
+  max-width: 1000px; /* added width constraint */
+  margin: 0 auto; /* center the card */
 }
 
 .work-image {
   width: 100%;
-  max-width: 350px;
+  max-width: 450px; /* was 350px */
   border: 3px solid white;
   border-radius: 10px;
   display: block;
@@ -282,33 +284,33 @@ h3 {
 }
 
 .work-content h3 {
-  font-size: 3.5rem;
+  font-size: 4rem; /* was 3.5rem */
   font-style: italic;
   color: #66e0ff;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .work-content p {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 2rem; /* was 1.8rem */
+  line-height: 1.7;
 }
 
 .work-content ul {
-  margin: 0 0  1.5rem;
-  padding-left: 1rem;
+  margin: 0 0 2rem;
+  padding-left: 1.5rem;
 }
 
 .work-content ul li {
-  margin-bottom: 0.5rem;
-  font-Size: 2.1rem;
+  margin-bottom: 1rem;
+  font-size: 2.4rem; /* was 2.1rem */
 }
 
 .signature {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* slightly larger */
   color: #fff;
   text-align: left;
 }
@@ -332,8 +334,8 @@ h3 {
   display: inline-block;
   padding: 18px 24px;
   font-family: 'Press Start 2P', monospace;
-  font-size: 0.9rem;
-  color: #00ffff; /* change text color here */
+  font-size: 1rem; /* was 0.9rem */
+  color: #00ffff;
   background-color: black;
   border: 3px solid #ff007f;
   border-radius: 8px;
