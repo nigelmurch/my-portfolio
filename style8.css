@@ -83,6 +83,7 @@ p, li {
 .nav-links li a:hover {
   font-family: 'Press Start 2P', monospace;
   text-decoration: underline;
+  font-color: #e042f5;
 }
 
 .nav-links li a:hover {
