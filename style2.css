@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links li a:hover {
-  background-color: red;
+  background-color: dark blue;
   color: #97e7f7;
   padding: 4px 8px;
   border-radius: 4px;
