@@ -22,112 +22,33 @@
     </ul>
   </nav>
 
-  <main class="content-container">
+  <div class="container">
     <h1>Flavours By Papatūānuku</h1>
 
-    <!-- Trigger Buttons -->
-    <div class="modal-buttons">
-      <button onclick="openVideoModal()">Watch Video</button>
-      <button onclick="openModal('modal1')">Open Display 1</button>
-      <button onclick="openModal('modal2')">Open Display 2</button>
-      <button onclick="openModal('modal3')">Open Display 3</button>
-      <button onclick="openModal('modal4')">Open Display 4</button>
-      <button onclick="openModal('modal5')">Open Display 5</button>
-    </div>
-
-    <!-- Video Modal -->
-    <div id="videoModal" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeVideoModal()">X</span>
-        <video id="videoPlayer" muted playsinline controls onclick="toggleVideoZoom()">
-          <source src="images/f-b-p-website.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <div class="section section-columns">
+      <div>
+        <h3>Service Design Purpose</h3>
+        <p><strong>Flavours By Papatūānuku</strong> is an eco-conscious food design service that connects people to wild and invasive foods as a way to nourish communities and protect native ecosystems through ethical eating.</p>
+        <ul>
+          <li><strong>Environmental Guardianship:</strong> eating invasive species helps restore balance.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Design Insight</h3>
+        <p><strong>Flavours By Papatūānuku</strong> is rooted in the idea that food change requires more than facts—it requires emotion and identity.</p>
+        <ul>
+          <li><strong>Psychology of Eating:</strong> Many avoid wild foods due to food neophobia (fear from childhood).</li>
+          <li><strong>Decolonisation Through Kai:</strong> Restoring cultural relationships by reconnecting people with whenua and whakapapa.</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Image Modals -->
-    <div id="modal1" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal('modal1')">X</span>
-        <img src="images/desk-top-lap-top.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
-      </div>
-    </div>
-
-    <div id="modal2" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal('modal2')">X</span>
-        <img src="images/home-page.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
-      </div>
-    </div>
-
-    <div id="modal3" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal('modal3')">X</span>
-        <img src="images/safety.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
-      </div>
-    </div>
-
-    <div id="modal4" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal('modal4')">X</span>
-        <img src="images/Poster-on-wall.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
-      </div>
-    </div>
-
-    <div id="modal5" class="modal-container">
-      <div class="modal-content">
-        <span class="close-button" onclick="closeModal('modal5')">X</span>
-        <h3>Why I Am Passionate About Flavours by Papatūānuku</h3>
-        <p><strong>Flavours by Papatūānuku</strong> is more than just a project.</p>
-        <p>It is a reflection of who I am, what I value, and the kind of future I want to help create...</p>
-        <p>By encouraging people to incorporate wild and invasive species into their diets...</p>
-        <p>My passion stems from a drive to challenge the status quo...</p>
-        <h4>Just A Thought</h4>
-        <p>We often hear about rabbits, possums, wallabies, and other invasive species...</p>
-      </div>
+    <div class="section">
+      <h3>Why I Am Passionate About Flavours by Papatūānuku</h3>
+      <p>Flavours by Papatūānuku is more than just a project. It is a reflection of who I am, what I value, and the kind of future I want to help create...</p>
     </div>
 
     <a href="individual-work.html" class="back-button">&larr; Return</a>
-  </main>
-
-  <script>
-    function openVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('videoPlayer');
-      modal.style.display = 'flex';
-      video.muted = true;
-      video.currentTime = 0;
-      video.play().catch((error) => console.warn('Autoplay failed:', error));
-    }
-
-    function toggleVideoZoom() {
-      const video = document.getElementById('videoPlayer');
-      video.classList.toggle('zoomed');
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('videoPlayer');
-      modal.style.display = 'none';
-      video.pause();
-      video.currentTime = 0;
-    }
-
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-    }
-
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.style.display = 'none';
-      const img = modal.querySelector('img');
-      if (img) img.classList.remove('zoomed');
-    }
-
-    function toggleZoom(img) {
-      img.classList.toggle('zoomed');
-    }
-  </script>
+  </div>
 </body>
 </html>
