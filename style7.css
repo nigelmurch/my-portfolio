@@ -11,22 +11,17 @@ body {
   font-size: 12px;
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 120px; /* space for fixed nav */
 }
 
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #0000aa;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
   font-size: 24px;
-  z-index: 1000;
 }
 
 .logo {
@@ -38,6 +33,8 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -45,7 +42,6 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 24px;
-  transition: all 0.3s ease;
 }
 
 .nav-links li a.active {
@@ -60,7 +56,7 @@ body {
   border-radius: 4px;
 }
 
-/* ------------------ HEADER ------------------ */
+/* HEADER SECTION */
 .section-title {
   text-align: center;
   padding: 50px 20px 20px;
@@ -79,7 +75,7 @@ body {
   margin-top: 15px;
 }
 
-/* ------------------ CONTENT BOXES ------------------ */
+/* DETAIL BOXES */
 .detail-box {
   background-color: #111;
   border: 2px dashed #00ffff;
@@ -89,6 +85,7 @@ body {
   text-align: left;
   max-width: 900px;
   width: 90%;
+  position: relative;
 }
 
 .detail-box h3 {
@@ -114,7 +111,69 @@ body {
   margin-bottom: 10px;
 }
 
-/* ------------------ BUTTON ------------------ */
+.read-more-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: #ff00ff;
+  color: #000;
+  text-decoration: none;
+  border: 2px solid #00ffff;
+  font-size: 10px;
+  box-shadow: 0 0 5px #00ffff;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.read-more-btn:hover {
+  background-color: #00ffff;
+  color: #000;
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* MODAL STYLES */
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 2rem;
+}
+
+.modal-content {
+  background-color: #111;
+  border: 3px solid #ff00ff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #eee;
+  position: relative;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #ff00ff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* RETRO BUTTON */
 .retro-button {
   display: inline-block;
   margin-top: 30px;
@@ -126,6 +185,7 @@ body {
   font-size: 12px;
   box-shadow: 0 0 5px #00ffff;
   transition: all 0.2s ease-in-out;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .retro-button:hover {
@@ -135,39 +195,18 @@ body {
   box-shadow: 0 0 10px #ff00ff;
 }
 
+/* BACK BUTTON CONTAINER */
 .back-button-container {
   display: flex;
   justify-content: center;
   margin: 60px 0 40px;
 }
 
-/* ------------------ FOOTER ------------------ */
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
   border-top: 2px solid #00ff99;
   color: #999;
   font-size: 10px;
-}
-
-/* ------------------ RESPONSIVE ------------------ */
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .logo {
-    height: 3em;
-  }
-
-  .section-title h1 {
-    font-size: 2rem;
-  }
 }
