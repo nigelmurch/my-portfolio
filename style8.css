@@ -52,6 +52,7 @@ p, li {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  font-family: 'Press Start 2P', monospace;
   border-bottom: 4px solid red;
 }
 
