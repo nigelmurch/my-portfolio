@@ -19,21 +19,20 @@ html, body {
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
-  font-size: 18px;
+  font-size: 24px;
 }
-
+  
 .logo {
   height: 4em;
   width: auto;
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
   gap: 30px;
-   font-family: 'Press Start 2P', monospace;
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
@@ -41,17 +40,16 @@ html, body {
   color: #fff;
   text-decoration: none;
   font-size: 24px;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links li a.active {
   text-decoration: underline;
-  color: #e042f5;
+  color: orange;
 }
 
 .nav-links li a:hover {
-  background-color: red;
-  color: #97e7f7;
+  background-color: dark blue;
+  color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
 }
