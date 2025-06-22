@@ -14,39 +14,39 @@ body {
   padding: 40px 30px;
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
-  font-size: 24px; 
+  font-size: 18px;
 }
-
 
 .logo {
   height: 4em;
-  width: auto;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
+   font-family: 'Press Start 2P', monospace;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-links li a {
+  font-family: 'Press Start 2P', monospace;
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase; /* ✅ Make all nav text uppercase */
   font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links li a.active {
-  text-decoration: underline;
+.nav-links li a.active,
+.nav-links li a:hover {
+  font-family: 'Press Start 2P', monospace;
 }
 
 .nav-links li a:hover {
   background-color: red;
-  color: white;
-  padding: 0 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 h1, h2 {
