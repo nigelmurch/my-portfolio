@@ -15,7 +15,7 @@ body {
 
 .nav-bar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* was column */
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
@@ -32,8 +32,8 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row; /* was column */
+  gap: 30px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -400,3 +400,14 @@ ul li.highlight {
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
