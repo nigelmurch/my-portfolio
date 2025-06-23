@@ -163,10 +163,6 @@
     }
   }
 
-  function toggleZoom(img) {
-    if (img) img.classList.toggle('zoomed');
-  }
-
   function openVideoModal(id) {
     const modal = document.getElementById(id);
     if (modal) {
@@ -177,22 +173,25 @@
         video.play();
       }
     }
+  }
 
   function closeVideoModal(id) {
-  const modal = document.getElementById(id);
-  if (modal) modal.style.display = 'none';
-  const video = modal.querySelector('video');
-  if (video) {
-    video.pause();
-    video.currentTime = 0;
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
   }
-}
-  
- function toggleZoom(el) {
-  if (el.tagName === 'IMG' || el.tagName === 'VIDEO') {
-    el.classList.toggle('zoomed');
+
+  function toggleZoom(el) {
+    if (el.tagName === 'IMG' || el.tagName === 'VIDEO') {
+      el.classList.toggle('zoomed');
+    }
   }
-}
 
   // Play click sound on any modal button
   window.addEventListener('DOMContentLoaded', () => {
