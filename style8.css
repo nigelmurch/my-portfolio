@@ -186,6 +186,7 @@ h1{
 }
 
 .project-work h2 {
+  text-align:centre;
   color: #00ffff;
   margin-top: 2rem;
   font-size: 2rem;
