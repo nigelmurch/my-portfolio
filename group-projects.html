@@ -142,21 +142,25 @@
   With more time and collaboration, Whetū Mārama could evolve into a beacon that inspires, teaches, and connects.
 </p>
 </section>
-
-
-
     
+<!-- JavaScript -->
+<!-- Sound Effect -->
+<audio id="click-sound" src="sounds/click.wav" preload="auto"></audio>
+
 <!-- JavaScript -->
 <script>
   function openModal(id) {
-    console.log("Opening modal: " + id); // Debug
     const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'flex';
+    if (modal) {
+      modal.style.display = 'flex';
+    }
   }
 
   function closeModal(id) {
     const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.style.display = 'none';
+    }
   }
 
   function toggleZoom(img) {
@@ -165,36 +169,44 @@
 
   function openVideoModal(id) {
     const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'flex';
-    const video = modal.querySelector('video');
-    if (video) {
-      video.currentTime = 0;
-      video.play();
+    if (modal) {
+      modal.style.display = 'flex';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.currentTime = 0;
+        video.play();
+      }
     }
   }
 
   function closeVideoModal(id) {
     const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'none';
-    const video = modal.querySelector('video');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
+    if (modal) {
+      modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
     }
   }
 
   function toggleVideoZoom(video) {
     if (video) video.classList.toggle('zoomed');
   }
-<audio id="click-sound" src="sounds/click.wav" preload="auto"></audio>
-<script>
-  const clickSound = document.getElementById("click-sound");
-  const buttons = document.querySelectorAll(".modal-buttons button");
 
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
+  // Play click sound on any modal button
+  window.addEventListener('DOMContentLoaded', () => {
+    const clickSound = document.getElementById("click-sound");
+    const buttons = document.querySelectorAll(".modal-buttons button");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (clickSound) {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        }
+      });
     });
   });
 </script>
