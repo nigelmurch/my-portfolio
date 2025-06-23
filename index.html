@@ -8,36 +8,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="c64-screen">
+<div class="c64-screen">
   <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
   <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
   <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>   
   <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
 </div>
 
-<!-- 🔊 Audio element -->
-<audio id="key-sound" src="sounds/keyboard-click.mp3" preload="auto"></audio>
+<!-- 🔊 Audio for key press -->
+<audio id="key-sound" src="sounds/key-press.mp3" preload="auto"></audio>
 
-<!-- 🎯 Script to trigger sound -->
+<!-- 🎯 Script -->
 <script>
-  const keyPrompt = document.getElementById('continue');
+  const continuePrompt = document.getElementById('continue');
   const keySound = document.getElementById('key-sound');
 
-  // Optional: redirect or hide screen after sound plays
+  // Handle actual key press anywhere
   document.addEventListener('keydown', () => {
     keySound.currentTime = 0;
     keySound.play();
-
-    // Optional: Add a transition (e.g., redirect or hide)
-    // setTimeout(() => {
-    //   window.location.href = 'about.html';
-    // }, 500);
+    setTimeout(() => {
+      window.location.href = 'about.html';
+    }, 400); // wait for sound to finish (adjust to your file)
   });
 
-  // Optional: also play on click or tap
-  keyPrompt.addEventListener('click', () => {
+  // Handle click on the text
+  continuePrompt.addEventListener('click', () => {
     keySound.currentTime = 0;
     keySound.play();
+    setTimeout(() => {
+      window.location.href = 'about.html';
+    }, 400); // same delay
   });
 </script>
 </body>
