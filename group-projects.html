@@ -40,8 +40,8 @@
 <!-- Video Modal for Open Door -->
 <div id="od-video" class="modal-container">
   <div class="modal-content">
-    <span class="close-button" onclick="closeVideoModal('od-video')">✕</span>
-    <video controls onclick="toggleVideoZoom(this)">
+   <span class="close-button" onclick="event.stopPropagation(); closeVideoModal('od-video')">✕</span>
+    <video controls onclick="toggleZoom(this)">
       <source src="images/open-door-project.mp4" type="video/mp4">
       Your browser does not support video.
     </video>
@@ -101,8 +101,8 @@
 <!-- Video Modal for Whetū Mārama -->
 <div id="wm-video" class="modal-container">
   <div class="modal-content">
-    <span class="close-button" onclick="closeVideoModal('wm-video')">✕</span>
-    <video controls onclick="toggleVideoZoom(this)">
+    <span class="close-button" onclick="event.stopPropagation(); closeVideoModal('od-video')">✕</span>
+    <video controls onclick="toggleZoom(this)">
       <source src="images/whetu-marama-website.mp4" type="video/mp4">
       Your browser does not support video.
     </video>
