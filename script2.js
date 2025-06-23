@@ -15,3 +15,9 @@ window.addEventListener('click', (e) => {
     modal.style.display = 'none';
   }
 });
+
+window.addEventListener('load', () => {
+  siren.play().catch(() => {
+    // Autoplay blocked — you can show a prompt or play on interaction
+  });
+});
