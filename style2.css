@@ -327,19 +327,14 @@ ul li.highlight {
   line-height: 1.6;
 }
 
+.ux-investigator.siren-active {
+  animation: sirenFlash 1s infinite;
+}
+
 @keyframes sirenFlash {
-  0% {
-    color: red;
-    text-shadow: 0 0 15px red;
-  }
-  50% {
-    color: white;
-    text-shadow: 0 0 5px white;
-  }
-  100% {
-    color: blue;
-    text-shadow: 0 0 15px blue;
-  }
+  0% { color: red; text-shadow: 0 0 8px red; }
+  50% { color: white; text-shadow: 0 0 8px white; }
+  100% { color: blue; text-shadow: 0 0 8px blue; }
 }
 
 .retro-button {
