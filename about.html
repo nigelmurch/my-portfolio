@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
+  <audio id="siren-sound" src="audio/siren.mp3" preload="auto"></audio>
+
+<script>
+  const h1 = document.querySelector('.ux-investigator');
+  const siren = document.getElementById('siren-sound');
+
+  h1.addEventListener('mouseenter', () => {
+    siren.currentTime = 0; // Restart the sound
+    siren.play();
+  });
+</script><body>
 
 <!-- Navigation -->
 <nav class="nav-bar">
@@ -27,7 +37,7 @@
 <!-- Section Title (retro style) -->
 <section class="section-title">
   <div class="title-with-badge">
-   <h1 class="siren-text">UX INVESTIGATOR</h1>
+<h1 class="ux-investigator">UX Investigator</h1>
     <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
   </div>
   <h2>About Me</h2>
