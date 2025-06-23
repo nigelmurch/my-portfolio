@@ -9,19 +9,36 @@
 </head>
 <body>
   <div class="c64-screen">
-    <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
-    <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
-    <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>   
-    <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
-  </div>
-<audio id="key-sound" src="sounds/key-press.mp3" preload="auto"></audio>  <script>
-    const goToAbout = () => {
-      window.location.href = "about.html";
-    };
+  <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
+  <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
+  <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>   
+  <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
+</div>
 
-    document.addEventListener('keydown', goToAbout);
-    document.addEventListener('click', goToAbout);
-  </script>
+<!-- 🔊 Audio element -->
+<audio id="key-sound" src="sounds/key-press.mp3" preload="auto"></audio>
 
+<!-- 🎯 Script to trigger sound -->
+<script>
+  const keyPrompt = document.getElementById('continue');
+  const keySound = document.getElementById('key-sound');
+
+  // Optional: redirect or hide screen after sound plays
+  document.addEventListener('keydown', () => {
+    keySound.currentTime = 0;
+    keySound.play();
+
+    // Optional: Add a transition (e.g., redirect or hide)
+    // setTimeout(() => {
+    //   window.location.href = 'about.html';
+    // }, 500);
+  });
+
+  // Optional: also play on click or tap
+  keyPrompt.addEventListener('click', () => {
+    keySound.currentTime = 0;
+    keySound.play();
+  });
+</script>
 </body>
 </html>
