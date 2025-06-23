@@ -99,13 +99,17 @@
   <a href="index.html" class="retro-button">Return Home</a>
 </div>
 
+<audio id="siren-sound" src="audio/siren.mp3" preload="auto"></audio>
+
 <script>
   const h1 = document.querySelector('.ux-investigator');
   const siren = document.getElementById('siren-sound');
 
-  h1.addEventListener('mouseenter', () => {
-    siren.currentTime = 0; // Restart the sound
+  h1.addEventListener('click', () => {
+    siren.currentTime = 0; // Restart sound if clicked multiple times
     siren.play();
   });
-</script></body>
+</script>
+
+  </body>
 </html>
