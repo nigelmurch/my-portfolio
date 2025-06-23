@@ -16,8 +16,9 @@ window.addEventListener('click', (e) => {
   }
 });
 
-window.addEventListener('load', () => {
-  siren.play().catch(() => {
-    // Autoplay blocked — you can show a prompt or play on interaction
-  });
+h1.addEventListener('click', () => {
+  siren.currentTime = 0;
+  siren.play();
+  h1.classList.add('siren-active');
+  setTimeout(() => h1.classList.remove('siren-active'), 2000); // remove after 2s
 });
