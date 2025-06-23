@@ -199,7 +199,8 @@ body {
 }
 
 .project-work p {
-  font-size: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;  f
+    ont-size: 1.2rem;
   margin-top: 1.5rem;
 }
 
