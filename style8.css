@@ -33,8 +33,6 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links li a {
@@ -55,7 +53,7 @@ body {
   border-radius: 4px;
 }
 
-/* Modal Buttons Section */
+/* ------------------ MODAL BUTTONS ------------------ */
 .modal-buttons {
   margin: 2rem 0;
   display: flex;
@@ -94,7 +92,7 @@ body {
   }
 }
 
-/* Modal Container */
+/* ------------------ MODAL CONTAINER ------------------ */
 .modal-container {
   display: none;
   position: fixed;
@@ -109,7 +107,7 @@ body {
   padding: 2rem;
 }
 
-/* Modal Content */
+/* ------------------ MODAL CONTENT ------------------ */
 .modal-content {
   background-color: #111;
   border: 3px solid #ff00ff;
@@ -117,14 +115,13 @@ body {
   padding: 1rem;
   max-width: 90vw;
   max-height: 90vh;
-  width: auto;
-  height: auto;
   overflow: auto;
   color: #eee;
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
 .modal-content img,
@@ -135,7 +132,8 @@ body {
   height: auto;
   border-radius: 8px;
 }
-/* Close Button */
+
+/* Close Button (X style) */
 .close-button {
   position: absolute;
   top: 10px;
@@ -148,13 +146,35 @@ body {
   font-family: 'Press Start 2P', monospace;
 }
 
-/* Zoomed Image Style */
+/* Retro Close Button (NEW) */
+.retro-close-button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #00ffff;
+  border: 3px solid #ff007f;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff007f;
+  transition: all 0.3s ease;
+}
+
+.retro-close-button:hover {
+  background-color: #ff007f;
+  color: #fff;
+  border-color: #fff;
+  animation: pulseGlow 1s infinite alternate;
+}
+
+/* Zoomed Image/Video Style */
 .zoomed {
   transform: scale(1.5);
   transition: transform 0.3s ease-in-out;
 }
 
-/* Project Section */
+/* ------------------ PROJECT WORK ------------------ */
 .project-work {
   text-align: left;
   max-width: 900px;
@@ -181,9 +201,6 @@ body {
   margin-top: 1.5rem;
 }
 
-/* Final Thoughts */
 .project-work h2:last-of-type {
   margin-top: 3rem;
 }
-
-
