@@ -9,11 +9,13 @@ html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-    background-color: #0000aa;
+  background-color: #0000aa;
 }
+
 /* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
@@ -21,7 +23,7 @@ html, body {
   font-family: 'Press Start 2P', monospace;
   font-size: 24px;
 }
-  
+
 .logo {
   height: 4em;
   width: auto;
@@ -30,9 +32,11 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: row;
   gap: 30px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-links li a {
@@ -48,13 +52,13 @@ html, body {
 }
 
 .nav-links li a:hover {
-  background-color: dark blue;
+  background-color: darkblue;
   color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
 }
 
-/* Page Title */
+/* ------------------ PAGE TITLE ------------------ */
 .section-title {
   text-align: center;
   padding: 50px 20px 20px;
@@ -70,15 +74,15 @@ html, body {
 .section-title h2 {
   font-family: "JetBrains Mono", monospace;
   color: #c2c4c4;
-  font-size: 2.5rem; /* ← You can make this 2rem, 3rem, etc. */
+  font-size: 2.5rem;
 }
+
 .section-title p {
   font-size: 18px;
   color: #cccccc;
 }
 
-
-/* Content Grid */
+/* ------------------ CONTENT GRID ------------------ */
 .individual-work-grid {
   display: flex;
   flex-wrap: wrap;
@@ -94,24 +98,26 @@ html, body {
   background-color: #111;
   border: 2px dashed #00ffff;
   padding: 30px;
-  flex: 1 1 300px; /* ✅ Flex-grow/shrink and minimum width */
-  max-width: 500px; /* ✅ Optional: cap max size */
-  min-width: 280px; /* ✅ Optional: minimum size */
+  flex: 1 1 300px;
+  max-width: 500px;
+  min-width: 280px;
   text-align: center;
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
 }
 
+.work-card:hover {
+  transform: scale(1.05);
+  min-height: 400px;
+}
+
 p {
   font-size: 24px;
 }
-h3{
-  font-size:2.5rem;
-}
-.work-card:hover {
-    min-height: 400px; /* or any desired height */
-  transform: scale(1.05);
+
+h3 {
+  font-size: 2.5rem;
 }
 
 .retro-button {
@@ -130,8 +136,7 @@ h3{
   border-color: #ff00ff;
 }
 
-
-/* Footer */
+/* ------------------ FOOTER ------------------ */
 .footer {
   text-align: center;
   padding: 20px;
@@ -139,4 +144,51 @@ h3{
   color: #666;
   font-size: 10px;
   margin-top: auto;
+}
+
+/* ------------------ RESPONSIVE (MOBILE) ------------------ */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section-title h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .individual-work-grid {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
+  .work-card {
+    padding: 20px;
+    min-width: auto;
+    max-width: 100%;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .retro-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
 }
