@@ -88,7 +88,7 @@
   <button onclick="openModal('wm-img3')">Open Image 3</button>
   <button onclick="openModal('wm-img4')">Open Image 4</button>
   <button onclick="openModal('wm-img5')">Open Image 5</button>
-  <button onclick="openVideoModal('wm-video')">Open Video</button>
+  <button onclick="openVideoModal('od-video')">Open Video</button>
 </div>
 
 <!-- Image Modals for Whetū Mārama -->
@@ -143,24 +143,15 @@
 </p>
 </section>
     
-<!-- JavaScript -->
-<!-- Sound Effect -->
-<audio id="click-sound" src="sounds/click.wav" preload="auto"></audio>
-
-<!-- JavaScript -->
 <script>
   function openModal(id) {
     const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = 'flex';
-    }
+    if (modal) modal.style.display = 'flex';
   }
 
   function closeModal(id) {
     const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = 'none';
-    }
+    if (modal) modal.style.display = 'none';
   }
 
   function openVideoModal(id) {
@@ -173,20 +164,19 @@
         video.play();
       }
     }
-  
-
- function closeVideoModal(id) {
-  const modal = document.getElementById(id);
-  if (modal) {
-    const video = modal.querySelector('video');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-    modal.style.display = 'none';
   }
-}
-  
+
+  function closeVideoModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+  }
 
   function toggleZoom(el) {
     if (el.tagName === 'IMG' || el.tagName === 'VIDEO') {
@@ -194,7 +184,7 @@
     }
   }
 
-  // Play click sound on any modal button
+  // Optional: Click sound for modal buttons
   window.addEventListener('DOMContentLoaded', () => {
     const clickSound = document.getElementById("click-sound");
     const buttons = document.querySelectorAll(".modal-buttons button");
@@ -207,7 +197,7 @@
         }
       });
     });
+  });
 </script>
-
 </body>
 </html>
