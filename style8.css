@@ -85,6 +85,15 @@ body {
   animation: pulseGlow 1s infinite alternate;
 }
 
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff007f;
+  }
+  to {
+    box-shadow: 0 0 20px #ffffff, 0 0 40px #ff007f, 0 0 60px #00ffff;
+  }
+}
+
 /* Modal Container */
 .modal-container {
   display: none;
@@ -165,12 +174,4 @@ body {
   margin-top: 3rem;
 }
 
-/* Animated Glow Keyframes */
-@keyframes pulseGlow {
-  from {
-    box-shadow: 0 0 10px #00ffff, 0 0 20px #ff007f;
-  }
-  to {
-    box-shadow: 0 0 20px #ffffff, 0 0 40px #ff007f, 0 0 60px #00ffff;
-  }
-}
+
