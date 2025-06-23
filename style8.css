@@ -22,6 +22,7 @@ body {
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -33,6 +34,10 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .nav-links li a {
@@ -52,10 +57,13 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
 }
-h1{
+
+/* Heading */
+h1 {
   font-size: 4.95rem;
   color: #ff66ff;
 }
+
 /* ------------------ MODAL BUTTONS ------------------ */
 .modal-buttons {
   margin: 2rem 0;
@@ -115,11 +123,11 @@ h1{
   background-color: #111;
   border: 3px solid #ff00ff;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
   max-width: 95vw;
   max-height: 95vh;
   overflow: auto;
-   padding: 2rem;  color: #eee;
+  color: #eee;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -150,7 +158,7 @@ h1{
   font-family: 'Press Start 2P', monospace;
 }
 
-/* Retro Close Button (NEW) */
+/* Retro Close Button */
 .retro-close-button {
   font-family: 'Press Start 2P', monospace;
   font-size: 0.8rem;
@@ -186,8 +194,7 @@ h1{
 }
 
 .project-work h2 {
-  text-align:center;
-  align-items:center;
+  text-align: center;
   color: #00ffff;
   margin-top: 2rem;
   font-size: 2rem;
@@ -204,11 +211,62 @@ h1{
 }
 
 .project-work p {
-  font-family: 'JetBrains Mono', monospace;  f
-    ont-size: 1.2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.2rem;
   margin-top: 1.5rem;
 }
 
 .project-work h2:last-of-type {
   margin-top: 3rem;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .modal-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    max-width: 100%;
+    max-height: 80vh;
+  }
+
+  .project-work {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .project-work ol {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  .project-work p {
+    font-size: 1rem;
+  }
 }
