@@ -52,7 +52,9 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
 }
-
+h1{
+  font-size: 4.95rem;
+}
 /* ------------------ MODAL BUTTONS ------------------ */
 .modal-buttons {
   margin: 2rem 0;
