@@ -88,7 +88,7 @@
   <button onclick="openModal('wm-img3')">Open Image 3</button>
   <button onclick="openModal('wm-img4')">Open Image 4</button>
   <button onclick="openModal('wm-img5')">Open Image 5</button>
-  <button onclick="openVideoModal('od-video')">Open Video</button>
+ <button onclick="openVideoModal('wm-video')">Open Video</button>
 </div>
 
 <!-- Image Modals for Whetū Mārama -->
@@ -99,9 +99,9 @@
 <div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="images/Whetu-code.jpg onclick="toggleZoom(this)"></div></div>
 
 <!-- Video Modal for Whetū Mārama -->
-<div id="od-video" class="modal-container">
-  <div class="modal-content" onclick="event.stopPropagation();">
-    <button class="retro-close-button" onclick="event.stopPropagation(); closeVideoModal('od-video')">Close Video</button>
+<div id="wm-video" class="modal-container">
+  <div class="modal-content">
+    <button class="retro-close-button" onclick="closeVideoModal('wm-video')">CLOSE VIDEO</button>
     <video controls onclick="toggleZoom(this)">
       <source src="images/whetu-marama-website.mp4" type="video/mp4">
       Your browser does not support video.
