@@ -191,9 +191,11 @@
     }
   }
 
-  function toggleVideoZoom(video) {
-    if (video) video.classList.toggle('zoomed');
+ function toggleZoom(el) {
+  if (el.tagName === 'IMG' || el.tagName === 'VIDEO') {
+    el.classList.toggle('zoomed');
   }
+}
 
   // Play click sound on any modal button
   window.addEventListener('DOMContentLoaded', () => {
