@@ -14,8 +14,10 @@ body {
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
   font-size: 24px;
+  flex-wrap: wrap;
+  text-align: center;
 }
-  
+
 .logo {
   height: 4em;
   width: auto;
@@ -27,6 +29,8 @@ body {
   gap: 30px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links li a {
@@ -42,7 +46,7 @@ body {
 }
 
 .nav-links li a:hover {
-  background-color: dark blue;
+  background-color: darkblue;
   color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
@@ -60,7 +64,7 @@ body {
   text-shadow: 2px 2px 0 black;
 }
 
-/* Project Content Layout */
+/* ------------------ CONTENT ------------------ */
 .project-content {
   max-width: 1000px;
   margin: 40px auto;
@@ -95,7 +99,8 @@ body {
 }
 
 .grid-item h3 {
-  font-family: "JetBrains Mono", monospace;  color: yellow;
+  font-family: "JetBrains Mono", monospace;
+  color: yellow;
   font-size: 1rem;
   margin-top: 15px;
 }
@@ -105,7 +110,7 @@ body {
   line-height: 1.6;
 }
 
-/* Button Styling */
+/* ------------------ BUTTONS ------------------ */
 .btn-container {
   text-align: center;
   margin: 30px 0;
@@ -146,8 +151,7 @@ body {
   color: white;
 }
 
-/* Modal Styling */
-/* Modal Styling */
+/* ------------------ MODALS ------------------ */
 .modal {
   display: none;
   position: fixed;
@@ -183,7 +187,6 @@ body {
 .close:hover {
   color: #ff00ff;
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -251,14 +254,13 @@ body {
   to   { transform: scale(1); opacity: 1; }
 }
 
-/* Case Studies Section */
+/* ------------------ CASE STUDIES ------------------ */
 .case-study {
   max-width: 900px;
-  margin: 60px auto;
-  padding: 0 40px; /* wider side margins */
+  margin: 60px auto 30px;
+  padding: 0 40px;
   font-size: 24px;
   line-height: 1.8;
-  margin-bottom: 30px;
   color: #cccccc;
   background: #0000aa;
 }
@@ -268,7 +270,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap; /* Makes it responsive on smaller screens */
+  flex-wrap: wrap;
 }
 
 .title-with-image h2 {
@@ -277,17 +279,26 @@ body {
 }
 
 .case-image {
-  width: 200px; /* Adjust size here */
+  width: 200px;
   height: auto;
   border: 3px solid #00ffe1;
   box-shadow: 2px 2px 10px #000;
 }
+
 .case-study h2 {
   color: #00ffe1;
   font-family: "JetBrains Mono", monospace;
   font-size: 2.5rem;
   margin-top: 40px;
   text-shadow: 2px 2px 0 #000;
+}
+
+.case-study p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 24px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #cccccc;
 }
 
 ul {
@@ -304,15 +315,8 @@ h3 {
   font-size: 1.8rem;
   margin-top: 15px;
 }
-.case-study p {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 24px;
-  line-height: 1.8;
-  margin-bottom: 30px;
-  color: #cccccc;
-}
 
-/* Footer */
+/* ------------------ FOOTER ------------------ */
 .site-footer {
   text-align: center;
   padding: 20px 0;
@@ -337,16 +341,22 @@ h3 {
   text-align: center;
 }
 
-/* Responsive */
+/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: 1fr;
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
   }
 
   .nav-links {
     flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
   }
 
   .footer-content {
@@ -355,6 +365,35 @@ h3 {
   }
 
   .case-study {
-    padding: 0 20px; /* smaller padding on mobile */
+    padding: 0 20px;
+  }
+
+  .section-title h1 {
+    font-size: 2.2rem;
+  }
+
+  .case-study h2 {
+    font-size: 1.6rem;
+  }
+
+  .case-study p,
+  ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .back-button,
+  .cta,
+  .close-btn {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+  }
+
+  .modal-box h2 {
+    font-size: 1rem;
+  }
+
+  .modal-img {
+    max-width: 90%;
   }
 }
