@@ -186,6 +186,17 @@
   function toggleVideoZoom(video) {
     if (video) video.classList.toggle('zoomed');
   }
+<audio id="click-sound" src="sounds/click.wav" preload="auto"></audio>
+<script>
+  const clickSound = document.getElementById("click-sound");
+  const buttons = document.querySelectorAll(".modal-buttons button");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
 </script>
 
 </body>
