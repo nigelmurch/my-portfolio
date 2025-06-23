@@ -15,8 +15,10 @@ body {
   border-bottom: 4px solid red;
   font-family: 'Press Start 2P', monospace;
   font-size: 24px;
+  flex-wrap: wrap;
+  text-align: center;
 }
-  
+
 .logo {
   height: 4em;
   width: auto;
@@ -26,8 +28,10 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
-  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
+  margin-top: 1rem;
 }
 
 .nav-links li a {
@@ -43,12 +47,13 @@ body {
 }
 
 .nav-links li a:hover {
-  background-color: dark blue;
+  background-color: darkblue;
   color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
 }
 
+/* Headings */
 h1, h2 {
   text-align: center;
   color: #00ffc3;
@@ -56,6 +61,7 @@ h1, h2 {
   margin-top: 2rem;
 }
 
+/* Footer */
 footer {
   text-align: center;
   margin-top: 3rem;
@@ -72,19 +78,20 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Contact Modal Container */
+/* ------------------ CONTACT FORM ------------------ */
 .contact-modal {
-  width: 500px; /* previously might have been ~300px */
+  width: 500px;
+  max-width: 90%;
   padding: 2rem;
   background-color: #000;
   border: 2px solid #00ffff;
   border-radius: 10px;
-  margin: 0 auto;
+  margin: 2rem auto;
   box-shadow: 0 0 20px #0ff;
   font-family: 'Press Start 2P', monospace;
+  text-align: left;
 }
 
-/* Input Fields */
 .contact-modal input,
 .contact-modal textarea {
   width: 100%;
@@ -95,6 +102,7 @@ footer a:hover {
   color: #00ffff;
   font-family: inherit;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 /* Button */
@@ -107,8 +115,43 @@ footer a:hover {
   border: none;
   font-size: 14px;
   cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
 }
 
 .contact-modal button:hover {
   background-color: #00dddd;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-modal {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 95%;
+    box-sizing: border-box;
+  }
+
+  .contact-modal input,
+  .contact-modal textarea {
+    font-size: 12px;
+  }
+
+  .contact-modal button {
+    font-size: 12px;
+  }
 }
