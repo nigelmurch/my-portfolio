@@ -54,14 +54,14 @@ body {
   border-radius: 4px;
 }
 
-/* Title */
+/* Page title */
 h1 {
   color: #ff66ff;
   font-size: 3rem;
   margin: 2rem 0;
 }
 
-/* Modal Button Container */
+/* Button container */
 .button-container {
   margin: 2rem 0;
 }
@@ -104,7 +104,7 @@ h1 {
   }
 }
 
-/* Modal Styling */
+/* Modal styling */
 .modal-container {
   display: none;
   position: fixed;
@@ -146,45 +146,7 @@ h1 {
   object-fit: contain;
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 3.5rem;
-  color: #ff00ff;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: 'Press Start 2P', monospace;
-}
-
-/* Zoomed Media */
-.zoomed {
-  transform: scale(1.5);
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Return Link Button */
-.back-button {
-  font-size: 16px;
-  padding: 12px 20px;
-  background: #00ffe1;
-  color: black;
-  border: 3px solid red;
-  font-family: 'Press Start 2P', monospace;
-  text-decoration: none;
-  box-shadow: 3px 3px 0 #000;
-  margin: 3rem auto;
-  display: inline-block;
-  transition: all 0.2s ease;
-}
-
-.back-button:hover {
-  background: #ff00ff;
-  color: white;
-}
-
-/* Retro Close Button Styles */
+/* Retro Close Button */
 .retro-close-btn {
   position: absolute;
   top: 20px;
@@ -209,11 +171,49 @@ h1 {
   transform: scale(1.05);
 }
 
+/* Zoomed effect */
+.zoomed {
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Back Button */
+.back-button {
+  font-size: 16px;
+  padding: 12px 20px;
+  background: #00ffe1;
+  color: black;
+  border: 3px solid red;
+  font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  box-shadow: 3px 3px 0 #000;
+  margin: 3rem auto;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #ff00ff;
+  color: white;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
   .retro-close-btn {
     top: 10px;
     right: 10px;
     padding: 8px 12px;
     font-size: 8px;
+  }
+  h1 {
+    font-size: 2rem;
   }
 }
