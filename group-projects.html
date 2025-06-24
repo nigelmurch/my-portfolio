@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Group Projects - Nigel Murch</title>
-  <link rel="stylesheet" href="styles10.css" />
+  <link rel="stylesheet" href="styles-group.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,66 +24,55 @@
 
   <h1>Group Projects</h1>
 
+  <!-- Modal Trigger Buttons -->
   <div class="button-container">
     <div class="modal-row">
-      <button onclick="openModal('open-door')">🟣 Open Door Project</button>
-      <button onclick="openModal('whetu-marama')">🔵 Whetū Mārama</button>
+      <button onclick="openModal('modal1')">🌀 Open Door Image 1</button>
+      <button onclick="openModal('modal2')">🌀 Open Door Image 2</button>
+      <button onclick="openModal('modal3')">🌠 Whetū Mārama Image 1</button>
+      <button onclick="openModal('modal4')">🌠 Whetū Mārama Image 2</button>
     </div>
   </div>
 
-  <!-- Open Door Modal -->
-  <div id="open-door" class="modal-container">
+  <!-- Image Modals -->
+  <div id="modal1" class="modal-container">
     <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('open-door')">✕ Close</button>
-      <img src="images/grp-research1.png" alt="Open Door Research" onclick="toggleZoom(this)" />
-      <p><strong>What Went Right:</strong></p>
-      <ul>
-        <li>Strong metaphor of accessibility.</li>
-        <li>Collaborative and heart-led team.</li>
-        <li>Effective design iteration.</li>
-      </ul>
-      <p><strong>What Went Wrong:</strong></p>
-      <ul>
-        <li>Visual-emotional mismatch.</li>
-        <li>Insufficient community testing.</li>
-      </ul>
-      <p><strong>Future Possibilities:</strong></p>
-      <ul>
-        <li>Interactive installations.</li>
-        <li>Community-led co-design.</li>
-        <li>Expansion to education platforms.</li>
-      </ul>
+      <button class="retro-close-btn" onclick="closeModal('modal1')">✕ CLOSE</button>
+      <img src="images/grp-research1.png" alt="Open Door Research 1" onclick="toggleZoom(this)" />
     </div>
   </div>
-
-  <!-- Whetū Mārama Modal -->
-  <div id="whetu-marama" class="modal-container">
+  <div id="modal2" class="modal-container">
     <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('whetu-marama')">✕ Close</button>
-      <img src="images/stargazing-page-wm.png" alt="Whetu Marama" onclick="toggleZoom(this)" />
-      <p><strong>What Went Right:</strong></p>
-      <ul>
-        <li>Guided by whakapapa and identity.</li>
-        <li>Rooted in te ao Māori values.</li>
-        <li>Retro-futuristic visual style.</li>
-      </ul>
-      <p><strong>What Went Wrong:</strong></p>
-      <ul>
-        <li>Unclear symbolism to wider audience.</li>
-        <li>Time-limited execution.</li>
-        <li>Insufficient intergenerational input.</li>
-      </ul>
-      <p><strong>Future Possibilities:</strong></p>
-      <ul>
-        <li>Cross-platform storytelling.</li>
-        <li>Deeper iwi partnerships.</li>
-        <li>Nightlight installations.</li>
-      </ul>
+      <button class="retro-close-btn" onclick="closeModal('modal2')">✕ CLOSE</button>
+      <img src="images/grp-social-mediatemplates.png" alt="Social Media Templates" onclick="toggleZoom(this)" />
+    </div>
+  </div>
+  <div id="modal3" class="modal-container">
+    <div class="modal-content">
+      <button class="retro-close-btn" onclick="closeModal('modal3')">✕ CLOSE</button>
+      <img src="images/my-role-in-wm.png" alt="Whetū Mārama Role" onclick="toggleZoom(this)" />
+    </div>
+  </div>
+  <div id="modal4" class="modal-container">
+    <div class="modal-content">
+      <button class="retro-close-btn" onclick="closeModal('modal4')">✕ CLOSE</button>
+      <img src="images/home-pagewm.png" alt="Whetū Mārama Home Page" onclick="toggleZoom(this)" />
     </div>
   </div>
 
-  <a href="index.html" class="back-button">← Return to Home</a>
+  <!-- Reflection Modal -->
+  <div id="modal5" class="modal-container">
+    <div class="modal-content">
+      <button class="retro-close-btn" onclick="closeModal('modal5')">✕ CLOSE</button>
+      <h3>Final Thoughts</h3>
+      <p>The Open Door Project could grow into a truly transformative piece of design activism rooted in accessibility and inclusion.</p>
+      <p>Whetū Mārama brought together creativity, cultural respect, and futuristic vision. With more time and collaboration, it could evolve into a taonga for storytelling in Aotearoa.</p>
+    </div>
+  </div>
 
+  <a href="index.html" class="back-button">← Return</a>
+
+  <!-- JavaScript -->
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = 'flex';
