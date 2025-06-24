@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Flavours By Papatūānuku</title>
-  <link rel="stylesheet" href="styles10.css" />
+  <title>Group Projects | Nigel Murch</title>
+  <link rel="stylesheet" href="styles11.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="nav-bar">
     <div class="nav-left">
       <a href="index.html">
@@ -16,127 +17,95 @@
     </div>
     <ul class="nav-links">
       <li><a href="about.html">ABOUT |</a></li>
-      <li><a href="individual-work.html"class="active">INDIVIDUAL WORK |</a></li>
-      <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
 
-  <h1>Flavours By Papatūānuku</h1>
+  <h1>Group Projects</h1>
 
-  <!-- Modal Trigger Buttons -->
   <div class="button-container">
     <div class="modal-row">
-      <button onclick="openVideoModal()">🎥 Watch Website Video</button>
-      <button onclick="openModal('modal1')">🖥️ Desktop & Laptop</button>
-      <button onclick="openModal('modal2')">🏠 Home Page</button>
-      <button onclick="openModal('modal3')">🛡️ Safety</button>
-    </div>
-    <div class="modal-row">
-      <button onclick="openModal('modal4')">🖼️ Figma Wireframe</button>
-      <button onclick="openModal('modal5')">💡 Project Purpose</button>
+      <button onclick="openModal('modalOpenDoor')">🗝️ Open Door Project</button>
+      <button onclick="openModal('modalWhetu')">🌟 Whetū Mārama</button>
     </div>
   </div>
 
-  <!-- Video Modal -->
-  <div id="videoModal" class="modal-container">
+  <!-- Open Door Modal -->
+  <div id="modalOpenDoor" class="modal-container">
     <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeVideoModal()">CLOSE VIDEO</button>
-      <video
-        id="videoPlayer"
-        muted
-        playsinline
-        controls
-        onclick="toggleVideoZoom()"
-        style="max-width: 100%; height: auto;">
-        <source src="images/f-b-p-website.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <button class="retro-close-btn" onclick="closeModal('modalOpenDoor')">✕ CLOSE</button>
+      <h2>Open Door Project</h2>
+      <h3>What Went Right</h3>
+      <ol>
+        <li>The core idea of accessibility and inclusion through the metaphor of a "door" was strong, universal, and relatable.</li>
+        <li>Our team operated with a genuine heart. Everyone brought something unique to the table — whether that was visual design, research, storytelling, or cultural insight.</li>
+        <li>The design process moved well through paper prototypes, lo-fi sketches, and found a more developed visual language.</li>
+      </ol>
+      <h3>What Went Wrong</h3>
+      <ol>
+        <li>The visuals didn’t fully match the emotional weight of the story we were trying to tell.</li>
+        <li>Some elements of the project were rushed. The refinement stage felt squeezed.</li>
+        <li>We didn’t conduct enough real-world or community-based testing to validate our design decisions.</li>
+        <li>There were inconsistencies or vagueness around some messaging, including tone and hierarchy.</li>
+        <li>Remote teamwork introduced communication gaps that impacted alignment and clarity.</li>
+      </ol>
+      <h3>Future Possibilities</h3>
+      <ol>
+        <li>Immersive installations using motion, sound, or AR posters to deepen user engagement.</li>
+        <li>Co-designing with communities so each story evolves with authentic representation.</li>
+        <li>Turning it into a digital platform that supports education, resources, and lived-experience advocacy.</li>
+        <li>Broader accessibility themes could tie into mental health, justice, public services or housing equity.</li>
+      </ol>
+      <h3>Final Thoughts</h3>
+      <p>The Open Door Project could grow into a truly transformative piece of design activism. Our team laid a strong foundation for future work rooted in community engagement and inclusive design.</p>
     </div>
   </div>
 
-  <!-- Image Modals -->
-  <div id="modal1" class="modal-container">
+  <!-- Whetu Marama Modal -->
+  <div id="modalWhetu" class="modal-container">
     <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal1')">CLOSE IMAGE</button>
-      <img src="images/desk-top-lap-top.png" alt="Modal 1" class="zoom-img" onclick="toggleZoom(this)" />
+      <button class="retro-close-btn" onclick="closeModal('modalWhetu')">✕ CLOSE</button>
+      <h2>Whetū Mārama</h2>
+      <h3>What Went Right</h3>
+      <ol>
+        <li>The concept of Whetū Mārama as a guiding light was powerful and resonated with themes of whakapapa, resilience, and identity.</li>
+        <li>We anchored our design in te ao Māori values, which gave the work a strong cultural foundation and sense of purpose.</li>
+        <li>The visual direction — inspired by retro-futurism — was bold, unique, and gave the project a distinct personality.</li>
+        <li>Our team collaborated well across disciplines, blending design, storytelling, and research into a cohesive whole.</li>
+      </ol>
+      <h3>What Went Wrong</h3>
+      <ol>
+        <li>Some of the symbolic and cultural references may not have been clearly communicated to broader audiences unfamiliar with the kaupapa.</li>
+        <li>The audio and animation elements were ambitious, and some were only partially realised due to time constraints.</li>
+        <li>There were moments where we drifted too far into aesthetics and needed to pull back to reinforce clarity of message.</li>
+        <li>User testing was limited, especially with intergenerational or kaumātua voices that could have strengthened the direction.</li>
+      </ol>
+      <h3>Future Possibilities</h3>
+      <ol>
+        <li>Expanding Whetū Mārama into a cross-platform storyworld, including animation, interactive storytelling, or game-based learning tools.</li>
+        <li>Deeper partnerships with iwi or cultural advisors to co-create future content and ensure rich authenticity.</li>
+        <li>Creating a physical installation or night-time light experience where stories are projected onto real spaces.</li>
+        <li>Translating the narrative into education modules to be used in kura kaupapa and mainstream schools alike.</li>
+      </ol>
+      <h3>Final Thoughts</h3>
+      <p>Whetū Mārama brought together creativity, cultural respect, and futuristic vision in a way that felt truly meaningful. While the project isn’t perfect, it has the spark of something greater — a potential taonga for future storytelling in Aotearoa.</p>
     </div>
   </div>
 
-  <div id="modal2" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal2')">CLOSE IMAGE</button>
-      <img src="images/home-page.png" alt="Modal 2" class="zoom-img" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-
-  <div id="modal3" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal3')">CLOSE IMAGE</button>
-      <img src="images/safety.png" alt="Modal 3" class="zoom-img" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-
-  <div id="modal4" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal4')">CLOSE IMAGE</button>
-      <img src="wireframe.png" alt="Modal 4" class="zoom-img" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-
-  <div id="modal5" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal5')">CLOSE</button>
-      <h3>Why I Am Passionate About Flavours by Papatūānuku</h3>
-      <p><strong>Flavours by Papatūānuku</strong> is more than just a project.</p>
-      <p>It is a reflection of who I am, what I value, and the kind of future I want to help create. As someone with a deep connection to both the natural world and the people of Aotearoa, I feel a personal and cultural responsibility to protect and celebrate our environment...</p>
-      <p>...This project is a wero (challenge) to all of us: to think critically about the impact of our choices, to celebrate the gifts of Papatūānuku, and to imagine a future where sustainability isn’t a compromise—it’s a joy.</p>
-      <h4>Just A Thought</h4>
-      <p>We often hear about rabbits, possums, wallabies, and other invasive species causing harm to Aotearoa’s delicate ecosystems. Yet the solution of aerial 1080 drops can be cruel, imprecise, and toxic...</p>
-    </div>
-  </div>
-
-  <a href="individual-work.html" class="back-button">← Return</a>
+  <a href="index.html" class="back-button">← Return</a>
 
   <!-- JavaScript -->
   <script>
-    function openVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('videoPlayer');
-      modal.style.display = 'flex';
-      video.muted = true;
-      video.currentTime = 0;
-      video.play().catch((error) => {
-        console.warn('Autoplay failed:', error);
-      });
-    }
-
-    function toggleVideoZoom() {
-      const video = document.getElementById('videoPlayer');
-      video.classList.toggle('zoomed');
-    }
-
-    function closeVideoModal() {
-      const modal = document.getElementById('videoModal');
-      const video = document.getElementById('videoPlayer');
-      modal.style.display = 'none';
-      video.pause();
-      video.currentTime = 0;
-    }
-
     function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
+      const modal = document.getElementById(id);
+      if (modal) modal.style.display = 'flex';
     }
 
     function closeModal(id) {
       const modal = document.getElementById(id);
-      modal.style.display = 'none';
-      const img = modal.querySelector('img');
-      if (img) img.classList.remove('zoomed');
-    }
-
-    function toggleZoom(img) {
-      img.classList.toggle('zoomed');
+      if (modal) modal.style.display = 'none';
     }
   </script>
 </body>
