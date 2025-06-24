@@ -9,15 +9,15 @@
 </head>
 <body>
   <!-- Nav -->
-<div class="nav-bar">
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT |</a></li>
-    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-    <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
-    <li><a href="fbp-website-design.html"class="active">FBP WEBSITE DESIGN |</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</div>
+  <div class="nav-bar">
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+      <li><a href="fbp-website-design.html" class="active">FBP WEBSITE DESIGN |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
 
   <!-- Main -->
   <main class="main-container">
@@ -33,6 +33,60 @@
 
   <!-- Modal 1 -->
   <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close retro-close" onclick="closeModal('modal1')">[ CLOSE ✖ ]</span>
+      <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
+      <img src="images/case-studies.png" alt="Case Studies" class="zoom-image">
+      <p>This Project is based around environmental protection, community aroha and whānau.</p>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close retro-close" onclick="closeModal('modal2')">[ CLOSE ✖ ]</span>
+      <h2>Device Mockups</h2>
+      <img src="images/cell&phone.png" alt="Mockups on laptop and phone" class="zoom-image">
+      <p>Mockups showing the interface across devices.</p>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close retro-close" onclick="closeModal('modal3')">[ CLOSE ✖ ]</span>
+      <h2>Club Page</h2>
+      <img src="images/club.png" alt="Club Page Design" class="zoom-image">
+      <p>The Club Page promotes local community and kai exchange.</p>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal" id="modal4">
+    <div class="modal-content">
+      <span class="close retro-close" onclick="closeModal('modal4')">[ CLOSE ✖ ]</span>
+      <h2>Desktop View</h2>
+      <img src="images/desk-top-lap-top.png" alt="Desktop Mockup" class="zoom-image">
+      <p>Full-screen version of the site on desktop and laptop.</p>
+    </div>
+  </div>
+
+  <!-- Modal 5 with Video -->
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="close retro-close" onclick="closeModal('modal5')">[ CLOSE ✖ ]</span>
+      <h2>Website Promo Video</h2>
+      <video controls>
+        <source src="images/f-b-p-website.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>This video walks through the key design elements of Flavours By Papatūānuku.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript file would be linked or added inline here -->
+</body>
+</html>
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal1')">&times;</span>
       <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
@@ -107,5 +161,35 @@
       });
     };
   </script>
+
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    const video = modal.querySelector('video');
+    modal.style.display = 'none';
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        const video = modal.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  };
+</script>
 </body>
 </html>
