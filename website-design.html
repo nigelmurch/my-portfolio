@@ -3,129 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Website Design</title>
-  <link rel="stylesheet" href="styles10.css" />
+  <title>Group Projects</title>
+  <link rel="stylesheet" href="style9.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
- <div class="nav-bar">
-  <div class="nav-left">
-    <img class="logo" src="images/logoUXI.png" alt="Logo" />
+  <!-- Nav -->
+  <div class="nav-bar">
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
+      <li><a href="website-design.html">WEBSITE DESIGN |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
   </div>
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT |</a></li>
-    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-    <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
-    <li><a href="website-design.html" class="active">WEBSITE DESIGN |</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</div>
 
+  <!-- Main -->
   <main class="main-container">
-    <h1 class="page-title">Website Design</h1>
+    <h1 class="page-title">Group Projects</h1>
     <div class="project-buttons">
-      <button class="open-modal" onclick="openModal('modal-wireframes')">Wireframes</button>
-      <button class="open-modal" onclick="openModal('modal-mockups')">Mockups</button>
-      <button class="open-modal" onclick="openModal('modal-styleguide')">Style Guide</button>
-      <button class="open-modal" onclick="openModal('modal-responsiveness')">Responsiveness</button>
-      <button class="open-modal" onclick="openModal('modal-modals')">Modals & Interaction</button>
+      <button class="open-modal" onclick="openModal('modal1')">Whetū Mārama</button>
+      <button class="open-modal" onclick="openModal('modal2')">Open Door</button>
     </div>
   </main>
 
-  <!-- Wireframes Modal -->
-  <div class="modal" id="modal-wireframes">
+  <!-- Modal 1 -->
+  <div class="modal" id="modal1">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('modal-wireframes')">&times;</span>
-      <h2>Wireframes</h2>
-      <div class="project-media">
-        <img src="images/wireframe1.jpg" alt="Wireframe 1" />
-        <img src="images/wireframe2.jpg" alt="Wireframe 2" />
-        <img src="images/wireframe3.jpg" alt="Wireframe 3" />
-        <img src="images/wireframe4.jpg" alt="Wireframe 4" />
-        <img src="images/wireframe5.jpg" alt="Wireframe 5" />
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
+
+      <img src="images/project1-img1.jpg" alt="Whetū Mārama Image 1">
+      <img src="images/project1-img2.jpg" alt="Whetū Mārama Image 2">
+      <img src="images/project1-img3.jpg" alt="Whetū Mārama Image 3">
+      <img src="images/project1-img4.jpg" alt="Whetū Mārama Image 4">
+      <img src="images/project1-img5.jpg" alt="Whetū Mārama Image 5">
+
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project1-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <p>The wireframes detail the site’s structure and user pathway, focusing on navigation and content layout.</p>
+
+      <p>This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.</p>
     </div>
   </div>
 
-  <!-- Mockups Modal -->
-  <div class="modal" id="modal-mockups">
+  <!-- Modal 2 -->
+  <div class="modal" id="modal2">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('modal-mockups')">&times;</span>
-      <h2>Mockups</h2>
-      <div class="project-media">
-        <img src="images/mockup1.jpg" alt="Mockup 1" />
-        <img src="images/mockup2.jpg" alt="Mockup 2" />
-        <img src="images/mockup3.jpg" alt="Mockup 3" />
-        <img src="images/mockup4.jpg" alt="Mockup 4" />
-        <img src="images/mockup5.jpg" alt="Mockup 5" />
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Open Door Project – Grief and Communication</h2>
+
+      <img src="images/project2-img1.jpg" alt="Open Door Image 1">
+      <img src="images/project2-img2.jpg" alt="Open Door Image 2">
+      <img src="images/project2-img3.jpg" alt="Open Door Image 3">
+      <img src="images/project2-img4.jpg" alt="Open Door Image 4">
+      <img src="images/project2-img5.jpg" alt="Open Door Image 5">
+
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project2-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
-      <p>High-fidelity visuals show the final look, combining eco-branding and retro pixel style.</p>
+
+      <p>The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.</p>
     </div>
   </div>
 
-  <!-- Style Guide Modal -->
-  <div class="modal" id="modal-styleguide">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal-styleguide')">&times;</span>
-      <h2>Style Guide</h2>
-      <div class="project-media">
-        <img src="images/styleguide1.jpg" alt="Style Guide 1" />
-        <img src="images/styleguide2.jpg" alt="Style Guide 2" />
-        <img src="images/styleguide3.jpg" alt="Style Guide 3" />
-        <img src="images/styleguide4.jpg" alt="Style Guide 4" />
-        <img src="images/styleguide5.jpg" alt="Style Guide 5" />
-      </div>
-      <p>Typography, colour palettes, and motifs rooted in te ao Māori and ecological storytelling.</p>
-    </div>
-  </div>
-
-  <!-- Responsiveness Modal -->
-  <div class="modal" id="modal-responsiveness">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal-responsiveness')">&times;</span>
-      <h2>Responsiveness</h2>
-      <div class="project-media">
-        <img src="images/responsive1.jpg" alt="Responsive 1" />
-        <img src="images/responsive2.jpg" alt="Responsive 2" />
-        <img src="images/responsive3.jpg" alt="Responsive 3" />
-        <img src="images/responsive4.jpg" alt="Responsive 4" />
-        <img src="images/responsive5.jpg" alt="Responsive 5" />
-      </div>
-      <p>Adaptive layouts across desktop, tablet, and mobile, preserving usability and aesthetic consistency.</p>
-    </div>
-  </div>
-
-  <!-- Modals & Interaction Modal -->
-  <div class="modal" id="modal-modals">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal-modals')">&times;</span>
-      <h2>Modals & Interaction</h2>
-      <div class="project-media">
-        <img src="images/modal1.jpg" alt="Modal Interaction 1" />
-        <img src="images/modal2.jpg" alt="Modal Interaction 2" />
-        <img src="images/modal3.jpg" alt="Modal Interaction 3" />
-        <img src="images/modal4.jpg" alt="Modal Interaction 4" />
-        <img src="images/modal5.jpg" alt="Modal Interaction 5" />
-      </div>
-      <p>Examples of pop-ups, navigation transitions, and interactive elements in the finished site.</p>
-    </div>
-  </div>
-
-        <div class="project-video">
-          <video controls>
-            <source src="videos/project1-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>  
-  
+  <!-- JavaScript -->
   <script>
-    function openModal(id) { document.getElementById(id).style.display = "block"; }
-    function closeModal(id) { document.getElementById(id).style.display = "none"; }
-    window.onclick = e => {
-      if (e.target.classList.contains('modal')) {
-        e.target.style.display = "none";
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      const video = modal.querySelector('video');
+      modal.style.display = 'none';
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
       }
+    }
+
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        }
+      });
     };
   </script>
 </body>
