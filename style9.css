@@ -149,3 +149,19 @@ body {
     font-size: 1.5rem;
   }
 }
+.enlarged-video {
+  width: 100%;
+  max-width: 95vw;
+  height: auto;
+  margin: 1rem 0;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 12px #ff00ff;
+  border-radius: 10px;
+}
+
+/* Optional: Limit on large screens */
+@media (min-width: 768px) {
+  .enlarged-video {
+    max-width: 800px;
+  }
+}
