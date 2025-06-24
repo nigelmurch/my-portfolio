@@ -18,8 +18,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 40px 30px;
   border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  gap: 20px;
+  text-align: center;
 }
 
 .logo {
@@ -30,7 +35,9 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -93,7 +100,6 @@ body {
 
 .detail-box p,
 .detail-box ul li {
-  font-family: 'JetBrains Mono', monospace;
   font-size: 24px;
   color: #eeeeee;
   line-height: 1.8;
@@ -159,14 +165,12 @@ body {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* ✅ NEW: Make modal text and lists 18px */
 .modal-content p,
 .modal-content ul,
 .modal-content li {
   font-size: 18px;
   line-height: 1.8;
   color: #eeeeee;
-  font-family: 'JetBrains Mono', monospace;
 }
 
 .modal-content ul {
@@ -230,6 +234,22 @@ body {
 
 /* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 900px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .section-title h1 {
+    font-size: 2rem;
+  }
+
   .detail-row {
     flex-direction: column;
     align-items: center;
@@ -238,5 +258,26 @@ body {
   .detail-box {
     width: 90%;
     margin-bottom: 30px;
+  }
+
+  .detail-box h3 {
+    font-size: 2rem;
+  }
+
+  .detail-box p,
+  .detail-box ul li {
+    font-size: 18px;
+  }
+
+  .read-more-btn,
+  .retro-button {
+    font-size: 10px;
+    padding: 10px 16px;
+  }
+
+  .modal-content p,
+  .modal-content ul,
+  .modal-content li {
+    font-size: 16px;
   }
 }
