@@ -2,202 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Open Door & Whetū Mārama Modals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">  
-  <link rel="stylesheet" href="style8.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Group Projects - Nigel Murch</title>
+  <link rel="stylesheet" href="styles10.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
-<!-- Navbar -->
-<nav class="nav-bar">
-  <img src="images/logoUXI.png" alt="Logo" class="logo" />
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT |</a></li>
-    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-    <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</nav>
+  <h1>Group Projects</h1>
 
-<h1>Open Door Project</h1>
-<div class="modal-buttons">
-  <button onclick="openModal('od-img1')">Open Image 1</button>
-  <button onclick="openModal('od-img2')">Open Image 2</button>
-  <button onclick="openModal('od-img3')">Open Image 3</button>
-  <button onclick="openModal('od-img4')">Open Image 4</button>
-  <button onclick="openModal('od-img5')">Open Image 5</button>
-  <button onclick="openVideoModal('od-video')">Open Video</button>
-</div>
-
-<!-- Image Modals for Open Door -->
-<div id="od-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img1')">✕</span><img src="images/grp-research1.png" onclick="toggleZoom(this)"></div></div>
-<div id="od-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img2')">✕</span><img src="images/grp-social-mediatemplates.png" onclick="toggleZoom(this)"></div></div>
-<div id="od-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img3')">✕</span><img src="images/grp-usercase-studies.png" onclick="toggleZoom(this)"></div></div>
-<div id="od-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img4')">✕</span><img src="images/grpsocialmedia-single.png" onclick="toggleZoom(this)"></div></div>
-<div id="od-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('od-img5')">✕</span><img src="images/grpsocialmedia-single2.png" onclick="toggleZoom(this)"></div></div>
-
-<!-- Video Modal for Open Door -->
-<div id="od-video" class="modal-container">
-  <div class="modal-content" onclick="event.stopPropagation();">
-    <button class="retro-close-button" onclick="event.stopPropagation(); closeVideoModal('od-video')">Close Video</button>
-    <video controls onclick="toggleZoom(this)">
-      <source src="images/open-door-project.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
+  <div class="button-container">
+    <div class="modal-row">
+      <button onclick="openModal('open-door')">🟣 Open Door Project</button>
+      <button onclick="openModal('whetu-marama')">🔵 Whetū Mārama</button>
+    </div>
   </div>
-</div>
 
-<section class="project-work">
-  <h2>WHAT WENT RIGHT</h2>
-  <ol>
-    <li>The core idea of accessibility and inclusion through the metaphor of a "door" was strong, universal, and relatable.</li>
-    <li>Our team operated with a genuine heart. Everyone brought something unique to the table — whether that was visual design, research, storytelling, or cultural insight.</li>
-    <li>The design process moved well through paper prototypes, lo-fi sketches, and found a more developed visual language.</li>
-  </ol>
-
-  <h2>WHAT WENT WRONG</h2>
-  <ol>
-    <li>The visuals didn’t fully match the emotional weight of the story we were trying to tell.</li>
-    <li>Some elements of the project were rushed. The refinement stage felt squeezed in my opinion.</li>
-    <li>We didn’t conduct enough real-world or community-based testing to validate our design decisions.</li>
-    <li>There were inconsistencies or vagueness around some messaging, including tone and hierarchy.</li>
-    <li>Remote teamwork introduced communication gaps that impacted alignment and clarity.</li>
-  </ol>
-
-  <h2>FUTURE POSSIBILITIES</h2>
-  <ol>
-    <li>Immersive installations using motion, sound, or AR posters to deepen user engagement.</li>
-    <li>Co-designing with communities so each story evolves with authentic representation.</li>
-    <li>Turning it into a digital platform that supports education, resources, and lived-experience advocacy.</li>
-    <li>Broader accessibility themes could tie into mental health, justice, public services or housing equity.</li>
-  </ol>
-
-  <h2>FINAL THOUGHTS</h2>
-  <p>
-    While not everything went as planned, the heart was there. The Open Door Project could grow into a truly transformative piece of design activism. 
-    Our team laid a strong foundation for future work rooted in community engagement, collaboration and inclusive design.
-  </p>
-</section>
-
-<br><br>
-<h1>Whetū Mārama</h1>
-<div class="modal-buttons">
-  <button onclick="openModal('wm-img1')">Open Image 1</button>
-  <button onclick="openModal('wm-img2')">Open Image 2</button>
-  <button onclick="openModal('wm-img3')">Open Image 3</button>
-  <button onclick="openModal('wm-img4')">Open Image 4</button>
-  <button onclick="openModal('wm-img5')">Open Image 5</button>
- <button onclick="openVideoModal('wm-video')">Open Video</button>
-</div>
-
-<!-- Image Modals for Whetū Mārama -->
-<div id="wm-img1" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img1')">✕</span><img src="images/my-role-in-wm.png" onclick="toggleZoom(this)"></div></div>
-<div id="wm-img2" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img2')">✕</span><img src="images/stargazing-page-wm.png" onclick="toggleZoom(this)"></div></div>
-<div id="wm-img3" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img3')">✕</span><img src="images/home-pagewm.png" onclick="toggleZoom(this)"></div></div>
-<div id="wm-img4" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img4')">✕</span><img src="images/360-experiencewm.png" onclick="toggleZoom(this)"></div></div>
-<div id="wm-img5" class="modal-container"><div class="modal-content"><span class="close-button" onclick="closeModal('wm-img5')">✕</span><img src="images/Whetu-code.jpg" onclick="toggleZoom(this)"></div></div>
-
-<!-- Video Modal for Whetū Mārama -->
-<div id="wm-video" class="modal-container">
-  <div class="modal-content">
-    <button class="retro-close-button" onclick="closeVideoModal('wm-video')">CLOSE VIDEO</button>
-    <video controls onclick="toggleZoom(this)">
-      <source src="images/whetu-marama-website.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
+  <!-- Open Door Modal -->
+  <div id="open-door" class="modal-container">
+    <div class="modal-content">
+      <button class="retro-close-btn" onclick="closeModal('open-door')">✕ Close</button>
+      <img src="images/grp-research1.png" alt="Open Door Research" onclick="toggleZoom(this)" />
+      <p><strong>What Went Right:</strong></p>
+      <ul>
+        <li>Strong metaphor of accessibility.</li>
+        <li>Collaborative and heart-led team.</li>
+        <li>Effective design iteration.</li>
+      </ul>
+      <p><strong>What Went Wrong:</strong></p>
+      <ul>
+        <li>Visual-emotional mismatch.</li>
+        <li>Insufficient community testing.</li>
+      </ul>
+      <p><strong>Future Possibilities:</strong></p>
+      <ul>
+        <li>Interactive installations.</li>
+        <li>Community-led co-design.</li>
+        <li>Expansion to education platforms.</li>
+      </ul>
+    </div>
   </div>
-</div>
 
-  <section class="project-work">
+  <!-- Whetū Mārama Modal -->
+  <div id="whetu-marama" class="modal-container">
+    <div class="modal-content">
+      <button class="retro-close-btn" onclick="closeModal('whetu-marama')">✕ Close</button>
+      <img src="images/stargazing-page-wm.png" alt="Whetu Marama" onclick="toggleZoom(this)" />
+      <p><strong>What Went Right:</strong></p>
+      <ul>
+        <li>Guided by whakapapa and identity.</li>
+        <li>Rooted in te ao Māori values.</li>
+        <li>Retro-futuristic visual style.</li>
+      </ul>
+      <p><strong>What Went Wrong:</strong></p>
+      <ul>
+        <li>Unclear symbolism to wider audience.</li>
+        <li>Time-limited execution.</li>
+        <li>Insufficient intergenerational input.</li>
+      </ul>
+      <p><strong>Future Possibilities:</strong></p>
+      <ul>
+        <li>Cross-platform storytelling.</li>
+        <li>Deeper iwi partnerships.</li>
+        <li>Nightlight installations.</li>
+      </ul>
+    </div>
+  </div>
 
-<h2>WHAT WENT RIGHT</h2>
-<ol>
-  <li>The concept of Whetū Mārama as a guiding light was powerful and resonated deeply with themes of whakapapa, resilience, and identity.</li>
-  <li>We anchored our design in te ao Māori values, which gave the work a strong cultural foundation and sense of purpose.</li>
-  <li>The visual direction — inspired by retro-futurism — was bold, unique, and gave the project a distinct personality.</li>
-  <li>Our team collaborated well across disciplines, blending design, storytelling, and research into a cohesive whole.</li>
-</ol>
+  <a href="index.html" class="back-button">← Return to Home</a>
 
-<h2>WHAT WENT WRONG</h2>
-<ol>
-  <li>Some of the symbolic and cultural references may not have been clearly communicated to broader audiences unfamiliar with the kaupapa.</li>
-  <li>The audio and animation elements were ambitious, and some were only partially realised due to time constraints.</li>
-  <li>There were moments where we drifted too far into aesthetics and needed to pull back to reinforce clarity of message.</li>
-  <li>User testing was limited, especially with intergenerational or kaumātua voices that could have strengthened the direction.</li>
-</ol>
-
-<h2>FUTURE POSSIBILITIES</h2>
-<ol>
-  <li>Expanding Whetū Mārama into a cross-platform storyworld, including animation, interactive storytelling, or game-based learning tools.</li>
-  <li>Deeper partnerships with iwi or cultural advisors to co-create future content and ensure rich authenticity.</li>
-  <li>Creating a physical installation or night-time light experience where stories are projected onto real spaces.</li>
-  <li>Translating the narrative into education modules to be used in kura kaupapa and mainstream schools alike.</li>
-</ol>
-
-<h2>FINAL THOUGHTS</h2>
-<p>
-  Whetū Mārama brought together creativity, cultural respect, and futuristic vision in a way that felt truly meaningful. 
-  While the project isn’t perfect, it has the spark of something greater — a potential taonga for future storytelling in Aotearoa. 
-  With more time and collaboration, Whetū Mārama could evolve into a beacon that inspires, teaches, and connects.
-</p>
-</section>
-    
-<script>
-  function openModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'flex';
-  }
-
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) modal.style.display = 'Close';
-  }
-
-  function openVideoModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = 'flex';
-      const video = modal.querySelector('video');
-      if (video) {
-        video.currentTime = 0;
-        video.play();
-      }
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
     }
-  }
 
-  function closeVideoModal(id) {
-    const modal = document.getElementById(id);
-    if (modal) {
+    function closeModal(id) {
+      const modal = document.getElementById(id);
       modal.style.display = 'none';
-      const video = modal.querySelector('video');
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
+      const img = modal.querySelector('img');
+      if (img) img.classList.remove('zoomed');
     }
-  }
 
-  function toggleZoom(el) {
-    if (el.tagName === 'IMG' || el.tagName === 'VIDEO') {
-      el.classList.toggle('zoomed');
+    function toggleZoom(img) {
+      img.classList.toggle('zoomed');
     }
-  }
-
-  // Optional: Click sound for modal buttons
-  window.addEventListener('DOMContentLoaded', () => {
-    const clickSound = document.getElementById("click-sound");
-    const buttons = document.querySelectorAll(".modal-buttons button");
-
-    buttons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        if (clickSound) {
-          clickSound.currentTime = 0;
-          clickSound.play();
-        }
-      });
-    });
-  });
-</script>
+  </script>
 </body>
 </html>
