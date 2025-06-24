@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 40px 30px;
   border-bottom: 4px solid red;
 }
@@ -33,6 +34,9 @@ body {
   list-style: none;
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 1rem;
 }
 
 .nav-links li a {
@@ -181,4 +185,60 @@ h1 {
 .back-button:hover {
   background: #ff00ff;
   color: white;
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 1rem;
+  }
+
+  .modal-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .modal-row button {
+    width: 100%;
+    font-size: 0.85rem;
+    padding: 14px;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+
+  .modal-content img,
+  .modal-content video {
+    max-width: 100%;
+    max-height: 70vh;
+  }
+
+  .close-btn {
+    font-size: 2rem;
+    top: 5px;
+    right: 10px;
+  }
+
+  .back-button {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
 }
