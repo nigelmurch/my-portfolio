@@ -3,90 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Group Projects - Nigel Murch</title>
-  <link rel="stylesheet" href="style8.css" />
+  <title>Group Projects</title>
+  <link rel="stylesheet" href="style-group.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
   <nav class="nav-bar">
-    <div class="nav-left">
-      <a href="index.html">
-        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-      </a>
-    </div>
     <ul class="nav-links">
-      <li><a href="about.html">ABOUT |</a></li>
-      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-      <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="about.html">About |</a></li>
+      <li><a href="individual-work.html">Individual Work |</a></li>
+      <li><a href="group-projects.html" class="active">Group Projects |</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>Group Projects</h1>
+  <main>
+    <h1 class="page-title">Group Projects</h1>
 
-  <!-- Modal Trigger Buttons -->
-  <div class="button-container">
-    <div class="modal-row">
-      <button onclick="openModal('modal1')">🌀 Open Door Image 1</button>
-      <button onclick="openModal('modal2')">🌀 Open Door Image 2</button>
-      <button onclick="openModal('modal3')">🌠 Whetū Mārama Image 1</button>
-      <button onclick="openModal('modal4')">🌠 Whetū Mārama Image 2</button>
-    </div>
-  </div>
+    <!-- Project 1 Button -->
+    <button class="open-modal" onclick="openModal('modal1')">Open Project 1</button>
 
-  <!-- Image Modals -->
-  <div id="modal1" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal1')">✕ CLOSE</button>
-      <img src="images/grp-research1.png" alt="Open Door Research 1" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-  <div id="modal2" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal2')">✕ CLOSE</button>
-      <img src="images/grp-social-mediatemplates.png" alt="Social Media Templates" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-  <div id="modal3" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal3')">✕ CLOSE</button>
-      <img src="images/my-role-in-wm.png" alt="Whetū Mārama Role" onclick="toggleZoom(this)" />
-    </div>
-  </div>
-  <div id="modal4" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal4')">✕ CLOSE</button>
-      <img src="images/home-pagewm.png" alt="Whetū Mārama Home Page" onclick="toggleZoom(this)" />
-    </div>
-  </div>
+    <!-- Project 1 Modal -->
+    <div class="modal" id="modal1">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
 
-  <!-- Reflection Modal -->
-  <div id="modal5" class="modal-container">
-    <div class="modal-content">
-      <button class="retro-close-btn" onclick="closeModal('modal5')">✕ CLOSE</button>
-      <h3>Final Thoughts</h3>
-      <p>The Open Door Project could grow into a truly transformative piece of design activism rooted in accessibility and inclusion.</p>
-      <p>Whetū Mārama brought together creativity, cultural respect, and futuristic vision. With more time and collaboration, it could evolve into a taonga for storytelling in Aotearoa.</p>
+        <div class="project-media">
+          <img src="images/project1-img1.jpg" alt="Whetū Mārama Image 1">
+          <img src="images/project1-img2.jpg" alt="Whetū Mārama Image 2">
+          <img src="images/project1-img3.jpg" alt="Whetū Mārama Image 3">
+          <img src="images/project1-img4.jpg" alt="Whetū Mārama Image 4">
+          <img src="images/project1-img5.jpg" alt="Whetū Mārama Image 5">
+        </div>
+
+        <div class="project-video">
+          <video controls>
+            <source src="videos/project1-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.</p>
+      </div>
     </div>
-  </div>
 
-  <a href="index.html" class="back-button">← Return</a>
+    <!-- Project 2 Button -->
+    <button class="open-modal" onclick="openModal('modal2')">Open Project 2</button>
 
-  <!-- JavaScript -->
+    <!-- Project 2 Modal -->
+    <div class="modal" id="modal2">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Open Door Project – Grief and Communication</h2>
+
+        <div class="project-media">
+          <img src="images/project2-img1.jpg" alt="Open Door Image 1">
+          <img src="images/project2-img2.jpg" alt="Open Door Image 2">
+          <img src="images/project2-img3.jpg" alt="Open Door Image 3">
+          <img src="images/project2-img4.jpg" alt="Open Door Image 4">
+          <img src="images/project2-img5.jpg" alt="Open Door Image 5">
+        </div>
+
+        <div class="project-video">
+          <video controls>
+            <source src="videos/project2-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <p>The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.</p>
+      </div>
+    </div>
+  </main>
+
   <script>
     function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
+      document.getElementById(id).style.display = 'block';
     }
 
     function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.style.display = 'none';
-      const img = modal.querySelector('img');
-      if (img) img.classList.remove('zoomed');
+      document.getElementById(id).style.display = 'none';
     }
 
-    function toggleZoom(img) {
-      img.classList.toggle('zoomed');
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
     }
   </script>
 </body>
