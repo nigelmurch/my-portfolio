@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Group Projects</title>
-  <link rel="stylesheet" href="style-group.css" />
+  <link rel="stylesheet" href="style9.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,65 +17,64 @@
     </ul>
   </nav>
 
-  <main>
+  <main class="main-container">
     <h1 class="page-title">Group Projects</h1>
 
-    <!-- Project 1 Button -->
-    <button class="open-modal" onclick="openModal('modal1')">Open Project 1</button>
-
-    <!-- Project 1 Modal -->
-    <div class="modal" id="modal1">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
-
-        <div class="project-media">
-          <img src="images/project1-img1.jpg" alt="Whetū Mārama Image 1">
-          <img src="images/project1-img2.jpg" alt="Whetū Mārama Image 2">
-          <img src="images/project1-img3.jpg" alt="Whetū Mārama Image 3">
-          <img src="images/project1-img4.jpg" alt="Whetū Mārama Image 4">
-          <img src="images/project1-img5.jpg" alt="Whetū Mārama Image 5">
-        </div>
-
-        <div class="project-video">
-          <video controls>
-            <source src="videos/project1-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <p>This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.</p>
-      </div>
-    </div>
-
-    <!-- Project 2 Button -->
-    <button class="open-modal" onclick="openModal('modal2')">Open Project 2</button>
-
-    <!-- Project 2 Modal -->
-    <div class="modal" id="modal2">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Open Door Project – Grief and Communication</h2>
-
-        <div class="project-media">
-          <img src="images/project2-img1.jpg" alt="Open Door Image 1">
-          <img src="images/project2-img2.jpg" alt="Open Door Image 2">
-          <img src="images/project2-img3.jpg" alt="Open Door Image 3">
-          <img src="images/project2-img4.jpg" alt="Open Door Image 4">
-          <img src="images/project2-img5.jpg" alt="Open Door Image 5">
-        </div>
-
-        <div class="project-video">
-          <video controls>
-            <source src="videos/project2-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <p>The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.</p>
-      </div>
+    <div class="project-buttons">
+      <button class="open-modal" onclick="openModal('modal1')">Whetū Mārama</button>
+      <button class="open-modal" onclick="openModal('modal2')">Open Door</button>
     </div>
   </main>
+
+  <!-- Whetū Mārama Modal -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
+
+      <div class="project-media">
+        <img src="images/project1-img1.jpg" alt="Whetū Mārama Image 1">
+        <img src="images/project1-img2.jpg" alt="Whetū Mārama Image 2">
+        <img src="images/project1-img3.jpg" alt="Whetū Mārama Image 3">
+        <img src="images/project1-img4.jpg" alt="Whetū Mārama Image 4">
+        <img src="images/project1-img5.jpg" alt="Whetū Mārama Image 5">
+      </div>
+
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project1-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p>This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.</p>
+    </div>
+  </div>
+
+  <!-- Open Door Modal -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Open Door Project – Grief and Communication</h2>
+
+      <div class="project-media">
+        <img src="images/project2-img1.jpg" alt="Open Door Image 1">
+        <img src="images/project2-img2.jpg" alt="Open Door Image 2">
+        <img src="images/project2-img3.jpg" alt="Open Door Image 3">
+        <img src="images/project2-img4.jpg" alt="Open Door Image 4">
+        <img src="images/project2-img5.jpg" alt="Open Door Image 5">
+      </div>
+
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project2-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p>The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.</p>
+    </div>
+  </div>
 
   <script>
     function openModal(id) {
