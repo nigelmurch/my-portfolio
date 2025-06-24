@@ -1,4 +1,4 @@
-/* Base Reset & Font */
+/* Reset and layout base */
 * {
   margin: 0;
   padding: 0;
@@ -10,18 +10,16 @@ html, body {
   display: flex;
   flex-direction: column;
   background-color: #0000aa;
+  font-family: "Press Start 2P", monospace;
 }
 
-/* ------------------ NAVIGATION ------------------ */
+/* Navigation Bar */
 .nav-bar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
 }
 
 .logo {
@@ -32,18 +30,13 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: row;
   gap: 30px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
 }
 
 .nav-links li a {
-  font-family: 'Press Start 2P', monospace;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 1rem;
 }
 
 .nav-links li a.active {
@@ -58,7 +51,7 @@ html, body {
   border-radius: 4px;
 }
 
-/* ------------------ PAGE TITLE ------------------ */
+/* Section Titles */
 .section-title {
   text-align: center;
   padding: 50px 20px 20px;
@@ -66,23 +59,17 @@ html, body {
 }
 
 .section-title h1 {
-  font-family: "Press Start 2P", system-ui;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #00ffff;
 }
 
 .section-title h2 {
   font-family: "JetBrains Mono", monospace;
   color: #c2c4c4;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.section-title p {
-  font-size: 18px;
-  color: #cccccc;
-}
-
-/* ------------------ CONTENT GRID ------------------ */
+/* Work Card Grid */
 .individual-work-grid {
   display: flex;
   flex-wrap: wrap;
@@ -92,15 +79,11 @@ html, body {
 }
 
 .work-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   background-color: #111;
   border: 2px dashed #00ffff;
   padding: 30px;
   flex: 1 1 300px;
   max-width: 500px;
-  min-width: 280px;
   text-align: center;
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
@@ -109,48 +92,38 @@ html, body {
 
 .work-card:hover {
   transform: scale(1.05);
-  min-height: 400px;
 }
 
-p {
-  font-size: 24px;
-}
-
-h3 {
-  font-size: 2.5rem;
-}
-
+/* Button Style */
 .retro-button {
   background-color: #44ff44;
   border: 2px solid white;
   padding: 1rem 2rem;
-  font-family: "Press Start 2P", monospace;
   font-size: 0.7rem;
   color: #000;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
   box-shadow: 4px 4px #222;
+  margin-top: 20px;
   transition: background-color 0.3s ease;
 }
 
 .retro-button:hover {
   background-color: #33cc33;
-  color: #000;
-}
 }
 
-/* ------------------ FOOTER ------------------ */
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
   border-top: 2px solid #00ff99;
-  color: #666;
+  color: #aaa;
   font-size: 10px;
   margin-top: auto;
 }
 
-/* ------------------ RESPONSIVE (MOBILE) ------------------ */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
@@ -164,35 +137,23 @@ h3 {
   }
 
   .section-title h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .section-title h2 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .individual-work-grid {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
   }
 
   .work-card {
     padding: 20px;
-    min-width: auto;
-    max-width: 100%;
-  }
-
-  h3 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 18px;
   }
 
   .retro-button {
     font-size: 0.9rem;
-    padding: 8px 12px;
+    padding: 10px 14px;
   }
 }
