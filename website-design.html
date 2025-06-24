@@ -8,23 +8,115 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="nav-bar">
-    <div class="nav-left">
-      <a href="index.html">
-        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-      </a>
-    </div>
     <ul class="nav-links">
-      <li><a href="about.html">ABOUT |</a></li>
-      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-      <li><a href="group-projects.html" class="active">WEBSITE DESIGN|</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="about.html">About |</a></li>
+      <li><a href="individual-work.html">Individual Work |</a></li>
+      <li><a href="group-projects.html">Group Projects |</a></li>
+      <li><a href="website-design.html" class="active">Website Design |</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>WEBSITE DESIGN </h1>
+  <main class="main-container">
+    <h1 class="page-title">Website Design</h1>
+    <div class="project-buttons">
+      <button class="open-modal" onclick="openModal('modal-wireframes')">Wireframes</button>
+      <button class="open-modal" onclick="openModal('modal-mockups')">Mockups</button>
+      <button class="open-modal" onclick="openModal('modal-styleguide')">Style Guide</button>
+      <button class="open-modal" onclick="openModal('modal-responsiveness')">Responsiveness</button>
+      <button class="open-modal" onclick="openModal('modal-modals')">Modals & Interaction</button>
+    </div>
+  </main>
 
-  
+  <!-- Wireframes Modal -->
+  <div class="modal" id="modal-wireframes">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-wireframes')">&times;</span>
+      <h2>Wireframes</h2>
+      <div class="project-media">
+        <img src="images/wireframe1.jpg" alt="Wireframe 1" />
+        <img src="images/wireframe2.jpg" alt="Wireframe 2" />
+        <img src="images/wireframe3.jpg" alt="Wireframe 3" />
+        <img src="images/wireframe4.jpg" alt="Wireframe 4" />
+        <img src="images/wireframe5.jpg" alt="Wireframe 5" />
+      </div>
+      <p>The wireframes detail the site’s structure and user pathway, focusing on navigation and content layout.</p>
+    </div>
+  </div>
+
+  <!-- Mockups Modal -->
+  <div class="modal" id="modal-mockups">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-mockups')">&times;</span>
+      <h2>Mockups</h2>
+      <div class="project-media">
+        <img src="images/mockup1.jpg" alt="Mockup 1" />
+        <img src="images/mockup2.jpg" alt="Mockup 2" />
+        <img src="images/mockup3.jpg" alt="Mockup 3" />
+        <img src="images/mockup4.jpg" alt="Mockup 4" />
+        <img src="images/mockup5.jpg" alt="Mockup 5" />
+      </div>
+      <p>High-fidelity visuals show the final look, combining eco-branding and retro pixel style.</p>
+    </div>
+  </div>
+
+  <!-- Style Guide Modal -->
+  <div class="modal" id="modal-styleguide">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-styleguide')">&times;</span>
+      <h2>Style Guide</h2>
+      <div class="project-media">
+        <img src="images/styleguide1.jpg" alt="Style Guide 1" />
+        <img src="images/styleguide2.jpg" alt="Style Guide 2" />
+        <img src="images/styleguide3.jpg" alt="Style Guide 3" />
+        <img src="images/styleguide4.jpg" alt="Style Guide 4" />
+        <img src="images/styleguide5.jpg" alt="Style Guide 5" />
+      </div>
+      <p>Typography, colour palettes, and motifs rooted in te ao Māori and ecological storytelling.</p>
+    </div>
+  </div>
+
+  <!-- Responsiveness Modal -->
+  <div class="modal" id="modal-responsiveness">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-responsiveness')">&times;</span>
+      <h2>Responsiveness</h2>
+      <div class="project-media">
+        <img src="images/responsive1.jpg" alt="Responsive 1" />
+        <img src="images/responsive2.jpg" alt="Responsive 2" />
+        <img src="images/responsive3.jpg" alt="Responsive 3" />
+        <img src="images/responsive4.jpg" alt="Responsive 4" />
+        <img src="images/responsive5.jpg" alt="Responsive 5" />
+      </div>
+      <p>Adaptive layouts across desktop, tablet, and mobile, preserving usability and aesthetic consistency.</p>
+    </div>
+  </div>
+
+  <!-- Modals & Interaction Modal -->
+  <div class="modal" id="modal-modals">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal-modals')">&times;</span>
+      <h2>Modals & Interaction</h2>
+      <div class="project-media">
+        <img src="images/modal1.jpg" alt="Modal Interaction 1" />
+        <img src="images/modal2.jpg" alt="Modal Interaction 2" />
+        <img src="images/modal3.jpg" alt="Modal Interaction 3" />
+        <img src="images/modal4.jpg" alt="Modal Interaction 4" />
+        <img src="images/modal5.jpg" alt="Modal Interaction 5" />
+      </div>
+      <p>Examples of pop-ups, navigation transitions, and interactive elements in the finished site.</p>
+    </div>
+  </div>
+
+  <script>
+    function openModal(id) { document.getElementById(id).style.display = "block"; }
+    function closeModal(id) { document.getElementById(id).style.display = "none"; }
+    window.onclick = e => {
+      if (e.target.classList.contains('modal')) {
+        e.target.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
