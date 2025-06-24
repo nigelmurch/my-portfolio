@@ -16,10 +16,13 @@ html, body {
 /* Navigation Bar */
 .nav-bar {
   display: flex;
+  flex-direction: row; /* was column */
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
 }
 
 .logo {
@@ -30,13 +33,18 @@ html, body {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-direction: row; /* was column */
   gap: 30px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
 .nav-links li a {
+  font-family: 'Press Start 2P', monospace;
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 24px;
 }
 
 .nav-links li a.active {
@@ -50,7 +58,6 @@ html, body {
   padding: 4px 8px;
   border-radius: 4px;
 }
-
 /* Section Titles */
 .section-title {
   text-align: center;
