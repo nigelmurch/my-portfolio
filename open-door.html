@@ -9,40 +9,111 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav-bar">
-    <div class="nav-left">
-      <a href="index.html">
-        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-      </a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="about.html">ABOUT |</a></li>
-      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-      <li><a href="group-projects.html" class="active">GROUP PROJECTS |</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
+<!-- NAVIGATION BAR -->
+<nav class="nav-bar">
+  <a href="index.html">
+    <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">ABOUT |</a></li>
+    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+    <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
 
-  <!-- Main Content -->
-  <main class="main-container">
-    <h1 class="page-title">Open Door Project</h1>
-    
-    <div class="project-section">
-      <img src="images/project1-img1.jpg" alt="Whetū Mārama" class="feature-image">
-      <p class="project-description">
-        Open Door is a rangatahi-focused health service on wheels. Designed to reduce stigma and improve access to sexual healthcare for 15–25 year olds, this mobile clinic brings essential services to the community. The bus features signage for advertising our pop-up clinic.
-      </p>
-    </div>
+<!-- MAIN CONTENT -->
+<main class="main-container">
+  <h1 class="page-title">Open Door Project</h1>
+  <p class="project-intro">A retro storytelling experience that helps tamariki and whānau discuss grief and loss.</p>
 
-    <div class="video-section">
-      <h2 class="video-title">Promo Video</h2>
-      <video controls class="promo-video">
-        <source src="videos/project1-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </main>
+  <div class="project-buttons">
+    <button onclick="openModal('modal1')">Image 1</button>
+    <button onclick="openModal('modal2')">Image 2</button>
+    <button onclick="openModal('modal3')">Image 3</button>
+    <button onclick="openModal('modal4')">Image 4</button>
+    <button onclick="openModal('modal5')">Image 5</button>
+    <button onclick="openModal('modal6')">Project Video</button>
+  </div>
+</main>
+
+<!-- IMAGE MODALS -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal1')">[ CLOSE ✖ ]</span>
+    <img src="images/project2-img1.jpg" alt="Open Door Image 1" class="zoom-image" />
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal2')">[ CLOSE ✖ ]</span>
+    <img src="images/project2-img2.jpg" alt="Open Door Image 2" class="zoom-image" />
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal3')">[ CLOSE ✖ ]</span>
+    <img src="images/project2-img3.jpg" alt="Open Door Image 3" class="zoom-image" />
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal4')">[ CLOSE ✖ ]</span>
+    <img src="images/project2-img4.jpg" alt="Open Door Image 4" class="zoom-image" />
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal5')">[ CLOSE ✖ ]</span>
+    <img src="images/project2-img5.jpg" alt="Open Door Image 5" class="zoom-image" />
+  </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal6')">[ CLOSE ✖ ]</span>
+    <video controls class="enlarged-video">
+      <source src="videos/project2-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+    const video = modal.querySelector('video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        const video = modal.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  };
+</script>
 
 </body>
 </html>
