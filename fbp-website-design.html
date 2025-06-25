@@ -3,28 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Group Projects</title>
+  <title>Flavours By Papatūānuku</title>
   <link rel="stylesheet" href="style9.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
- 
- <<!-- Navbar -->
-<nav class="nav-bar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-    </a>
-  </div>   
-<nav class="nav-bar">
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT |</a></li>
-    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-    <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
-    <li><a href="fbp-website-design.html" class="active">FBP WEBSITE DESIGN |</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</nav>
+  <!-- Navbar -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+      <li><a href="fbp-website-design.html" class="active">FBP WEBSITE DESIGN |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
   <!-- Main -->
   <main class="main-container">
@@ -79,44 +77,19 @@
   </div>
 
   <!-- Modal 5 with Video -->
- <div class="modal" id="modal5">
-  <div class="modal-content">
-    <span class="close retro-close" onclick="closeModal('modal5')">[ CLOSE ✖ ]</span>
-    <h2>Website Promo Video</h2>
-    
-    <video controls class="enlarged-video">
-      <source src="images/f-b-p-website.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    
-    <p>This video walks through the key design elements of Flavours By Papatūānuku.</p>
-  </div>
-</div>
-
-
-
-  <!-- Modal 2 -->
-  <div class="modal" id="modal2">
+  <div class="modal" id="modal5">
     <div class="modal-content">
-      <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h2>Open Door Project – Grief and Communication</h2>
-      <img src="images/project2-img1.jpg" alt="Open Door Image 1">
-    </div>
-
-      <div class="project-video">
-        <video controls>
-          <source src="videos/project2-video.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <p>The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.</p>
+      <span class="close retro-close" onclick="closeModal('modal5')">[ CLOSE ✖ ]</span>
+      <h2>Website Promo Video</h2>
+      <video controls class="enlarged-video">
+        <source src="images/f-b-p-website.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>This video walks through the key design elements of Flavours By Papatūānuku.</p>
     </div>
   </div>
-  <!-- JavaScript file would be linked or added inline here -->
-</body>
-</html>
-     <!-- JavaScript -->
+
+  <!-- JavaScript -->
   <script>
     function openModal(id) {
       document.getElementById(id).style.display = 'block';
@@ -146,35 +119,5 @@
       });
     };
   </script>
-
-<script>
-  function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    const video = modal.querySelector('video');
-    modal.style.display = 'none';
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
-    }
-  }
-
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-        const video = modal.querySelector('video');
-        if (video) {
-          video.pause();
-          video.currentTime = 0;
-        }
-      }
-    });
-  };
-</script>
 </body>
 </html>
