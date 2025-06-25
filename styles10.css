@@ -62,7 +62,8 @@ body {
 
 /* Main Page */
 .main-container {
-  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .page-title {
@@ -72,17 +73,19 @@ body {
 }
 
 .project-link-button {
-  display: inline-block;
   background: #44ff44;
   color: #000;
   border: 2px solid #fff;
   padding: 1rem 1.5rem;
   font-size: 0.8rem;
   font-family: 'Press Start 2P', monospace;
-  text-decoration: none;
   box-shadow: 4px 4px #222;
+  text-decoration: none;
   transition: background 0.3s ease;
-  margin: 0.5rem;
+}
+
+.project-link-button:hover {
+  background: #33cc33;
 }
 
 .project-link-button:hover {
