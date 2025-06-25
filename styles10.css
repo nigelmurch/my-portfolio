@@ -7,13 +7,10 @@
 
 /* Body Styling */
 body {
-  position: relative;
-  background: url('images/groupwork-bg.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background: #0000aa;
   color: #fff;
   font-family: 'Press Start 2P', monospace;
   padding: 2rem;
-  z-index: 0;
 }
 
 
