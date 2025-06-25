@@ -16,17 +16,7 @@ body {
   z-index: 0;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;   /* use vw/vh for full viewport */
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4); /* Adjust opacity here */
-  z-index: -1;
-  pointer-events: none; /* so clicks pass through */
-}
+
 
 /* Navbar */
 .nav-bar {
