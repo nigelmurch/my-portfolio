@@ -7,11 +7,11 @@
 
 /* Body Styling */
 body {
-  background: #0000aa;
+  background: url('images/old80spc-2.png') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   font-family: 'Press Start 2P', monospace;
   padding: 2rem;
-  text-align: center;
 }
 
 /* Navbar */
