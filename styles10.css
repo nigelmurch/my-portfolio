@@ -71,21 +71,22 @@ body {
 }
 
 .project-link-button {
+  display: inline-block;
   background: #44ff44;
-  border: 2px solid #fff;
-  font-size: 0.8rem;
-  padding: 1rem 2rem;
   color: #000;
-  text-decoration: none;
+  border: 2px solid #fff;
+  padding: 1rem 1.5rem;
+  font-size: 0.8rem;
   font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
   box-shadow: 4px 4px #222;
   transition: background 0.3s ease;
-  display: inline-block;
-  text-align: center;
+  margin: 0.5rem;
 }
 
 .project-link-button:hover {
   background: #33cc33;
+  color: #000;
 }
 
 /* Modal Styling */
