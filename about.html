@@ -6,38 +6,9 @@
   <title>About Nigel Murch</title>
   <link rel="stylesheet" href="style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
-  <!-- Inline styles for play button -->
-  <style>
-    .music-button {
-      padding: 1rem 2rem;
-      font-size: 0.9rem;
-      font-family: "Press Start 2P", monospace;
-      background: limegreen;
-      color: black;
-      border: 3px solid black;
-      margin: 2rem auto;
-      display: block;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .music-button:hover {
-      background-color: yellow;
-    }
-  </style>
 </head>
 
 <body>
-
-  <!-- 🎵 Background Music -->
-  <audio id="bg-music" preload="auto" loop>
-    <source src="sounds/dead-man-walking.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- ▶ Play Music Button -->
-  <button onclick="playMusic()" class="music-button">▶ PLAY MUSIC</button>
 
   <!-- Navigation -->
   <nav class="nav-bar">
@@ -132,23 +103,21 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-    const h1 = document.querySelector('.ux-investigator');
-    const siren = document.getElementById('siren-sound');
+  <<script>
+  const h1 = document.querySelector('.ux-investigator');
+  const siren = document.getElementById('siren-sound');
 
-    h1.addEventListener('click', () => {
-      siren.currentTime = 0;
-      siren.play();
-    });
+  h1.addEventListener('click', () => {
+    siren.currentTime = 0;
+    siren.play();
 
-    function playMusic() {
-      const music = document.getElementById('bg-music');
-      music.play().catch(e => {
-        console.error("Playback blocked by browser:", e);
-        alert("⚠ Please click the button to allow music to play.");
-      });
-    }
-  </script>
+    // ⏱️ Stop siren after 3 seconds
+    setTimeout(() => {
+      siren.pause();
+      siren.currentTime = 0; // reset
+    }, 3000); // 3000 milliseconds = 3 seconds
+  });
+</script>
 
   <footer>
     Police Siren Sound Effect by Jurij & Keyboard Click by CreatorsHome from Pixabay.  
