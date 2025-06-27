@@ -6,9 +6,38 @@
   <title>About Nigel Murch</title>
   <link rel="stylesheet" href="style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Inline styles for play button -->
+  <style>
+    .music-button {
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      font-family: "Press Start 2P", monospace;
+      background: limegreen;
+      color: black;
+      border: 3px solid black;
+      margin: 2rem auto;
+      display: block;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .music-button:hover {
+      background-color: yellow;
+    }
+  </style>
 </head>
 
 <body>
+
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="sounds/dead-man-walking.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ▶ Play Music Button -->
+  <button onclick="playMusic()" class="music-button">▶ PLAY MUSIC</button>
 
   <!-- Navigation -->
   <nav class="nav-bar">
@@ -24,15 +53,8 @@
       <li><a href="contact.html">CONTACT</a></li>
     </ul>
   </nav>
-  <!-- 🔊 Background music --> <!-- Audio element -->
-  <audio id="bg-music" preload="auto" loop>
-    <source src="sounds/dead-man-walking.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
 
-  <!-- Music trigger button -->
-  <button onclick="document.getElementById('bg-music').play()">Play Music</button> <button onclick="playMusic()" class="music-button">▶ PLAY MUSIC</button>
-  <!-- Siren for h1 click -->
+  <!-- Siren Audio -->
   <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Section Title -->
@@ -49,7 +71,6 @@
   <main class="work-container">
     <section class="work-card">
       <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
-
       <div class="work-content">
         <h3>Nigel Murch — UX Researcher & Service Designer</h3>
 
@@ -110,7 +131,7 @@
     <a href="index.html" class="retro-button">Return Home</a>
   </div>
 
-  <!-- Sound Effects and Scripts -->
+  <!-- JavaScript -->
   <script>
     const h1 = document.querySelector('.ux-investigator');
     const siren = document.getElementById('siren-sound');
@@ -123,14 +144,15 @@
     function playMusic() {
       const music = document.getElementById('bg-music');
       music.play().catch(e => {
-        console.error("Playback blocked:", e);
-        alert("Please interact with the page to allow music.");
+        console.error("Playback blocked by browser:", e);
+        alert("⚠ Please click the button to allow music to play.");
       });
     }
   </script>
 
   <footer>
-    Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Dead Man Walking - Justin LaPoint - https://uppbeat.io
+    Police Siren Sound Effect by Jurij & Keyboard Click by CreatorsHome from Pixabay.  
+    Music: "Dead Man Walking" by Justin LaPoint – https://uppbeat.io
   </footer>
 
 </body>
