@@ -7,114 +7,136 @@
   <link rel="stylesheet" href="style2.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
- 
-  <body>
-  <!-- 🔊 Audio placed here -->
- <!-- Button to manually start music -->
-<button onclick="document.getElementById('bg-music').play()">Play Music</button>
 
-<audio id="bg-music" loop>
-  <source src="sounds/dead-man-walking.mp3" type="audio/mpeg" />
-</audio>
-<nav class="nav-bar">
-  <div class="nav-left">
-    <a href="index.html">
-      <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
-    </a>
-  </div>
- <ul class="nav-links">
-  <li><a href="about.html" class="active">ABOUT |</a></li>
-  <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
-  <li><a href="group-projects.html">GROUP PROJECTS |</a></li> <!-- ✅ fixed label -->
-  <li><a href="contact.html">CONTACT</a></li>
-</ul>
-</nav>
- <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
-    <!-- Section Title (retro style) -->
-<section class="section-title">
-  <div class="title-with-badge">
-<h1 class="ux-investigator">UX Investigator</h1>
-    <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
-  </div>
-  <h2>About Me</h2>
-  <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
-</section>
+<body>
+  <!-- 🎵 Background music (controlled with button) -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="sounds/dead-man-walking.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-  <!-- Content Grid (repurposed from individual work grid) -->
-<main class="work-container">
-  <section class="work-card">
-    <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
+  <!-- 🔊 Toggle music button -->
+  <button onclick="toggleMusic()" class="retro-button" style="margin: 2rem auto; display: block; text-align: center;">🔊 Sound On / Off</button>
 
-    <div class="work-content">
-      <h3>Nigel Murch — UX Researcher & Service Designer</h3>
-
-      <p>Kia ora, I’m Nigel Murch — a UX researcher dedicated to uncovering what people truly need, especially in spaces where silence, stigma, or systems make access unfair.</p>
-
-      <p>Over the past three years, while studying at <span class="highlight">Media Design School</span> in <span class="highlight">Tāmaki Makaurau (Auckland)</span>, Aotearoa New Zealand, I'm driven by a singular purpose:</p>
-
-      <p><span class="highlight">To uncover and understand what people truly need</span> — especially in spaces where <span class="highlight">silence, stigma, or systemic barriers</span> have made access unjustifiably difficult.</p>
-
-      <p>I see UX not just as a profession, but as a <span class="highlight">vehicle for creating a fairer, more compassionate world</span>.</p>
-
-      <p>My work is guided by three core principles:</p>
-      <ul>
-        <li><span class="highlight">Understand deeply</span></li>
-        <li><span class="highlight">Design with purpose</span></li>
-        <li><span class="highlight">Always advocate for the user</span></li>
-      </ul>
-
-      <p>As a UX researcher and service designer, I navigate the deeply human side of design — looking beyond surface-level data to discover the <span class="highlight">emotional, cultural, and systemic layers</span> that influence how people experience services.</p>
-
-      <p>Whether I’m <span class="highlight">co-designing with communities</span>, <span class="highlight">interviewing rangatahi</span>, or <span class="highlight">testing early prototypes</span>, my purpose remains constant — to amplify marginalised voices, bridge access gaps, and champion inclusive, ethical innovation.</p>
-
-      <p>My practice is shaped by a life steeped in <span class="highlight">storytelling, deep listening, and collaborative change-making</span>.</p>
-
-      <p>I come from the <span class="highlight">Rural South West of Te Waipounamu</span> (South Island), and because of my lived experiences, my values are firmly rooted in <span class="highlight">service, curiosity, and integrity</span>.</p>
-
-      <p>I believe that when we approach design with <span class="highlight">empathy</span> and respect people as the <span class="highlight">experts of their own lived experiences</span>, we elevate design from functional to transformational.</p>
-
-      <p>I’m passionate about <span class="highlight">global equity and access</span>, from <span class="highlight">sexual health</span> to <span class="highlight">digital inclusion</span>. There are no excuses for excluding or discriminating against anyone for any reason.</p>
-
-      <p>I strive to challenge <span class="highlight">manipulative design and harmful defaults</span> by promoting <span class="highlight">transparency</span>, <span class="highlight">cultural insight</span>, and <span class="highlight">co-design</span>.</p>
-
-      <p>My design philosophy is also grounded in <span class="highlight">environmental responsibility</span>, believing that digital experiences should be <span class="highlight">intuitive, inclusive, and sustainable</span>.</p>
-
-      <p>My <span class="highlight">research-led approach</span> transforms complexity into clarity, crafting interactions that feel <span class="highlight">effortless, respectful, and genuinely useful</span>.</p>
-
-      <p>Looking ahead, I’m committed to contributing to <span class="highlight">bold, community-led projects that uplift lives</span>, whether in healthcare, housing, public services, or digital platforms.</p>
-
-      <p>I want to continue supporting organisations in <span class="highlight">transforming meaningful insight into real-world impact</span>.</p>
-
-      <p>I myself have been in the systems of <span class="highlight">health and welfare</span>, navigating life with a <span class="highlight">spinal injury</span> that altered my world forever...</p>
-
-      <p><strong>This portfolio is more than a collection of work</strong>.<br>
-        It’s a reflection of who I am as a designer and a person — someone who believes in <span class="highlight">equity, ethics, and the power of listening</span>. Someone who shows up with purpose and walks alongside others to <span class="highlight">build better, together</span>.</p>
-      
-      <div class="signature">
-        Ngā mihi nui,<br>
-        <strong>Nigel Murch</strong><br>
-        Specialist UX Researcher & Service Designer<br>
-        <span class="highlight">Authentic. Ethical. Sustainable. Intuitive.</span>
-      </div>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+      </a>
     </div>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Siren sound for header click -->
+  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
+
+  <!-- Section Title -->
+  <section class="section-title">
+    <div class="title-with-badge">
+      <h1 class="ux-investigator">UX Investigator</h1>
+      <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
+    </div>
+    <h2>About Me</h2>
+    <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
   </section>
-</main>
-<!--  Footer Return Link -->
-<div class="content" style="text-align:center; margin: 3rem auto;">
-  <a href="index.html" class="retro-button">Return Home</a>
-</div>
 
-<audio id="siren-sound" src="audio/siren.mp3" preload="auto"></audio>
+  <!-- Content Grid -->
+  <main class="work-container">
+    <section class="work-card">
+      <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
 
-<script>
-  const h1 = document.querySelector('.ux-investigator');
-  const siren = document.getElementById('siren-sound');
+      <div class="work-content">
+        <h3>Nigel Murch — UX Researcher & Service Designer</h3>
 
-  h1.addEventListener('click', () => {
-    siren.currentTime = 0; // Restart sound if clicked multiple times
-    siren.play();
-  });
-</script>
-<Footer>Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Dead Man Walking-Justin LaPoint-https://uppbeat.io</Footer>
-  </body>
+        <p>Kia ora, I’m Nigel Murch — a UX researcher dedicated to uncovering what people truly need, especially in spaces where silence, stigma, or systems make access unfair.</p>
+
+        <p>Over the past three years, while studying at <span class="highlight">Media Design School</span> in <span class="highlight">Tāmaki Makaurau (Auckland)</span>, Aotearoa New Zealand, I'm driven by a singular purpose:</p>
+
+        <p><span class="highlight">To uncover and understand what people truly need</span> — especially in spaces where <span class="highlight">silence, stigma, or systemic barriers</span> have made access unjustifiably difficult.</p>
+
+        <p>I see UX not just as a profession, but as a <span class="highlight">vehicle for creating a fairer, more compassionate world</span>.</p>
+
+        <p>My work is guided by three core principles:</p>
+        <ul>
+          <li><span class="highlight">Understand deeply</span></li>
+          <li><span class="highlight">Design with purpose</span></li>
+          <li><span class="highlight">Always advocate for the user</span></li>
+        </ul>
+
+        <p>As a UX researcher and service designer, I navigate the deeply human side of design — looking beyond surface-level data to discover the <span class="highlight">emotional, cultural, and systemic layers</span> that influence how people experience services.</p>
+
+        <p>Whether I’m <span class="highlight">co-designing with communities</span>, <span class="highlight">interviewing rangatahi</span>, or <span class="highlight">testing early prototypes</span>, my purpose remains constant — to amplify marginalised voices, bridge access gaps, and champion inclusive, ethical innovation.</p>
+
+        <p>My practice is shaped by a life steeped in <span class="highlight">storytelling, deep listening, and collaborative change-making</span>.</p>
+
+        <p>I come from the <span class="highlight">Rural South West of Te Waipounamu</span> (South Island), and because of my lived experiences, my values are firmly rooted in <span class="highlight">service, curiosity, and integrity</span>.</p>
+
+        <p>I believe that when we approach design with <span class="highlight">empathy</span> and respect people as the <span class="highlight">experts of their own lived experiences</span>, we elevate design from functional to transformational.</p>
+
+        <p>I’m passionate about <span class="highlight">global equity and access</span>, from <span class="highlight">sexual health</span> to <span class="highlight">digital inclusion</span>. There are no excuses for excluding or discriminating against anyone for any reason.</p>
+
+        <p>I strive to challenge <span class="highlight">manipulative design and harmful defaults</span> by promoting <span class="highlight">transparency</span>, <span class="highlight">cultural insight</span>, and <span class="highlight">co-design</span>.</p>
+
+        <p>My design philosophy is also grounded in <span class="highlight">environmental responsibility</span>, believing that digital experiences should be <span class="highlight">intuitive, inclusive, and sustainable</span>.</p>
+
+        <p>My <span class="highlight">research-led approach</span> transforms complexity into clarity, crafting interactions that feel <span class="highlight">effortless, respectful, and genuinely useful</span>.</p>
+
+        <p>Looking ahead, I’m committed to contributing to <span class="highlight">bold, community-led projects that uplift lives</span>, whether in healthcare, housing, public services, or digital platforms.</p>
+
+        <p>I want to continue supporting organisations in <span class="highlight">transforming meaningful insight into real-world impact</span>.</p>
+
+        <p>I myself have been in the systems of <span class="highlight">health and welfare</span>, navigating life with a <span class="highlight">spinal injury</span> that altered my world forever...</p>
+
+        <p><strong>This portfolio is more than a collection of work</strong>.<br>
+        It’s a reflection of who I am as a designer and a person — someone who believes in <span class="highlight">equity, ethics, and the power of listening</span>. Someone who shows up with purpose and walks alongside others to <span class="highlight">build better, together</span>.</p>
+
+        <div class="signature">
+          Ngā mihi nui,<br>
+          <strong>Nigel Murch</strong><br>
+          Specialist UX Researcher & Service Designer<br>
+          <span class="highlight">Authentic. Ethical. Sustainable. Intuitive.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--  Footer Return Link -->
+  <div class="content" style="text-align:center; margin: 3rem auto;">
+    <a href="index.html" class="retro-button">Return Home</a>
+  </div>
+
+  <!-- Siren interaction script -->
+  <script>
+    const h1 = document.querySelector('.ux-investigator');
+    const siren = document.getElementById('siren-sound');
+
+    h1.addEventListener('click', () => {
+      siren.currentTime = 0;
+      siren.play();
+    });
+  </script>
+
+  <!-- Music toggle script -->
+  <script>
+    const music = document.getElementById('bg-music');
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play().catch(e => console.log("Playback blocked:", e));
+      } else {
+        music.pause();
+      }
+    }
+  </script>
+
+  <footer>
+    Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Dead Man Walking - Justin LaPoint - https://uppbeat.io
+  </footer>
+</body>
 </html>
