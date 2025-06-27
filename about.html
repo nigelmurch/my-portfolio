@@ -10,10 +10,12 @@
  
   <body>
   <!-- 🔊 Audio placed here -->
-  <audio autoplay loop>
-    <source src="sounds/dead-man-walking.mp3" type="audio/mp4" />
-    Your browser does not support the audio element.
-  </audio><!-- Navigation -->
+ <!-- Button to manually start music -->
+<button onclick="document.getElementById('bg-music').play()">Play Music</button>
+
+<audio id="bg-music" loop>
+  <source src="sounds/dead-man-walking.mp3" type="audio/mpeg" />
+</audio>
 <nav class="nav-bar">
   <div class="nav-left">
     <a href="index.html">
