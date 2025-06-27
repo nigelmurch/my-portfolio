@@ -13,6 +13,20 @@ body {
   box-sizing: border-box;
 }
 
+.music-button {
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-family: "Press Start 2P", monospace;
+      background: limegreen;
+      color: black;
+      border: none;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+
+    .music-button:hover {
+      background: yellow;
+    }
 .nav-bar {
   display: flex;
   flex-direction: row; /* was column */
