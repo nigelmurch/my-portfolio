@@ -9,14 +9,15 @@
 </head>
 
 <body>
-  <!-- 🎵 Background music (controlled with button) -->
-  <audio id="bg-music" preload="auto" loop>
+
+  <!-- 🔊 Background music -->
+  <audio id="bg-music" loop>
     <source src="sounds/dead-man-walking.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+     Your browser does not support the audio element.
   </audio>
 
-  <!-- 🔊 Toggle music button -->
-  <button onclick="toggleMusic()" class="retro-button" style="margin: 2rem auto; display: block; text-align: center;">🔊 Sound On / Off</button>
+  <!-- 🔘 Music play button -->
+  <button onclick="playMusic()" class="music-button">▶ PLAY MUSIC</button>
 
   <!-- Navigation -->
   <nav class="nav-bar">
@@ -33,7 +34,7 @@
     </ul>
   </nav>
 
-  <!-- Siren sound for header click -->
+  <!-- Siren for h1 click -->
   <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Section Title -->
@@ -46,7 +47,7 @@
     <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
   </section>
 
-  <!-- Content Grid -->
+  <!-- Main Content -->
   <main class="work-container">
     <section class="work-card">
       <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
@@ -106,12 +107,12 @@
     </section>
   </main>
 
-  <!--  Footer Return Link -->
+  <!-- Return Home Button -->
   <div class="content" style="text-align:center; margin: 3rem auto;">
     <a href="index.html" class="retro-button">Return Home</a>
   </div>
 
-  <!-- Siren interaction script -->
+  <!-- Sound Effects and Scripts -->
   <script>
     const h1 = document.querySelector('.ux-investigator');
     const siren = document.getElementById('siren-sound');
@@ -120,23 +121,19 @@
       siren.currentTime = 0;
       siren.play();
     });
-  </script>
 
-  <!-- Music toggle script -->
-  <script>
-    const music = document.getElementById('bg-music');
-
-    function toggleMusic() {
-      if (music.paused) {
-        music.play().catch(e => console.log("Playback blocked:", e));
-      } else {
-        music.pause();
-      }
+    function playMusic() {
+      const music = document.getElementById('bg-music');
+      music.play().catch(e => {
+        console.error("Playback blocked:", e);
+        alert("Please interact with the page to allow music.");
+      });
     }
   </script>
 
   <footer>
     Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Dead Man Walking - Justin LaPoint - https://uppbeat.io
   </footer>
+
 </body>
 </html>
