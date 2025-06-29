@@ -109,7 +109,7 @@ body {
 /* ========== MUSIC CONTROLS ========== */
 .music-controls-container {
   position: absolute;
-  top: 280px;
+  top: 480px;
   left: 130px;
   z-index: 10;
 }
