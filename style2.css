@@ -13,23 +13,91 @@ body {
   box-sizing: border-box;
 }
 
-.music-button {
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      font-family: "Press Start 2P", monospace;
-      background: limegreen;
-      color: black;
-      border: none;
-      cursor: pointer;
-      margin-top: 2rem;
-    }
+/* Retro Boombox Styles */
+.boombox {
+  background: linear-gradient(135deg, #444, #222);
+  border: 5px solid #0f0;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 0 20px #0f0;
+  text-align: center;
+  position: relative;
+  margin: 3rem auto;
+}
 
-    .music-button:hover {
-      background: yellow;
-    }
+.boombox h1 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #0f0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #0f0;
+  color: #111;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.volume {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.speaker {
+  position: absolute;
+  top: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #0f0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #0f0;
+}
+
+.speaker.left {
+  left: 20px;
+}
+
+.speaker.right {
+  right: 20px;
+}
+
+/* Music Button */
+.music-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Press Start 2P", monospace;
+  background: limegreen;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.music-button:hover {
+  background: yellow;
+}
+
+/* Navigation */
 .nav-bar {
   display: flex;
-  flex-direction: row; /* was column */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
@@ -46,7 +114,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: row; /* was column */
+  flex-direction: row;
   gap: 30px;
   margin: 0;
   padding: 0;
@@ -72,6 +140,7 @@ body {
   border-radius: 4px;
 }
 
+/* Headings */
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -353,7 +422,7 @@ ul li.highlight {
   box-shadow: 0 0 20px white, 0 0 30px #ff007f;
 }
 
-/* ------------------ RESPONSIVE ------------------ */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
   body {
     padding: 1rem;
@@ -414,14 +483,3 @@ ul li.highlight {
     font-size: 0.8rem;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    padding: 20px 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
