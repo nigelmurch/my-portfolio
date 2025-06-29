@@ -8,15 +8,12 @@ body {
   font-family: "JetBrains Mono", monospace, sans-serif;
   background-color: #0000aa;
   color: #f0f0f0;
-  margin: 0;
   padding: 2rem;
-  box-sizing: border-box;
 }
 
-/* ========== NAVIGATION ========== */
+/* NAVIGATION */
 .nav-bar {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
@@ -33,11 +30,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  flex-direction: row;
   gap: 30px;
-  margin: 0;
-  padding: 0;
-  align-items: center;
 }
 
 .nav-links li a {
@@ -59,7 +52,7 @@ body {
   border-radius: 4px;
 }
 
-/* ========== HEADINGS ========== */
+/* HEADINGS */
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -73,12 +66,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-.section-title {
-  margin-top: 4rem;
-  text-align: center;
-  position: relative;
-}
-
 .title-with-badge h1 {
   animation: sirenFlash 0.6s infinite alternate;
   color: red;
@@ -86,12 +73,6 @@ h1 {
   background: none;
   -webkit-background-clip: none;
   -webkit-text-fill-color: initial;
-}
-
-.badge-icon {
-  width: 100px;
-  height: auto;
-  display: inline-block;
 }
 
 h2 {
@@ -102,29 +83,51 @@ h2 {
   margin-bottom: 0.2rem;
 }
 
-h3 {
-  font-size: 2.8rem;
-  font-weight: 400;
-  font-style: italic;
-  color: #fff;
-  margin-bottom: 1rem;
+.badge-icon {
+  width: 100px;
+  height: auto;
 }
 
-/* ========== QUOTE ========== */
+/* MUSIC BUTTON ALIGNMENT */
+.music-align-container {
+  position: absolute;
+  left: 5vw;
+  top: 32%;
+  transform: translateY(-50%);
+}
+
+/* STYLED PLAY/PAUSE BUTTON */
+.play-pause-button {
+  background-color: #220044;
+  border: 3px solid #ff007f;
+  color: #00ffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00e5ff, 0 0 25px #00ffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.play-pause-button:hover {
+  background-color: #000055;
+  box-shadow: 0 0 20px #ff007f, 0 0 30px #00ffff;
+  color: white;
+}
+
+/* QUOTE */
+.quote-wrapper {
+  position: relative;
+  margin-top: 2rem;
+}
+
 .quote {
   font-style: italic;
   font-size: 1.3rem;
   color: #ffffff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 100%;
-  margin-top: 2rem;
-}
-
-.quote-sub {
-  font-size: 1rem;
-  opacity: 0.7;
+  text-align: center;
 }
 
 .siren-text {
