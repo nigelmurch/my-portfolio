@@ -25,33 +25,26 @@
     </ul>
   </nav>
 
-  <!-- 🔊 Background Music (Play manually) -->
-  <audio id="bg-music" preload="auto" loop>
-    <source src="sounds/go-ahead-gerald-olivieri-main-version-35364-01-46.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-
-  <div style="text-align: center; margin: 1rem;">
-    <button onclick="toggleMusic()" class="retro-button">🎵 Play / Pause Music</button>
-  </div>
-
-  <!-- Siren Sound (for h1 click) -->
-  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
-
-  <!-- Section Title -->
+  <!-- Section Title and Quote with Music Button -->
   <section class="section-title">
     <div class="title-with-badge">
       <h1 class="ux-investigator">UX Investigator</h1>
       <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
     </div>
     <h2>About Me</h2>
-    <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
+    <div class="quote-wrapper">
+      <div class="music-button-container">
+        <button class="music-button" onclick="toggleMusic()">🎵 Play/Pause</button>
+      </div>
+      <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
+    </div>
   </section>
 
   <!-- Main Content -->
   <main class="work-container">
     <section class="work-card">
       <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
+
       <div class="work-content">
         <h3>Nigel Murch — UX Researcher & Service Designer</h3>
 
@@ -112,25 +105,24 @@
     <a href="index.html" class="retro-button">Return Home</a>
   </div>
 
-  <!-- Scripts -->
+  <!-- Siren Audio Effect -->
+  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
+
   <script>
-    // Siren on h1 click
     const h1 = document.querySelector('.ux-investigator');
     const siren = document.getElementById('siren-sound');
 
     h1.addEventListener('click', () => {
       siren.currentTime = 0;
       siren.play();
-
-      setTimeout(() => {
-        siren.pause();
-        siren.currentTime = 0;
-      }, 3000); // stop siren after 3 sec
+      setTimeout(() => siren.pause(), 3000); // 3-second siren
     });
 
-    // Toggle background music
+    // Retro Play/Pause Music Button Logic
+    const music = new Audio('sounds/go-ahead-gerald-olivieri-main-version-35364-01-46.mp3');
+    music.loop = true;
+
     function toggleMusic() {
-      const music = document.getElementById('bg-music');
       if (music.paused) {
         music.play();
       } else {
@@ -140,7 +132,7 @@
   </script>
 
   <footer>
-    Siren Sound Effect by Jurij, Keyboard Click by CreatorsHome, Music: "Go Ahead" by Gerald Olivieri  License code: 9KAIMXJABEUSOSMV via upbeat.io
+    Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Go Ahead - Gerald Olivieri - https://uppbeat.io
   </footer>
 
 </body>
