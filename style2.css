@@ -235,6 +235,28 @@ body {
   box-shadow: 0 0 20px white, 0 0 30px #ff007f;
 }
 
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  box-shadow: 0 0 6px #00ffff, 0 0 12px #ff00ff;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fadeOut 0.6s forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
   body {
