@@ -8,12 +8,34 @@ body {
   font-family: "JetBrains Mono", monospace, sans-serif;
   background-color: #0000aa;
   color: #f0f0f0;
-  margin: 0;
   padding: 2rem;
   box-sizing: border-box;
 }
 
-/* ========== NAVIGATION ========== */
+/* ------------------ MUSIC BUTTON ------------------ */
+.music-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.music-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Press Start 2P", monospace;
+  background: limegreen;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.music-button:hover {
+  background: yellow;
+}
+
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -59,7 +81,7 @@ body {
   border-radius: 4px;
 }
 
-/* ========== HEADINGS ========== */
+/* ------------------ HEADINGS ------------------ */
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -99,7 +121,7 @@ h2 {
   font-size: 4.5rem;
   font-style: italic;
   color: #ffccff;
-  margin-bottom: 0.2rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -110,6 +132,24 @@ h3 {
   margin-bottom: 1rem;
 }
 
+/* ------------------ QUOTE ------------------ */
+.quote-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+  max-width: 700px;
+}
+
+/* ------------------ SIREN ------------------ */
 .siren-text {
   animation: sirenFlash 0.6s infinite alternate;
   font-weight: bold;
@@ -122,162 +162,7 @@ h3 {
   100% { color: blue; text-shadow: 0 0 15px blue; }
 }
 
-/* ========== MUSIC CONTROLS ========== */
-.music-controls {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 2rem;
-  margin-left: 4rem; /* aligned left with modal below */
-  gap: 1rem;
-}
-
-.music-button {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-family: "Press Start 2P", monospace;
-  background: limegreen;
-  color: black;
-  border: none;
-  cursor: pointer;
-}
-
-.music-button:hover {
-  background: yellow;
-}
-
-.music-volume {
-  width: 120px;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ffffff;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-/* ========== ABOUT SECTION ========== */
-.about-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  max-width: 1000px;
-  margin: 2rem auto;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.left-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 300px;
-}
-
-.left-stack img {
-  width: 147px;
-  border: 3px solid #fff;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.left-stack h3 {
-  font-size: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-.left-stack .cta {
-  font-size: 0.8rem;
-  padding: 8px 16px;
-  font-family: 'Press Start 2P', monospace;
-  background-color: #ff007f;
-  color: white;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-  margin-top: 1rem;
-}
-
-.left-stack .cta:hover {
-  background-color: #ff0055;
-}
-
-.quote-wrapper {
-  flex: 1;
-  text-align: left;
-  max-width: 500px;
-}
-
-.quote-sub {
-  font-size: 1rem;
-  opacity: 0.7;
-}
-
-/* ========== MODAL ========== */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  background: #0000aa;
-  padding: 2rem;
-  border: 3px solid #66e0ff;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  color: white;
-  font-family: "JetBrains Mono", monospace;
-  box-shadow: 0 0 20px #00ffff;
-  position: relative;
-  text-align: center;
-}
-
-.modal-content h2 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 3.2rem;
-  margin-bottom: 1rem;
-}
-
-.modal-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.modal-content ul li {
-  margin-bottom: 0.8rem;
-  font-size: 2.1rem;
-  color:#f507b2;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.close-modal:hover {
-  color: #ff007f;
-}
-
-/* ========== WORK SECTION ========== */
+/* ------------------ WORK CARD ------------------ */
 .work-container {
   max-width: 1800px;
   margin: 3rem auto;
@@ -351,7 +236,6 @@ ul li.highlight {
   animation: sirenFlash 1s infinite;
 }
 
-/* ========== BUTTON ========== */
 .retro-button {
   display: inline-block;
   padding: 18px 24px;
@@ -375,7 +259,7 @@ ul li.highlight {
   box-shadow: 0 0 20px white, 0 0 30px #ff007f;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ------------------ RESPONSIVE ------------------ */
 @media screen and (max-width: 768px) {
   body {
     padding: 1rem;
@@ -393,11 +277,6 @@ ul li.highlight {
 
   h1, h2 {
     font-size: 2.5rem;
-  }
-
-  .about-section {
-    flex-direction: column;
-    gap: 30px;
   }
 
   .quote-wrapper {
@@ -434,20 +313,5 @@ ul li.highlight {
   .retro-button {
     padding: 12px 18px;
     font-size: 0.8rem;
-  }
-
-  .music-controls {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .music-button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .music-volume {
-    width: 100px;
   }
 }
