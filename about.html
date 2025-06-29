@@ -25,7 +25,17 @@
     </ul>
   </nav>
 
-  <!-- Siren Audio -->
+  <!-- 🔊 Background Music (Play manually) -->
+  <audio id="bg-music" preload="auto" loop>
+    <source src="sounds/go-ahead-gerald-olivieri-main-version-35364-01-46.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <div style="text-align: center; margin: 1rem;">
+    <button onclick="toggleMusic()" class="retro-button">🎵 Play / Pause Music</button>
+  </div>
+
+  <!-- Siren Sound (for h1 click) -->
   <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Section Title -->
@@ -102,25 +112,35 @@
     <a href="index.html" class="retro-button">Return Home</a>
   </div>
 
-  <!-- JavaScript -->
-  <<script>
-  const h1 = document.querySelector('.ux-investigator');
-  const siren = document.getElementById('siren-sound');
+  <!-- Scripts -->
+  <script>
+    // Siren on h1 click
+    const h1 = document.querySelector('.ux-investigator');
+    const siren = document.getElementById('siren-sound');
 
-  h1.addEventListener('click', () => {
-    siren.currentTime = 0;
-    siren.play();
+    h1.addEventListener('click', () => {
+      siren.currentTime = 0;
+      siren.play();
 
-    // ⏱️ Stop siren after 3 seconds
-    setTimeout(() => {
-      siren.pause();
-      siren.currentTime = 0; // reset
-    }, 3000); // 3000 milliseconds = 3 seconds
-  });
-</script>
+      setTimeout(() => {
+        siren.pause();
+        siren.currentTime = 0;
+      }, 3000); // stop siren after 3 sec
+    });
+
+    // Toggle background music
+    function toggleMusic() {
+      const music = document.getElementById('bg-music');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+  </script>
 
   <footer>
-    Police Siren Sound Effect by Jurij & Keyboard Click by CreatorsHome from Pixabay.
+    Siren Sound Effect by Jurij, Keyboard Click by CreatorsHome, Music: "Go Ahead" by Gerald Olivieri via Uppbeat.io
   </footer>
 
 </body>
