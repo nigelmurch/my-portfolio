@@ -140,6 +140,19 @@
     });
   </script>
 
+  <script>
+  document.addEventListener('mousemove', (e) => {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.left = `${e.pageX}px`;
+    sparkle.style.top = `${e.pageY}px`;
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+      sparkle.remove();
+    }, 600); // Remove after animation
+  });
+</script>
   <footer>
     Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
   </footer>
