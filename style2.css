@@ -13,43 +13,7 @@ body {
   box-sizing: border-box;
 }
 
-.music-button {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-family: "Press Start 2P", monospace;
-  background: limegreen;
-  color: black;
-  border: none;
-  cursor: pointer;
-  margin-top: 2rem;
-}
-
-.music-button:hover {
-  background: yellow;
-}
-
-/* New button alignment styles */
-.quote-wrapper.aligned-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-  padding: 0 2rem;
-}
-
-.music-button-container {
-  align-self: flex-start;
-  margin-right: auto;
-  margin-left: 0; /* Align with left side */
-}
-
-.quote-wrapper .quote {
-  text-align: center;
-  flex: 1;
-}
-
-/* ------------------ NAVIGATION ------------------ */
+/* ========== NAVIGATION ========== */
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -95,6 +59,7 @@ body {
   border-radius: 4px;
 }
 
+/* ========== HEADINGS ========== */
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -111,6 +76,7 @@ h1 {
 .section-title {
   margin-top: 4rem;
   text-align: center;
+  position: relative;
 }
 
 .title-with-badge h1 {
@@ -156,13 +122,43 @@ h3 {
   100% { color: blue; text-shadow: 0 0 15px blue; }
 }
 
+/* ========== MUSIC CONTROLS ========== */
+.music-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 4rem; /* aligned left with modal below */
+  gap: 1rem;
+}
+
+.music-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-family: "Press Start 2P", monospace;
+  background: limegreen;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.music-button:hover {
+  background: yellow;
+}
+
+.music-volume {
+  width: 120px;
+}
+
 .quote {
   font-style: italic;
   font-size: 1.3rem;
   color: #ffffff;
   margin-top: 1rem;
+  text-align: center;
 }
 
+/* ========== ABOUT SECTION ========== */
 .about-section {
   display: flex;
   justify-content: center;
@@ -221,6 +217,7 @@ h3 {
   opacity: 0.7;
 }
 
+/* ========== MODAL ========== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -280,6 +277,7 @@ h3 {
   color: #ff007f;
 }
 
+/* ========== WORK SECTION ========== */
 .work-container {
   max-width: 1800px;
   margin: 3rem auto;
@@ -353,6 +351,7 @@ ul li.highlight {
   animation: sirenFlash 1s infinite;
 }
 
+/* ========== BUTTON ========== */
 .retro-button {
   display: inline-block;
   padding: 18px 24px;
@@ -376,7 +375,7 @@ ul li.highlight {
   box-shadow: 0 0 20px white, 0 0 30px #ff007f;
 }
 
-/* ------------------ RESPONSIVE ------------------ */
+/* ========== RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
   body {
     padding: 1rem;
@@ -435,5 +434,20 @@ ul li.highlight {
   .retro-button {
     padding: 12px 18px;
     font-size: 0.8rem;
+  }
+
+  .music-controls {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .music-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .music-volume {
+    width: 100px;
   }
 }
