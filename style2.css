@@ -105,11 +105,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  text-align: left;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  margin: 3rem auto;
   max-width: 1000px;
-  margin: 2rem auto;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .music-button-container {
@@ -121,7 +121,11 @@ body {
   font-size: 1.3rem;
   color: #ffffff;
   margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 600px;
+  flex-grow: 1;
+  text-align: center;
 }
 
 /* ------------------ NAV BAR ------------------ */
@@ -169,7 +173,6 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
 }
-
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
