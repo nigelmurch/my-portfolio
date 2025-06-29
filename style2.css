@@ -1,388 +1,147 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Nigel Murch</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
 
-body {
-  font-family: "JetBrains Mono", monospace, sans-serif;
-  background-color: #0000aa;
-  color: #f0f0f0;
-  padding: 2rem;
-}
+<body>
+  <!-- Navigation -->
+  <nav class="nav-bar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">ABOUT |</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+      <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
-/* NAVIGATION */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
-}
+  <!-- Retro Music Controls + Audio -->
+  <div class="music-controls-container">
+    <div class="music-controls">
+      <button id="playPauseBtn" class="play-pause-button">▶ Play</button>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1" />
+    </div>
+    <audio id="bg-music" loop preload="auto">
+      <source src="sounds/go-ahead-gerald.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
 
-.logo {
-  height: 4em;
-  width: auto;
-}
+  <!-- Siren Sound for H1 click -->
+  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
+  <!-- Section Title -->
+  <section class="section-title">
+    <div class="title-with-badge" style="text-align: center;">
+      <h1 class="ux-investigator">UX Investigator</h1>
+      <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
+    </div>
+    <h2 style="text-align: center;">About Me</h2>
 
-.nav-links li a {
-  font-family: 'Press Start 2P', monospace;
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-}
+    <!-- Quote Centered Horizontally & Vertically Below -->
+    <div class="quote-wrapper">
+      <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
+    </div>
+  </section>
 
-.nav-links li a.active {
-  text-decoration: underline;
-  color: orange;
-}
+  <!-- Main Content -->
+  <main class="work-container">
+    <section class="work-card">
+      <img src="images/me-suit.png" alt="Nigel Murch Portrait" class="work-image" />
+      <div class="work-content">
+        <h3>Nigel Murch — UX Researcher & Service Designer</h3>
 
-.nav-links li a:hover {
-  background-color: darkblue;
-  color: #0dff35;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
+        <p>Kia ora, I’m Nigel Murch — a UX researcher dedicated to uncovering what people truly need, especially in spaces where silence, stigma, or systems make access unfair.</p>
+        <p>Over the past three years, while studying at <span class="highlight">Media Design School</span> in <span class="highlight">Tāmaki Makaurau (Auckland)</span>, Aotearoa New Zealand, I'm driven by a singular purpose:</p>
+        <p><span class="highlight">To uncover and understand what people truly need</span> — especially in spaces where <span class="highlight">silence, stigma, or systemic barriers</span> have made access unjustifiably difficult.</p>
+        <p>I see UX not just as a profession, but as a <span class="highlight">vehicle for creating a fairer, more compassionate world</span>.</p>
 
-/* HEADINGS */
-h1 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 4.5rem;
-  background: linear-gradient(90deg, #ff007f, #7f00ff, #00e5ff);
-  background-size: 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: retro-glow 4s ease-in-out infinite alternate;
-  margin-bottom: 0.5rem;
-}
+        <p>My work is guided by three core principles:</p>
+        <ul>
+          <li><span class="highlight">Understand deeply</span></li>
+          <li><span class="highlight">Design with purpose</span></li>
+          <li><span class="highlight">Always advocate for the user</span></li>
+        </ul>
 
-.title-with-badge h1 {
-  animation: sirenFlash 0.6s infinite alternate;
-  color: red;
-  text-shadow: 0 0 15px red;
-  background: none;
-  -webkit-background-clip: none;
-  -webkit-text-fill-color: initial;
-}
+        <p>As a UX researcher and service designer, I navigate the deeply human side of design — looking beyond surface-level data to discover the <span class="highlight">emotional, cultural, and systemic layers</span> that influence how people experience services.</p>
+        <p>Whether I’m <span class="highlight">co-designing with communities</span>, <span class="highlight">interviewing rangatahi</span>, or <span class="highlight">testing early prototypes</span>, my purpose remains constant — to amplify marginalised voices, bridge access gaps, and champion inclusive, ethical innovation.</p>
 
-h2 {
-  font-family: "Marcellus", serif;
-  font-size: 4.5rem;
-  font-style: italic;
-  color: #ffccff;
-  margin-bottom: 0.2rem;
-}
+        <p>My practice is shaped by a life steeped in <span class="highlight">storytelling, deep listening, and collaborative change-making</span>.</p>
+        <p>I come from the <span class="highlight">Rural South West of Te Waipounamu</span> (South Island), and because of my lived experiences, my values are firmly rooted in <span class="highlight">service, curiosity, and integrity</span>.</p>
 
-.badge-icon {
-  width: 100px;
-  height: auto;
-}
+        <p>I believe that when we approach design with <span class="highlight">empathy</span> and respect people as the <span class="highlight">experts of their own lived experiences</span>, we elevate design from functional to transformational.</p>
+        <p>I’m passionate about <span class="highlight">global equity and access</span>, from <span class="highlight">sexual health</span> to <span class="highlight">digital inclusion</span>. There are no excuses for excluding or discriminating against anyone for any reason.</p>
 
-/* MUSIC BUTTON ALIGNMENT */
-.music-align-container {
-  position: absolute;
-  left: 5vw;
-  top: 32%;
-  transform: translateY(-50%);
-}
+        <p>I strive to challenge <span class="highlight">manipulative design and harmful defaults</span> by promoting <span class="highlight">transparency</span>, <span class="highlight">cultural insight</span>, and <span class="highlight">co-design</span>.</p>
+        <p>My design philosophy is also grounded in <span class="highlight">environmental responsibility</span>, believing that digital experiences should be <span class="highlight">intuitive, inclusive, and sustainable</span>.</p>
 
-/* STYLED PLAY/PAUSE BUTTON */
-.play-pause-button {
-  background-color: #220044;
-  border: 3px solid #ff007f;
-  color: #00ffff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.9rem;
-  padding: 14px 18px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00e5ff, 0 0 25px #00ffff;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
+        <p>My <span class="highlight">research-led approach</span> transforms complexity into clarity, crafting interactions that feel <span class="highlight">effortless, respectful, and genuinely useful</span>.</p>
+        <p>Looking ahead, I’m committed to contributing to <span class="highlight">bold, community-led projects that uplift lives</span>, whether in healthcare, housing, public services, or digital platforms.</p>
+        <p>I want to continue supporting organisations in <span class="highlight">transforming meaningful insight into real-world impact</span>.</p>
 
-.play-pause-button:hover {
-  background-color: #000055;
-  box-shadow: 0 0 20px #ff007f, 0 0 30px #00ffff;
-  color: white;
-}
+        <p>I myself have been in the systems of <span class="highlight">health and welfare</span>, navigating life with a <span class="highlight">spinal injury</span> that altered my world forever...</p>
 
-/* QUOTE */
-.quote-wrapper {
-  position: relative;
-  margin-top: 2rem;
-}
+        <p><strong>This portfolio is more than a collection of work</strong>.<br>
+        It’s a reflection of who I am as a designer and a person — someone who believes in <span class="highlight">equity, ethics, and the power of listening</span>. Someone who shows up with purpose and walks alongside others to <span class="highlight">build better, together</span>.</p>
 
-.quote {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ffffff;
-  text-align: center;
-}
+        <div class="signature">
+          Ngā mihi nui,<br>
+          <strong>Nigel Murch</strong><br>
+          Specialist UX Researcher & Service Designer<br>
+          <span class="highlight">Authentic. Ethical. Sustainable. Intuitive.</span>
+        </div>
+      </div>
+    </section>
+  </main>
 
-.siren-text {
-  animation: sirenFlash 0.6s infinite alternate;
-  font-weight: bold;
-  color: red;
-}
+  <!-- Return Home Button -->
+  <div class="content" style="text-align:center; margin: 3rem auto;">
+    <a href="index.html" class="retro-button">Return Home</a>
+  </div>
 
-@keyframes sirenFlash {
-  0% { color: red; text-shadow: 0 0 15px red; }
-  50% { color: white; text-shadow: 0 0 5px white; }
-  100% { color: blue; text-shadow: 0 0 15px blue; }
-}
+  <!-- JavaScript -->
+  <script>
+    const music = document.getElementById("bg-music");
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const volumeControl = document.getElementById("volumeControl");
 
-/* ========== RETRO MUSIC BUTTON ========== */
-.play-pause-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-  margin-left: 2rem;
-}
+    let isPlaying = false;
 
-.play-pause-button {
-  background-color: #07b513;
-  border: 3px solid #ff007f;
-  color: #00ffff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.9rem;
-  padding: 14px 18px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00e5ff, 0 0 25px #00ffff;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
+    playPauseBtn.addEventListener("click", () => {
+      if (!isPlaying) {
+        music.play()
+          .then(() => {
+            isPlaying = true;
+            playPauseBtn.textContent = "⏸ Pause";
+            console.log("Music is playing");
+          })
+          .catch((error) => {
+            console.error("Error playing audio:", error);
+            alert("Audio failed to play. Check console for details.");
+          });
+      } else {
+        music.pause();
+        isPlaying = false;
+        playPauseBtn.textContent = "▶ Play";
+      }
+    });
 
-.play-pause-button:hover {
-  background-color:#f50a9b;
-  box-shadow: 0 0 20px #ff007f, 0 0 30px #00ffff;
-  color: white;
-}
+    volumeControl.addEventListener("input", () => {
+      music.volume = volumeControl.value;
+    });
+  </script>
 
-/* ========== MODAL & CONTENT STYLES ========== */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.85);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  background: #0000aa;
-  padding: 2rem;
-  border: 3px solid #66e0ff;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
-  color: white;
-  font-family: "JetBrains Mono", monospace;
-  box-shadow: 0 0 20px #00ffff;
-  position: relative;
-  text-align: center;
-}
-
-.modal-content h2 {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 3.2rem;
-  margin-bottom: 1rem;
-}
-
-.modal-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.modal-content ul li {
-  margin-bottom: 0.8rem;
-  font-size: 2.1rem;
-  color:#f507b2;
-}
-
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 2rem;
-  cursor: pointer;
-  color: white;
-  transition: color 0.3s ease;
-}
-
-.close-modal:hover {
-  color: #ff007f;
-}
-
-/* ========== WORK SECTION ========== */
-.work-container {
-  max-width: 1800px;
-  margin: 3rem auto;
-  padding: 2rem;
-}
-
-.work-card {
-  background-color: #000aa0;
-  border: 3px solid #ff007f;
-  padding: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 0 20px #00e5ff;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.work-image {
-  width: 100%;
-  max-width: 450px;
-  border: 3px solid white;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-.work-content h3 {
-  font-size: 3.2rem;
-  font-style: italic;
-  color: #66e0ff;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.work-content p {
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.work-content ul {
-  margin: 0 0 2rem;
-  padding-left: 1.5rem;
-}
-
-.work-content ul li {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #f507b2;
-}
-
-ul li.highlight {
-  background-color: #00ffff;
-  color: #f507b2;
-  padding: 8px 12px;
-  margin-bottom: 10px;
-  border-radius: 6px;
-  font-weight: bold;
-  box-shadow: 0 0 6px #ff00ff;
-}
-
-.signature {
-  margin-top: 2.5rem;
-  color: #fff;
-  text-align: left;
-  font-size: 0.9rem;
-  font-family: 'JetBrains Mono', monospace;
-  line-height: 1.6;
-}
-
-/* ========== BUTTONS ========== */
-.retro-button {
-  display: inline-block;
-  padding: 18px 24px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1rem;
-  color: #00ffff;
-  background-color: black;
-  border: 3px solid #ff007f;
-  border-radius: 8px;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff007f;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
-}
-
-.retro-button:hover {
-  background-color: #ff007f;
-  color: white;
-  border-color: white;
-  box-shadow: 0 0 20px white, 0 0 30px #ff007f;
-}
-
-/* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  .nav-bar {
-    flex-direction: column;
-    padding: 20px 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  h1, h2 {
-    font-size: 2.5rem;
-  }
-
-  .about-section {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .quote-wrapper {
-    text-align: center;
-  }
-
-  .modal-content {
-    width: 95%;
-    padding: 1rem;
-  }
-
-  .modal-content h2 {
-    font-size: 2rem;
-  }
-
-  .modal-content ul li {
-    font-size: 1.4rem;
-  }
-
-  .work-card {
-    padding: 2rem;
-  }
-
-  .work-content h3 {
-    font-size: 2.5rem;
-  }
-
-  .work-content p,
-  .work-content ul li,
-  .signature {
-    font-size: 1.2rem;
-  }
-
-  .retro-button {
-    padding: 12px 18px;
-    font-size: 0.8rem;
-  }
-}
+  <footer>
+    Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
+  </footer>
+</body>
+</html>
