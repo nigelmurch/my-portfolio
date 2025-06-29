@@ -255,7 +255,7 @@ h3 {
 }
 
 .work-content h3 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-style: italic;
   color: #66e0ff;
   text-align: center;
@@ -264,7 +264,7 @@ h3 {
 
 .work-content p {
   margin-bottom: 1.5rem;
-  font-size: 2rem;
+  font-size: 0.9rem;
   line-height: 1.7;
 }
 
@@ -275,7 +275,7 @@ h3 {
 
 .work-content ul li {
   margin-bottom: 1rem;
-  font-size: 2.4rem;
+  font-size: 0.9rem;
   color: #f507b2;
 }
 
@@ -293,7 +293,7 @@ ul li.highlight {
   margin-top: 2.5rem;
   color: #fff;
   text-align: left;
-  font-size: 2rem;
+  font-size: 0.9rem;
   font-family: 'JetBrains Mono', monospace;
   line-height: 1.6;
 }
