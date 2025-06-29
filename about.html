@@ -109,36 +109,36 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-    const music = document.getElementById("bg-music");
-    const playPauseBtn = document.getElementById("playPauseBtn");
-    const volumeControl = document.getElementById("volumeControl");
+ <script>
+  const music = document.getElementById("bg-music");
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const volumeControl = document.getElementById("volumeControl");
 
-    playPauseBtn.addEventListener("click", () => {
-      if (music.paused) {
-        music.play().then(() => {
+  let isPlaying = false;
+
+  playPauseBtn.addEventListener("click", () => {
+    if (!isPlaying) {
+      music.play()
+        .then(() => {
+          isPlaying = true;
           playPauseBtn.textContent = "⏸ Pause";
-        }).catch(e => {
-          console.error("Playback failed:", e);
-          alert("Please interact with the page to start music.");
+          console.log("Music is playing");
+        })
+        .catch((error) => {
+          console.error("Error playing audio:", error);
+          alert("Audio failed to play. Check console for details.");
         });
-      } else {
-        music.pause();
-        playPauseBtn.textContent = "▶ Play";
-      }
-    });
+    } else {
+      music.pause();
+      isPlaying = false;
+      playPauseBtn.textContent = "▶ Play";
+    }
+  });
 
-    volumeControl.addEventListener("input", () => {
-      music.volume = volumeControl.value;
-    });
-
-    const siren = document.getElementById('siren-sound');
-    const h1 = document.querySelector('.ux-investigator');
-    h1.addEventListener('click', () => {
-      siren.currentTime = 0;
-      siren.play();
-    });
-  </script>
+  volumeControl.addEventListener("input", () => {
+    music.volume = volumeControl.value;
+  });
+</script>
 
   <footer>
     Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
