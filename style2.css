@@ -13,72 +13,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Retro Boombox Styles */
-.boombox {
-  background: linear-gradient(135deg, #444, #222);
-  border: 5px solid #0f0;
-  border-radius: 15px;
-  padding: 2rem;
-  width: 400px;
-  box-shadow: 0 0 20px #0f0;
-  text-align: center;
-  position: relative;
-  margin: 3rem auto;
-}
-
-.boombox h1 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #0f0;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  background-color: #0f0;
-  color: #111;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.75rem;
-  cursor: pointer;
-  border-radius: 8px;
-  font-family: 'Press Start 2P', monospace;
-}
-
-.btn:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-.volume {
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.speaker {
-  position: absolute;
-  top: -30px;
-  width: 30px;
-  height: 30px;
-  background-color: #0f0;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #0f0;
-}
-
-.speaker.left {
-  left: 20px;
-}
-
-.speaker.right {
-  right: 20px;
-}
-
-/* Music Button */
+/* ------------------ MUSIC BUTTON ------------------ */
 .music-button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -94,7 +29,78 @@ body {
   background: yellow;
 }
 
-/* Navigation */
+/* ------------------ RETRO BOOMBOX ------------------ */
+.boombox {
+  background: linear-gradient(135deg, #000055, #220044);
+  border: 5px solid #ff007f;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 0 20px #00e5ff;
+  text-align: center;
+  position: relative;
+  margin: 3rem auto;
+}
+
+.boombox h1 {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ffccff;
+  font-family: 'Press Start 2P', monospace;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #00ffff;
+  color: #000044;
+  border: 2px solid #ff007f;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: 'Press Start 2P', monospace;
+  box-shadow: 0 0 10px #ff00ff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff007f;
+  color: white;
+  border-color: #ffffff;
+  box-shadow: 0 0 20px white, 0 0 30px #ff00ff;
+}
+
+.volume {
+  width: 100%;
+  margin-top: 1rem;
+  accent-color: #00ffff;
+}
+
+.speaker {
+  position: absolute;
+  top: -30px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff007f;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+.speaker.left {
+  left: 20px;
+}
+
+.speaker.right {
+  right: 20px;
+}
+
+/* ------------------ NAV BAR ------------------ */
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -140,7 +146,6 @@ body {
   border-radius: 4px;
 }
 
-/* Headings */
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -208,7 +213,6 @@ h3 {
   color: #ffffff;
   margin-top: 1rem;
 }
-
 .about-section {
   display: flex;
   justify-content: center;
