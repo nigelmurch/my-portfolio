@@ -110,7 +110,7 @@ body {
 .music-controls-container {
   position: absolute;
   top: 280px;
-  left: 30px;
+  left: 130px;
   z-index: 10;
 }
 
