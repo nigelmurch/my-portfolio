@@ -25,20 +25,31 @@
     </ul>
   </nav>
 
-  <!-- Section Title and Quote with Music Button -->
+  <!-- Section Title -->
   <section class="section-title">
     <div class="title-with-badge">
       <h1 class="ux-investigator">UX Investigator</h1>
       <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
     </div>
     <h2>About Me</h2>
-    <div class="quote-wrapper aligned-row">
-  <div class="music-button-container">
-    <button class="music-button" onclick="toggleMusic()">🎵 Play/Pause</button>
-  </div>
-  <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
-</div>
+
+    <!-- Retro Music Button to Left -->
+    <div class="play-pause-wrapper">
+      <button id="musicButton" class="play-pause-button">▶ Play</button>
+    </div>
+
+    <!-- Centered Quote -->
+    <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
   </section>
+
+  <!-- Audio Track -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="sounds/go-ahead-gerald.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Siren Audio -->
+  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Main Content -->
   <main class="work-container">
@@ -105,34 +116,34 @@
     <a href="index.html" class="retro-button">Return Home</a>
   </div>
 
-  <!-- Siren Audio Effect -->
-  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
-
+  <!-- Scripts -->
   <script>
+    // Siren sound on title click
     const h1 = document.querySelector('.ux-investigator');
     const siren = document.getElementById('siren-sound');
 
     h1.addEventListener('click', () => {
       siren.currentTime = 0;
       siren.play();
-      setTimeout(() => siren.pause(), 3000); // 3-second siren
     });
 
-    // Retro Play/Pause Music Button Logic
-    const music = new Audio('sounds/go-ahead-gerald-olivieri-main-version-35364-01-46.mp3');
-    music.loop = true;
+    // Music play/pause toggle
+    const music = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('musicButton');
 
-    function toggleMusic() {
+    musicBtn.addEventListener('click', () => {
       if (music.paused) {
         music.play();
+        musicBtn.textContent = '⏸ Pause';
       } else {
         music.pause();
+        musicBtn.textContent = '▶ Play';
       }
-    }
+    });
   </script>
 
   <footer>
-    Police Siren Sound Effect By Jurij, & Keyboard Click By CreatorsHome From Pixabay, Go Ahead - Gerald Olivieri - https://uppbeat.io
+    Sound Effects: Siren by Jurij & Music by Gerald Olivieri — go-ahead-gerald.mp3 from Pixabay / Uppbeat.io
   </footer>
 
 </body>
