@@ -13,7 +13,6 @@ body {
   box-sizing: border-box;
 }
 
-/* ------------------ MUSIC BUTTON ------------------ */
 .music-button {
   padding: 1rem 2rem;
   font-size: 1.2rem;
@@ -29,106 +28,28 @@ body {
   background: yellow;
 }
 
-/* ------------------ RETRO BOOMBOX ------------------ */
-.boombox {
-  background: linear-gradient(135deg, #000055, #220044);
-  border: 5px solid #ff007f;
-  border-radius: 15px;
-  padding: 2rem;
-  width: 400px;
-  box-shadow: 0 0 20px #00e5ff;
-  text-align: center;
-  position: relative;
-  margin: 3rem auto;
-}
-
-.boombox h1 {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #ffccff;
-  font-family: 'Press Start 2P', monospace;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  background-color: #00ffff;
-  color: #000044;
-  border: 2px solid #ff007f;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.75rem;
-  cursor: pointer;
-  border-radius: 8px;
-  font-family: 'Press Start 2P', monospace;
-  box-shadow: 0 0 10px #ff00ff;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #ff007f;
-  color: white;
-  border-color: #ffffff;
-  box-shadow: 0 0 20px white, 0 0 30px #ff00ff;
-}
-
-.volume {
-  width: 100%;
-  margin-top: 1rem;
-  accent-color: #00ffff;
-}
-
-.speaker {
-  position: absolute;
-  top: -30px;
-  width: 30px;
-  height: 30px;
-  background-color: #ff007f;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #ff00ff;
-}
-
-.speaker.left {
-  left: 20px;
-}
-
-.speaker.right {
-  right: 20px;
-}
-
-/* ------------------ QUOTE + MUSIC LAYOUT ------------------ */
-.quote-wrapper {
+/* New button alignment styles */
+.quote-wrapper.aligned-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
-  gap: 1.5rem;
-  margin: 3rem auto;
-  max-width: 1000px;
-  text-align: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
 }
 
 .music-button-container {
-  flex-shrink: 0;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ffffff;
-  margin-top: 1rem;
-  margin-left: auto;
+  align-self: flex-start;
   margin-right: auto;
-  max-width: 600px;
-  flex-grow: 1;
-  text-align: center;
+  margin-left: 0; /* Align with left side */
 }
 
-/* ------------------ NAV BAR ------------------ */
+.quote-wrapper .quote {
+  text-align: center;
+  flex: 1;
+}
+
+/* ------------------ NAVIGATION ------------------ */
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -173,6 +94,7 @@ body {
   padding: 4px 8px;
   border-radius: 4px;
 }
+
 h1 {
   font-family: 'Press Start 2P', cursive;
   font-size: 4.5rem;
@@ -240,6 +162,7 @@ h3 {
   color: #ffffff;
   margin-top: 1rem;
 }
+
 .about-section {
   display: flex;
   justify-content: center;
@@ -453,7 +376,7 @@ ul li.highlight {
   box-shadow: 0 0 20px white, 0 0 30px #ff007f;
 }
 
-/* Responsive Styles */
+/* ------------------ RESPONSIVE ------------------ */
 @media screen and (max-width: 768px) {
   body {
     padding: 1rem;
