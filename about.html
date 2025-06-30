@@ -28,12 +28,15 @@
   <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Section Title -->
-  <section class="section-title">
+ <section class="section-title">
     <div class="title-with-badge" style="text-align: center;">
       <h1 class="ux-investigator">UX Investigator</h1>
       <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
     </div>
-    <h2 class="sparkle-frame">About Me</h2>
+    <div class="sparkle-frame-wrapper">
+      <h2 class="sparkle-frame">About Me</h2>
+      <div class="pixel-sparkles"></div>
+    </div>
 
     <!-- Quote Centered Horizontally & Vertically Below -->
     <div class="quote-wrapper">
@@ -153,6 +156,38 @@
     }, 600); // Remove after animation
   });
 </script>
+
+ <script>
+    const pixelSparkles = document.querySelector('.pixel-sparkles');
+
+    function createPixelSparkle(x, y) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('pixel-sparkle');
+      sparkle.style.left = `${x}px`;
+      sparkle.style.top = `${y}px`;
+      pixelSparkles.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 3000);
+    }
+
+    function animateSparkles() {
+      const h2 = document.querySelector('.sparkle-frame');
+      const rect = h2.getBoundingClientRect();
+      const perimeterPoints = 100;
+      let step = 0;
+      setInterval(() => {
+        const t = (step / perimeterPoints) * (2 * Math.PI);
+        const x = rect.left + rect.width / 2 + (rect.width / 2 + 10) * Math.cos(t);
+        const y = rect.top + rect.height / 2 + (rect.height / 2 + 10) * Math.sin(t);
+        createPixelSparkle(x, y);
+        step = (step + 1) % perimeterPoints;
+      }, 80);
+    }
+
+    window.addEventListener('load', animateSparkles);
+  </script>
+
+
+  
   <footer>
     Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
   </footer>
