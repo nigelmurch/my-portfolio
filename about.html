@@ -33,10 +33,10 @@
       <h1 class="ux-investigator">UX Investigator</h1>
       <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
     </div>
- <div class="sparkle-frame-wrapper">
+<div class="sparkle-frame-wrapper">
   <h2 class="sparkle-frame">About Me</h2>
   <div class="pixel-sparkles">
-    <!-- 12 sparkles -->
+    <!-- 12 orbiting sparkles -->
     <div class="pixel-sparkle"></div>
     <div class="pixel-sparkle"></div>
     <div class="pixel-sparkle"></div>
@@ -198,7 +198,32 @@
 
   animateSparkles();
 </script>
+  <script>
+  const sparkleContainer = document.querySelector('.pixel-sparkles');
+  const sparkles = sparkleContainer.querySelectorAll('.pixel-sparkle');
+  const sparkleWrapper = document.querySelector('.sparkle-frame-wrapper');
 
+  let angle = 0;
+  const radius = 60;
+
+  function animateOrbit() {
+    const centerX = sparkleWrapper.offsetWidth / 2;
+    const centerY = sparkleWrapper.offsetHeight / 2;
+    const total = sparkles.length;
+
+    sparkles.forEach((sparkle, i) => {
+      const theta = angle + (i * (2 * Math.PI)) / total;
+      const x = centerX + radius * Math.cos(theta);
+      const y = centerY + radius * Math.sin(theta);
+      sparkle.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    angle += 0.02;
+    requestAnimationFrame(animateOrbit);
+  }
+
+  animateOrbit();
+</script>
 
   
   <footer>
