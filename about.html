@@ -157,34 +157,33 @@
   });
 </script>
 
- <script>
-    const pixelSparkles = document.querySelector('.pixel-sparkles');
+<script>
+  const sparkleWrapper = document.querySelector('.sparkle-frame-wrapper');
+  const sparkles = document.querySelectorAll('.pixel-sparkle');
+  const total = sparkles.length;
+  let angle = 0;
 
-    function createPixelSparkle(x, y) {
-      const sparkle = document.createElement('div');
-      sparkle.classList.add('pixel-sparkle');
+  function animateSparkles() {
+    const rect = sparkleWrapper.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const radius = 40; // 🔧 Tighter orbit here
+
+    sparkles.forEach((sparkle, index) => {
+      const offset = (Math.PI * 2 * index) / total;
+      const currentAngle = angle + offset;
+      const x = centerX + radius * Math.cos(currentAngle);
+      const y = centerY + radius * Math.sin(currentAngle);
       sparkle.style.left = `${x}px`;
       sparkle.style.top = `${y}px`;
-      pixelSparkles.appendChild(sparkle);
-      setTimeout(() => sparkle.remove(), 3000);
-    }
+    });
 
-    function animateSparkles() {
-      const h2 = document.querySelector('.sparkle-frame');
-      const rect = h2.getBoundingClientRect();
-      const perimeterPoints = 100;
-      let step = 0;
-      setInterval(() => {
-        const t = (step / perimeterPoints) * (2 * Math.PI);
-        const x = rect.left + rect.width / 2 + (rect.width / 2 + 10) * Math.cos(t);
-        const y = rect.top + rect.height / 2 + (rect.height / 2 + 10) * Math.sin(t);
-        createPixelSparkle(x, y);
-        step = (step + 1) % perimeterPoints;
-      }, 80);
-    }
+    angle += 0.03;
+    requestAnimationFrame(animateSparkles);
+  }
 
-    window.addEventListener('load', animateSparkles);
-  </script>
+  animateSparkles();
+</script>
 
 
   
