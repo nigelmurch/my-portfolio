@@ -257,6 +257,68 @@ body {
     transform: scale(0.3);
   }
 }
+
+/* ========== SPARKLE FRAME AROUND H2 ========== */
+.sparkle-frame {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: "Marcellus", serif;
+  font-size: 4.5rem;
+  font-style: italic;
+  color: #ffccff;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.sparkle-frame::before,
+.sparkle-frame::after {
+  content: "";
+  position: absolute;
+  border: 2px dashed transparent;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+  animation: sparkle-loop 4s linear infinite;
+  border-radius: 12px;
+}
+
+.sparkle-frame::before {
+  border-image: linear-gradient(90deg, #00ffff, #ff007f, #ffff00, #00ffff) 1;
+  border-style: solid;
+  animation-delay: 0s;
+}
+
+.sparkle-frame::after {
+  border-image: linear-gradient(270deg, #ff007f, #00ffff, #ffff00, #ff007f) 1;
+  border-style: dotted;
+  animation-delay: 2s;
+}
+
+@keyframes sparkle-loop {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05) rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+
+
+
+
 /* ========== RESPONSIVE ========== */
 @media screen and (max-width: 768px) {
   body {
