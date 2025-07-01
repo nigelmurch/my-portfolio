@@ -112,6 +112,41 @@ p{
   transform: scale(1.05);
 }
 
+.pixel-underline {
+  position: relative;
+  display: inline-block;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.pixel-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    red 0px,
+    red 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  animation: pixelSlide 1.5s linear infinite;
+}
+
+@keyframes pixelSlide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 8px 0;
+  }
+}
 /* Button Style */
 .retro-button {
   background-color: #44ff44;
