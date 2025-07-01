@@ -3,29 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case Studies</title>
-  <link rel="stylesheet" href="style6.css"/>
+  <title>Case Study 1: Wild Boar to the Rescue</title>
+  <link rel="stylesheet" href="style13.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-<header class="nav-bar">
-  <img src="images/logoUXI.png" alt="Logo" class="logo" />
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT</a></li>
-    <li><a href="individual-work.html" class="active">INDIVIDUAL WORK</a></li>
-    <li><a href="group-projects.html">GROUP PROJECTS</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</header>
+  <header class="nav-bar">
+    <img src="images/logoUXI.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
+      <li><a href="case-studies.html" class="active">CASE STUDIES</a></li>
+      <li><a href="group-projects.html">GROUP PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </header>
 
   <section class="section-title">
-    <h1>Case Study 1</h1>
-    <h4>Wild Boar To The Rescue</h4>
+    <h1>Case Study 1: Wild Boar to the Rescue</h1>
   </section>
 
+  <main class="individual-work-grid">
+    <div class="work-card">
+      <h3 class="pixel-underline">Wild Boar to the Rescue</h3>
+      <img src="images/wild-boar.jpeg" alt="Wild Boar" class="case-image" onclick="openModal(this)" />
+      <p>In southern Italy, wild boar populations have exploded due to climate change and habitat loss...</p>
+      <a href="#" class="retro-button" onclick="openModal(document.querySelector('.case-image'))">View Image</a>
+    </div>
+  </main>
 
+  <!-- Modal Overlay -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" class="modal-content" alt="Wild Boar Full View">
+  </div>
 
+  <footer class="site-footer">
+    <div class="footer-content">
+      <span>2024 Nigel Murch – All Rights Reserved</span>
+    </div>
+  </footer>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
 
 
 
