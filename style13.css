@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #0000aa;
@@ -12,7 +18,6 @@ body {
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
   font-size: 24px;
   flex-wrap: wrap;
   text-align: center;
@@ -34,7 +39,6 @@ body {
 }
 
 .nav-links li a {
-  font-family: 'Press Start 2P', monospace;
   color: #fff;
   text-decoration: none;
   font-size: 24px;
@@ -52,10 +56,14 @@ body {
   border-radius: 4px;
 }
 
+/* ------------------ SECTION TITLE ------------------ */
 .section-title {
   text-align: center;
   margin-top: 40px;
+  border-bottom: 2px dotted #ff00ff;
+  padding-bottom: 20px;
 }
+
 .section-title h1 {
   font-family: 'Press Start 2P', monospace;
   color: #00dbfc;
@@ -63,7 +71,7 @@ body {
   text-shadow: 2px 2px 0 black;
 }
 
-/* Reuse grid layout from Individual Work */
+/* ------------------ WORK CARDS GRID ------------------ */
 .individual-work-grid {
   display: flex;
   flex-wrap: wrap;
@@ -72,23 +80,29 @@ body {
   padding: 40px 20px;
 }
 
-/* Work Card */
 .work-card {
   background-color: #111;
   border: 2px dashed #00ffff;
   padding: 30px;
   flex: 1 1 300px;
-  max-width: 350px;
+  max-width: 500px;
   text-align: center;
   color: #fff;
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
 }
+
 .work-card:hover {
   transform: scale(1.05);
 }
 
-/* Pixel Underline reused */
+.work-card h3 {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+/* Pixel-underline effect reused */
 .pixel-underline {
   position: relative;
   display: inline-block;
@@ -99,6 +113,7 @@ body {
   padding-bottom: 1rem;
   transition: color 0.3s ease;
 }
+
 .pixel-underline::after {
   content: "";
   position: absolute;
@@ -107,38 +122,44 @@ body {
   width: 100%;
   height: 6px;
   background: repeating-linear-gradient(
-    90deg, red 0, red 4px, transparent 4px, transparent 8px
+    90deg,
+    red 0px,
+    red 4px,
+    transparent 4px,
+    transparent 8px
   );
   animation: pixelSlide 1.5s linear infinite;
   box-shadow: 0 0 5px red, 0 0 10px red;
+  transition: all 0.3s ease;
 }
+
 .pixel-underline:hover {
   color: #085387;
 }
+
 .pixel-underline:hover::after {
   background: repeating-linear-gradient(
-    90deg, #00ffff 0, #00ffff 4px, transparent 4px, transparent 8px
+    90deg,
+    #00ffff 0px,
+    #00ffff 4px,
+    transparent 4px,
+    transparent 8px
   );
   box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
 }
 
-/* Case image styling */
-.case-image {
-  width: 100%;
-  height: auto;
-  border: 3px solid #00ffe1;
-  margin-bottom: 15px;
-  box-shadow: 2px 2px 10px #000;
+@keyframes pixelSlide {
+  0% { background-position: 0 0; }
+  100% { background-position: 8px 0; }
 }
 
-/* Retro Button */
+/* ------------------ BUTTONS ------------------ */
 .retro-button {
   background-color: #44ff44;
   border: 2px solid white;
   padding: 1rem 2rem;
   font-size: 0.7rem;
   color: #000;
-  font-family: 'Press Start 2P', monospace;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
@@ -146,31 +167,105 @@ body {
   margin-top: 20px;
   transition: background-color 0.3s ease;
 }
+
 .retro-button:hover {
   background-color: #33cc33;
 }
 
-/* Footer */
+/* ------------------ MODAL STYLES ------------------ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  display: block;
+  margin: 5% auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border: 4px solid #00ffe1;
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Press Start 2P', monospace;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff00ff;
+}
+
+.work-card img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.work-card img:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------ FOOTER ------------------ */
 .site-footer {
   text-align: center;
   padding: 20px 0;
   font-size: 10px;
   border-top: 4px solid red;
   background-color: #000aa0;
-}
-.footer-content {
-  max-width: 900px;
-  margin: 0 auto;
   color: white;
 }
 
-/* Responsive adjustments */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+footer span {
+  flex: 1;
+  text-align: center;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .section-title h1 {
+    font-size: 2.2rem;
+  }
+
   .individual-work-grid {
     flex-direction: column;
   }
+
   .work-card {
-    max-width: 90%;
-    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .retro-button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
   }
 }
