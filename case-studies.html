@@ -5,7 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Case Studies</title>
   <link rel="stylesheet" href="style6.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono&display=swap" rel="stylesheet"/>
+  <style>
+    /* Retro Pop-up Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 170, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-box {
+      background-color: #111;
+      border: 4px solid #00ffff;
+      box-shadow: 0 0 20px #ff00ff;
+      padding: 30px;
+      width: 80%;
+      max-width: 800px;
+      max-height: 90%;
+      overflow-y: auto;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: #ff4444;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .modal-box h2 {
+      font-family: 'Press Start 2P', monospace;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .modal-box p {
+      line-height: 1.6;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -49,15 +98,22 @@
   </div>
 </main>
 
-<!-- Text Modal -->
+<!-- Retro Text Modal -->
 <div id="textModal" class="modal">
   <div class="modal-box">
     <span class="close-btn" onclick="closeModalText()">&times;</span>
     <h2>Wild Boar to the Rescue</h2>
     <p>
-      After digging into the data and real-world examples, I’m struck by how wild boar foraging—and even controlled harvesting—can shift from problem to potential. In southern Italy, dense boar populations are uprooting forest floors, flipping soil and seedlings like natural tillers—impacting everything from oak regeneration to rare butterflies. That same digging can also reshape ecosystems: turning over 2–4 m² of soil a day, helping aerate soils, seed dispersal, and habitat renewal.<br><br>
-      But here’s the kicker: I found evidence that communities are taking this wild ecology into their own hands. In Apulia (Puglia), public vets and hunting groups are trialling models to harvest boar meat, tested and safe, to both protect agriculture and create sustainable food chains. It’s not just culling—it’s reframing the narrative. Especially when well-coordinated harvesting conserves local food systems, curbs crop damage, and mitigates disease risk, like African swine fever, through veterinary oversight.<br><br>
-      In my view, this isn’t about glorifying wild boar, it’s about transforming an ecological challenge into a community opportunity. It blends environmental stewardship, circular economic thinking, and social equity—all through design and systems. That’s the kind of thinking I want to bring into my work.
+      After digging into the data and real-world examples, I’m struck by how wild boar foraging—and even controlled harvesting—can shift from problem to potential. 
+      In southern Italy, dense boar populations are uprooting forest floors, flipping soil and seedlings like natural tillers—impacting everything from oak regeneration to rare butterflies. 
+      That same digging can also reshape ecosystems: turning over 2–4 m² of soil a day, helping aerate soils, seed dispersal, and habitat renewal.
+      <br><br>
+      But here’s the kicker: I found evidence that communities are taking this wild ecology into their own hands. 
+      In Apulia (Puglia), public vets and hunting groups are trialling models to harvest boar meat, tested and safe, to both protect agriculture and create sustainable food chains. 
+      It’s not just culling—it’s reframing the narrative. Especially when well-coordinated harvesting conserves local food systems, curbs crop damage, and mitigates disease risk, like African swine fever, through veterinary oversight.
+      <br><br>
+      In my view, this isn’t about glorifying wild boar, it’s about transforming an ecological challenge into a community opportunity. 
+      It blends environmental stewardship, circular economic thinking, and social equity—all through design and systems. That’s the kind of thinking I want to bring into my work.
     </p>
   </div>
 </div>
@@ -74,7 +130,7 @@
 
 <script>
   function openModalText() {
-    document.getElementById("textModal").style.display = "block";
+    document.getElementById("textModal").style.display = "flex";
   }
 
   function closeModalText() {
