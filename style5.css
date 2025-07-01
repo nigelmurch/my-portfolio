@@ -189,6 +189,18 @@ html, body {
   margin-bottom: 1rem;
 }
 
+.retro-modal-header h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  color: red; /* ✅ Now matches the red pixel dividers */
+  padding-bottom: 0.6rem;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
 .retro-modal-body p {
   margin-bottom: 1rem;
   line-height: 1.6;
