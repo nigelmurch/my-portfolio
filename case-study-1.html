@@ -26,16 +26,24 @@
   <main class="individual-work-grid">
     <div class="work-card">
       <h3 class="pixel-underline">Wild Boar to the Rescue</h3>
-      <img src="images/wild-boar.jpeg" alt="Wild Boar" class="case-image" onclick="openModal(this)" />
+      <img src="images/wild-boar.jpeg" alt="Wild Boar" class="case-image" onclick="openModalText()" />
       <p>In southern Italy, wild boar populations have exploded due to climate change and habitat loss...</p>
-      <a href="#" class="retro-button" onclick="openModal(document.querySelector('.case-image'))">View Image</a>
     </div>
   </main>
 
-  <!-- Modal Overlay -->
-  <div id="imageModal" class="modal" onclick="closeModal()">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" class="modal-content" alt="Wild Boar Full View">
+  <!-- Text Modal -->
+  <div id="textModal" class="modal">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModalText()">&times;</span>
+      <h2>Wild Boar to the Rescue</h2>
+      <p>
+        In southern Italy, wild boar populations have exploded due to climate change and habitat loss.
+        Local foraging groups and chefs are collaborating to harvest wild boar sustainably, turning them into
+        nutritious meals distributed through food banks. This not only reduces crop damage and road accidents,
+        but also provides iron-rich protein to vulnerable communities.
+      </p>
+      <!-- add more detailed text as needed -->
+    </div>
   </div>
 
   <footer class="site-footer">
@@ -45,42 +53,12 @@
   </footer>
 
   <script>
-    function openModal(img) {
-      const modal = document.getElementById("imageModal");
-      const modalImg = document.getElementById("modalImage");
-      modal.style.display = "block";
-      modalImg.src = img.src;
+    function openModalText() {
+      document.getElementById("textModal").style.display = "flex";
     }
-
-    function closeModal() {
-      document.getElementById("imageModal").style.display = "none";
+    function closeModalText() {
+      document.getElementById("textModal").style.display = "none";
     }
   </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
