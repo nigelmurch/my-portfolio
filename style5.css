@@ -142,6 +142,11 @@ html, body {
   box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
 }
 
+/* ✅ Override pixel-underline when inside retro modal */
+.retro-modal-header .pixel-underline {
+  color: red !important;
+}
+
 @keyframes pixelSlide {
   0% {
     background-position: 0 0;
@@ -194,7 +199,7 @@ html, body {
   display: inline-block;
   font-size: 1.2rem;
   font-family: 'Press Start 2P', monospace;
-  color: red; /* ✅ Now matches the red pixel dividers */
+  color: red;
   padding-bottom: 0.6rem;
   margin: 0;
   text-align: center;
