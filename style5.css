@@ -201,7 +201,7 @@ retro-modal-header h2 {
   margin: 0 0 1rem 0;
   font-size: 1.4rem;
   text-align: center;
-  color: #000;
+  color:  #000;
   text-decoration: none; /* Remove default underline */
 }
 .retro-modal-body p {
