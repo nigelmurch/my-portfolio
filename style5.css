@@ -96,9 +96,14 @@ html, body {
   box-shadow: 0 0 10px #ff00ff;
   transition: transform 0.2s;
 }
+
+h3{ 
+ font-size:1.8rem;
+}
+
 p{
   font-family: "JetBrains Mono", monospace;
-  font-size:.09rem;
+  font-size:0.9rem;
 }
 .work-card:hover {
   transform: scale(1.05);
