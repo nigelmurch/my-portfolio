@@ -150,6 +150,39 @@ body {
   background-color: #33cc33;
 }
 
+/* ------------------ MODAL TEXT POPUP ------------------ */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-box {
+  background-color: #1a1a1a;
+  margin: auto;
+  padding: 2rem;
+  border: 4px solid #fff;
+  width: 80%;
+  max-width: 960px;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.6;
+}
+
+.close-btn {
+  color: white;
+  float: right;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* Footer */
 .site-footer {
   text-align: center;
@@ -172,5 +205,9 @@ body {
   .work-card {
     max-width: 90%;
     margin: 0 auto;
+  }
+  .modal-box {
+    width: 90%;
+    font-size: 0.5rem;
   }
 }
