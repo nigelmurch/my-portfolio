@@ -1,1 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Te Pou Theatre</title>
+  <link rel="stylesheet" href="styles11.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
 
+<!-- NAVIGATION BAR -->
+<nav class="nav-bar">
+  <a href="index.html">
+    <img src="images/logoUXI.png" alt="UX Investigator Logo" class="logo" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="about.html">ABOUT |</a></li>
+    <li><a href="individual-work.html">INDIVIDUAL WORK |</a></li>
+    <li><a href="group-projects.html">GROUP PROJECTS |</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main-container">
+  <h1 class="page-title">Whetū Mārama Project</h1>
+
+  <!-- BUTTONS -->
+  <div class="project-buttons">
+    <button onclick="openModal('modal1')">Image 1</button>
+    <button onclick="openModal('modal2')">Image 2</button>
+    <button onclick="openModal('modal3')">Image 3</button>
+    <button onclick="openModal('modal4')">Image 4</button>
+    <button onclick="openModal('modal5')">Image 5</button>
+    <button onclick="openModal('modal6')">Project Video</button>
+  </div>
+
+  <!-- RETRO MODAL -->
+  <div class="retro-modal">
+    <div class="retro-modal-header">
+      <h2>About Te Pou Theatre's Project </h2>
+    </div>
+    <div class="retro-modal-body">
+      <p>
+        Whetū Mārama is a project we created to empower and uplift Rangatahi, especially Māori youth, by reconnecting them with their identity, whakapapa, and mātauranga through the use of digital storytelling and creative technology. It’s about putting the stars back in the eyes of our young people — helping them see themselves reflected in the stories they tell, and in the tools they use to tell them.
+      </p>
+      <p>
+        At its heart, Whetū Mārama blends the richness of te ao Māori with the power of emerging tech — whether that’s animation, interactive media, or immersive platforms like AR and VR. It’s a space where traditional pūrākau meet the digital future.
+      </p>
+      <p>
+        More than that, it's inclusive and multicultural by design. We acknowledge that our communities are diverse, and Whetū Mārama makes space for all voices — encouraging cross-cultural understanding and collective storytelling that reflects the true makeup of Aotearoa.
+      </p>
+      <p>
+        This project isn’t just about showcasing culture — it’s about shaping futures. We want Rangatahi to see that their stories, values, and ways of knowing are not only valid but vital in a world that’s constantly evolving. By building their digital confidence, creative expression, and connection to culture, Whetū Mārama helps prepare our young people to lead, innovate, and thrive in both the digital space and in their own lives.
+      </p>
+      <p>
+        It’s about legacy, belonging, and giving Rangatahi the tools to become kaitiaki of their own stories — and our collective future.
+      </p>
+    </div>
+  </div>
+</main>
+
+<!-- IMAGE MODALS -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal1')">[ CLOSE ✖ ]</span>
+    <img src="images/about-home.png" alt="Whetu Image 1" class="zoom-image" />
+  </div>
+</div>
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal2')">[ CLOSE ✖ ]</span>
+    <img src="images/360-experiencewm.png" alt="Whetu Image 2" class="zoom-image" />
+  </div>
+</div>
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal3')">[ CLOSE ✖ ]</span>
+    <img src="images/figma-hifi-prototype.png" alt="Whetu Image 3" class="zoom-image" />
+  </div>
+</div>
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal4')">[ CLOSE ✖ ]</span>
+    <img src="images/stargazing-page-wm.png" alt="Whetu Image 4" class="zoom-image" />
+  </div>
+</div>
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal5')">[ CLOSE ✖ ]</span>
+    <img src="images/Whetu-code.jpg" alt="Whetu Image 5" class="zoom-image" />
+  </div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close retro-close" onclick="closeModal('modal6')">[ CLOSE ✖ ]</span>
+    <video controls class="enlarged-video">
+      <source src="images/whetu-marama-website.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+    const video = modal.querySelector('video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }
+
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        const video = modal.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  };
+</script>
+
+</body>
+</html>
