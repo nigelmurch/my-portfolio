@@ -120,6 +120,7 @@ p{
   color: #ffffff;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
+  transition: color 0.3s ease;
 }
 
 .pixel-underline::after {
@@ -137,6 +138,23 @@ p{
     transparent 8px
   );
   animation: pixelSlide 1.5s linear infinite;
+  box-shadow: 0 0 5px red, 0 0 10px red;
+  transition: all 0.3s ease;
+}
+
+.pixel-underline:hover {
+  color: #00ffff; /* Text color changes on hover */
+}
+
+.pixel-underline:hover::after {
+  background: repeating-linear-gradient(
+    90deg,
+    #00ffff 0px,
+    #00ffff 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
 }
 
 @keyframes pixelSlide {
