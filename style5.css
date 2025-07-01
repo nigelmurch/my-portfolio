@@ -197,7 +197,7 @@ p{
   color: #111;
 }
 
-retro-modal-header h2 {
+.retro-modal-header h2 {
   margin: 0 0 1rem 0;
   font-size: 1.4rem;
   text-align: center;
