@@ -101,7 +101,7 @@ html, body {
   border-bottom: 4px solid red;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
-  color: white; /* Optional: ensure it stands out against dark backgrounds */
+  color: #d07fc5; /* Optional: ensure it stands out against dark backgrounds */
 }
 
 p{
