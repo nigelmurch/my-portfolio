@@ -197,14 +197,13 @@ p{
   color: #111;
 }
 
-.retro-modal-header h2 {
+retro-modal-header h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
-  text-decoration: underline;
   color: #000;
+  text-decoration: none; /* Remove default underline */
 }
-
 .retro-modal-body p {
   margin-bottom: 1rem;
   line-height: 1.6;
