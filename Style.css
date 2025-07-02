@@ -32,21 +32,20 @@ body {
 }
 
 /* Boot text container for grouping */
-.boot-text {
+/* Boot text - first line */
+.left-line {
   position: absolute;
   top: 60px;
-  left: 20px;
-}
-
-/* First boot line */
-.left-line {
+  left: 20px; /* adjust to 0px if you want it hard against the edge */
   font-size: 1.5rem;
   white-space: pre-line;
 }
 
-/* Second boot line */
+/* Boot text - second line */
 .left-line2 {
-  margin-top: 1rem;
+  position: absolute;
+  top: 110px;
+  left: 20px; /* adjust to 0px if needed */
   font-size: 1.5rem;
   color: #ffffff;
   white-space: pre-line;
