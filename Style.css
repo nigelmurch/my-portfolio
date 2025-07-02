@@ -29,11 +29,12 @@ body {
 .top-line {
   position: absolute;
   top: 20px;
-  width: 100%;
-  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 1.8rem;
+  text-align: center;
+  white-space: nowrap;
 }
-
 /* Left-aligned boot text */
 .left-line {
   position: fixed;
