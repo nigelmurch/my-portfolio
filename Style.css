@@ -104,3 +104,23 @@ body {
     width: 100%;
   }
 }
+
+/* 👾 Retro scanline overlay */
+.scanlines {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.2) 3px,
+    rgba(0, 0, 0, 0.2) 4px
+  );
+  z-index: 99;
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+}
