@@ -18,12 +18,11 @@ body {
 
 /* Main C64 screen container */
 .c64-screen {
-  position: relative;
   width: 100%;
   max-width: 800px;
-  height: 100%;
-  padding: 0;
+  height: 100vh;
   box-sizing: border-box;
+  padding: 0;
 }
 
 /* Top line centered */
@@ -36,21 +35,22 @@ body {
 }
 
 /* Left-aligned boot text */
-.left-line,
-.left-line2 {
-  position: absolute;
+.left-line {
+  position: fixed;
+  top: 60px;
   left: 0;
   padding-left: 1rem;
   font-size: 1.5rem;
   white-space: pre-line;
 }
 
-.left-line {
-  top: 60px;
-}
-
 .left-line2 {
+  position: fixed;
   top: 120px;
+  left: 0;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  white-space: pre-line;
 }
 
 /* Centered blinking prompt */
