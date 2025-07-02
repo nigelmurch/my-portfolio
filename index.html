@@ -4,54 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Commodore 64 UI</title>
-  <link href="https://fonts.cdnfonts.com/css/commodore-64-pixelized" rel="stylesheet"> 
+  <link href="https://fonts.cdnfonts.com/css/commodore-64-pixelized" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div class="c64-screen">
-  <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
+  <div class="c64-screen">
+    <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
 
-  <div class="boot-lines">
-    <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
-    <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>
+    <div class="boot-text">
+      <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
+      <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>
+    </div>
+
+    <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
+
+    <!-- Retro scanlines overlay -->
+    <div class="scanlines"></div>
   </div>
 
-  <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
+  <!-- Audio -->
+  <audio id="key-sound" src="sounds/keyboard-click.mp3" preload="auto"></audio>
 
-  <!-- 👇 Add this -->
-  <div class="scanlines"></div>
-</div>
-  </div>
+  <!-- Script -->
+  <script>
+    const continuePrompt = document.getElementById('continue');
+    const keySound = document.getElementById('key-sound');
 
-  <!-- Centered Prompt -->
-  <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
-</div>
+    document.addEventListener('keydown', () => {
+      keySound.currentTime = 0;
+      keySound.play();
+      setTimeout(() => {
+        window.location.href = 'about.html';
+      }, 400);
+    });
 
-<!-- 🔊 Audio for key press -->
-<audio id="key-sound" src="sounds/keyboard-click.mp3" preload="auto"></audio>
-
-<!-- 🎯 Script -->
-<script>
-  const continuePrompt = document.getElementById('continue');
-  const keySound = document.getElementById('key-sound');
-
-  // Handle actual key press anywhere
-  document.addEventListener('keydown', () => {
-    keySound.currentTime = 0;
-    keySound.play();
-    setTimeout(() => {
-      window.location.href = 'about.html';
-    }, 400); // wait for sound to finish (adjust to your file)
-  });
-
-  // Handle click on the text
-  continuePrompt.addEventListener('click', () => {
-    keySound.currentTime = 0;
-    keySound.play();
-    setTimeout(() => {
-      window.location.href = 'about.html';
-    }, 400); // same delay
-  });
-</script>
+    continuePrompt.addEventListener('click', () => {
+      keySound.currentTime = 0;
+      keySound.play();
+      setTimeout(() => {
+        window.location.href = 'about.html';
+      }, 400);
+    });
+  </script>
 </body>
 </html>
