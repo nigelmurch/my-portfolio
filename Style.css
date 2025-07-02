@@ -7,14 +7,22 @@ body {
   font-size: 2rem;
   height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Main C64 screen container */
 .c64-screen {
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
+/* Top line centered */
 .top-line {
   position: absolute;
   top: 20px;
@@ -23,6 +31,7 @@ body {
   font-size: 1.8rem;
 }
 
+/* Left-aligned system text */
 .left-line {
   position: absolute;
   top: 60px;
@@ -31,15 +40,17 @@ body {
   white-space: pre-line;
 }
 
+/* Below the first left line */
 .left-line2 {
   position: absolute;
-  top: 110px; /* space it below .left-line (adjust as needed) */
+  top: 110px;
   left: 20px;
   font-size: 1.5rem;
   color: #ffffff;
   white-space: pre-line;
 }
 
+/* Centered blinking prompt */
 .center-prompt {
   position: absolute;
   top: 50%;
@@ -53,7 +64,38 @@ body {
   text-align: center;
 }
 
+/* Blink animation */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* 🔁 Responsive Fixes for Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .top-line {
+    font-size: 1.2rem;
+    top: 15px;
+  }
+
+  .left-line {
+    font-size: 1rem;
+    top: 50px;
+    left: 10px;
+  }
+
+  .left-line2 {
+    font-size: 1rem;
+    top: 90px;
+    left: 10px;
+  }
+
+  .center-prompt {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
 }
