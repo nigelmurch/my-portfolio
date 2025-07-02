@@ -36,23 +36,10 @@ body {
 }
 
 /* Left-aligned boot text */
-.left-line {
-  position: absolute;
-  top: 60px;
-  left: 0; /* 🔥 Flush left */
-  padding-left: 1rem; /* Optional: creates small readable margin */
-  font-size: 1.5rem;
-  white-space: pre-line;
-}
-
-.left-line2 {
-  position: absolute;
-  top: 120px; /* space under .left-line */
-  left: 0; /* 🔥 Flush left */
-  padding-left: 1rem;
-  font-size: 1.5rem;
-  color: #ffffff;
-  white-space: pre-line;
+.left-line, .left-line2 {
+  left: 0 !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Centered blinking prompt */
