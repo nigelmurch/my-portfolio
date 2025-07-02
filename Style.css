@@ -6,20 +6,20 @@ body {
   font-family: 'Commodore 64 Pixelized', monospace;
   font-size: 2rem;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Main container */
+/* Main C64 screen container */
 .c64-screen {
   position: relative;
   width: 100%;
   max-width: 800px;
-  height: 100vh;
-  padding: 2rem;
+  height: 100%;
   box-sizing: border-box;
+  padding: 0; /* 🔥 REMOVE padding to ensure flush alignment */
 }
 
 /* Top line centered */
@@ -31,21 +31,21 @@ body {
   font-size: 1.8rem;
 }
 
-/* Boot text container for grouping */
-/* Boot text - first line */
+/* Left-aligned boot text */
 .left-line {
   position: absolute;
   top: 60px;
-  left: 20px; /* adjust to 0px if you want it hard against the edge */
+  left: 0; /* 🔥 Flush left */
+  padding-left: 1rem; /* Optional: creates small readable margin */
   font-size: 1.5rem;
   white-space: pre-line;
 }
 
-/* Boot text - second line */
 .left-line2 {
   position: absolute;
-  top: 110px;
-  left: 20px; /* adjust to 0px if needed */
+  top: 120px; /* space under .left-line */
+  left: 0; /* 🔥 Flush left */
+  padding-left: 1rem;
   font-size: 1.5rem;
   color: #ffffff;
   white-space: pre-line;
@@ -54,7 +54,7 @@ body {
 /* Centered blinking prompt */
 .center-prompt {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #00ff00;
@@ -67,40 +67,13 @@ body {
   padding: 0 1rem;
 }
 
-/* Blinking animation */
+/* Blink animation */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* Retro scanline overlay */
-.scanlines {
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0px,
-    rgba(0, 0, 0, 0) 2px,
-    rgba(0, 0, 0, 0.15) 3px,
-    rgba(0, 0, 0, 0.15) 4px
-  );
-  z-index: 99;
-  mix-blend-mode: multiply;
-  opacity: 0.3;
-  animation: flicker 0.2s infinite;
-}
-
-/* Flicker effect */
-@keyframes flicker {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.4; }
-}
-
-/* Mobile responsiveness */
+/* ✅ Responsive Fixes */
 @media (max-width: 768px) {
   body {
     font-size: 1.2rem;
@@ -111,17 +84,22 @@ body {
     top: 10px;
   }
 
-  .boot-text {
-    top: 50px;
-    left: 10px;
+  .left-line,
+  .left-line2 {
+    font-size: 1rem;
+    padding-left: 0.5rem;
   }
 
-  .left-line, .left-line2 {
-    font-size: 1rem;
+  .left-line {
+    top: 50px;
+  }
+
+  .left-line2 {
+    top: 90px;
   }
 
   .center-prompt {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     padding: 0 1rem;
   }
 }
