@@ -6,13 +6,13 @@ body {
   font-family: 'Commodore 64 Pixelized', monospace;
   font-size: 2rem;
   height: 100vh;
-  overflow: hidden;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Main C64 screen container */
+/* Main container */
 .c64-screen {
   position: relative;
   width: 100%;
@@ -31,25 +31,22 @@ body {
   font-size: 1.8rem;
 }
 
-/* Boot lines container aligned left */
-.boot-lines {
+/* Boot text container for grouping */
+.boot-text {
   position: absolute;
   top: 60px;
-  left: 0;
-  padding-left: 20px;
+  left: 20px;
 }
 
-/* Boot line 1 */
+/* First boot line */
 .left-line {
-  position: relative;
   font-size: 1.5rem;
   white-space: pre-line;
-  margin-bottom: 1rem;
 }
 
-/* Boot line 2 */
+/* Second boot line */
 .left-line2 {
-  position: relative;
+  margin-top: 1rem;
   font-size: 1.5rem;
   color: #ffffff;
   white-space: pre-line;
@@ -58,7 +55,7 @@ body {
 /* Centered blinking prompt */
 .center-prompt {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #00ff00;
@@ -71,41 +68,13 @@ body {
   padding: 0 1rem;
 }
 
-/* Blink animation */
+/* Blinking animation */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
 
-/* 🔁 Responsive Fixes for Mobile */
-@media (max-width: 768px) {
-  body {
-    font-size: 1.2rem;
-  }
-
-  .top-line {
-    font-size: 1.2rem;
-    top: 15px;
-  }
-
-  .boot-lines {
-    padding-left: 10px;
-    top: 50px;
-  }
-
-  .left-line,
-  .left-line2 {
-    font-size: 1rem;
-  }
-
-  .center-prompt {
-    font-size: 1.4rem;
-    padding: 0 1rem;
-    width: 100%;
-  }
-}
-
-/* 👾 Retro scanline overlay */
+/* Retro scanline overlay */
 .scanlines {
   pointer-events: none;
   position: absolute;
@@ -117,10 +86,43 @@ body {
     to bottom,
     rgba(0, 0, 0, 0) 0px,
     rgba(0, 0, 0, 0) 2px,
-    rgba(0, 0, 0, 0.2) 3px,
-    rgba(0, 0, 0, 0.2) 4px
+    rgba(0, 0, 0, 0.15) 3px,
+    rgba(0, 0, 0, 0.15) 4px
   );
   z-index: 99;
-  opacity: 0.3;
   mix-blend-mode: multiply;
+  opacity: 0.3;
+  animation: flicker 0.2s infinite;
+}
+
+/* Flicker effect */
+@keyframes flicker {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.4; }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .top-line {
+    font-size: 1.2rem;
+    top: 10px;
+  }
+
+  .boot-text {
+    top: 50px;
+    left: 10px;
+  }
+
+  .left-line, .left-line2 {
+    font-size: 1rem;
+  }
+
+  .center-prompt {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+  }
 }
