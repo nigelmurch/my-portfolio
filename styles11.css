@@ -162,18 +162,33 @@ body {
   background-color: #fdf6e3;
   border: 3px double #000;
   padding: 1.5rem;
-  margin-top: 8rem;
   box-shadow: 4px 4px 0px #000;
   font-family: 'Courier New', Courier, monospace;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
   color: #111;
+  height: 50vh;
+  overflow-y: auto;
+  max-width: 800px;
+  width: 90%;
+  margin: 4rem auto;
+  position: relative;
 }
 
+.retro-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.retro-modal::-webkit-scrollbar-thumb {
+  background-color: #ff00ff;
+  border-radius: 4px;
+}
+
+.retro-modal::-webkit-scrollbar-track {
+  background: #222;
+
+  
 .retro-modal-header h2 {
   margin: 0 0 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   text-decoration: underline;
   color: #000;
@@ -183,7 +198,8 @@ body {
   margin-bottom: 1rem;
   line-height: 1.6;
   color: #222;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+}
 }
 
 /* 🔻 Scrollable Retro Modal Box 🔻 */
