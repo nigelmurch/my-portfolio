@@ -11,7 +11,10 @@
   <div class="c64-screen">
     <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
     <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
-    <div class="left-line2">LOADING UXINVESTIGATOR...<br>READY....</div>
+   <div class="left-line2">
+  LOADING UXINVESTIGATOR...<br>
+  <span id="ready-text">READY.</span>
+</div>
     <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
     <div class="scanlines"></div> <!-- 👈 Moved inside screen -->
   </div>
@@ -38,5 +41,16 @@
       }, 400);
     });
   </script>
+
+<script>
+  const readyText = document.getElementById('ready-text');
+  const base = "READY";
+  let dotCount = 1;
+
+  setInterval(() => {
+    readyText.textContent = base + ".".repeat(dotCount);
+    dotCount = dotCount < 3 ? dotCount + 1 : 1;
+  }, 400); // 400ms between each dot phase
+</script>
 </body>
 </html>
