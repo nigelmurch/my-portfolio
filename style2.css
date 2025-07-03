@@ -293,8 +293,20 @@ body {
     transform: scale(0.3);
   }
 }
+@keyframes spinInFromLeft {
+  0% {
+    transform: translateX(-100vw) rotate(-720deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
 
-
+.spin-in {
+  animation: spinInFromLeft 2s ease-out forwards;
+}
 
 
 /* ========== RESPONSIVE ========== */
