@@ -202,7 +202,16 @@ body {
   color: #f507b2;
 }
 
-.signature {
+.highlight {
+  font-family: 'Press Start 2P', monospace;
+  color: #ffff00; /* Bright yellow text */
+  background-color: #ff0000; /* Retro red background */
+  padding: 0.2em 0.4em;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+  text-transform: uppercase;
+  animation: flickerGlow 2s infinite alternate;
+}.signature {
   margin-top: 2.5rem;
   color: #fff;
   text-align: left;
@@ -247,7 +256,34 @@ body {
   z-index: 9999;
 }
 
-@keyframes fadeOut {
+@keyframes flickerGlow {
+  0% {
+    background-color: #ff0000;
+    color: #ffff00;
+    box-shadow: 2px 2px 0 #000;
+  }
+  25% {
+    background-color: #ff6600;
+    color: #fff;
+    box-shadow: 2px 2px 5px #ff0;
+  }
+  50% {
+    background-color: #cc00ff;
+    color: #00ffff;
+    box-shadow: 0 0 8px #fff;
+  }
+  75% {
+    background-color: #0000ff;
+    color: #ffcc00;
+    box-shadow: 2px 2px 4px #0ff;
+  }
+  100% {
+    background-color: #ff0000;
+    color: #ffff00;
+    box-shadow: 2px 2px 0 #000;
+  }
+  
+}@keyframes fadeOut {
   0% {
     opacity: 1;
     transform: scale(1);
