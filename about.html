@@ -25,7 +25,7 @@
   </nav>
 
   <!-- Siren Sound for H1 click -->
-  <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
+ <audio id="siren-sound" src="sounds/siren-sound.mp3" preload="auto"></audio>
 
   <!-- Section Title -->
  <section class="section-title">
@@ -219,6 +219,19 @@
 </script>
 
   
+<script>
+  function playSiren() {
+    const siren = document.getElementById("siren-sound");
+
+    if (siren) {
+      siren.currentTime = 0; // Reset to beginning
+      siren.play().catch(err => {
+        console.error("Siren play failed:", err);
+        alert("⚠️ Your browser blocked the audio. Try clicking again.");
+      });
+    }
+  }
+</script>
   <footer>
     Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
   </footer>
