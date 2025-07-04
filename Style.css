@@ -88,6 +88,27 @@ body {
   z-index: 10;
 }
 
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.center-prompt {
+  font-family: 'Commodore 64 Pixelized', monospace;
+  color: #00ffcc;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  animation: blink 1s infinite;
+  cursor: pointer;
+}
+
+
+
 /* Blink animation */
 @keyframes blink {
   0%, 100% { opacity: 1; }
