@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -10,17 +10,23 @@
 <body>
   <div class="c64-screen">
     <div class="top-line">*** COMMODORE 64 BASIC V2 ***</div>
-    <div class="left-line">64K RAM SYSTEM 38911 BASIC BYTES FREE<br>READY.</div>
-   <div class="left-line2">
-  LOADING UXINVESTIGATOR...<br>
-  <span id="ready-text">READY.</span>
-</div>
+    <div class="left-line">
+      64K RAM SYSTEM 38911 BASIC BYTES FREE<br>
+      READY.
+    </div>
+    <div class="left-line2">
+      LOADING UXINVESTIGATOR...<br>
+      <span id="ready-text">READY.</span>
+    </div>
     <div class="center-prompt" id="continue">PRESS ANY KEY TO CONTINUE</div>
-   <div class="scanlines"></div> <!-- 👈 Moved inside screen -->
-</div>
+    <div class="scanlines"></div>
+  </div>
 
-<audio id="key-sound" src="sounds/keyboard-click.mp3" preload="auto"></audio>
-<audio id="blink-sound" src="sounds/retro-blip.mp3" preload="auto"></audio>
+  <!-- Sounds -->
+  <audio id="key-sound" src="sounds/keyboard-click.mp3" preload="auto"></audio>
+  <audio id="blink-sound" src="sounds/retro-blip.mp3" preload="auto"></audio>
+
+  <!-- Handle key or click to go to about.html -->
   <script>
     const continuePrompt = document.getElementById('continue');
     const keySound = document.getElementById('key-sound');
@@ -42,26 +48,46 @@
     });
   </script>
 
-<script>
-  const readyText = document.getElementById('ready-text');
-  const base = "READY";
-  let dotCount = 1;
+  <!-- Blinking "READY." dots animation -->
+  <script>
+    const readyText = document.getElementById('ready-text');
+    const base = "READY";
+    let dotCount = 1;
 
-  setInterval(() => {
-    readyText.textContent = base + ".".repeat(dotCount);
-    dotCount = dotCount < 3 ? dotCount + 1 : 1;
-  }, 400); // 400ms between each dot phase
-</script>
-<script>
-  const blinkSound = document.getElementById('blink-sound');
+    setInterval(() => {
+      readyText.textContent = base + ".".repeat(dotCount);
+      dotCount = dotCount < 3 ? dotCount + 1 : 1;
+    }, 400); // 400ms per phase
+  </script>
 
-  setInterval(() => {
-    blinkSound.currentTime = 0;
-    blinkSound.play().catch(err => {
-      // If autoplay is blocked, don't worry
-      console.warn("Blink sound blocked:", err);
+  <!-- Retro blink sound triggered after interaction -->
+  <script>
+    const blinkSound = document.getElementById('blink-sound');
+    let blinkSoundEnabled = false;
+
+    function enableBlinkSound() {
+      if (!blinkSoundEnabled) {
+        blinkSoundEnabled = true;
+
+        setInterval(() => {
+          if (blinkSound && blinkSoundEnabled) {
+            blinkSound.currentTime = 0;
+            blinkSound.play().catch(err => {
+              console.warn("Blink sound blocked:", err);
+            });
+          }
+        }, 1000); // Match with blink CSS
+      }
+    }
+
+    // Enable after first user interaction
+    document.addEventListener('keydown', enableBlinkSound, { once: true });
+    document.addEventListener('click', enableBlinkSound, { once: true });
+
+    // Optional: Debugging
+    blinkSound.addEventListener('canplaythrough', () => {
+      console.log("✅ Blink sound is ready.");
     });
-  }, 1000); // Match with CSS animation duration
-</script>  
+  </script>
 </body>
 </html>
