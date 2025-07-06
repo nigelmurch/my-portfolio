@@ -229,6 +229,12 @@
         console.error("Siren play failed:", err);
         alert("⚠️ Your browser blocked the audio. Try clicking again.");
       });
+
+      // Stop the siren after 2 seconds
+      setTimeout(() => {
+        siren.pause();
+        siren.currentTime = 0;
+      }, 2000); // 2000 milliseconds = 2 seconds
     }
   }
 </script>
