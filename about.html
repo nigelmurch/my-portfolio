@@ -97,47 +97,50 @@
 
   <!-- Background music file -->
 <!-- Background music -->
-<audio id="bg-music" preload="none">
-  <source src="sounds/bg-music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+<audio id="bg-music" src="sounds/bg-music.mp3" preload="none"></audio>
 
-<!-- Play button -->
-<div class="screen">
-  <h1>UX Investigator</h1>
-  <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
-  <button class="btn" id="playBtn">▶ PLAY</button>
-</div>
+<button id="playBtn" class="btn">▶ PLAY</button>
 
 <script>
   const playBtn = document.getElementById("playBtn");
   const bgMusic = document.getElementById("bg-music");
   let isPlaying = false;
 
-  // This ensures Chrome recognises a real user gesture
+  console.log("🎵 Audio control script loaded");
+
+  // Ensure audio context is ready once user interacts with the page
+  document.addEventListener("click", () => {
+    if (bgMusic.readyState === 0) {
+      console.log("Loading audio file after first user click...");
+      bgMusic.load(); // this allows Chrome to register the file after gesture
+    }
+  }, { once: true });
+
   playBtn.addEventListener("click", async () => {
     try {
       if (!isPlaying) {
+        console.log("Attempting to play music...");
         await bgMusic.play();
         isPlaying = true;
         playBtn.textContent = "⏸ PAUSE";
+        console.log("✅ Music is now playing");
       } else {
+        console.log("Pausing music...");
         bgMusic.pause();
         isPlaying = false;
         playBtn.textContent = "▶ PLAY";
       }
     } catch (err) {
-      console.error("Audio playback blocked:", err);
-      alert("🔇 Chrome blocked the audio. Try clicking the PLAY button again.");
+      console.error("🚫 Audio playback blocked:", err);
+      alert("🔇 Chrome blocked the audio. Please click the PLAY button again.");
     }
   });
 
-  // This ensures Chrome "registers" user interaction properly
-  document.body.addEventListener("click", () => {
-    if (!isPlaying && bgMusic.paused) {
-      bgMusic.load(); // preload audio only after interaction
-    }
-  }, { once: true });
+  // Optional: if you want the music to restart after being paused
+  bgMusic.addEventListener("ended", () => {
+    isPlaying = false;
+    playBtn.textContent = "▶ PLAY";
+  });
 </script>
 
   <!-- Subtle CRT flicker effect -->
