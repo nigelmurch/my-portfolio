@@ -17,6 +17,7 @@ body {
 }
 
 /* CRT container */
+/* CRT container */
 .crt {
   position: relative;
   overflow: hidden;
@@ -85,6 +86,7 @@ body {
   text-align: center;
   margin: 2em;
 }
+
 
 
 /* ========== NAVIGATION ========== */
