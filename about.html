@@ -17,7 +17,7 @@
     <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
 
     <!-- Play button -->
-    <button id="playBtn">Play</button>Broadway Overture.mp3</audio>
+    <button id="playBtn">▶ PLAY</button>
 
 
     <div class="about">
@@ -97,16 +97,27 @@
   </div>
 
   <!-- Background music file -->
-<audio id="bg-music" src="soundsBroadway Overture.mp3" preload="auto" crossorigin="anonymous"></audio>
-
 <script>
   const playBtn = document.getElementById("playBtn");
   const audioElement = document.getElementById("bg-music");
 
   let isPlaying = false;
+  let audioCtx; // Will create only after user clicks
 
   playBtn.addEventListener("click", async () => {
     try {
+      // Create AudioContext only after user gesture
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const track = audioCtx.createMediaElementSource(audioElement);
+        track.connect(audioCtx.destination);
+      }
+
+      // Resume context if suspended
+      if (audioCtx.state === "suspended") {
+        await audioCtx.resume();
+      }
+
       if (!isPlaying) {
         await audioElement.play();
         isPlaying = true;
@@ -124,6 +135,7 @@
     }
   });
 </script>
+
 
   <!-- Subtle CRT flicker effect -->
   <script>
