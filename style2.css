@@ -43,6 +43,33 @@ h1 {
   color: #ffa502;
 }
 
+.btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.9rem;
+  color: #00ffff;
+  background: #12003b;
+  border: 2px solid #00ffff;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow:
+    0 0 10px #00ffff,
+    inset 0 0 10px rgba(0, 255, 255, 0.5);
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #00ffff;
+  color: #12003b;
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+.btn.playing {
+  background: #00ffff;
+  color: #12003b;
+  box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+}
 /* === Retro Button === */
 .retro-button {
   display: inline-block;
