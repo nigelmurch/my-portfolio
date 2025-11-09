@@ -121,11 +121,10 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
+   <script>
     const music = document.getElementById("bg-music");
     const playPauseBtn = document.getElementById("playPauseBtn");
     const volumeControl = document.getElementById("volumeControl");
-
     let isPlaying = false;
 
     playPauseBtn.addEventListener("click", () => {
@@ -134,7 +133,6 @@
           .then(() => {
             isPlaying = true;
             playPauseBtn.textContent = "⏸ Pause";
-            console.log("Music is playing");
           })
           .catch((error) => {
             console.error("Error playing audio:", error);
@@ -152,96 +150,91 @@
     });
   </script>
 
+  <!-- Sparkle trail on mousemove -->
   <script>
-  document.addEventListener('mousemove', (e) => {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.left = `${e.pageX}px`;
-    sparkle.style.top = `${e.pageY}px`;
-    document.body.appendChild(sparkle);
-
-    setTimeout(() => {
-      sparkle.remove();
-    }, 600); // Remove after animation
-  });
-</script>
-
-<script>
-  const sparkleWrapper = document.querySelector('.sparkle-frame-wrapper');
-  const sparkles = document.querySelectorAll('.pixel-sparkle');
-  const total = sparkles.length;
-  let angle = 0;
-
-  function animateSparkles() {
-    const rect = sparkleWrapper.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    const radius = 40; // Tighter orbit
-
-    sparkles.forEach((sparkle, index) => {
-      const offset = (Math.PI * 2 * index) / total;
-      const currentAngle = angle + offset;
-      const x = centerX + radius * Math.cos(currentAngle);
-      const y = centerY + radius * Math.sin(currentAngle);
-      sparkle.style.left = `${x}px`;
-      sparkle.style.top = `${y}px`;
+    document.addEventListener('mousemove', (e) => {
+      const sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 600);
     });
+  </script>
 
-    angle += 0.03;
-    requestAnimationFrame(animateSparkles);
-  }
-
-  animateSparkles();
-</script>
+  <!-- Orbiting sparkles animation -->
   <script>
-  const sparkleContainer = document.querySelector('.pixel-sparkles');
-  const sparkles = sparkleContainer.querySelectorAll('.pixel-sparkle');
-  const sparkleWrapper = document.querySelector('.sparkle-frame-wrapper');
-
-  let angle = 0;
-  const radius = 60;
-
-  function animateOrbit() {
-    const centerX = sparkleWrapper.offsetWidth / 2;
-    const centerY = sparkleWrapper.offsetHeight / 2;
+    const sparkleWrapper = document.querySelector('.sparkle-frame-wrapper');
+    const sparkles = document.querySelectorAll('.pixel-sparkle');
     const total = sparkles.length;
+    let angle = 0;
 
-    sparkles.forEach((sparkle, i) => {
-      const theta = angle + (i * (2 * Math.PI)) / total;
-      const x = centerX + radius * Math.cos(theta);
-      const y = centerY + radius * Math.sin(theta);
-      sparkle.style.transform = `translate(${x}px, ${y}px)`;
-    });
+    function animateSparkles() {
+      const rect = sparkleWrapper.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      const radius = 40;
+      sparkles.forEach((sparkle, index) => {
+        const offset = (Math.PI * 2 * index) / total;
+        const currentAngle = angle + offset;
+        const x = centerX + radius * Math.cos(currentAngle);
+        const y = centerY + radius * Math.sin(currentAngle);
+        sparkle.style.left = `${x}px`;
+        sparkle.style.top = `${y}px`;
+      });
+      angle += 0.03;
+      requestAnimationFrame(animateSparkles);
+    }
+    animateSparkles();
+  </script>
 
-    angle += 0.02;
-    requestAnimationFrame(animateOrbit);
-  }
+  <!-- Alternate sparkle orbit (if using pixel-sparkles wrapper) -->
+  <script>
+    const sparkleContainer = document.querySelector('.pixel-sparkles');
+    const orbitSparkles = sparkleContainer.querySelectorAll('.pixel-sparkle');
+    const sparkleOrbitWrapper = document.querySelector('.sparkle-frame-wrapper');
+    let orbitAngle = 0;
+    const radius = 60;
 
-  animateOrbit();
-</script>
+    function animateOrbit() {
+      const centerX = sparkleOrbitWrapper.offsetWidth / 2;
+      const centerY = sparkleOrbitWrapper.offsetHeight / 2;
+      const total = orbitSparkles.length;
 
-  
-<script>
-  function playSiren() {
-    const siren = document.getElementById("siren-sound");
-
-    if (siren) {
-      siren.currentTime = 0; // Reset to beginning
-      siren.play().catch(err => {
-        console.error("Siren play failed:", err);
-        alert("⚠️ Your browser blocked the audio. Try clicking again.");
+      orbitSparkles.forEach((sparkle, i) => {
+        const theta = orbitAngle + (i * (2 * Math.PI)) / total;
+        const x = centerX + radius * Math.cos(theta);
+        const y = centerY + radius * Math.sin(theta);
+        sparkle.style.transform = `translate(${x}px, ${y}px)`;
       });
 
-      // Stop the siren after 4 seconds
-      setTimeout(() => {
-        siren.pause();
-        siren.currentTime = 0;
-      }, 4000); // 4000 milliseconds = 4 seconds
+      orbitAngle += 0.02;
+      requestAnimationFrame(animateOrbit);
     }
-  }
-</script>
+    animateOrbit();
+  </script>
+
+  <!-- New Siren Script -->
+  <script>
+    function playSiren() {
+      const siren = document.getElementById("siren-sound");
+      if (siren) {
+        siren.currentTime = 0;
+        siren.play().catch(err => {
+          console.error("Siren play failed:", err);
+          alert("⚠️ Your browser blocked the audio. Try clicking again.");
+        });
+        setTimeout(() => {
+          siren.pause();
+          siren.currentTime = 0;
+        }, 4000);
+      }
+    }
+  </script>
+
   <footer>
-    Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, “Go Ahead” by Gerald Olivieri – from Uppbeat.io
+    Police Siren Sound Effect By Jurij & Keyboard Click By CreatorsHome from Pixabay, 
+    “Go Ahead” by Gerald Olivieri – from Uppbeat.io
   </footer>
 </body>
 </html>
