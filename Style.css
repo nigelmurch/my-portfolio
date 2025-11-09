@@ -1,84 +1,27 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: #0000aa;
   color: #ffffff;
-  font-family: 'Commodore 64 Pixelized', monospace;
-  font-size: 2rem;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-family: 'Commodore 64 Pixelized', 'Courier New', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
 }
 
-/* Main C64 screen container */
-.c64-screen {
-  width: 100%;
-  max-width: 800px;
-  height: 100vh;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/* Top line centered */
-.top-line {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
-  text-align: center;
-  white-space: nowrap;
-}
-/* Left-aligned boot text */
-.left-line {
+/* Retro scanlines overlay */
+body::before {
+  content: "";
   position: fixed;
-  top: 60px;
-  left: 0;
-  padding-left: 1rem;
-  font-size: 1.5rem;
-  white-space: pre-line;
-}
-
-.left-line2 {
-  position: fixed;
-  top: 120px;
-  left: 0;
-  padding-left: 1rem;
-  font-size: 1.5rem;
-  white-space: pre-line;
-}
-
-/* Centered blinking prompt */
-.center-prompt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #00ffcc;
-  font-family: 'Commodore 64 Pixelized', monospace;
-  font-weight: bold;
-  font-size: 3.2rem;
-  animation: blink 1s steps(2, start) infinite;
-  cursor: pointer;
-  text-align: center;
-  width: 100%;
-  padding: 0 1rem;
-}
-
-/* Retro scanlines */
-.scanlines {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   background: repeating-linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.1) 0px,
@@ -86,50 +29,270 @@ body {
     transparent 2px,
     transparent 4px
   );
-  z-index: 10;
+  pointer-events: none;
+  z-index: 9999;
 }
 
-@keyframes blink {
-  0%, 50%, 100% {
-    opacity: 1;
+/* CRT flicker effect */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+}
+
+/* Main screen container */
+.screen {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+/* Typography */
+h1 {
+  font-family: 'Commodore 64 Pixelized', 'Press Start 2P', monospace;
+  color: #00ffcc;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 0 #0088aa;
+  letter-spacing: 2px;
+  animation: blink 2s ease-in-out infinite;
+}
+
+h2 {
+  font-family: 'Commodore 64 Pixelized', monospace;
+  color: #ffff00;
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0 #aa0000;
+}
+
+h3 {
+  font-family: 'Commodore 64 Pixelized', monospace;
+  color: #00ffcc;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+  line-height: 1.8;
+}
+
+p, li {
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #aaaaff;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.highlight {
+  color: #00ffcc;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Play button with C64 style */
+#playBtn {
+  display: block;
+  margin: 2rem auto;
+  font-family: 'Commodore 64 Pixelized', monospace;
+  background: #aa00aa;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 0 #550055;
+  transition: all 0.1s;
+}
+
+#playBtn:hover {
+  background: #ff00ff;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #550055;
+}
+
+#playBtn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* About section */
+.about {
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 4px solid #00ffcc;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Work container */
+.work-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+}
+
+.work-card {
+  background: rgba(0, 0, 170, 0.5);
+  border: 6px solid #ffffff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.work-content {
+  margin-top: 1.5rem;
+}
+
+/* Image styling */
+.work-image {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto 2rem;
+  border: 6px solid #00ffcc;
+  filter: contrast(1.3) brightness(0.9);
+  box-shadow: 0 0 20px #00ffcc;
+}
+
+/* Spin-in animation for image */
+.spin-in {
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #00ffcc;
   }
-  25%, 75% {
-    opacity: 0;
+  to {
+    box-shadow: 0 0 40px #00ffff;
   }
 }
 
-/* Blink animation */
+/* List styling */
+.work-content ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.work-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.work-content ul li::before {
+  content: "▸ ";
+  color: #00ffcc;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Signature section */
+.signature {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 4px solid #ffff00;
+  border-bottom: 4px solid #ffff00;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.signature strong {
+  color: #00ffcc;
+  font-size: 1.4rem;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Return home button */
+.retro-button {
+  font-family: 'Commodore 64 Pixelized', monospace;
+  background: #aa00aa;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 0 #550055;
+  transition: all 0.1s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.retro-button:hover {
+  background: #ff00ff;
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #550055;
+}
+
+.retro-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #aaaaff;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-top: 4px solid #00ffcc;
+  margin-top: 3rem;
+}
+
+/* Blink animation for headings */
 @keyframes blink {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  50% { opacity: 0.7; }
 }
 
-/* Responsive Fixes */
+/* Content wrapper for centered layout */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   body {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
-
-  .top-line {
-    font-size: 1.2rem;
-    top: 10px;
+  
+  .screen {
+    margin: 1rem;
+    padding: 1.5rem 1rem;
   }
-
-  .left-line,
-  .left-line2 {
-    font-size: 1rem;
-    padding-left: 0.5rem;
+  
+  h1 {
+    font-size: 1.5rem;
   }
-
-  .left-line {
-    top: 50px;
+  
+  h2 {
+    font-size: 1.3rem;
   }
-
-  .left-line2 {
-    top: 90px;
+  
+  h3 {
+    font-size: 1.1rem;
   }
-
-  .center-prompt {
-    font-size: 1.4rem;
+  
+  #playBtn, .retro-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .work-image {
+    max-width: 100%;
   }
 }
