@@ -68,3 +68,88 @@ h1 {
   background-color: #ffa502;
   color: #000;
 }
+
+/* Container holds multiple work cards (if needed later) */
+.work-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Each card */
+.work-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background: #0019A8; /* your retro blue */
+  border: 2px solid #ff0044;
+  box-shadow: 0 0 15px rgba(255, 0, 100, 0.3);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1.5rem;
+  gap: 2rem;
+}
+
+/* Image inside card */
+.work-image {
+  flex: 0 0 250px; /* fixed image width, but can adjust */
+  height: auto;
+  max-width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 2px solid #ff00aa;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .work-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .work-image {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+}
+
+/* Optional subtle entrance effect */
+.spin-in {
+  animation: spinIn 1s ease-out forwards;
+}
+
+@keyframes spinIn {
+  from {
+    transform: rotate(-10deg) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Text content */
+.work-content {
+  flex: 1;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.work-content h3 {
+  color: #ffefaa;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #00ffcc;
+  background: rgba(0,0,0,0.3);
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
