@@ -1,3 +1,12 @@
+/* Color Palette */
+:root {
+  --deep-black: #0B0B0B;
+  --burnt-red: #8A2E23;
+  --soft-light: #EAE6DF;
+  --highlight: #ffa502;
+}
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -5,371 +14,89 @@
 }
 
 body {
-  font-family: "JetBrains Mono", monospace, sans-serif;
- background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  overflow-x: hidden;
-}
-
-/* Optional non-destructive CRT overlay */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  pointer-events: none;
-  z-index: 9999;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0,0,0,0) 0px,
-    rgba(0,0,0,0.15) 2px,
-    rgba(0,0,0,0) 4px
-  );
-  animation: flicker 0.15s infinite;
-}
-
-@keyframes flicker {
-  0%, 100% { opacity: 0.9; }
-  50% { opacity: 1; }
-}
-/* ========== NAVIGATION ========== */
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
-}
-
-.logo {
-  height: 4em;
-  width: auto;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.nav-links li a {
-  font-family: 'Press Start 2P', monospace;
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.nav-links li a.active {
-  text-decoration: underline;
-  color: orange;
-}
-
-.nav-links li a:hover {
-  background-color: darkblue;
-  color: #0dff35;
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
-/* ========== SECTION TITLE & BADGE ========== */
-.section-title {
-  margin-top: 4rem;
-  text-align: center;
-}
-
-.title-with-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.title-with-badge h1 {
-  animation: sirenFlash 0.6s infinite alternate;
-  text-shadow: 0 0 15px red;
-  color: red;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 4.5rem;
-  margin-bottom: 1rem;
-}
-
-.badge-icon {
-  width: 100px;
-  height: auto;
-  margin-top: 0.5rem;
-  
-}
-
-.section-title h2 {
-  font-family: "Open Sans", sans-serif;
-  font-size: 4.5rem;
-  font-style: italic;
-  color: #ffccff;
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-/* ========== QUOTE ========== */
-.quote-wrapper {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.quote {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #ffffff;
-}
-
-/* ========== MUSIC CONTROLS ========== */
-.music-controls-container {
-  position: absolute;
-  top: 480px;
-  left: 385px;
-  z-index: 10;
-}
-
-.music-controls {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#playPauseBtn {
-  background-color: #220044;
-  border: 3px solid #ff007f;
-  color: #00ffff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 0.9rem;
-  padding: 14px 18px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00e5ff, 0 0 25px #00ffff;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-#playPauseBtn:hover {
-  background-color: #000055;
-  box-shadow: 0 0 20px #ff007f, 0 0 30px #00ffff;
-  color: white;
-}
-
-#volumeControl {
-  width: 100px;
-}
-
-/* ========== SIREN KEYFRAME ========== */
-@keyframes sirenFlash {
-  0% { color: red; text-shadow: 0 0 15px red; }
-  50% { color: white; text-shadow: 0 0 5px white; }
-  100% { color: blue; text-shadow: 0 0 15px blue; }
-}
-
-/* ========== WORK SECTION ========== */
-.work-container {
-  max-width: 1800px;
-  margin: 3rem auto;
-  padding: 2rem;
-}
-
-.work-card {
-  background-color: #000aa0;
-  border: 3px solid #ff007f;
-  padding: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 0 20px #00e5ff;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.work-image {
-  width: 100%;
-  max-width: 450px;
-  border: 3px solid white;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-.work-content h3 {
-  font-size: 3.2rem;
-  font-style: italic;
-  color: #66e0ff;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.work-content p {
-  margin-bottom: 0.9rem;
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.work-content ul {
-  margin: 0 0 2rem;
-  padding-left: 1.5rem;
-}
-
-.work-content ul li {
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #f507b2;
-}
-
-.highlight {
-  font-family: 'Press Start 2P', monospace;
-  color: #ffff00; /* Bright yellow text */
-  background-color: #ff0000; /* Retro red background */
-  padding: 0.2em 0.4em;
-  border: 2px solid #000;
-  box-shadow: 2px 2px 0 #000;
-  text-transform: uppercase;
-  animation: flickerGlow 2s infinite alternate;
-}.signature {
-  margin-top: 2.5rem;
-  color: #fff;
-  text-align: left;
-  font-size: 0.9rem;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--deep-black);
+  color: var(--soft-light);
   line-height: 1.6;
 }
 
-/* ========== RETRO BUTTON ========== */
-.retro-button {
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.title {
+  font-size: 3rem;
+  color: var(--burnt-red);
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: var(--soft-light);
+}
+
+/* Buttons */
+.btn {
   display: inline-block;
-  padding: 18px 24px;
-  font-family: 'Press Start 2P', monospace;
+  padding: 12px 24px;
   font-size: 1rem;
-  color: #00ffff;
-  background-color: black;
-  border: 3px solid #ff007f;
-  border-radius: 8px;
-  text-decoration: none;
-  text-transform: uppercase;
-  box-shadow: 0 0 10px #00ffff, 0 0 20px #ff007f;
-  transition: all 0.3s ease;
-  margin-top: 2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.retro-button:hover {
-  background-color: #ff007f;
-  color: white;
-  border-color: white;
-  box-shadow: 0 0 20px white, 0 0 30px #ff007f;
+.btn.primary {
+  background-color: var(--highlight);
+  color: var(--deep-black);
 }
 
-.sparkle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  box-shadow: 0 0 6px #00ffff, 0 0 12px #ff00ff;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: fadeOut 0.6s forwards;
-  z-index: 9999;
+.btn.primary:hover,
+.btn.primary:focus {
+  background-color: var(--burnt-red);
+  color: var(--soft-light);
 }
 
-@keyframes flickerGlow {
-  0% {
-    background-color: #ff0000;
-    color: #ffff00;
-    box-shadow: 2px 2px 0 #000;
-  }
-  25% {
-    background-color: #ff6600;
-    color: #fff;
-    box-shadow: 2px 2px 5px #ff0;
-  }
-  50% {
-    background-color: #cc00ff;
-    color: #00ffff;
-    box-shadow: 0 0 8px #fff;
-  }
-  75% {
-    background-color: #0000ff;
-    color: #ffcc00;
-    box-shadow: 2px 2px 4px #0ff;
-  }
-  100% {
-    background-color: #ff0000;
-    color: #ffff00;
-    box-shadow: 2px 2px 0 #000;
-  }
-  
-}@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-}
-@keyframes spinInFromLeft {
-  0% {
-    transform: translateX(-100vw) rotate(-720deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-  }
+.btn.secondary {
+  background-color: transparent;
+  color: var(--highlight);
+  border: 2px solid var(--highlight);
+  margin-top: 20px;
 }
 
-.spin-in {
-  animation: spinInFromLeft 2s ease-out forwards;
+.btn.secondary:hover,
+.btn.secondary:focus {
+  background-color: var(--highlight);
+  color: var(--deep-black);
 }
 
+/* Content Section */
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+}
 
-/* ========== RESPONSIVE ========== */
-@media screen and (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
+.about h2 {
+  font-size: 2rem;
+  color: var(--burnt-red);
+  margin-bottom: 15px;
+}
 
-  .nav-bar {
-    flex-direction: column;
-    padding: 20px 10px;
-  }
+.about p {
+  margin-bottom: 15px;
+}
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
+.highlight {
+  color: var(--highlight);
+  font-weight: bold;
+}
 
-  h1, h2 {
-    font-size: 2.5rem;
-  }
-
-  .work-card {
-    padding: 2rem;
-  }
-
-  .work-content h3 {
-    font-size: 2.5rem;
-  }
-
-  .work-content p,
-  .work-content ul li,
-  .signature {
-    font-size: 1.2rem;
-  }
-
-  .retro-button {
-    padding: 12px 18px;
-    font-size: 0.8rem;
-  }
+/* Accessibility */
+.btn:focus {
+  outline: 3px solid var(--soft-light);
 }
