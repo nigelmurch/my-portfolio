@@ -43,32 +43,74 @@ h1 {
   color: #ffa502;
 }
 
-/* Retro Buttons */
-.btn {
+/* === Retro Button === */
+.retro-button {
   display: inline-block;
-  background-color: black;
-  color: white;
-  border: 3px solid #ff00ff;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
+  font-family: 'Press Start 2P', monospace; /* Pixel font vibe */
+  font-size: 0.9rem;
+  color: #00ffff;
+  background: #12003b;
+  border: 2px solid #00ffff;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  box-shadow:
+    0 0 8px #00ffff,
+    inset 0 0 8px #00ffff,
+    0 0 20px rgba(0, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background-color: #ff00ff;
-  color: #000;
+/* Subtle CRT flicker overlay */
+.retro-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0.1) 0px,
+    rgba(0, 255, 255, 0.05) 2px,
+    transparent 3px,
+    transparent 4px
+  );
+  mix-blend-mode: overlay;
+  animation: flicker 1.8s infinite;
+  pointer-events: none;
 }
 
-.secondary {
-  border-color: #ffa502;
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+  }
 }
 
-.secondary:hover {
-  background-color: #ffa502;
-  color: #000;
+/* Hover effect: glow intensifies, neon pulse */
+.retro-button:hover {
+  background: #00ffff;
+  color: #12003b;
+  border-color: #fff;
+  box-shadow:
+    0 0 20px #00ffff,
+    0 0 40px #00ffff,
+    0 0 80px rgba(0, 255, 255, 0.8);
+  transform: scale(1.05);
 }
 
+/* Click feedback */
+.retro-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 10px #00ffff;
+}
 /* Container holds multiple work cards (if needed later) */
 .work-container {
   display: flex;
