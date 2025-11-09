@@ -17,7 +17,8 @@
     <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
 
     <!-- Play button -->
-    <button class="btn" id="playBtn">▶ PLAY</button>
+    <button id="playBtn">Play</button>Broadway Overture.mp3</audio>
+
 
     <div class="about">
       <h2>THE USER</h2>
@@ -102,21 +103,10 @@
   const playBtn = document.getElementById("playBtn");
   const audioElement = document.getElementById("bg-music");
 
-  // Create an AudioContext — Chrome won't allow it until a user gesture
-  const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  const track = audioCtx.createMediaElementSource(audioElement);
-  track.connect(audioCtx.destination);
-
   let isPlaying = false;
 
   playBtn.addEventListener("click", async () => {
     try {
-      // Ensure audio context is resumed (required by Chrome)
-      if (audioCtx.state === "suspended") {
-        await audioCtx.resume();
-        console.log("Audio context resumed");
-      }
-
       if (!isPlaying) {
         await audioElement.play();
         isPlaying = true;
@@ -134,6 +124,7 @@
     }
   });
 </script>
+
   <!-- Subtle CRT flicker effect -->
   <script>
     setInterval(() => {
