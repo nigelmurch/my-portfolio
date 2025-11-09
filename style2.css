@@ -23,6 +23,52 @@ body {
   position: relative;
 }
 
+/* ------------------ NAVIGATION ------------------ */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.logo {
+  height: 4em;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.nav-links li a {
+  font-family: 'Press Start 2P', monospace;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links li a.active {
+  text-decoration: underline;
+  color: orange;
+}
+
+.nav-links li a:hover {
+  background-color: darkblue;
+  color: #0dff35;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
 /* CRT Screen Effect */
 body::before {
   content: "";
