@@ -99,30 +99,39 @@
   <audio id="bg-music" src="sounds/bg-music.mp3" preload="auto"></audio>
 
   <!-- Working JavaScript for play/pause -->
-  <script>
-    const playBtn = document.getElementById("playBtn");
-    const bgMusic = document.getElementById("bg-music");
-    let isPlaying = false;
+<script>
+  const playBtn = document.getElementById("playBtn");
+  const bgMusic = document.getElementById("bg-music");
+  let isPlaying = false;
 
-    playBtn.addEventListener("click", async () => {
-      try {
-        if (!isPlaying) {
-          await bgMusic.play();
-          isPlaying = true;
-          playBtn.textContent = "⏸ PAUSE";
-          playBtn.classList.add("playing");
-        } else {
-          bgMusic.pause();
-          isPlaying = false;
-          playBtn.textContent = "▶ PLAY";
-          playBtn.classList.remove("playing");
-        }
-      } catch (error) {
-        console.error("Error playing audio:", error);
-        alert("⚠️ Your browser blocked the audio. Try clicking again.");
+  // ensure music is allowed to start when user clicks
+  playBtn.addEventListener("click", async () => {
+    try {
+      if (!isPlaying) {
+        // Allow playback only after explicit click
+        await bgMusic.play();
+        isPlaying = true;
+        playBtn.textContent = "⏸ PAUSE";
+        playBtn.classList.add("playing");
+      } else {
+        bgMusic.pause();
+        isPlaying = false;
+        playBtn.textContent = "▶ PLAY";
+        playBtn.classList.remove("playing");
       }
-    });
-  </script>
+    } catch (error) {
+      console.warn("Chrome blocked autoplay — user must click directly.");
+      alert("🔊 Click the PLAY button again to start the music.");
+    }
+  });
+
+  // This ensures Chrome "registers" user interaction properly
+  document.body.addEventListener("click", () => {
+    if (!isPlaying && bgMusic.paused) {
+      bgMusic.load(); // preload audio only after interaction
+    }
+  }, { once: true });
+</script>
 
   <!-- Subtle CRT flicker effect -->
   <script>
