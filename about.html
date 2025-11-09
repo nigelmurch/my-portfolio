@@ -33,13 +33,19 @@
      <h1 class="ux-investigator" onclick="playSiren()">UX Investigator</h1>
       <img src="images/badge for portfolio-1.png" alt="Badge" class="badge-icon" />
     </div>
- <h1>UX Investigator</h1>
-<p><strong>Nigel.exe Information Dump</strong></p>
-<p>"Your users have secrets. I find them (ethically, of course)."</p>
-    <!-- Quote Centered Horizontally & Vertically Below -->
-    <div class="quote-wrapper">
-      <p class="quote">"Your users have secrets. I find them." <em>(ethically, of course)</em></p>
-    </div>
+   
+<main>
+    <h1>UX Investigator</h1>
+    <p><strong>Nigel.exe Information Dump</strong></p>
+    <p>"Your users have secrets. I find them (ethically, of course)."</p>
+
+    <button id="playPauseBtn">▶ Play</button>
+    <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="0.5">
+
+    <audio id="bg-music" src="your-audio.mp3" loop></audio>
+    <audio id="siren-sound" src="siren.mp3"></audio>
+  </main>
+
   </section>
 
    <!-- Retro Music Controls + Audio -->
