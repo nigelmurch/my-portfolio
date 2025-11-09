@@ -6,11 +6,86 @@
 
 body {
   font-family: "JetBrains Mono", monospace, sans-serif;
-  background-color: #0000aa;
-  color: #f0f0f0;
+ background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   padding: 2rem;
   overflow-x: hidden;
 }
+
+/* CRT container */
+.crt {
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  height: 90vh;
+  background: #0000aa; /* classic DOS blue */
+  border: 2px solid #330099;
+  box-shadow:
+    0 0 25px rgba(0,255,255,0.4),
+    inset 0 0 50px rgba(0,0,255,0.2);
+
+  border-radius: 8px;
+  transform: perspective(800px) rotateX(2deg);
+  filter: contrast(1.1) brightness(0.9) saturate(1.2);
+}
+
+/* Scanlines overlay */
+.crt::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0px,
+    rgba(0,0,0,0.15) 2px,
+    rgba(0,0,0,0) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+  animation: flicker 0.15s infinite;
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 1; }
+}
+
+/* RGB glow and reflection overlay */
+.crt::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255,255,255,0.1), transparent 70%),
+    repeating-linear-gradient(to right,
+      rgba(255,0,0,0.05),
+      rgba(0,255,0,0.05),
+      rgba(0,0,255,0.05),
+      rgba(255,0,0,0.05) 3px
+    );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Slight blur and glow for text */
+.crt-content {
+  filter: blur(0.3px);
+  transform: scale(1.01);
+  z-index: 1;
+  position: relative;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 0 0 2px #0ff, 0 0 5px #0ff;
+  text-align: center;
+  margin: 2em;
+}
+
 
 /* ========== NAVIGATION ========== */
 .nav-bar {
