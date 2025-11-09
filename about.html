@@ -17,7 +17,10 @@
     <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
 
     <!-- Play button -->
-    <button id="playBtn">▶ PLAY</button>
+   
+<button id="playBtn">▶ PLAY</button>
+<audio id="bg-mudio>
+
 
 
     <div class="about">
@@ -97,27 +100,16 @@
   </div>
 
   <!-- Background music file -->
+<button id="playBtn">▶ PLAY</button>
+<audio id="bg-mudio>
+
 <script>
   const playBtn = document.getElementById("playBtn");
   const audioElement = document.getElementById("bg-music");
-
   let isPlaying = false;
-  let audioCtx; // Will create only after user clicks
 
   playBtn.addEventListener("click", async () => {
     try {
-      // Create AudioContext only after user gesture
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const track = audioCtx.createMediaElementSource(audioElement);
-        track.connect(audioCtx.destination);
-      }
-
-      // Resume context if suspended
-      if (audioCtx.state === "suspended") {
-        await audioCtx.resume();
-      }
-
       if (!isPlaying) {
         await audioElement.play();
         isPlaying = true;
@@ -131,7 +123,7 @@
       }
     } catch (err) {
       console.error("Audio play failed:", err);
-      alert("🔇 Chrome blocked the audio. Try clicking again.");
+      alert("🔇 Chrome blocked the audio. Please click again.");
     }
   });
 </script>
