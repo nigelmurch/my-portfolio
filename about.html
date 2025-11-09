@@ -96,32 +96,39 @@
   </div>
 
   <!-- Background music file -->
- <audio id="bg-music" src="sounds/bg-music.mp3" preload="none"></audio>
+<!-- Background music -->
+<audio id="bg-music" preload="none">
+  <source src="sounds/bg-music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
-  <!-- Working JavaScript for play/pause -->
+<!-- Play button -->
+<div class="screen">
+  <h1>UX Investigator</h1>
+  <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
+  <button class="btn" id="playBtn">▶ PLAY</button>
+</div>
+
 <script>
   const playBtn = document.getElementById("playBtn");
   const bgMusic = document.getElementById("bg-music");
   let isPlaying = false;
 
-  // ensure music is allowed to start when user clicks
+  // This ensures Chrome recognises a real user gesture
   playBtn.addEventListener("click", async () => {
     try {
       if (!isPlaying) {
-        // Allow playback only after explicit click
         await bgMusic.play();
         isPlaying = true;
         playBtn.textContent = "⏸ PAUSE";
-        playBtn.classList.add("playing");
       } else {
         bgMusic.pause();
         isPlaying = false;
         playBtn.textContent = "▶ PLAY";
-        playBtn.classList.remove("playing");
       }
-    } catch (error) {
-      console.warn("Chrome blocked autoplay — user must click directly.");
-      alert("🔊 Click the PLAY button again to start the music.");
+    } catch (err) {
+      console.error("Audio playback blocked:", err);
+      alert("🔇 Chrome blocked the audio. Try clicking the PLAY button again.");
     }
   });
 
