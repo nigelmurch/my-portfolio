@@ -23,28 +23,4 @@ h1.addEventListener('click', () => {
   setTimeout(() => h1.classList.remove('siren-active'), 2000); // remove after 2s
 });
 
-// Select the elements
-const music = document.getElementById("bg-music");
-const playButton = document.querySelector(".btn");
 
-let isPlaying = false;
-
-playButton.addEventListener("click", () => {
-  if (!isPlaying) {
-    music.play()
-      .then(() => {
-        isPlaying = true;
-        playButton.textContent = "⏸ PAUSE";
-        playButton.classList.add("playing");
-      })
-      .catch((error) => {
-        console.error("Error playing audio:", error);
-        alert("⚠️ Your browser blocked autoplay. Try clicking again.");
-      });
-  } else {
-    music.pause();
-    isPlaying = false;
-    playButton.textContent = "▶ PLAY";
-    playButton.classList.remove("playing");
-  }
-});
