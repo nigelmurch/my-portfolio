@@ -6,7 +6,7 @@
 }
 
 body {
-  background: var(--c64-blue);
+   background: var(--c64-blue);
   color: var(--c64-text);
   font-family: 'Courier New', 'Press Start 2P', monospace;
   line-height: 1.6;
