@@ -24,7 +24,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: var(--bg-color);
+  background-color: #3E31A2;
   color: var(--text-color);
   font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
