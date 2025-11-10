@@ -22,43 +22,62 @@
     </ul>
   </div>
 
-  <!-- Page Title -->
-  <header class="section-title">
+    <!-- Page Title -->
+  class="section-title">
     <h1>INDIVIDUAL WORK</h1>
     <h2>Pixel-perfect solo missions by Nigel Murch</h2>
   </header>
 
-  <!-- Main Content Section -->
+
+   <!-- Main Content Section -->
   <section class="individual-work-grid">
     <div class="work-card">
       <h3 class="pixel-underline">Case Study</h3>
-      <p>Research-led project highlighting the benefits of consuming wild, invasive species benefiting both environment and health.</p>
-      <a href="case-studies.html" class="retro-button">View Case Studies</a>
+      <p>Research-led project highlighting the benefits of consuming wild, invasive species, benefiting both the environment and health.</p>
+      <button class="retro-button" data-modal="modal1">View Case Studies</button>
     </div>
 
     <div class="work-card">
       <h3 class="pixel-underline">Flavours By Papatūānuku</h3>
       <p>Eco-conscious food service design—eat wild, protect nature, feed those suffering with financial oppression.</p>
-      <a href="fbp-details.html" class="retro-button">See Details</a>
+      <button class="retro-button" data-modal="modal2">See Details</button>
     </div>
 
     <div class="work-card">
       <h3 class="pixel-underline">Interactive Design</h3>
-      <p>Design inspired by nature with an earthy warm colour palette, and a strong environmental tone of voice.</p>
-      <a href="fbp-website-design.html" class="retro-button">Website Design</a>
+      <p>Design inspired by nature with an earthy, warm colour palette, and a strong environmental tone of voice.</p>
+      <button class="retro-button" data-modal="modal3">Website Design</button>
     </div>
   </section>
 
-  <!-- Retro Modal -->
-  <div class="retro-modal">
+  <!-- Retro Modals -->
+  <div id="modal1" class="retro-modal hidden">
     <div class="retro-modal-header">
-      <h2 class="pixel-underline">About My Individual Work</h2>
+      <h2 class="pixel-underline">Case Study Details</h2>
     </div>
     <div class="retro-modal-body">
-      <p>This section showcases my individual designs and research projects developed during my studies. I was proud to have developed a project that reflects a deep commitment to human-centered design, cultural relevance, and sustainable impact.</p>
-      <p>From UX/UI prototypes to service design research and interactive storytelling, this project demonstrates my ability to empathize with users, integrate stakeholder insights, and deliver innovative digital solutions grounded in community needs and lived experience.</p>
-      <p>Whether exploring eco-conscious food systems, digital equity, or inclusive access to services, my work contributes to a wider vision of equity, sustainability, and cultural respect.</p>
-      <p>I invite you to explore the portfolio with curiosity and a future-focused mindset. These projects—both individual and group—are just the beginning of a lifelong design journey with purpose and impact.</p>
+      <p>Full case study details go here...</p>
+      <button class="retro-button close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="modal2" class="retro-modal hidden">
+    <div class="retro-modal-header">
+      <h2 class="pixel-underline">Flavours By Papatūānuku</h2>
+    </div>
+    <div class="retro-modal-body">
+      <p>Details about eco-conscious food service design...</p>
+      <button class="retro-button close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="modal3" class="retro-modal hidden">
+    <div class="retro-modal-header">
+      <h2 class="pixel-underline">Interactive Design</h2>
+    </div>
+    <div class="retro-modal-body">
+      <p>Details about interactive design inspired by nature...</p>
+      <button class="retro-button close-modal">Close</button>
     </div>
   </div>
 
@@ -67,5 +86,6 @@
     <p>2024 Flavours By Papatūānuku | All Rights Reserved</p>
   </footer>
 
+  script.js</script>
 </body>
 </html>
