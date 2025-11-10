@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-body {
+html,body {
    background: var(--c64-blue);
   color: var(--c64-text);
   font-family: 'Courier New', 'Press Start 2P', monospace;
