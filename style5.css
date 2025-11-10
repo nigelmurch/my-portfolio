@@ -22,59 +22,10 @@
 html, body {
   background: var(--c64-blue);
   color: var(--c64-text);
-  font-family: 'Courier New', 'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
-}
-
-/* ===========================
-   Navigation
-=========================== */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.logo {
-  height: 4em;
-  width: auto;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  margin-top: 1rem;
-}
-
-.nav-links li a {
-  font-family: 'Press Start 2P', monospace;
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
-}
-
-.nav-links li a.active {
-  text-decoration: underline;
-  color: orange;
-}
-
-.nav-links li a:hover {
-  background-color: darkblue;
-  color: #0dff35;
-  padding: 4px 8px;
-  border-radius: 4px;
 }
 
 /* ===========================
@@ -95,7 +46,7 @@ body::before {
     transparent 2px
   );
   pointer-events: none;
-  9999;
+  z-index: 9999;
 }
 
 body::after {
@@ -120,58 +71,100 @@ body::after {
   100% { background-position: 0 100%; }
 }
 
-/*-title {
+/* ===========================
+   Navigation
+=========================== */
+.nav display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+  font-size: 24px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.logo {
+  height: 4em;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.nav-links li a.active {
+  text-decoration: underline;
+  color: orange;
+}
+
+.nav-links li a:hover {
+  background-color: darkblue;
+  color: #0dff35;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   Section Titles
+=========================== */
+.section-title {
   text-align: center;
   padding: 50px 20px 20px;
   border-bottom: 2px dotted #ff00ff;
 }
 
 .section-title h1 {
-  font-size: 4.4rem;
+  font-size: 3rem;
   color: #00ffff;
 }
 
 .section-title h2 {
-  font-family: "JetBrains Mono", monospace;
+  font-size: 1.2rem;
   color: #c2c4c4;
-  font-size: 2.2rem;
 }
 
 /* ===========================
    Retro Buttons
 =========================== */
-button, .retro-button {
+.retro-button {
   font-family: 'Press Start 2P', monospace;
   background: var(--c64-border);
   color: var(--c64-highlight);
   border: 4px solid var(--c64-light-blue);
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
-  box-shadow: 
-    0 4px 0 var(--c64-blue),
-    0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 0 var(--c64-blue), 0 8px 20px rgba(0,0,0,0.5);
   transition: all 0.1s;
-  text-decoration: none;
   display: inline-block;
   margin: 1rem auto;
+  text-decoration: none;
 }
 
-button:hover, .retro-button:hover {
+.retro-button:hover {
   background: var(--c64-light-blue);
   transform: translateY(2px);
-  box-shadow: 
-    0 2px 0 var(--c64-blue),
-    0 4px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 0 var(--c64-blue), 0 4px 15px rgba(0,0,0,0.5);
 }
 
-button:active, .retro-button:active {
+.retro-button:active {
   transform: translateY(4px);
-  box-shadow: 
-    0 0 0 var(--c64-blue),
-    0 2px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 var(--c64-blue), 0 2px 10px rgba(0,0,0,0.5);
 }
 
 /* ===========================
@@ -209,12 +202,10 @@ button:active, .retro-button:active {
 .pixel-underline {
   position: relative;
   display: inline-block;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #ffffff;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
-  transition: color 0.3s ease;
 }
 
 .pixel-underline::after {
@@ -224,31 +215,9 @@ button:active, .retro-button:active {
   bottom: 0;
   width: 100%;
   height: 6px;
-  background: repeating-linear-gradient(
-    90deg,
-    red 0px,
-    red 4px,
-    transparent 4px,
-    transparent 8px
-  );
+  background: repeating-linear-gradient(90deg, red 0px, red 4px, transparent 4px, transparent 8px);
   animation: pixelSlide 1.5s linear infinite;
   box-shadow: 0 0 5px red, 0 0 10px red;
-  transition: all 0.3s ease;
-}
-
-.pixel-underline:hover {
-  color: #085387;
-}
-
-.pixel-underline:hover::after {
-  background: repeating-linear-gradient(
-    90deg,
-    #00ffff 0px,
-    #00ffff 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  box-shadow: 0 0 6px #00ffff, 0 0 12px #00ffff;
 }
 
 @keyframes pixelSlide {
@@ -260,41 +229,27 @@ button:active, .retro-button:active {
    Retro Modal
 =========================== */
 .retro-modal {
-  background-color: #fdf6e3;
-  border: 3px double #000;
+  background-color: #1a1a6e;
+  border: 3px double #fff;
   padding: 1.5rem;
   margin-top: 5rem;
   box-shadow: 4px 4px 0px #000;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Press Start 2P', monospace;
   max-width: 800px;
   margin: 5rem auto;
-  color: #111;
-}
-
-.retro-modal-header {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1rem;
+  color: #fff;
 }
 
 .retro-modal-header h2 {
-  position: relative;
-  display: inline-block;
-  font-size: 1.2rem;
-  font-family: 'Press Start 2P', monospace;
-  color: Black;
-  padding-bottom: 0.6rem;
-  margin: 0;
+  font-size: 1rem;
+  color: #00ffff;
   text-align: center;
-  line-height: 1.4;
 }
 
 .retro-modal-body p {
   margin-bottom: 1rem;
-  line-height: 1.6;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  color: #222;
+  font-size: 0.8rem;
+  color: #fff;
 }
 
 /* ===========================
@@ -325,11 +280,11 @@ button:active, .retro-button:active {
   }
 
   .section-title h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .section-title h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .individual-work-grid {
@@ -341,7 +296,7 @@ button:active, .retro-button:active {
   }
 
   .retro-button {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 10px 14px;
   }
 }
