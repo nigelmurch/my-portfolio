@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  background-color: #0000aa;
-  font-family: "Press Start 2P", monospace;
+body {
+  background: var(--c64-blue);
+  color: var(--c64-text);
+  font-family: 'Courier New', 'Press Start 2P', monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
 }
-
 /* Navigation Bar */
 .nav-bar {
   display: flex;
