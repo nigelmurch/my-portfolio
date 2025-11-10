@@ -18,16 +18,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-   
+
 html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background: var(--c64-blue);
   color: var(--c64-text);
   font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  display: block; /* Prevent flex pushing content down */
 }
 
 /* ===========================
@@ -76,17 +78,8 @@ body::after {
 /* ===========================
    Navigation
 =========================== */
-
-nav-bar {
-  margin: 0;
-  padding: 20px 30px; /* Adjust if needed */
-}
-
-.nav display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
+.nav-bar {
+  display: flex;
   font-size: 24px;
   flex-wrap: wrap;
   text-align: center;
@@ -130,9 +123,8 @@ nav-bar {
 =========================== */
 .section-title {
   text-align: center;
-margin-top: 0; /* Remove any top margin */
-  padding-top: 20px; /* Optional for spacing */
-
+  margin: 0;
+  padding: 20px 0;
   border-bottom: 2px dotted #ff00ff;
 }
 
@@ -185,7 +177,8 @@ margin-top: 0; /* Remove any top margin */
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  padding: 40px 20px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 .work-card {
@@ -242,11 +235,11 @@ margin-top: 0; /* Remove any top margin */
   background-color: #1a1a6e;
   border: 3px double #fff;
   padding: 1.5rem;
-  margin-top: 5rem;
+  margin-top: 20px;
   box-shadow: 4px 4px 0px #000;
   font-family: 'Press Start 2P', monospace;
   max-width: 800px;
-  margin: 5rem auto;
+  margin: 20px auto;
   color: #fff;
 }
 
