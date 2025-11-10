@@ -1,12 +1,14 @@
 /* ===========================
    Root Variables (About Page Palette)
 =========================== */
-:root {
-  --bg-color: #0B0B0B;        /* Deep black background */
-  --primary-color: #8A2E23;   /* Burnt red */
-  --text-color: #EAE6DF;      /* Soft light */
-  --highlight-color: #ffa502; /* Accent highlight */
-  --border-color: #8A2E23;
+
+ :root {
+  --c64-blue: #3E31A2;
+  --c64-light-blue: #6C5EB5;
+  --c64-border: #352879;
+  --c64-text: #A5A5FF;
+  --c64-highlight: #FFFFFF;
+  --c64-accent: #7869C4;
 }
 
 /* ===========================
