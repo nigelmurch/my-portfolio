@@ -1,9 +1,16 @@
-/* Reset and layout base */
+:root {
+  --c64-blue: #3E31A2;
+  --c64-light-blue: #6C5EB5;
+  --c64-border: #352879;
+  --c64-text: #A5A5FF;
+  --c64-highlight: #FFFFFF;
+  --c64-accent: #7869C4;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
 
 html,body {
    background: var(--c64-blue);
