@@ -18,8 +18,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+   
 html, body {
+  margin: 0;
+  padding: 0;
   background: var(--c64-blue);
   color: var(--c64-text);
   font-family: 'Press Start 2P', monospace;
@@ -74,6 +76,12 @@ body::after {
 /* ===========================
    Navigation
 =========================== */
+
+nav-bar {
+  margin: 0;
+  padding: 20px 30px; /* Adjust if needed */
+}
+
 .nav display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,7 +130,9 @@ body::after {
 =========================== */
 .section-title {
   text-align: center;
-  padding: 50px 20px 20px;
+margin-top: 0; /* Remove any top margin */
+  padding-top: 20px; /* Optional for spacing */
+
   border-bottom: 2px dotted #ff00ff;
 }
 
