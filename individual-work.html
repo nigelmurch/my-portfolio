@@ -19,8 +19,6 @@
   <div class="screen">
     <header>
       <h1>UX Investigator</h1>
-      <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
-      <button class="btn" id="playBtn">▶ PLAY</button>
     </header>
 
     <nav class="top-nav">
@@ -81,32 +79,9 @@
     </div>
   </div>
 
-  <!-- Background Music -->
-  <audio id="bg-music" src="sounds/bg-music.mp3" preload="auto"></audio>
+ 
 
-  <!-- Script for music toggle -->
-  <script>
-    const playBtn = document.getElementById("playBtn");
-    const bgMusic = document.getElementById("bg-music");
-    let isPlaying = false;
-
-    playBtn.addEventListener("click", async () => {
-      try {
-        if (bgMusic.paused) {
-          await bgMusic.play();
-          isPlaying = true;
-          playBtn.textContent = "⏸ PAUSE";
-        } else {
-          bgMusic.pause();
-          isPlaying = false;
-          playBtn.textContent = "▶ PLAY";
-        }
-      } catch (err) {
-        console.error("Playback blocked:", err);
-        alert("🔇 Chrome blocked autoplay. Try clicking again.");
-      }
-    });
-  </script>
+ 
 
   <!-- Optional sparkle / flicker scripts if used -->
   <script src="script.js"></script>
