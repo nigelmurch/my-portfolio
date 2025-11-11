@@ -78,47 +78,47 @@ body::after {
 /* ===========================
    Navigation
 =========================== */
+/* NAVIGATION BAR FIX */
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px;
-  border-bottom: 4px solid var(--primary-color);
-  font-size: 18px;
-  flex-wrap: wrap;
+  background-color: #000;
+  padding: 0.8rem 2rem;
+  border-bottom: 3px solid red;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
-  height: 3em;
+  height: 40px;
   width: auto;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: centre;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-links li a {
-  color: var(--text-color);
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.75rem;
+  transition: color 0.3s ease;
 }
 
-.nav-links li a.active {
-  color: var(--highlight-color);
-  text-decoration: underline;
+.nav-links a:hover,
+.nav-links a.active {
+  color: red;
 }
-
-.nav-links li a:hover {
-  background-color: var(--primary-color);
-  color: var(--highlight-color);
-  padding: 4px 8px;
-  border-radius: 4px;
-}
-
 /* ===========================
    Section Titles
 =========================== */
