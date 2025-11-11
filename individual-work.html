@@ -97,6 +97,32 @@
   </footer>
 
   <!-- JavaScript -->
+
+  <script>
+    const playBtn = document.getElementById("playBtn");
+    const bgMusic = document.getElementById("bg-music");
+    let isPlaying = false;
+
+    playBtn.addEventListener("click", async () => {
+      try {
+        if (bgMusic.paused) {
+          await bgMusic.play();
+          isPlaying = true;
+          playBtn.textContent = "⏸ PAUSE";
+        } else {
+          bgMusic.pause();
+          isPlaying = false;
+          playBtn.textContent = "▶ PLAY";
+        }
+      } catch (err) {
+        console.error("Playback blocked:", err);
+        alert("🔇 Chrome blocked autoplay. Try clicking again.");
+      }
+    });
+  </script>
+
+  <!-- Optional sparkle / flicker scripts if used -->
+  <script src="script.js"></script>
   script.js</script>
 </body>
 </html>
