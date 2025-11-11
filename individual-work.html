@@ -2,43 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Individual Work - Nigel Murch</title>
-  <link rel="stylesheet" href="style5.css"/> 
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="iv class="nav-bar">
-  
-   <header class="nav-bar">
-  <img src="images/logoUXI.png" alt="Logo" class="logo" />
-  <ul class="nav-links">
-    <li><a href="about.html">About</a></li> 
-    <li><a href="individual-work.html"class="active">Invidual Work</a></li>   
-    <li><a href="group-projects.html">GROUP PROJECTS</a></li>   
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-  </ul>
-</header> 
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Investigator — Individual Work</title>
 
-  <!-- Main Content Section -->
-  <section class="individual-work-grid">
-    <div class="work-card">
-      <h3 class="pixel-underline">Case Study</h3>
-      <p>Research-led project highlighting the benefits of consuming wild, invasive species, benefiting both the environment and health.</p>
-      <button class="retro-button" data-modal="modal1">View Case Studies</button>
-    </div>
+  <!-- CRT Styling -->
+  <link rel="stylesheet" href="style2.css" />
 
-    <div class="work-card">
-      <h3 class="pixel-underline">Flavours By Papatūānuku</h3>
-      <p>Eco-conscious food service design—eat wild, protect nature, feed those suffering with financial oppression.</p>
-      <button class="retro-button" data-modal="modal2">See Details</button>
-    </div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-    <div class="work-card">
-      <h3 class="pixel-underline">Interactive Design</h3>
-      <p>Design inspired by nature with an earthy, warm colour palette, and a strong environmental tone of voice.</p>
-      <button class="retro-button" data-modal="modal3">Website Design</button>
-    </div>
-  </section>
+<body>
+  <!-- Screen Wrapper -->
+  <div class="screen">
+    <header>
+      <h1>UX Investigator</h1>
+      <p class="tagline">"Your users have secrets. I find them (ethically, of course)."</p>
+      <button class="btn" id="playBtn">▶ PLAY</button>
+    </header>
+
+    <nav class="top-nav">
+      <a href="about.html">About</a>
+      <a href="individual-work.html" class="active">Individual Work</a>
+      <a href="group-projects.html">Group Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
     <main class="work-container">
       <section class="work-card">
@@ -91,13 +81,10 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>2024 Flavours By Papatūānuku | All Rights Reserved</p>
-  </footer>
+  <!-- Background Music -->
+  <audio id="bg-music" src="sounds/bg-music.mp3" preload="auto"></audio>
 
-  <!-- JavaScript -->
-
+  <!-- Script for music toggle -->
   <script>
     const playBtn = document.getElementById("playBtn");
     const bgMusic = document.getElementById("bg-music");
@@ -123,6 +110,10 @@
 
   <!-- Optional sparkle / flicker scripts if used -->
   <script src="script.js"></script>
-  script.js</script>
+
+  <footer>
+    Police Siren Sound Effect by Jurij & Keyboard Click by CreatorsHome from Pixabay.  
+    “Go Ahead” by Gerald Olivieri – from Uppbeat.io
+  </footer>
 </body>
 </html>
