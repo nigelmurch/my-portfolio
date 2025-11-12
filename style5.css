@@ -294,8 +294,32 @@ body::after {
   animation: fadeIn 0.3s ease;
 }
 
+/* === RETRO BACK BUTTON === */
+.btn-container {
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
 
+.back-button {
+  display: inline-block;
+  background-color: var(--c64-light-blue);
+  color: var(--c64-highlight);
+  border: 3px solid var(--c64-border);
+  font-family: 'Press Start 2P', monospace;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  box-shadow: 4px 4px var(--c64-border);
+  transition: all 0.2s ease;
+}
 
+.back-button:hover {
+  background-color: var(--c64-highlight);
+  color: var(--c64-blue);
+  box-shadow: 4px 4px var(--c64-accent);
+  transform: translateY(2px);
+}
 /* ===========================
    Footer
 =========================== */
