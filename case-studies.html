@@ -2,125 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Case Studies</title>
-  <link rel="stylesheet" href="style6.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Investigator — Case Studies</title>
+
+  <!-- Shared Stylesheet -->
+  <link rel="stylesheet" href="style5.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- NAVIGATION -->
+  <header>
+    <nav class="nav-bar">
+      <img src="images/logoUXI.png" alt="Logo" class="logo" />    
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="individual-work.html">Individual Work</a></li>
+        <li><a href="group-projects.html">Group Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="nav-bar">
-  <img src="images/logoUXI.png" alt="Logo" class="logo" />
-  <ul class="nav-links">
-    <li><a href="about.html">ABOUT</a></li>
-    <li><a href="individual-work.html" class="active">INDIVIDUAL WORK</a></li>
-    <li><a href="group-projects.html">GROUP PROJECTS</a></li>
-    <li><a href="contact.html">CONTACT</a></li>
-  </ul>
-</header>
+  <!-- MAIN CONTENT -->
+  <main class="work-container">
+    <h1 class="section-title">Case Studies</h1>
 
-<section class="section-title">
-  <h1>Case Studies</h1>
-</section>
+    <section class="work-card">
+      <h2>Case Study 1: Wild Boar to the Rescue</h2>
+      <p>
+        A research-led exploration into how the consumption of invasive wild boar
+        can support biodiversity while offering sustainable culinary opportunities.
+      </p>
+      <img src="images/wildboar.jpg" alt="Wild Boar" style="width:100%; border:2px solid red; margin-top:1rem;">
+      <a href="index.html" class="retro-button">Return Home</a>
+    </section>
+  </main>
 
-<main class="individual-work-grid">
-  <!-- Case Study 1 -->
-  <div class="work-card">
-    <h3 class="pixel-underline">Case Study 1: Wild Boar to the Rescue</h3>
-    <img src="images/wild-boar.jpeg" alt="Wild Boar" class="case-image"/>
-    <p>In southern Italy, wild boar populations have exploded due to climate change and habitat loss…</p>
-    <button class="retro-button" onclick="openModalText1()">Read Blurb</button>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    Police Siren Sound Effect by Jurij & Keyboard Click by CreatorsHome from Pixabay.  
+    “Go Ahead” by Gerald Olivieri – from Uppbeat.io
+  </footer>
 
-  <!-- Case Study 2 -->
-  <div class="work-card">
-    <h3 class="pixel-underline">Case Study 2: Invasive Plants Feeding Aotearoa</h3>
-    <img src="images/rosehip jelly.png" alt="Foraging Invasive Plants" class="case-image"/>
-    <p>In New Zealand, invasive plants like gorse and wild fennel… This initiative educates communities…</p>
-    <button class="retro-button" onclick="openModalText2()">Read Blurb</button>
-  </div>
-
-  <!-- Case Study 3 -->
-  <div class="work-card">
-    <h3 class="pixel-underline">Case Study 3: Flavours By Papatūānuku</h3>
-    <img src="images/FBP-Icon.png" alt="Flavours By Papatūānuku" class="case-image"/>
-    <p>Turning wild and invasive species into eco-conscious delicacies, this project reframes perception…</p>
-    <button class="retro-button" onclick="openModalText3()">Read Blurb</button>
-  </div>
-</main>
-
-<!-- MODAL 1 -->
-<div id="textModal1" class="modal">
-  <div class="modal-box">
-    <span class="close-btn" onclick="closeModalText1()">&times;</span>
-    <h2>Wild Boar to the Rescue</h2>
-    <p>
-      After digging into the data and real-world examples, I’m struck by how wild boar foraging—and even controlled harvesting—can shift from problem to potential. In southern Italy, dense boar populations are uprooting forest floors, flipping soil and seedlings like natural tillers—impacting everything from oak regeneration to rare butterflies. That same digging can also reshape ecosystems: turning over 2–4 m² of soil a day, helping aerate soils, seed dispersal, and habitat renewal.<br><br>
-      But here’s the kicker: I found evidence that communities are taking this wild ecology into their own hands. In Apulia (Puglia), public vets and hunting groups are trialling models to harvest boar meat, tested and safe, to both protect agriculture and create sustainable food chains. It’s not just culling—it’s reframing the narrative. Especially when well-coordinated harvesting conserves local food systems, curbs crop damage, and mitigates disease risk, like African swine fever, through veterinary oversight.<br><br>
-      In my view, this isn’t about glorifying wild boar, it’s about transforming an ecological challenge into a community opportunity. It blends environmental stewardship, circular economic thinking, and social equity—all through design and systems. That’s the kind of thinking I want to bring into my work.
-    </p>
-  </div>
-</div>
-
-<!-- MODAL 2 -->
-<div id="textModal2" class="modal">
-  <div class="modal-box">
-    <span class="close-btn" onclick="closeModalText2()">&times;</span>
-    <h2>Invasive Plants Feeding Aotearoa</h2>
-    <p>
-      In Aotearoa, invasive plants like gorse, blackberry, and wild fennel are often seen as pests. But local community groups are flipping the script—turning these once-problematic weeds into jam, syrup, herbal blends, and teas.<br><br>
-      This project isn’t just about culinary creativity—it’s grounded in community resilience, climate action, and food sovereignty. By involving rangatahi, kuia, and whānau in harvesting and recipe making, the movement empowers knowledge sharing and reconnects people to whenua.<br><br>
-      The initiative also diverts food waste, raises awareness about biodiversity threats, and promotes a uniquely New Zealand approach to invasive management through kai. A delicious, sustainable act of rebellion.
-    </p>
-  </div>
-</div>
-
-<!-- MODAL 3 -->
-<div id="textModal3" class="modal">
-  <div class="modal-box">
-    <span class="close-btn" onclick="closeModalText3()">&times;</span>
-    <h2>Flavours By Papatūānuku</h2>
-    <p>
-      Flavours By Papatūānuku is a platform designed to inspire, inform, and activate eco-conscious food behaviours. By focusing on invasive and native wild kai, it aims to shift mindsets and reduce the environmental impacts of conventional agriculture.<br><br>
-      I developed the brand identity to reflect grounded climate values—earthy colours, bold messages, and retro flair. The storytelling strategy elevates real voices and community tasting experiments: like my cured wild pork with whiskey and mānuka honey, tested on 15 participants—all of whom said they’d eat it again!<br><br>
-      The site offers recipes, flavour profiles, and foraging guidance to help people connect with the land through kai. It’s food design with a conscience.
-    </p>
-  </div>
-</div>
-
-<div class="btn-container">
-  <a href="individual-work.html" class="back-button">Back A Step</a>
-</div>
-
-<footer class="site-footer">
-  <div class="footer-content">
-    <span>2024 Flavours By Papatūānuku All Rights Reserved</span>
-  </div>
-</footer>
-
-<!-- MODAL SCRIPT -->
-<script>
-  function openModalText1() {
-    document.getElementById("textModal1").style.display = "flex";
-  }
-  function closeModalText1() {
-    document.getElementById("textModal1").style.display = "none";
-  }
-
-  function openModalText2() {
-    document.getElementById("textModal2").style.display = "flex";
-  }
-  function closeModalText2() {
-    document.getElementById("textModal2").style.display = "none";
-  }
-
-  function openModalText3() {
-    document.getElementById("textModal3").style.display = "flex";
-  }
-  function closeModalText3() {
-    document.getElementById("textModal3").style.display = "none";
-  }
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
