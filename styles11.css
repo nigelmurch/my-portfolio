@@ -254,14 +254,15 @@ body::after {
   max-width: 600px;
 
 /* Modal content box */
+
 .modal-box {
   background-color: #2a1d7a;
   border: 3px solid #fff;
   color: #fff;
   font-family: 'Press Start 2P', sans-serif;
   padding: 2rem;
-  width: 85%;
-  max-width: 700px;
+  width: 50%;           /* Half the viewport width */
+  max-width: 600px;     /* Optional: slightly smaller max width */
   box-shadow: 0 0 15px #fff;
   text-align: left;
   overflow-y: auto;
