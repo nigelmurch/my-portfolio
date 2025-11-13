@@ -3,138 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UX Investigator — Individual Work</title>
+  <title>UX Investigator — Group Projects</title>
 
   <!-- CRT Styling -->
-  <link rel="stylesheet" href="style5.css" />
+  style5.css
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
+  https://fonts.googleapis.com
+  https://fonts.gstatic.com
+  https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap
 </head>
 
-<body>
-  <!-- HEADER + NAV -->
-  <header>
-    <nav class="nav-bar">
-      <img src="images/logoUXI.png" alt="Logo" class="logo" />    
+<body="Logo" class="logo" />    
       <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
-        <li><a href="group-projects.html"class="active">GROUP PROJECTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li>index.htmlHOME</a></li>
+        <li>about.htmlABOUT</a></li>
+        <li>individual-work.htmlINDIVIDUAL WORK</a></li>
+        <li><a href="group-projects.html" classa></li>
+        <li>contact.htmlCONTACT</a></li>
       </ul>
     </nav>
   </header>
 
-<!-- MAIN CONTENT -->
-<main class="work-container">
-  <!-- Intro Card -->
-  <section class="work-card">
-    <h2>Group Projects</h2>
-    <p>
-      A collection of collaborative projects that blend creativity, research, and design thinking. Each one focuses on human-centered outcomes and teamwork-driven ideas.
-    </p>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="work-container">
+    <!-- Intro Card -->
+    <section class="work-card">
+     h2>Group Projects</h2>
+      <p>
+        A collection of collaborative projects that blend creativity, research, and design thinking. Each one focuses on human-centered outcomes and teamwork-driven ideas.
+      </p>
+    </section>
 
-  <!-- Project Cards -->
-  <section class="work-card">
-    <h2>Whetū Mārama</h2>
-    <p>
-      Rangatahi sexual health bus — a co-designed service promoting access and awareness for youth aged 15–25.
-    </p>
-    <a href="#" class="retro-button" onclick="openModalork-card">
-    <h2>Open Door</h2>
-    <p>
-      Exploring grief and communication through interactive storytelling and empathy-based design.
-    </p>
-    #VIEW PROJECT</a>
-  </section>
+    <!-- Project Card 1 -->
+    <section class="work-card">
+      <h2>Whetū Mārama</h2>
+      <p>
+        Rangatahi sexual health bus — a co-designed service promoting access and awareness for youth aged 15–25.
+      </p>
+      <button class="retro-button" onclick="openModal('modal1')">VIEW PROJECT</button>
+    </section>
 
-  <section class="work-card">
-    <h2>Te Pou Theatre</h2>
-    <p>
-      Community-driven theatre experience built to celebrate Māori storytelling through accessible digital design.
-    </p>
-     <button class="retro-button" onclick="openModalText1()">BACK TO ABOUT</button>
-  </section>
+    <!-- Project Card 2 -->
+    <section class="work-card">
+      <h2>Open Door</h2>
+      <p>
+        Exploring grief and communication through interactive storytelling and empathy-based design.
+      </p>
+      <button class="retro-button" onclick="openModal('modal2')">VIEW PROJECT</button>
+    </section>
 
-  <!-- Back Button -->
-  <div class="btn-container">BACK A STEP</a>
-  </div>
-</main>
+    <!-- Project Card 3 -->
+    <section class="work-card">
+      <h2>Te Pou Theatre</h2>
+      <p>
+        Community-driven theatre experience built to celebrate Māori storytelling through accessible digital design.
+      </p>
+      <button class="retro-button" onclick="openModal('modal3')">VIEW PROJECT</button>
+    </section>
 
-<!-- MODAL 1 – WHETŪ MĀRAMA -->
-<div class="modal" id="modal1">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
-    <div class="project-media">
-      <img src="images/project1-img1.jpg" alt="Whetū Māramact1-img2.jpg" alt="Whetū Mproject1      <img src="images/project1-img4.jpg" alt="Wmages/project1-img5.jpg" alt="Whetū Mārama Image-video">
-      <video controls>
-        <ideos/project1-video.mp4
-        Your browser does not support the video tag.
-      </video>
+    <!-- Back Button -->
+    <div class="btn-container">
+      index.htmlBACK A STEP</a>
     </div>
-    <p>
-      This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.
-    </p>
-  </div>
-</div>
+  </main>
 
-<!-- MODAL 2 – OPEN DOOR -->
-<div class="modal" id="modal2">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <h2>Open Door Project – Grief and Communication</h2>
-    <div class="project-media">
-      images/project2-img1.jpg
-      <img src="images/project2-img2.jpg" alt="Openes/project2-img3.jpg" alt="Openes/project
-      <mages/project2-img5.jpg
+  <!-- MODAL 1 – WHETŪ MĀRAMA -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
+      <div class="project-media">
+        images/project1-img1.jpg
+        images/project1-img2.jpg
+        images/project1-img3.jpg
+      </div>
+      <div class="project-video">
+        <video controls>
+          videos/project1-video.mp4
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>
+        This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.
+      </p>
     </div>
-    <div class="project-video">
-      <video controls>
-        <source src="videos/project2-videoYour browser does not support the video tag.
-      </video>
-    </div>
-    <p>
-      The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.
-    </p>
   </div>
-</div>
 
-<!-- SCRIPT -->
-<script>
-  function openModal(id) {
-    document.getElementById(id).style.display = 'block';
-  }
+  <!-- MODAL 2 – OPEN DOOR -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Open Door Project – Grief and Communication</h2>
+      <div class="project-media">
+        images/project2-img1.jpg
+        images/project2-img2.jpg
+      </div>
+      <div class="project-video">
+        <video controls>
+          videos/project2-video.mp4
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>
+        The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.
+      </p>
+    </div>
+  </div>
 
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    modal.style.display = 'none';
-    const video = modal.querySelector('video');
-    if (video) {
-      video.pause();
-      video.currentTime = 0;
+  <!-- MODAL 3 – TE POU THEATRE -->
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Te Pou Theatre – Māori Storytelling</h2>
+      <div class="project-media">
+        images/project3-img1.jpg
+        images/project3-img2.jpg
+      </div>
+      <p>
+        This project celebrates Māori storytelling through community-driven theatre and accessible digital design. Our team worked to create an inclusive experience that honors cultural narratives and fosters engagement.
+      </p>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
     }
-  }
 
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-        const video = modal.querySelector('video');
-        if (video) {
-          video.pause();
-          video.currentTime = 0;
-        }
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
       }
-    });
-  };
-</script>
+    }
 
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        }
+      });
+    };
+  </script>
 </body>
-</html>
