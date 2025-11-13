@@ -1,219 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whetū Mārama - CRT Terminal</title>
-    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
-    <link rel="stylesheet" href="./styles13.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Investigator — Group Projects</title>
+  <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png" type="image/png">
+
+  <!-- CRT Styling -->
+  <link rel="stylesheet" href="style5.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- CRT Screen Container -->
-    <div class="crt-container">
-        <div class="crt-screen">
-            <div class="scanlines"></div>
-            <div class="crt-flicker"></div>
-            
-            <div class="page-container">
-                <div class="terminal-header">
-                    <span class="blink">█</span> SYSTEM READY <span class="blink">█</span>
-                </div>
-                
-                <div class="hero-section">
-                    <pre class="ascii-art">
- ██╗    ██╗██╗  ██╗███████╗████████╗██╗   ██╗
- ██║    ██║██║  ██║██╔════╝╚══██╔══╝██║   ██║
- ██║ █╗ ██║███████║█████╗     ██║   ██║   ██║
- ██║███╗██║██╔══██║██╔══╝     ██║   ██║   ██║
- ╚███╔███╔╝██║  ██║███████╗   ██║   ╚██████╔╝
-  ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝   ╚═╝    ╚═════╝ 
-                    </pre>
-                    <h1 class="glitch" data-text="WHETŪ MĀRAMA">WHETŪ MĀRAMA</h1>
-                    <p class="subtitle">&gt; EMPOWERING RANGATAHI THROUGH DIGITAL STORYTELLING</p>
-                    <p class="terminal-prompt">&gt; <span class="blink">_</span></p>
-                    <button id="openRetroModalBtn" class="cta-button">
-                        [ INITIALIZE PROJECT DATA ]
-                    </button>
-                </div>
+  <!-- HEADER + NAV -->
+  <header>
+    <nav class="nav-bar">
+      <img src="images/logoUXI.png" alt="Logo" class="logo" onerror="this.src='https://via.placeholder.com/200x80/3E31A2/FFFFFF?text=UX+INVESTIGATOR'" />    
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
+        <li><a href="group-projects.html" class="active">GROUP PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <!-- Project Navigation -->
-                <div class="project-buttons">
-                    <div class="terminal-menu">
-                        <p class="menu-header">&gt; SELECT MODULE:</p>
-                        <button onclick="openModal('modal1')" class="terminal-btn">
-                            <span class="btn-prefix">[1]</span> HOME_INTERFACE.IMG
-                        </button>
-                        <button onclick="openModal('modal2')" class="terminal-btn">
-                            <span class="btn-prefix">[2]</span> 360_EXPERIENCE.IMG
-                        </button>
-                        <button onclick="openModal('modal3')" class="terminal-btn">
-                            <span class="btn-prefix">[3]</span> PROTOTYPE_HIFI.IMG
-                        </button>
-                        <button onclick="openModal('modal4')" class="terminal-btn">
-                            <span class="btn-prefix">[4]</span> STARGAZING_PAGE.IMG
-                        </button>
-                        <button onclick="openModal('modal5')" class="terminal-btn">
-                            <span class="btn-prefix">[5]</span> SOURCE_CODE.IMG
-                        </button>
-                        <button onclick="openModal('modal6')" class="terminal-btn">
-                            <span class="btn-prefix">[6]</span> PROJECT_VIDEO.MP4
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- MAIN CONTENT -->
+  <main class="work-container">
+    <!-- Intro Card -->
+    <section class="work-card">
+      <h2>Group Projects</h2>
+      <p>
+        A collection of collaborative projects that blend creativity, research, and design thinking. Each one focuses on human-centered outcomes and teamwork-driven ideas.
+      </p>
+    </section>
+
+    <!-- Project Card 1 -->
+    <section class="work-card">
+      <h2>Whetū Mārama</h2>
+      <p>
+        Rangatahi sexual health bus — a co-designed service promoting access and awareness for youth aged 15–25.
+      </p>
+      <button class="retro-button" onclick="openModal('modal1')">VIEW PROJECT</button>
+    </section>
+
+    <!-- Project Card 2 -->
+    <section class="work-card">
+      <h2>Open Door</h2>
+      <p>
+        Exploring grief and communication through interactive storytelling and empathy-based design.
+      </p>
+      <button class="retro-button" onclick="openModal('modal2')">VIEW PROJECT</button>
+    </section>
+
+    <!-- Project Card 3 -->
+    <section class="work-card">
+      <h2>Te Pou Theatre</h2>
+      <p>
+        Community-driven theatre experience built to celebrate Māori storytelling through accessible digital design.
+      </p>
+      <button class="retro-button" onclick="openModal('modal3')">VIEW PROJECT</button>
+    </section>
+
+    <!-- RETURN HOME BUTTON -->
+    <div class="content" style="text-align:center; margin:3rem auto;">
+      <a href="individual-work.html" class="retro-button">BACK A STEP</a>
     </div>
+  </main>
 
-    <!-- Retro Modal - About Project -->
-    <div id="retroModal" class="retro-modal">
-        <div class="modal-content">
-            <div class="retro-modal-header">
-                <span class="terminal-title">╔═══════════════════════════════════════════════╗</span>
-                <h2>█ ABOUT THE WHETŪ MĀRAMA PROJECT █</h2>
-                <button class="retro-close" onclick="closeModal('retroModal')">[ ESC ] CLOSE</button>
-            </div>
-            <div class="retro-modal-body">
-                <p class="terminal-text">&gt; LOADING PROJECT DATA...</p>
-                <p>Whetū Mārama is a project we created to empower and uplift Rangatahi, especially Māori youth, by reconnecting them with their identity, whakapapa, and mātauranga through the use of digital storytelling and creative technology. It's about putting the stars back in the eyes of our young people — helping them see themselves reflected in the stories they tell, and in the tools they use to tell them.</p>
-                
-                <p>At its heart, Whetū Mārama blends the richness of te ao Māori with the power of emerging tech — whether that's animation, interactive media, or immersive platforms like AR and VR. It's a space where traditional pūrākau meet the digital future.</p>
-                
-                <p>More than that, it's inclusive and multicultural by design. We acknowledge that our communities are diverse, and Whetū Mārama makes space for all voices — encouraging cross-cultural understanding and collective storytelling that reflects the true makeup of Aotearoa.</p>
-                
-                <p>This project isn't just about showcasing culture — it's about shaping futures. We want Rangatahi to see that their stories, values, and ways of knowing are not only valid but vital in a world that's constantly evolving. By building their digital confidence, creative expression, and connection to culture, Whetū Mārama helps prepare our young people to lead, innovate, and thrive in both the digital space and in their own lives.</p>
-                
-                <p>It's about legacy, belonging, and giving Rangatahi the tools to become kaitiaki of their own stories — and our collective future.</p>
-                
-                <p class="terminal-text">&gt; END OF TRANSMISSION_</p>
-            </div>
-        </div>
+  <!-- MODAL 1 – WHETŪ MĀRAMA -->
+  <div class="modal" id="modal1">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Whetū Mārama – Rangatahi Sexual Health Bus</h2>
+      <div class="project-media">
+        <img src="/images/RangatahiSexualHealth.jpg" alt="Whetū Mārama Image 1" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Project+Image+1'" />
+        <img src="images/project1-img2.jpg" alt="Whetū Mārama Image 2" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Project+Image+2'" />
+        <img src="images/project1-img3.jpg" alt="Whetū Mārama Image 3" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Project+Image+3'" />
+      </div>
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project1-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>
+        This project focused on reducing stigma and increasing access to sexual health services for rangatahi aged 15–25. We co-designed a mobile clinic experience including a vending machine for free testing kits and private soundproof booths for telehealth consultations.
+      </p>
     </div>
+  </div>
 
-    <!-- IMAGE MODALS -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: HOME_INTERFACE.IMG</span>
-                <span class="close retro-close" onclick="closeModal('modal1')">[ ESC ]</span>
-            </div>
-            <img src="/images/HomeInterface.jpg" alt="Home Interface" class="modal-image" onerror="this.src='https://via.placeholder.com/800x600/001100/00ff00?text=HOME+INTERFACE+IMAGE'">
-        </div>
+  <!-- MODAL 2 – OPEN DOOR -->
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Open Door Project – Grief and Communication</h2>
+      <div class="project-media">
+        <img src="/images/Grief.jpg" alt="Open Door Image 1" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Open+Door+Image+1'" />
+        <img src="/images/OpenDoor.jpg" alt="Open Door Image 2" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Open+Door+Image+2'" />
+      </div>
+      <div class="project-video">
+        <video controls>
+          <source src="videos/project2-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p>
+        The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.
+      </p>
     </div>
+  </div>
 
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: 360_EXPERIENCE.IMG</span>
-                <span class="close retro-close" onclick="closeModal('modal2')">[ ESC ]</span>
-            </div>
-            <img src="/images/360Experience.jpg" alt="360 Experience" class="modal-image" onerror="this.src='https://via.placeholder.com/800x600/001100/00ff00?text=360+EXPERIENCE+IMAGE'">
-        </div>
+  <!-- MODAL 3 – TE POU THEATRE -->
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Te Pou Theatre – Māori Storytelling</h2>
+      <div class="project-media">
+        <img src="/images/MoriStorytelling.jpg" alt="Te Pou Theatre Image 1" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Te+Pou+Theatre+1'" />
+        <img src="/images/Moristorytelling.jpg" alt="Te Pou Theatre Image 2" onerror="this.src='https://via.placeholder.com/800x600/3E31A2/FFFFFF?text=Te+Pou+Theatre+2'" />
+      </div>
+      <p>
+        This project celebrates Māori storytelling through community-driven theatre and accessible digital design. Our team worked to create an inclusive experience that honors cultural narratives and fosters engagement.
+      </p>
     </div>
+  </div>
 
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: PROTOTYPE_HIFI.IMG</span>
-                <span class="close retro-close" onclick="closeModal('modal3')">[ ESC ]</span>
-            </div>
-            <img src="images/figma-hifi-prototype.png" alt="Figma Hi-Fi Prototype" class="modal-image" onerror="this.src='https://via.placeholder.com/800x600/001100/00ff00?text=FIGMA+PROTOTYPE+IMAGE'">
-        </div>
-    </div>
+  <!-- SCRIPT -->
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.add('active');
+      modal.style.display = 'flex';
+    }
 
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: STARGAZING_PAGE.IMG</span>
-                <span class="close retro-close" onclick="closeModal('modal4')">[ ESC ]</span>
-            </div>
-            <img src="/images/Stargazing.jpg" alt="Stargazing Page" class="modal-image" onerror="this.src='https://via.placeholder.com/800x600/001100/00ff00?text=STARGAZING+PAGE+IMAGE'">
-        </div>
-    </div>
+    function closeModal(id) {
+      const modal = document.getElementById(id);
+      modal.classList.remove('active');
+      modal.style.display = 'none';
+      const video = modal.querySelector('video');
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
 
-    <div id="modal5" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: SOURCE_CODE.IMG</span>
-                <span class="close retro-close" onclick="closeModal('modal5')">[ ESC ]</span>
-            </div>
-            <img src="/images/SourceCode.jpg" alt="Source Code" class="modal-image" onerror="this.src='https://via.placeholder.com/800x600/001100/00ff00?text=SOURCE+CODE+IMAGE'">
-        </div>
-    </div>
-
-    <!-- VIDEO MODAL -->
-    <div id="modal6" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="file-info">&gt; FILE: PROJECT_VIDEO.MP4</span>
-                <span class="close retro-close" onclick="closeModal('modal6')">[ ESC ]</span>
-            </div>
-            <video controls class="modal-video">
-                <source src="images/whetu-marama-website.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
-
-    <!-- SCRIPT -->
-    <script>
-        // Open retro modal
-        document.getElementById('openRetroModalBtn').addEventListener('click', function() {
-            document.getElementById('retroModal').classList.add('active');
-        });
-
-        // Open any modal
-        function openModal(id) {
-            document.getElementById(id).classList.add('active');
+    // Close modal on outside click
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.classList.remove('active');
+          modal.style.display = 'none';
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
         }
+      });
+    };
 
-        // Close modal
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('active');
-            const video = document.getElementById(id).querySelector('video');
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
-            }
-        }
-
-        // Close modal on outside click
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal, .retro-modal');
-            modals.forEach(modal => {
-                if (event.target === modal) {
-                    modal.classList.remove('active');
-                    const video = modal.querySelector('video');
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0;
-                    }
-                }
-            });
-        };
-
-        // ESC key to close modals
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const activeModals = document.querySelectorAll('.modal.active, .retro-modal.active');
-                activeModals.forEach(modal => {
-                    modal.classList.remove('active');
-                    const video = modal.querySelector('video');
-                    if (video) {
-                        video.pause();
-                        video.currentTime = 0;
-                    }
-                });
-            }
+    // ESC key to close modals
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        const activeModals = document.querySelectorAll('.modal.active');
+        activeModals.forEach(modal => {
+          modal.classList.remove('active');
+          modal.style.display = 'none';
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
         });
-
-        // CRT boot sequence
-        window.addEventListener('load', function() {
-            document.body.classList.add('crt-boot');
-        });
-
-          <script src="script.js"></script>    </script>
+      }
+    });
+  </script>
 </body>
 </html>
