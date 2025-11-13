@@ -1,7 +1,3 @@
-/* ===========================
-   Root Variables (About Page Palette)
-=========================== */
-
 :root {
   --c64-blue: #3E31A2;
   --c64-light-blue: #6C5EB5;
@@ -15,342 +11,249 @@
    Global Reset
 =========================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: var(--c64-blue);
-  color: var(--c64-text);
-  font-family: 'Press Start 2P', monospace;
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f1e 100%);
+    min-height: 100vh;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* ===========================
-   CRT Screen Effect
-=========================== */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.03) 1px,
-    transparent 1px,
-    transparent 2px
-  );
-  pointer-events: none;
-  z-index: 9999;
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
-  );
-  background-size: 100% 4px;
-  pointer-events: none;
-  z-index: 9998;
-  animation: scanline 8s linear infinite;
+.hero-section {
+    text-align: center;
+    max-width: 800px;
 }
 
-@keyframes scanline {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 100%; }
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
 }
 
-/* ===========================
-   Navigation
-=========================== */
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
-  flex-wrap: wrap;
-  text-align: center;
+@keyframes glow {
+    from { text-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+    to { text-shadow: 0 0 40px rgba(0, 255, 0, 0.8); }
 }
 
-.logo {
-  height: 4em;
-  width: auto;
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: #ccc;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  margin-top: 1rem;
+.cta-button {
+    background: linear-gradient(135deg, #00ff00 0%, #00cc00 100%);
+    color: black;
+    border: 3px solid #00ff00;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+    font-family: 'Courier New', monospace;
 }
 
-.nav-links li a {
-  font-family: 'Press Start 2P', monospace;
-  color: #fff;
-  text-decoration: none;
-  font-size: 24px;
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.8);
 }
 
-.nav-links li a.active {
-  text-decoration: underline;
-  color: orange;
+/* Modal Styles */
+.retro-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background-color: darkblue;
-  color: #0dff35;
-  padding: 4px 8px;
-  border-radius: 4px;
+.retro-modal.active {
+    display: block;
 }
 
-/* ===========================
-   Section Titles
-=========================== */
-.section-title {
-  text-align: center;
-  padding: 30px 20px 10px;
-  border-bottom: 2px dotted var(--c64-light-blue);
-}
-
-.section-title h1 {
-  font-size: 2.5rem;
-  color: var(--c64-highlight);
-}
-
-.section-title h2 {
-  font-size: 1rem;
-  color: var(--c64-text);
-}
-
-/* ===========================
-   Work Container and Cards
-=========================== */
-.work-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.work-card {
-  background: rgba(0, 0, 0, 0.6);
-  border: 2px solid red;
-  border-radius: 10px;
-  padding: 2rem;
-  max-width: 600px;
-  width: 90%;
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
-}
-
-.work-card h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.work-card p {
-  font-family: 'Merriweather Sans', sans-serif;
-  color: #fff;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-/* ===========================
-   Retro Buttons
-=========================== */
-.retro-button {
-  display: inline-block;
-  font-family: 'Press Start 2P', cursive;
-  color: #fff;
-  border: 2px solid red;
-  padding: 0.8rem 1.2rem;
-  text-decoration: none;
-  font-size: 0.75rem;
-  background: transparent;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  margin-top: 1rem;
-}
-
-.retro-button:hover {
-  background: red;
-  color: black;
-  box-shadow: 0 0 10px red, 0 0 20px red;
-}
-
-/* ===========================
-   Pixel Underline Effect
-=========================== */
-.pixel-underline {
-  position: relative;
-  display: inline-block;
-  font-size: 1rem;
-  color: var(--c64-highlight);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-}
-
-.pixel-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    red 0px,
-    red 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  animation: pixelSlide 1.5s linear infinite;
-}
-
-@keyframes pixelSlide {
-  0% { background-position: 0 0; }
-  100% { background-position: 8px 0; }
-}
-
-/* === MODAL STYLING === */
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  max-width: 600px;
-
-/* Modal content box */
-
-.modal-container {
-  background-color: #2a1d7a;
-  border: 3px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-family: 'Press Start 2P', sans-serif;
-  padding: 2rem;
-  width: 50%;           /* Half the viewport width */
-  max-width: 600px;     /* Optional: slightly smaller max width */
-  box-shadow: 0 0 15px #fff;
-  text-align: left;
-  overflow-y: auto;
-  max-height: 80vh;
-  line-height: 1.6;
-}
-
-/* Close button */
-.close-btn {
-  color: #fff;
-  float: right;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-top: -10px;
-  margin-right: -10px;
-}
-
-/* Optional subtle fade-in animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.modal-box {
-  animation: fadeIn 0.3s ease;
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
 }
 
-/* === RETRO BACK BUTTON === */
-.btn-container {
-  text-align: center;
-  margin: 3rem 0 2rem;
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 90%;
+    max-height: 90vh;
+    background: #0a0a0a;
+    border: 4px solid #00ff00;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.6);
+    animation: slideDown 0.4s ease;
 }
 
-.back-button {
-  display: inline-block;
-  background-color: var(--c64-light-blue);
-  color: var(--c64-highlight);
-  border: 3px solid var(--c64-border);
-  font-family: 'Press Start 2P', monospace;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  box-shadow: 4px 4px var(--c64-border);
-  transition: all 0.2s ease;
+@keyframes slideDown {
+    from {
+        transform: translate(-50%, -60%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
 }
 
-.back-button:hover {
-  background-color: var(--c64-highlight);
-  color: var(--c64-blue);
-  box-shadow: 4px 4px var(--c64-accent);
-  transform: translateY(2px);
+/* Scanline Effect */
+.modal-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 0, 0.03) 0px,
+        rgba(0, 255, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 10;
 }
-/* ===========================
-   Footer
-=========================== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid red;
-  color: var(--c64-text);
-  font-size: 10px;
+
+/* CRT Curve Effect */
+.modal-content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+    z-index: 10;
 }
 
-/* ===========================
-   Responsive
-=========================== */
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
-  }
+.retro-modal-header {
+    background: #00ff00;
+    color: black;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #00cc00;
+    position: relative;
+    z-index: 20;
+}
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-  }
+.retro-modal-header h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
 
-  .work-card {
-    padding: 1.5rem;
-  }
+.retro-close {
+    background: black;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    font-family: 'Courier New', monospace;
+}
 
-  .retro-button {
-    font-size: 0.7rem;
-    padding: 10px 14px;
-  }
+.retro-close:hover {
+    background: #00ff00;
+    color: black;
+}
+
+.retro-modal-body {
+    padding: 30px;
+    color: #00ff00;
+    max-height: 60vh;
+    overflow-y: auto;
+    position: relative;
+    z-index: 20;
+}
+
+.retro-modal-body p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Custom Scrollbar */
+.retro-modal-body::-webkit-scrollbar {
+    width: 12px;
+}
+
+.retro-modal-body::-webkit-scrollbar-track {
+    background: #0a0a0a;
+    border-left: 2px solid #00ff00;
+}
+
+.retro-modal-body::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border: 2px solid #0a0a0a;
+}
+
+.retro-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .retro-modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .retro-modal-body {
+        padding: 20px;
+    }
+    
+    .retro-modal-body p {
+        font-size: 1rem;
+    }
 }
