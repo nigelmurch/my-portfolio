@@ -255,9 +255,12 @@ body::after {
 
 /* Modal content box */
 
-.modal-box {
+.modal-container {
   background-color: #2a1d7a;
   border: 3px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: 'Press Start 2P', sans-serif;
   padding: 2rem;
