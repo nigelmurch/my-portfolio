@@ -5,174 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UX Investigator — Group Projects</title>
 
-   <!-- CRT Styling -->
   <link rel="stylesheet" href="style5.css" />
 
-
-<!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-  <!-- HEADER + NAV -->
-  <header>
-    <nav class="nav-bar">
-      <img src="images/logoUXI.png" alt="Logo" class="logo" />    
-      <ul class="nav-links">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
-        <li><a href="group-projects.html" class="active">GROUP PROJECTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-  <!-- MAIN CONTENT -->
-  <main class="work-container">
-    <!-- Intro Card -->
-    <section class="work-card">
-     <h2>Group Projects</h2>
-      <p>
-        A collection of collaborative projects that blend creativity, research, and design thinking. Each one focuses on human-centered outcomes and teamwork-driven ideas.
-      </p>
-    </section>
 
-    <!-- Project Card 1 -->
-    <section class="work-card">
-      <h2>Whetū Mārama</h2>
-      <p>Whetū Mārama
-“Star of Light” – a symbol of guidance, hope, and connection. It represents the light that leads us forward, bridging tradition and innovation, and illuminating new pathways for Rangatahi to shine. With the power of 5G, this vision expands—connecting communities, unlocking creativity, and empowering the next generation to lead in a world without limits.      
-      </p>
-      <button class="retro-button" onclick="openModal('modal1')">VIEW PROJECT</button>
-    </section>
+<header>
+  <nav class="nav-bar">
+    <img src="images/logoUXI.png" alt="Logo" class="logo" />
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
+      <li><a href="group-projects.html" class="active">GROUP PROJECTS</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Project Card 2 -->
-    <section class="work-card">
-      <h2>Open Door</h2>
-      <p>
-        Exploring grief and communication through interactive storytelling and empathy-based design.
-      </p>
-      <button class="retro-button" onclick="openModal('modal2')">VIEW PROJECT</button>
-    </section>
 
-    <!-- Project Card 3 -->
-    <section class="work-card">
-      <h2>Te Pou Theatre</h2>
-      <p>
-        Community-driven theatre experience built to celebrate Māori storytelling through accessible digital design.
-      </p>
-      <button class="retro-button" onclick="openModal('modal3')">VIEW PROJECT</button>
-    </section>
+<main class="work-container">
 
-   <!-- RETURN HOME BUTTON -->
+  <!-- Intro Card -->
+  <section class="work-card">
+    <h2>Group Projects</h2>
+    <p>A collection of collaborative projects blending creativity, research, and design thinking.</p>
+  </section>
+
+  <!-- Card 1 -->
+  <section class="work-card">
+    <h2>Whetū Mārama</h2>
+    <p>
+      “Star of Light”—a symbol of guidance and connection. This project explores how 5G can empower Rangatahi.
+    </p>
+    <button class="retro-button" onclick="openModal('modal1')">VIEW PROJECT</button>
+  </section>
+
+  <!-- Card 2 -->
+  <section class="work-card">
+    <h2>Open Door</h2>
+    <p>Exploring grief and communication through interactive storytelling and empathy-based design.</p>
+    <button class="retro-button" onclick="openModal('modal2')">VIEW PROJECT</button>
+  </section>
+
+  <!-- Card 3 -->
+  <section class="work-card">
+    <h2>Te Pou Theatre</h2>
+    <p>A community-driven celebration of Māori storytelling through accessible digital design.</p>
+    <button class="retro-button" onclick="openModal('modal3')">VIEW PROJECT</button>
+  </section>
+
   <div class="content" style="text-align:center; margin:3rem auto;">
     <a href="individual-work.html" class="retro-button">BACK A STEP</a>
   </div>
- </main>
 
-  <!-- MODAL 1 – WHETŪ MĀRAMA -->
- 
+</main>
 
-<!-- Button to Open Modal -->
-  <button class="open-modal-btn" onclick="openModal('modal1')">View Whetū Mārama</button>
 
-  <!-- MODAL 1 – WHETŪ MĀRAMA -->
-  <div class="modal" id="modal1">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal1')">&times;</span>
-      
-      <div class="modal-body">
-        <h2>Whetū Mārama</h2>
-        <p class="tagline">"Guiding light meets 5G power, connecting Rangatahi to limitless possibilities".</p>
-        
-!-- Images -->
-        <div class="project-media">
-          <img src="images/project1-img1.jpg" alt="rc="images/project1-img2.jpg"<img src="images/project1-img3.jpg/div>
-        
-        <!-- Video -->
-        <div class="project-video">
-          <video controls>
-            <source src="whetu-marama            Your browser does not support the video tag.
-          </video>
-        </div>
 
-<!-- Description -->
-        <p class="description">
-          Spark 5G Stories - Rangatahi celebrates the transformative power of 5G technology in everyday life, unlocking boundless possibilities for our interconnected world. With lightning-fast downloads, minimal latency, and unparalleled reliability, 5G empowers Rangatahi—the dynamic youth and future leaders of Māori communities—to innovate, connect, and lead. This project bridges tradition and technology, weaving stories that inspire creativity and community engagement.
-        </p>
-      </div>
-    </div>
-  </div>
+<!-- ========== MODAL 1 ========== -->
+<div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal1')">&times;</span>
 
-            
-  <!-- MODAL 2 – OPEN DOOR -->
-  <div class="modal" id="modal2">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal2')">&times;</span>
-      <h2>Open Door Project – Grief and Communication</h2>
+    <div class="modal-body">
+      <h2>Whetū Mārama</h2>
+      <p class="tagline">"Guiding light meets 5G power."</p>
+
       <div class="project-media">
-        images/project2-img1.jpg
-        images/project2-img2.jpg
+        <img src="images/project1-img1.jpg" alt="">
+        <img src="images/project1-img2.jpg" alt="">
+        <img src="images/project1-img3.jpg" alt="">
       </div>
+
       <div class="project-video">
         <video controls>
-          videos/project2-video.mp4
+          <source src="videos/whetu-marama.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
-      <p>
-        The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss. Our team created a retro-inspired interactive storytelling experience with resources designed to foster safe and meaningful conversations between children and adults.
+
+      <p class="description">
+        Spark 5G Stories – Rangatahi celebrates the transformative power of 5G technology...
       </p>
     </div>
   </div>
+</div>
 
-  <!-- MODAL 3 – TE POU THEATRE -->
-  <div class="modal" id="modal3">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal3')">&times;</span>
-      <h2>Te Pou Theatre – Māori Storytelling</h2>
-      <div class="project-media">
-        images/project3-img1.jpg
-        images/project3-img2.jpg
-      </div>
-      <p>
-        This project celebrates Māori storytelling through community-driven theatre and accessible digital design. Our team worked to create an inclusive experience that honors cultural narratives and fosters engagement.
-      </p>
+
+
+<!-- ========== MODAL 2 ========== -->
+<div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal2')">&times;</span>
+
+    <h2>Open Door Project – Grief and Communication</h2>
+
+    <div class="project-media">
+      <img src="images/project2-img1.jpg" alt="">
+      <img src="images/project2-img2.jpg" alt="">
     </div>
+
+    <div class="project-video">
+      <video controls>
+        <source src="videos/project2-video.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <p>
+      The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss...
+    </p>
   </div>
+</div>
 
-  <!-- SCRIPT -->
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'block';
+
+
+<!-- ========== MODAL 3 ========== -->
+<div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal3')">&times;</span>
+
+    <h2>Te Pou Theatre – Māori Storytelling</h2>
+
+    <div class="project-media">
+      <img src="images/project3-img1.jpg" alt="">
+      <img src="images/project3-img2.jpg" alt="">
+    </div>
+
+    <p>
+      This project celebrates Māori storytelling through community-driven theatre...
+    </p>
+  </div>
+</div>
+
+
+
+<!-- SCRIPT -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    modal.style.display = 'none';
+
+    const video = modal.querySelector('video');
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
     }
+  }
 
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      modal.style.display = 'none';
-      const video = modal.querySelector('video');
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
-      }
-    }
+  // Close modals by clicking outside
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
 
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-          const video = modal.querySelector('video');
-          if (video) {
-            video.pause();
-            video.currentTime = 0;
-          }
+        const video = modal.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
         }
-      });
-    };
-  </script>
-    <script src="script.jsody>
-      </body>
-      </html>
+      }
+    });
+  };
+</script>
+
+</body>
+</html>
