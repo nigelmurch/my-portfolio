@@ -1,1 +1,214 @@
+/* ===========================
+   Retro Variables — C64 Palette
+=========================== */
+:root {
+  --c64-blue: #3E31A2;
+  --c64-light-blue: #6C5EB5;
+  --c64-border: #352879;
+  --c64-text: #A5A5FF;
+  --c64-highlight: #FFFFFF;
+  --c64-accent: #7869C4;
 
+  --border-red: #ff0000;
+}
+
+/* ===========================
+   Global Reset
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--c64-blue);
+  color: var(--c64-text);
+  font-family: 'Press Start 2P', monospace;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ===========================
+   CRT Scanline Effect
+=========================== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.03) 0,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 999;
+  pointer-events: none;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0) 50%,
+    rgba(0,0,0,0.25) 50%
+  );
+  background-size: 100% 4px;
+  animation: scanline 6s linear infinite;
+  z-index: 998;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  from { background-position: 0 0; }
+  to   { background-position: 0 100%; }
+}
+
+/* ===========================
+   Navigation
+=========================== */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  border-bottom: 4px solid red;
+}
+
+.logo {
+  height: 4em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--c64-highlight);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.nav-links a.active {
+  color: orange;
+  text-decoration: underline;
+}
+
+.nav-links a:hover {
+  background: darkblue;
+  color: #0dff35;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   Page Title
+=========================== */
+.page-header {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  border-bottom: 2px dotted var(--c64-light-blue);
+  padding-bottom: 1rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  color: var(--c64-highlight);
+}
+
+.page-header h2 {
+  font-size: 1rem;
+  color: var(--c64-text);
+  margin-top: 1rem;
+}
+
+/* ===========================
+   Content Wrapper
+=========================== */
+.detail-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.detail-container p {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--c64-highlight);
+  margin-bottom: 1.3rem;
+}
+
+/* ===========================
+   Images
+=========================== */
+.detail-image {
+  width: 100%;
+  border: 3px solid var(--border-red);
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(255,0,0,0.4);
+  margin: 2rem 0;
+}
+
+/* ===========================
+   Retro Back Button
+=========================== */
+.btn-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--c64-light-blue);
+  border: 3px solid var(--c64-border);
+  color: var(--c64-highlight);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  box-shadow: 4px 4px var(--c64-border);
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  background: var(--c64-highlight);
+  color: var(--c64-blue);
+  box-shadow: 4px 4px var(--c64-accent);
+  transform: translateY(2px);
+}
+
+/* ===========================
+   Footer
+=========================== */
+.footer {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid red;
+  font-size: 10px;
+  color: var(--c64-text);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .page-header h1 {
+    font-size: 1.4rem;
+  }
+}
