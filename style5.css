@@ -299,7 +299,27 @@ body::after {
   margin-bottom: 1.5rem;
   color: #fff;
 }
+.retro-button {
+  display: inline-block;
+  background-color: var(--c64-light-blue);
+  color: var(--c64-highlight);
+  border: 3px solid var(--c64-border);
+  font-family: 'Press Start 2P', monospace;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px var(--c64-border);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
 
+.retro-button:hover {
+  background-color: var(--c64-highlight);
+  color: var(--c64-blue);
+  box-shadow: 4px 4px var(--c64-accent);
+  transform: translateY(2px);
+}
 /* Close Button */
 .close {
   float: right;
