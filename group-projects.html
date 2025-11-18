@@ -84,9 +84,10 @@
 
       <div class="project-video">
         <video controls>
-          <source src="videos/whetu-marama.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+  <source src="videos/whetu-marama.mp4" type="video/mp4">
+  <source src="videos/whetu-marama.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
       </div>
 
       <p class="description">
@@ -111,9 +112,11 @@
     </div>
 
     <div class="project-video">
-      <video controls>
-        <source src="videos/project2-video.mp4" type="video/mp4">
-      </video>
+     <video controls>
+  <source src="videos/open-door-project.mp4" type="video/mp4">
+  <source src="videos/open-door-project.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
     </div>
 
     <p>
@@ -130,11 +133,16 @@
     <span class="close" onclick="closeModal('modal3')">&times;</span>
 
     <h2>Te Pou Theatre – Māori Storytelling</h2>
+    
+ <div class="project-video">   <video controls>
+  <source src="te-pou-sponsors-page.mov" type="video/.mov">
+Your browser does not support the video tag.
+</video>
 
-    <div class="project-media">
-      <img src="images/project3-img1.jpg" alt="">
-      <img src="images/project3-img2.jpg" alt="">
-    </div>
+<div class="project-video">   <video controls>
+  <source src="te-pou-our-people-page.mov" type="video/.mov">
+  Your browser does not support the video tag.
+</video>   
 
     <p>
       This project celebrates Māori storytelling through community-driven theatre...
@@ -160,7 +168,19 @@
       video.currentTime = 0;
     }
   }
-
+  
+  //Video\\
+  const modal = document.getElementById(id);
+  modal.style.display = 'block';
+  
+  // Auto-play video when modal opens
+  const video = modal.querySelector('video');
+  if (video) {
+    video.play().catch(err => {
+      console.log('Autoplay prevented:', err);
+    });
+  }
+}
   // Close modals by clicking outside
   window.onclick = function(event) {
     const modals = document.querySelectorAll('.modal');
