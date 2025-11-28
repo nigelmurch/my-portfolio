@@ -208,7 +208,31 @@
       }
     });
   };
-</script>
+
+  // ---------- FULLSCREEN IMAGE VIEWER ----------
+const fullscreenModal = document.getElementById('imageFullscreenModal');
+const fullscreenImg = document.getElementById('fullscreenImage');
+const imgCloseBtn = document.querySelector('.img-close-btn');
+
+// Attach click events to all images inside modals
+document.querySelectorAll('.project-media img').forEach(img => {
+  img.addEventListener('click', () => {
+    fullscreenImg.src = img.src;
+    fullscreenModal.style.display = "flex";
+  });
+});
+
+// Close fullscreen by clicking the X
+imgCloseBtn.addEventListener('click', () => {
+  fullscreenModal.style.display = "none";
+});
+
+// Close fullscreen by clicking outside the image
+fullscreenModal.addEventListener('click', (e) => {
+  if (e.target === fullscreenModal) {
+    fullscreenModal.style.display = "none";
+  }
+});</script>
 
 </body>
 </html>
