@@ -338,10 +338,12 @@ body::after {
   color: var(--burnt-red);
   margin-bottom: 10px;
 }
+
 .tagline {
   font-size: 1.2rem;
   color: var(--highlight);
   margin-bottom: 20px;
+}
 
 
 /* Project Media Gallery */
@@ -427,7 +429,7 @@ body::after {
 }
 
    
-* Description */
+/*Description */
 .description {
   font-size: 1rem;
   line-height: 1.6;
