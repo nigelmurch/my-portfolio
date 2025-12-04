@@ -1,7 +1,3 @@
-/* ===========================
-   Root Variables (C64 Palette)
-=========================== */
-
 :root {
   --c64-blue: #3E31A2;
   --c64-light-blue: #6C5EB5;
@@ -9,6 +5,12 @@
   --c64-text: #A5A5FF;
   --c64-highlight: #FFFFFF;
   --c64-accent: #7869C4;
+
+  /* Missing Variables (DEFINE THESE) */
+  --burnt-red: #ff3b3b;
+  --soft-light: #f2f2f2;
+  --deep-black: #000000;
+  --highlight: #ffe066;
 }
 
 /* ===========================
