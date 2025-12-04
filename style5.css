@@ -261,11 +261,8 @@ body::after {
   background-color: var(--soft-light);
   margin: 5% auto;
   padding: 20px;
-  width: 80%;
-  max-width: 900px;
-  max-height: 80vh;
+  max-height: 90vh;
   overflow-y: auto;
-  border-radius: 10px;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   color: var(--deep-black);
 }
