@@ -261,7 +261,8 @@ body::after {
 /* Modal Content */
 .modal-content {
   background-color: var(--soft-light);
-  margin: 5% auto;
+  backdrop-filter: none !important;
+  filter: none !important;  margin: 5% auto;
   padding: 20px;
   max-height: 90vh;
   overflow-y: auto;
