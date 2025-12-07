@@ -262,8 +262,6 @@ body::after {
 .modal-content {
   background-color: var(--soft-light);
   position: relative;
-  backdrop-filter: none !important;
-  filter: none !important;  margin: 5% auto;
   padding: 20px;
   max-height: 90vh;
   overflow-y: auto;
@@ -530,9 +528,14 @@ body::after {
     font-size: 0.8rem;
   }
 
-  .modal-content {
-    padding: 1rem;
-  }
+ .modal-content {
+  background-color: rgba(0, 0, 0, 0.8);   /* dark modal background */
+  border: 2px solid red;                  /* matches the retro theme */
+  margin: 5% auto;                         /* centers the modal */
+  width: 90%;
+  max-width: 800px;
+  animation: modalFadeIn 0.3s ease;
+}
 
   .modal-content h2 {
     font-size: 0.9rem;
