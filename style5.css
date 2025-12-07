@@ -245,7 +245,7 @@ body::after {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 10000;
   left: 0;
   top: 0;
   width: 100%;
@@ -261,11 +261,13 @@ body::after {
 /* Modal Content */
 .modal-content {
   background-color: var(--soft-light);
+  position: relative;
   backdrop-filter: none !important;
   filter: none !important;  margin: 5% auto;
   padding: 20px;
   max-height: 90vh;
   overflow-y: auto;
+  z-index: 10001;
   box-shadow: 0 0 20px rgba(0,0,0,0.6);
   color: var(--deep-black);
 }
