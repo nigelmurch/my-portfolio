@@ -527,7 +527,6 @@ body::after {
   }
 
  .modal-content {
- .modal-content {
   background-color: var(--soft-light); /* #f5f5f5 (very light) */
   color: var(--deep-black);        /* matches the retro theme */
   margin: 5% auto;                         /* centers the modal */
@@ -536,11 +535,7 @@ body::after {
   animation: modalFadeIn 0.3s ease;
 }
 
-  .modal-content h2 {
-    font-size: 0.9rem;
-  }
-
-  .modal-content p {
-    font-size: 0.8rem;
-  }
+  .modal-content h2,
+.modal-content p {
+  color: var(--deep-black);
 }
