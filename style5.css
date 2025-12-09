@@ -297,19 +297,16 @@ body::after {
   margin-bottom: 1.5rem;
   color: #fff;
 }
+
 .retro-button {
   display: inline-block;
   background-color: var(--c64-light-blue);
-  color: var(--c64-highlight);
-  border: 3px solid var(--c64-border);
-  font-family: 'Press Start 2P', monospace;
-  padding: 0.8rem 1.5rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 24px;
+  border: 2px solid var(--c64-border);
   cursor: pointer;
-  box-shadow: 4px 4px var(--c64-border);
-  transition: all 0.2s ease;
-  text-decoration: none;
+  font-family: 'Press Start 2P', monospace;
+  transition: background 0.3s ease;
 }
 
 .retro-button:hover {
