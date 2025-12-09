@@ -200,17 +200,21 @@ body::after {
 }
 
 .modal-content {
-  background-color: var(--soft-light);
-  position: relative;
-  padding: 20px;
-  max-height: 90vh;
-  overflow-y: auto;
-  z-index: 1001;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  color: var(--deep-black);
+  max-width: 90vw;
+  width: 900px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent video overflow */
+}
+
+.modal-body video,
+.project-video video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
   border-radius: 8px;
-  width: 90%;
-  max-width: 900px;
+  object-fit: contain;
 }
 
 /* Close button in modal */
