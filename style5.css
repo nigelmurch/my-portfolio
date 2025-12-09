@@ -6,13 +6,14 @@
   --c64-highlight: #FFFFFF;
   --c64-accent: #7869C4;
 
-  --soft-light: #f5f5f5; 
+  --soft-light: #f5f5f5;
   --deep-black: #000000;
   --highlight: #ffeb3b;
   --burnt-red: #ff3b3b;
 }
-/* ===========================
-   Global Reset
+
+/* ===========================  
+   Global Reset  
 =========================== */
 * {
   margin: 0;
@@ -21,8 +22,6 @@
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   background-color: var(--c64-blue);
   color: var(--c64-text);
@@ -32,9 +31,7 @@ html, body {
   position: relative;
 }
 
-/* ===========================
-   CRT Screen Effect
-=========================== */
+/* CRT Screen Effect */
 body::before {
   content: "";
   position: fixed;
@@ -50,7 +47,7 @@ body::before {
     transparent 2px
   );
   pointer-events: none;
-  z-index: 9999;
+  z-index: 100;      /* lowered so modals overlay this reliably */
 }
 
 body::after {
@@ -66,7 +63,7 @@ body::after {
   );
   background-size: 100% 4px;
   pointer-events: none;
-  z-index: 9998;
+  z-index: 99;
   animation: scanline 8s linear infinite;
 }
 
@@ -75,16 +72,13 @@ body::after {
   100% { background-position: 0 100%; }
 }
 
-/* ===========================
-   Navigation
-=========================== */
+/* Navigation */
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-  font-family: 'Press Start 2P', monospace;
   font-size: 24px;
   flex-wrap: wrap;
   text-align: center;
@@ -101,15 +95,14 @@ body::after {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0;
   margin-top: 1rem;
+  padding: 0;
 }
 
 .nav-links li a {
-  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
 }
 
 .nav-links li a.active {
@@ -124,33 +117,11 @@ body::after {
   border-radius: 4px;
 }
 
-/* ===========================
-   Section Titles
-=========================== */
-.section-title {
-  text-align: center;
-  padding: 30px 20px 10px;
-  border-bottom: 2px dotted var(--c64-light-blue);
-}
-
-.section-title h1 {
-  font-size: 2.5rem;
-  color: var(--c64-highlight);
-}
-
-.section-title h2 {
-  font-size: 1rem;
-  color: var(--c64-text);
-}
-
-/* ===========================
-   Work Container and Cards
-=========================== */
+/* Work Container and Cards */
 .work-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 2.5rem;
   padding: 3rem 1rem;
   text-align: center;
@@ -187,125 +158,20 @@ body::after {
   margin-bottom: 1.5rem;
 }
 
-/* Button */
-.open-modal-btn {
-  background-color: var(--burnt-red);
-  color: var(--soft-light);
-  padding: 12px 24px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.open-modal-btn:hover {
-  background-color: var(--highlight);
-  color: var(--deep-black);
-}
-
-/* ===========================
-   Pixel Underline Effect
-=========================== */
-.pixel-underline {
-  position: relative;
-  display: inline-block;
-  font-size: 1rem;
-  color: var(--c64-highlight);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-}
-
-.pixel-underline::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background: repeating-linear-gradient(
-    90deg,
-    red 0px,
-    red 4px,
-    transparent 4px,
-    transparent 8px
-  );
-  animation: pixelSlide 1.5s linear infinite;
-}
-
-@keyframes pixelSlide {
-  0% { background-position: 0 0; }
-  100% { background-position: 8px 0; }
-}
-
-/* ===========================
-   MODAL STYLING
-=========================== */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(11, 11, 11, 0.9);
-}
-
-
-.modal.active {
-  display: flex;
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: var(--soft-light);
-  position: relative;
-  padding: 20px;
-  max-height: 90vh;
-  overflow-y: auto;
-  z-index: 10001;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
-  color: var(--deep-black);
-}
-
-
-
-@keyframes modalFadeIn {
-  from { 
-    opacity: 0; 
-    transform: scale(0.9);
-  }
-  to { 
-    opacity: 1; 
-    transform: scale(1);
-  }
-}
-
-.modal-content h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  border-bottom: 2px solid red;
-  padding-bottom: 1rem;
-}
-
-.modal-content p {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: var(--deep-black);
-  margin-bottom: 1.5rem;
-}
-
+/* Retro Button (for opening modals / navigation) */
 .retro-button {
   display: inline-block;
   background-color: var(--c64-light-blue);
-  color: #fff;
-  padding: 12px 24px;
-  border: 2px solid var(--c64-border);
-  cursor: pointer;
+  color: var(--c64-highlight);
+  border: 3px solid var(--c64-border);
   font-family: 'Press Start 2P', monospace;
-  transition: background 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 4px 4px var(--c64-border);
+  transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .retro-button:hover {
@@ -314,12 +180,47 @@ body::after {
   box-shadow: 4px 4px var(--c64-accent);
   transform: translateY(2px);
 }
-/* Close Button */
+
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 11, 11, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--soft-light);
+  position: relative;
+  padding: 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1001;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  color: var(--deep-black);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Close button in modal */
 .close {
-  float: right;
- background-color: var(--burnt-red);
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--burnt-red);
   color: var(--soft-light);
-  padding: 12px 24px;
+  padding: 10px 16px;
   font-size: 1rem;
   border: none;
   border-radius: 6px;
@@ -327,19 +228,30 @@ body::after {
   transition: background 0.3s ease;
 }
 
-/* Headings & Tagline */
-.modal-body h2 {
-  color: var(--burnt-red);
-  margin-bottom: 10px;
+.close:hover {
+  background-color: #cc2a2a;
 }
 
-.tagline {
+/* Modal text and headings */
+.modal-content h2 {
   font-size: 1.2rem;
-  color: var(--highlight);
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
+  color: var(--deep-black);
+  text-align: center;
+  border-bottom: 2px solid red;
+  padding-bottom: 1rem;
 }
 
-/* Project Media Gallery */
+.modal-content p,
+.modal-content .description {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--deep-black);
+}
+
+/* Project media gallery */
 .project-media {
   display: flex;
   flex-direction: column;
@@ -349,27 +261,33 @@ body::after {
 
 .project-media img {
   width: 100%;
-  margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
-
-/* Video */
+/* Video wrapper */
 .project-video {
   margin: 2rem 0;
+  width: 100%;
 }
-   
-/* Fullscreen Image Modal */
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Fullscreen image modal */
 .image-fullscreen-modal {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 2000;
   inset: 0;
   background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(4px);
 }
 
 .fullscreen-image {
@@ -377,8 +295,6 @@ body::after {
   max-height: 90%;
   border-radius: 8px;
   box-shadow: 0 0 20px rgba(255,255,255,0.3);
-  animation: fadeIn 0.25s ease;
-  cursor: pointer;
 }
 
 .img-close-btn {
@@ -388,80 +304,15 @@ body::after {
   font-size: 40px;
   color: white;
   cursor: pointer;
-  font-weight: bold;
   user-select: none;
-  transition: 0.2s;
 }
 
-.img-close-btn:hover {
-  color: #ff4444;
-}
-
-/* Description */
-.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #fff; /* Keep visible on dark background */
-}
-/* Fade in */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.97); }
-  to   { opacity: 1; transform: scale(1); }
-}   
-
-/* ===========================
-   RETRO BACK BUTTON
-=========================== */
-.btn-container {
-  text-align: center;
-  margin: 3rem 0 2rem;
-}
-
-.back-button {
-  display: inline-block;
-  background-color: var(--c64-light-blue);
-  color: var(--c64-highlight);
-  border: 3px solid var(--c64-border);
-  font-family: 'Press Start 2P', monospace;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  box-shadow: 4px 4px var(--c64-border);
-  transition: all 0.2s ease;
-}
-
-.back-button:hover {
-  background-color: var(--c64-highlight);
-  color: var(--c64-blue);
-  box-shadow: 4px 4px var(--c64-accent);
-  transform: translateY(2px);
-}
-
-/* ===========================
-   Footer
-=========================== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 2px solid red;
-  color: var(--c64-text);
-  font-size: 10px;
-}
-
-/* ===========================
-   Responsive
-=========================== */
+/* Responsive tweaks */
 @media screen and (max-width: 768px) {
   .nav-bar {
     flex-direction: column;
     gap: 20px;
     padding: 20px 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
   }
 
   .nav-links li a {
@@ -498,40 +349,16 @@ body::after {
   }
 }
 
-   
-/* Responsive */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    padding: 15px;
-  }
-  .modal-body h2 {
-    font-size: 1.5rem;
-  }
-  .tagline {
-    font-size: 1rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .nav-links li a {
-    font-size: 14px;
+  .modal-content {
+    width: 90%;
+    max-width: 800px;
+    padding: 15px;
+    animation: fadeIn 0.3s ease;
   }
-
-  .work-card h2 {
-    font-size: 0.8rem;
-  }
-
- .modal-content {
-  background-color: var(--soft-light); /* #f5f5f5 (very light) */
-  color: var(--deep-black);        /* matches the retro theme */
-  margin: 5% auto;                         /* centers the modal */
-  width: 90%;
-  max-width: 800px;
-  animation: modalFadeIn 0.3s ease;
-}
 
   .modal-content h2,
-.modal-content p {
-  color: var(--deep-black);
+  .modal-content p {
+    color: var(--deep-black);
+  }
 }
