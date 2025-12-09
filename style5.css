@@ -527,8 +527,9 @@ body::after {
   }
 
  .modal-content {
-  background-color: rgba(0, 0, 0, 0.8);   /* dark modal background */
-  border: 2px solid red;                  /* matches the retro theme */
+ .modal-content {
+  background-color: var(--soft-light); /* #f5f5f5 (very light) */
+  color: var(--deep-black);        /* matches the retro theme */
   margin: 5% auto;                         /* centers the modal */
   width: 90%;
   max-width: 800px;
