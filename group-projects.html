@@ -4,232 +4,224 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UX Investigator — Group Projects</title>
-
   <link rel="stylesheet" href="style5.css" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Merriweather+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header>
+    <nav class="nav-bar">
+      <img src="images/logoUXI.png" alt="Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
+        <li><a href="group-projects.html" class="active">GROUP PROJECTS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav class="nav-bar">
-    <img src="images/logoUXI.png" alt="Logo" class="logo" />
-    <ul class="nav-links">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li><a href="individual-work.html">INDIVIDUAL WORK</a></li>
-      <li><a href="group-projects.html" class="active">GROUP PROJECTS</a></li>
-      <li><a href="contact.html">CONTACT</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="work-container">
 
+    <!-- Intro Card -->
+    <section class="work-card">
+      <h2>Group Projects</h2>
+      <p>A collection of collaborative projects blending creativity, research, and design thinking.</p>
+    </section>
 
-<main class="work-container">
-
-  <!-- Intro Card -->
-  <section class="work-card">
-    <h2>Group Projects</h2>
-    <p>A collection of collaborative projects blending creativity, research, and design thinking.</p>
-  </section>
-
-  <!-- Card 1 -->
-  <section class="work-card">
-    <h2>Whetū Mārama</h2>
-    <p>
-     Meaning in Maori "Star of Light" which is a symbol of guidance and connection. This project explores how 5G can empower Rangatahi.
-    </p>
-    <button class="open-modal-btn" onclick="openModal('modal1')">VIEW PROJECT</button>
-  </section>
-
-  <!-- Card 2 -->
-  <section class="work-card">
-    <h2>Open Door</h2>
-    <p>How might team kotuitui toi implement an engaging and educational approach that reshapes public attitudes, and makes seeking sexual health advice a normalized and positive experience.</p>
-    <button class="open-modal-btn" onclick="openModal('modal2')">VIEW PROJECT</button>
-  </section>
-
-  <!-- Card 3 -->
-  <section class="work-card">
-    <h2>Te Pou Theatre</h2>
-    <p>A community-driven celebration of Māori storytelling through accessible digital design.</p>
-    <button class="open-modal-btn" onclick="openModal('modal3')">VIEW PROJECT</button>
-  </section>
-
-  <div class="content" style="text-align:center; margin:3rem auto;">
-    <a href="individual-work.html" class="retro-button">BACK A STEP</a>
-  </div>
-
-</main>
-
-
-
-<!-- ========== MODAL 1 ========== -->
-<div class="modal" id="modal1">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">CLOSE</span>
-
-    <div class="modal-body">
+    <!-- ====== CARD 1: Whetū Mārama ====== -->
+    <section class="work-card">
       <h2>Whetū Mārama</h2>
-      <div class="project-media">
-        <img src="images/wm-home.png" alt="Home Page for Whetu MArama">
-        <img src="images/stargazing-page-wm.png" alt="Stargazing page where you can line up the app with the stars and learn">
-        <img src="images/my-role-in-wm.png" alt="Image with text about my role in Whetu Marama3">
-      </div>
+      <p>Meaning in Maori "Star of Light" — a symbol of guidance and connection. This project explores how 5G can empower Rangatahi.</p>
+      <!-- Buttons / Thumbnails for 2 videos + 3 images -->
+      <button class="retro-button" data-modal="wm-video-1">Play Video 1</button>
+      <button class="retro-button" data-modal="wm-video-2">Play Video 2</button>
 
-      <div class="project-video">
-        <video controls>
-          <source src="whetu-marama.mp4" type="video/mp4">
-  
-          Your browser does not support the video tag.
-        </video>
-      </div>
+      <img src="images/wm-home-thumb.png" alt="Whetu Marama home thumbnail" data-modal="wm-img-1" class="thumb">
+      <img src="images/stargazing-page-wm-thumb.png" alt="Whetu Marama stargazing thumbnail" data-modal="wm-img-2" class="thumb">
+      <img src="images/my-role-in-wm-thumb.png" alt="Whetu Marama role image thumbnail" data-modal="wm-img-3" class="thumb">
+    </section>
 
-      <p class="description">
-        Spark 5G Stories – Rangatahi celebrates the transformative power of 5G technology...
-      </p>
+    <!-- ====== CARD 2: Open Door ====== -->
+    <section class="work-card">
+      <h2>Open Door</h2>
+      <p>How might team kotuitui toi implement an engaging and educational approach that reshapes public attitudes, making seeking sexual-health advice normalized and positive.</p>
+      <button class="retro-button" data-modal="od-video-1">Play Video 1</button>
+      <button class="retro-button" data-modal="od-video-2">Play Video 2</button>
+
+      <img src="images/open-door-img1-thumb.jpg" alt="Open Door image 1 thumbnail" data-modal="od-img-1" class="thumb">
+      <img src="images/open-door-img2-thumb.jpg" alt="Open Door image 2 thumbnail" data-modal="od-img-2" class="thumb">
+      <img src="images/open-door-img3-thumb.jpg" alt="Open Door image 3 thumbnail" data-modal="od-img-3" class="thumb">
+    </section>
+
+    <!-- ====== CARD 3: Te Pou Theatre ====== -->
+    <section class="work-card">
+      <h2>Te Pou Theatre</h2>
+      <p>A community-driven celebration of Māori storytelling through accessible digital design.</p>
+      <button class="retro-button" data-modal="tp-video-1">Play Video 1</button>
+      <button class="retro-button" data-modal="tp-video-2">Play Video 2</button>
+
+      <img src="images/te-pou-img1-thumb.jpg" alt="Te Pou Theatre image 1 thumbnail" data-modal="tp-img-1" class="thumb">
+      <img src="images/te-pou-img2-thumb.jpg" alt="Te Pou Theatre image 2 thumbnail" data-modal="tp-img-2" class="thumb">
+      <img src="images/te-pou-img3-thumb.jpg" alt="Te Pou Theatre image 3 thumbnail" data-modal="tp-img-3" class="thumb">
+    </section>
+
+    <div class="content" style="text-align:center; margin:3rem auto;">
+      <a href="individual-work.html" class="retro-button">BACK A STEP</a>
     </div>
-  </div>
-</div>
 
+  </main>
 
-
-<!-- ========== MODAL 2 ========== -->
-<div class="modal" id="modal2">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">CLOSE</span>
-
-    <div class="modal-body">
-      <h2>Open Door Project – Grief and Communication</h2>
-
-      <div class="project-media">
-        <img src="images/project2-img1.jpg" alt="Project 2 Image 1">
-        <img src="images/project2-img2.jpg" alt="Project 2 Image 2">
-      </div>
-
-      <div class="project-video">
-        <video controls>
-          <source src="videos/open-door-project.mp4" type="video/mp4">
-          <source src="videos/open-door-project.webm" type="video/webm">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-
-      <p class="description">
-        The Open Door Project explored ways to support tamariki and whānau in talking about grief and loss...
-      </p>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- ========== MODAL 3 ========== -->
-<div class="modal" id="modal3">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal3')">CLOSE</span>
-
-    <div class="modal-body">
-      <h2>Te Pou Theatre – Māori Storytelling</h2>
-    
-      <div class="project-video">
+  <!-- ====== MODALS for CARD 1 (Whetū Mārama) ====== -->
+  <div class="modal" id="wm-video-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
       <video controls>
-  <source src="te-pou-sponsors-page.mp4" type="video/mp4">
-  <source src="te-pou-sponsors-page.mov" type="video/quicktime">
-</video>
-      </div>
-
-      <div class="project-video">
-      <video controls>
-  <source src="our-people-page.mp4.mp4" type="video/mp4">
-  <source src="te-pou-sponsors-page.mov" type="video/quicktime">
-</video>
-      </div>
-      
-
-      <p class="description">
-        This project celebrates Māori storytelling through community-driven theatre...
-      </p>
+        <source src="videos/wm-video-1.mp4" type="video/mp4">
+      </video>
     </div>
   </div>
-</div>
 
-<!-- FULLSCREEN IMAGE VIEWER -->
-<div id="imageFullscreenModal" class="image-fullscreen-modal">
-  <span class="img-close-btn">&times;</span>
-  <img id="fullscreenImage" class="fullscreen-image" src="" alt="Fullscreen Preview">
-</div>
-<!-- SCRIPT -->
-<script>
-  // Open modal and auto-play video
-  function openModal(id) {
-    const modal = document.getElementById(id);
-    modal.style.display = 'block';
-    
-    // Auto-play video when modal opens
-    const videos = modal.querySelectorAll('video');
-    videos.forEach(video => {
-      video.play().catch(err => {
-        console.log('Autoplay prevented:', err);
+  <div class="modal" id="wm-video-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/wm-video-2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="modal" id="wm-img-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/wm-home.png" alt="Whetu Marama – Home Page">
+    </div>
+  </div>
+
+  <div class="modal" id="wm-img-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/stargazing-page-wm.png" alt="Whetu Marama – Stargazing Page">
+    </div>
+  </div>
+
+  <div class="modal" id="wm-img-3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/my-role-in-wm.png" alt="Whetu Marama – My Role">
+    </div>
+  </div>
+
+  <!-- ====== MODALS for CARD 2 (Open Door) ====== -->
+  <div class="modal" id="od-video-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/open-door-project-1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="modal" id="od-video-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/open-door-project-2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="modal" id="od-img-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/project2-img1.jpg" alt="Open Door – Image 1">
+    </div>
+  </div>
+
+  <div class="modal" id="od-img-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/project2-img2.jpg" alt="Open Door – Image 2">
+    </div>
+  </div>
+
+  <div class="modal" id="od-img-3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/project2-img3.jpg" alt="Open Door – Image 3">
+    </div>
+  </div>
+
+  <!-- ====== MODALS for CARD 3 (Te Pou Theatre) ====== -->
+  <div class="modal" id="tp-video-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/te-pou-video-1.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="modal" id="tp-video-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <video controls>
+        <source src="videos/te-pou-video-2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="modal" id="tp-img-1">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/te-pou-img1.jpg" alt="Te Pou Theatre – Image 1">
+    </div>
+  </div>
+
+  <div class="modal" id="tp-img-2">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/te-pou-img2.jpg" alt="Te Pou Theatre – Image 2">
+    </div>
+  </div>
+
+  <div class="modal" id="tp-img-3">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img src="images/te-pou-img3.jpg" alt="Te Pou Theatre – Image 3">
+    </div>
+  </div>
+
+  <script>
+    // Universal modal open/close logic
+    document.querySelectorAll('[data-modal]').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const id = trigger.getAttribute('data-modal');
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.style.display = 'flex';
+
+        const video = modal.querySelector('video');
+        if (video) {
+          video.play().catch(_ => {});
+        }
       });
     });
-  }
 
-  // Close modal and stop video
-  function closeModal(id) {
-    const modal = document.getElementById(id);
-    modal.style.display = 'none';
-
-    const videos = modal.querySelectorAll('video');
-    videos.forEach(video => {
-      video.pause();
-      video.currentTime = 0;
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal || e.target.classList.contains('close')) {
+          const video = modal.querySelector('video');
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+          modal.style.display = 'none';
+        }
+      });
     });
-  }
-
-  // Close modals by clicking outside
-  window.onclick = function(event) {
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = 'none';
-
-        const videos = modal.querySelectorAll('video');
-        videos.forEach(video => {
-          video.pause();
-          video.currentTime = 0;
-        });
-      }
-    });
-  };
-
-  // ---------- FULLSCREEN IMAGE VIEWER ----------
-const fullscreenModal = document.getElementById('imageFullscreenModal');
-const fullscreenImg = document.getElementById('fullscreenImage');
-const imgCloseBtn = document.querySelector('.img-close-btn');
-
-// Attach click events to all images inside modals
-document.querySelectorAll('.project-media img').forEach(img => {
-  img.addEventListener('click', () => {
-    fullscreenImg.src = img.src;
-    fullscreenModal.style.display = "flex";
-  });
-});
-
-// Close fullscreen by clicking the X
-imgCloseBtn.addEventListener('click', () => {
-  fullscreenModal.style.display = "none";
-});
-
-// Close fullscreen by clicking outside the image
-fullscreenModal.addEventListener('click', (e) => {
-  if (e.target === fullscreenModal) {
-    fullscreenModal.style.display = "none";
-  }
-});</script>
-
+  </script>
 </body>
 </html>
