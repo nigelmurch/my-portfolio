@@ -222,6 +222,45 @@
         }
       });
     });
+// Safety: when opening a modal, ensure its videos are forced to fit
+  document.addEventListener('click', (e) => {
+    // open triggers: data-modal or retro-button with data-modal
+    const trigger = e.target.closest('[data-modal], .retro-button[data-modal], .open-modal-btn[data-modal]');
+    if (trigger) {
+      const id = trigger.getAttribute('data-modal') || trigger.dataset.modal;
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.style.display = 'flex';
+
+      // find videos and programmatically enforce sizes (extra measure)
+      modal.querySelectorAll('video').forEach(v => {
+        v.style.width = '100%';
+        v.style.maxWidth = '100%';
+        v.style.height = 'auto';
+        // try to play but ignore errors
+        v.play && v.play().catch(()=>{});
+      });
+    }
+  });
+
+  // closing logic: click on .close or click outside modal-content
+  document.addEventListener('click', (e) => {
+    const close = e.target.closest('.modal .close');
+    if (close) {
+      const modal = close.closest('.modal');
+      if (modal) {
+        modal.style.display = 'none';
+        modal.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
+      }
+    }
+
+    // click outside modal-content to close
+    if (e.target.classList && e.target.classList.contains('modal')) {
+      const modal = e.target;
+      modal.style.display = 'none';
+      modal.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
+    }
+  });    
   </script>
 </body>
 </html>
