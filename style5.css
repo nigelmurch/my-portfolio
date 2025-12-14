@@ -12,8 +12,8 @@
   --burnt-red: #ff3b3b;
 }
 
-/* ===========================  
-   Global Reset  
+/* ===========================
+   Global Reset
 =========================== */
 * {
   margin: 0;
@@ -28,38 +28,33 @@ html, body {
   font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
   overflow-x: hidden;
-  position: relative;
 }
 
-/* CRT Screen Effect */
+/* ===========================
+   CRT Screen Effect
+=========================== */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255, 255, 255, 0.03),
-    rgba(255, 255, 255, 0.03) 1px,
+    rgba(255,255,255,0.03),
+    rgba(255,255,255,0.03) 1px,
     transparent 1px,
     transparent 2px
   );
   pointer-events: none;
-  z-index: 100;      /* lowered so modals overlay this reliably */
+  z-index: 100;
 }
 
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%,
-    rgba(0, 0, 0, 0.25) 50%
+    rgba(18,16,16,0) 50%,
+    rgba(0,0,0,0.25) 50%
   );
   background-size: 100% 4px;
   pointer-events: none;
@@ -68,25 +63,25 @@ body::after {
 }
 
 @keyframes scanline {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 100%; }
+  from { background-position: 0 0; }
+  to { background-position: 0 100%; }
 }
 
-/* Navigation */
+/* ===========================
+   Navigation
+=========================== */
 .nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
-  font-size: 24px;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .logo {
   height: 4em;
-  width: auto;
 }
 
 .nav-links {
@@ -94,30 +89,29 @@ body::after {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1rem;
-  padding: 0;
 }
 
-.nav-links li a {
+.nav-links a {
   font-size: 24px;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
-.nav-links li a.active {
+.nav-links a.active {
   text-decoration: underline;
   color: orange;
 }
 
-.nav-links li a:hover {
-  background-color: darkblue;
+.nav-links a:hover {
+  background: darkblue;
   color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
 }
 
-/* Work Container and Cards */
+/* ===========================
+   Work Cards
+=========================== */
 .work-container {
   display: flex;
   flex-direction: column;
@@ -128,302 +122,134 @@ body::after {
 }
 
 .work-card {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   border: 2px solid red;
   border-radius: 10px;
   padding: 2rem;
   max-width: 600px;
   width: 90%;
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 25px rgba(255,0,0,0.4);
+  transition: 0.3s ease;
 }
 
 .work-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
+  box-shadow: 0 0 35px rgba(255,0,0,0.7);
 }
 
 .work-card h2 {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 1rem;
-  color: #fff;
+  color: white;
   margin-bottom: 1rem;
 }
 
 .work-card p {
   font-family: 'Merriweather Sans', sans-serif;
-  color: #fff;
+  color: white;
   font-size: 0.9rem;
-  line-height: 1.5;
   margin-bottom: 1.5rem;
 }
 
-/* Retro Button (for opening modals / navigation) */
+/* ===========================
+   Retro Buttons
+=========================== */
 .retro-button {
   display: inline-block;
-  background-color: var(--c64-light-blue);
+  background: var(--c64-light-blue);
   color: var(--c64-highlight);
   border: 3px solid var(--c64-border);
   font-family: 'Press Start 2P', monospace;
   padding: 0.8rem 1.5rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  font-size: 0.75rem;
   cursor: pointer;
   box-shadow: 4px 4px var(--c64-border);
-  transition: all 0.2s ease;
+  transition: 0.2s ease;
   text-decoration: none;
+  margin: 0.3rem;
 }
 
 .retro-button:hover {
-  background-color: var(--c64-highlight);
+  background: var(--c64-highlight);
   color: var(--c64-blue);
   box-shadow: 4px 4px var(--c64-accent);
   transform: translateY(2px);
 }
 
-/* Modal styling */
+/* ===========================
+   MODALS — SINGLE SOURCE OF TRUTH
+=========================== */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(11, 11, 11, 0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.modal.active {
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 }
 
 .modal-content {
-  max-width: 90vw;
-  width: 900px;
-  padding: 1.5rem;
-  box-sizing: border-box;
-  overflow: hidden; /* Prevent video overflow */
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.modal-body video,
-.project-video video {
-  width: 100%;
-  max-width: 100%;
+/* Images inside modals */
+.modal-content img {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
   height: auto;
-  display: block;
-  border-radius: 8px;
   object-fit: contain;
+  display: block;
 }
 
-/* Close button in modal */
+/* Videos inside modals */
+.modal-content video {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Close button */
 .close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: var(--burnt-red);
-  color: var(--soft-light);
-  padding: 10px 16px;
-  font-size: 1rem;
-  border: none;
+  top: -45px;
+  right: 0;
+  background: var(--burnt-red);
+  color: white;
+  padding: 8px 14px;
+  font-size: 1.2rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 .close:hover {
-  background-color: #cc2a2a;
+  background: #cc2a2a;
 }
 
-/* Modal text and headings */
-.modal-content h2 {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--deep-black);
-  text-align: center;
-  border-bottom: 2px solid red;
-  padding-bottom: 1rem;
-}
-
-.modal-content p,
-.modal-content .description {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-  color: var(--deep-black);
-}
-
-/* Project media gallery */
-.project-media {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.project-media img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  cursor: pointer;
-}
-
-/* Video wrapper */
-.project-video {
-  margin: 2rem 0;
-  width: 100%;
-}
-
-.project-video video {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-/* Fullscreen image modal */
-.image-fullscreen-modal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-}
-
-.fullscreen-image {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.3);
-}
-
-.img-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Responsive tweaks */
-@media screen and (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 10px;
-  }
-
-  .nav-links li a {
+/* ===========================
+   Responsive Tweaks
+=========================== */
+@media (max-width: 768px) {
+  .nav-links a {
     font-size: 18px;
   }
 
-  .work-card {
-    padding: 1.5rem;
-  }
-
-  .work-card h2 {
-    font-size: 0.9rem;
-  }
-
   .retro-button {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     padding: 10px 14px;
   }
 
-  .modal-content {
-    width: 95%;
-    padding: 1.5rem;
-    margin: 1rem auto;
-  }
-
-  .modal-content h2 {
-    font-size: 1rem;
-  }
-
   .close {
-    font-size: 1.5rem;
-    top: 0.5rem;
-    right: 1rem;
+    font-size: 1rem;
+    top: -40px;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .modal-content {
-    width: 90%;
-    max-width: 800px;
-    padding: 15px;
-    animation: fadeIn 0.3s ease;
-  }
-
-  .modal-content h2,
-  .modal-content p {
-    color: var(--deep-black);
-  }
-}
-
-/* ======= Force videos to respect modal boundaries (paste at end of stylesheet) ======= */
-
-/* Make sure modal centers and limits itself to viewport */
-.modal {
-  display: none;              /* leave as-is when hidden */
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background-color: rgba(11,11,11,0.9);
-  justify-content: center;
-  align-items: center;
-  padding: 1.5rem;            /* safe spacing on small viewports */
-}
-
-/* modal-content: strict viewport-aware sizing */
-.modal-content {
-  width: min(900px, 95vw);     /* never wider than viewport; prefer 900px */
-  max-width: 95vw;
-  max-height: 90vh;           /* limit height so videos scale */
-  box-sizing: border-box;
-  overflow: hidden;           /* hide any overflow (prevents horizontal scroll) */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-/* video inside modal: absolute lockdown */
-.modal-content video,
-.project-video video,
-.modal video {
-  width: 100% !important;     /* fill modal width */
-  max-width: 100% !important; /* never exceed container */
-  height: auto !important;    /* preserve aspect ratio */
-  display: block;
-  object-fit: contain;        /* letterbox if needed rather than overflow */
-  border-radius: 6px;
-}
-
-/* Make sure <video> wont be stretched by ancestor flex rules */
-.modal-content > video,
-.modal-content .project-video {
-  flex: 0 0 auto;
-  width: 100%;
-}
-
-/* prevent weird scrollbars introduced by body styling like large padding/margins */
-html, body {
-  overflow-x: hidden;
-}
-
-/* fallback for exceptionally stubborn site CSS (use sparingly) */
-.modal .video-force-contain {
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto !important;
 }
