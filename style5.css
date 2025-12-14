@@ -12,8 +12,8 @@
   --burnt-red: #ff3b3b;
 }
 
-/* ===========================
-   Global Reset
+/* ===========================  
+   Global Reset  
 =========================== */
 * {
   margin: 0;
@@ -28,6 +28,7 @@ html, body {
   font-family: 'Press Start 2P', monospace;
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
 }
 
 /* ===========================
@@ -39,8 +40,8 @@ body::before {
   inset: 0;
   background: repeating-linear-gradient(
     0deg,
-    rgba(255,255,255,0.03),
-    rgba(255,255,255,0.03) 1px,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
     transparent 1px,
     transparent 2px
   );
@@ -53,8 +54,8 @@ body::after {
   position: fixed;
   inset: 0;
   background: linear-gradient(
-    rgba(18,16,16,0) 50%,
-    rgba(0,0,0,0.25) 50%
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
   );
   background-size: 100% 4px;
   pointer-events: none;
@@ -63,8 +64,8 @@ body::after {
 }
 
 @keyframes scanline {
-  from { background-position: 0 0; }
-  to { background-position: 0 100%; }
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
 }
 
 /* ===========================
@@ -76,6 +77,7 @@ body::after {
   align-items: center;
   padding: 40px 30px;
   border-bottom: 4px solid red;
+  font-size: 24px;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -89,21 +91,23 @@ body::after {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.nav-links a {
+.nav-links li a {
   font-size: 24px;
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 
-.nav-links a.active {
+.nav-links li a.active {
   text-decoration: underline;
   color: orange;
 }
 
-.nav-links a:hover {
-  background: darkblue;
+.nav-links li a:hover {
+  background-color: darkblue;
   color: #0dff35;
   padding: 4px 8px;
   border-radius: 4px;
@@ -122,29 +126,30 @@ body::after {
 }
 
 .work-card {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   border: 2px solid red;
   border-radius: 10px;
   padding: 2rem;
   max-width: 600px;
   width: 90%;
-  box-shadow: 0 0 25px rgba(255,0,0,0.4);
-  transition: 0.3s ease;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(255,0,0,0.7);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
 }
 
 .work-card h2 {
-  color: white;
+  font-size: 1rem;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
 .work-card p {
   font-family: 'Merriweather Sans', sans-serif;
-  color: white;
+  color: #fff;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 }
@@ -153,42 +158,43 @@ body::after {
    Retro Buttons
 =========================== */
 .retro-button {
-  display: inline-block;
-  background: var(--c64-light-blue);
+  background-color: var(--c64-light-blue);
   color: var(--c64-highlight);
   border: 3px solid var(--c64-border);
-  font-family: 'Press Start 2P', monospace;
   padding: 0.8rem 1.5rem;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
   cursor: pointer;
   box-shadow: 4px 4px var(--c64-border);
-  transition: 0.2s ease;
-  text-decoration: none;
-  margin: 0.3rem;
+  transition: all 0.2s ease;
 }
 
 .retro-button:hover {
-  background: var(--c64-highlight);
+  background-color: var(--c64-highlight);
   color: var(--c64-blue);
   box-shadow: 4px 4px var(--c64-accent);
   transform: translateY(2px);
 }
 
 /* ===========================
-   MODALS — SINGLE SOURCE OF TRUTH
+   MODALS — FIXED & UNIFIED
 =========================== */
+
+/* Backdrop */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 9999;
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
 }
 
+/* Modal container */
 .modal-content {
   position: relative;
   max-width: 95vw;
@@ -198,21 +204,21 @@ body::after {
   justify-content: center;
 }
 
-/* Images inside modals */
+/* FULL IMAGE SCALING — THIS IS THE FIX */
 .modal-content img {
-  max-width: 95vw;
-  max-height: 95vh;
   width: auto;
   height: auto;
+  max-width: 95vw;
+  max-height: 95vh;
   object-fit: contain;
   display: block;
 }
 
-/* Videos inside modals */
+/* Video scaling */
 .modal-content video {
+  width: 100%;
   max-width: 95vw;
   max-height: 95vh;
-  width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
@@ -221,9 +227,9 @@ body::after {
 /* Close button */
 .close {
   position: absolute;
-  top: -45px;
+  top: -40px;
   right: 0;
-  background: var(--burnt-red);
+  background-color: var(--burnt-red);
   color: white;
   padding: 8px 14px;
   font-size: 1.2rem;
@@ -231,25 +237,20 @@ body::after {
   cursor: pointer;
 }
 
-.close:hover {
-  background: #cc2a2a;
-}
-
 /* ===========================
-   Responsive Tweaks
+   Responsive
 =========================== */
-@media (max-width: 768px) {
-  .nav-links a {
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links li a {
     font-size: 18px;
   }
 
   .retro-button {
-    font-size: 0.65rem;
-    padding: 10px 14px;
-  }
-
-  .close {
-    font-size: 1rem;
-    top: -40px;
+    font-size: 0.7rem;
   }
 }
