@@ -202,8 +202,7 @@
         }
       });
     });
-// Safety: when opening a modal, ensure its videos are forced to fit
-  document.addEventListener('click', (e) => {
+
     // open triggers: data-modal or retro-button with data-modal
     const trigger = e.target.closest('[data-modal], .retro-button[data-modal], .open-modal-btn[data-modal]');
     if (trigger) {
