@@ -174,66 +174,36 @@
     </div>
   </div>
 
-  <script>
-    // Universal modal open/close logic
-    document.querySelectorAll('[data-modal]').forEach(trigger => {
-      trigger.addEventListener('click', () => {
-        const id = trigger.getAttribute('data-modal');
-        const modal = document.getElementById(id);
-        if (!modal) return;
-        modal.style.display = 'flex';
+ <script>
+document.addEventListener('DOMContentLoaded', () => {
 
-        const video = modal.querySelector('video');
-        if (video) {
-          video.play().catch(_ => {});
-        }
-      });
+  // Open modal
+  document.querySelectorAll('[data-modal]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const id = trigger.dataset.modal;
+      const modal = document.getElementById(id);
+      if (!modal) return;
+
+      modal.style.display = 'flex';
+
+      const video = modal.querySelector('video');
+      if (video) video.play().catch(() => {});
     });
-
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', e => {
-        if (e.target === modal || e.target.classList.contains('close')) {
-          const video = modal.querySelector('video');
-          if (video) {
-            video.pause();
-            video.currentTime = 0;
-          }
-          modal.style.display = 'none';
-        }
-      });
-    });
-
-  
-
-      // find videos and programmatically enforce sizes (extra measure)
-      modal.querySelectorAll('video').forEach(v => {
-        v.style.width = '100%';
-        v.style.maxWidth = '100%';
-        v.style.height = 'auto';
-        // try to play but ignore errors
-        v.play && v.play().catch(()=>{});
-      });
-    }
   });
 
-  // closing logic: click on .close or click outside modal-content
-  document.addEventListener('click', (e) => {
-    const close = e.target.closest('.modal .close');
-    if (close) {
-      const modal = close.closest('.modal');
-      if (modal) {
+  // Close modal
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', e => {
+      if (e.target === modal || e.target.classList.contains('close')) {
+        const video = modal.querySelector('video');
+        if (video) {
+          video.pause();
+          video.currentTime = 0;
+        }
         modal.style.display = 'none';
-        modal.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
       }
-    }
+    });
+  });
 
-    // click outside modal-content to close
-    if (e.target.classList && e.target.classList.contains('modal')) {
-      const modal = e.target;
-      modal.style.display = 'none';
-      modal.querySelectorAll('video').forEach(v => { v.pause(); v.currentTime = 0; });
-    }
-  });    
-  </script>
-</body>
-</html>
+});
+</script>
